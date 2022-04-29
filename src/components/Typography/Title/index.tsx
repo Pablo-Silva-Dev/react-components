@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { BaseHTMLAttributes } from 'react';
 import { Title as TitleComponent } from './styles';
 
-interface TitleProps {
+interface Props { }
+
+interface TitleProps extends BaseHTMLAttributes<Props> {
   content: string;
   themeColor?: "dark" | "light";
 }

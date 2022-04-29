@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import { SubTitle } from '../components/Typography/SubTitle'
 import { Title } from '../components/Typography/Title'
+import { Text } from '../components/Typography/Text'
 
 export default function Home() {
   return (
@@ -10,7 +12,12 @@ export default function Home() {
       <Title
         content='sdfsdf'
       />
-      <button>OK</button>
+      <SubTitle
+        content='sdfsdf'
+      />
+      <Text
+        content='sdfsdf'
+      />
     </div>
   )
 }
