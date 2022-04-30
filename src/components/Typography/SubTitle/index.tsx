@@ -1,5 +1,5 @@
 
-import React, { BaseHTMLAttributes } from 'react';
+import  { BaseHTMLAttributes } from 'react';
 import { SubTitle as SubTitleComponent } from './styles';
 
 interface Props { }
