@@ -24,10 +24,10 @@
     "**/*.ts",
     "**/*.tsx",
     "styled.d.ts",
-    "src/theme/styled.d.ts",
+    "src/themes/styled.d.ts",
   ],
   "files" : [
-    "src/theme/styled.d.ts",
+    "src/themes/styled.d.ts",
   ],
   "exclude": [
     "node_modules"
