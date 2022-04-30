@@ -22,10 +22,12 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "styled.d.ts",
+    "src/theme/styled.d.ts",
   ],
   "files" : [
-    "src/theme/styled.d.ts"
+    "src/theme/styled.d.ts",
   ],
   "exclude": [
     "node_modules"
