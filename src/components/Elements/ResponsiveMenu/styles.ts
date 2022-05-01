@@ -1,8 +1,17 @@
 import styled, { keyframes } from "styled-components";
 
-const menuAnimation = keyframes`
+interface ResponsiveMenuProps {
+  direction: string;
+}
+
+const menuAnimationVertical = keyframes`
     0%{height: 0px};
-    100%{height: 240px};
+    100%{height: 32vh};
+`;
+
+const menuAnimationHorizontal = keyframes`
+  0%{width: 0px};
+  100%{width: 64vw};
 `;
 
 const menuItemAnimation = keyframes`
@@ -10,17 +19,21 @@ const menuItemAnimation = keyframes`
     100%{opacity: 1};
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<ResponsiveMenuProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 20vh;
-  width: 100%;
+  height: ${({ direction }) => (direction === "vertical" ? "20vh" : "100vh")};
+  width: ${({ direction }) => (direction === "vertical" ? "100%" : "32vh")};
   position: fixed;
   top: 0;
   right: 0;
   z-index: 999;
-  animation: ${menuAnimation} 0.32s;
+  animation: ${({ direction }) =>
+      direction === "vertical"
+        ? menuAnimationVertical
+        : menuAnimationHorizontal}
+    0.32s;
   -webkit-animation-fill-mode: forwards;
   background-image: linear-gradient(
     to bottom,
@@ -42,12 +55,13 @@ export const MenuContainer = styled.div`
 
 export const MenuItem = styled.a`
   color: ${({ theme }) => theme.colors.white};
+  text-transform: capitalize;
   font-weight: 700;
   font-size: ${({ theme }) => theme.sizes.large};
   line-height: 32px;
   cursor: pointer;
   animation: ${menuItemAnimation} 1s;
-  &:hover{
+  &:hover {
     color: ${({ theme }) => theme.colors.secondary_light};
   }
 `;

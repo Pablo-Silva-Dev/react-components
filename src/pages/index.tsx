@@ -42,6 +42,16 @@ export default function Home() {
       />
       {isResponsiveMenuOpen &&
         <ResponsiveMenu
+          direction='vertical'
+          firstUrlTitle='Home'
+          firstUrlLink='sdfsdfsdfsdf'
+          secondUrlTitle='ssdfsdfsdfdfjh'
+          secondUrlLink='sdjsdfsdfdffh'
+          thirdUrlTitle='sdfsdfsdfjh'
+          thirdUrlLink='sdsdfsdfsdfjfh'
+          fourthUrlTitle='sdfjsdfsdfhsdf'
+          fourthUrlLink='sdsdfdsfjfh'
+          fivethUrlTitle='sdfdfsdfdsfjhsdf'
           closeResponsiveMenu={closeResponsiveMenu}
         />
       }
