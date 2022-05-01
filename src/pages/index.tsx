@@ -5,6 +5,7 @@ import { Text } from '../components/Typography/Text'
 import { Header } from '../components/Elements/Header'
 import { useState } from 'react'
 import { ResponsiveMenu } from '../components/Elements/ResponsiveMenu'
+import NextProgress from 'next-progress'
 
 export default function Home() {
 
@@ -22,9 +23,10 @@ export default function Home() {
       <Head>
         <title>PSD - React Components</title>
       </Head>
+      <NextProgress  options={{ showSpinner: false }} />
       <Header
         firstUrlTitle='Home'
-        firstUrlLink='sdfsdfsdfsdf'
+        firstUrlLink='/test'
         secondUrlTitle='ssdfsdfsdfdfjh'
         secondUrlLink='sdjsdfsdfdffh'
         thirdUrlTitle='sdfsdfsdfjh'
@@ -38,7 +40,6 @@ export default function Home() {
         logoImageAlt='sdfsdfsdfsdf'
         logoImagePath='/logo.png'
         openResponsiveMenu={openResponsiveMenu}
-        showsAuthenticationContainer
       />
       {isResponsiveMenuOpen &&
         <ResponsiveMenu
