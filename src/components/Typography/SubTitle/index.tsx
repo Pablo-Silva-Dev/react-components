@@ -1,17 +1,15 @@
 
-import  { BaseHTMLAttributes } from 'react';
+import { CSSProperties } from 'react';
 import { SubTitle as SubTitleComponent } from './styles';
 
-interface Props { }
-
-interface SubTitleProps extends BaseHTMLAttributes<Props> {
+interface SubTitleProps {
   content: string;
-  themeColor?: 'dark' | 'light';
+  style?: CSSProperties
 }
 
-export function SubTitle({ content, themeColor }: SubTitleProps) {
+export function SubTitle({ content, style }: SubTitleProps) {
   return (
-    <SubTitleComponent themeColor={themeColor}>
+    <SubTitleComponent style={style}>
       {content}
     </SubTitleComponent>
   )

@@ -1,17 +1,15 @@
 
-import React, { BaseHTMLAttributes } from 'react';
+import { CSSProperties } from 'react';
 import { Text as TextComponent } from './styles';
 
-interface Props { }
-
-interface TextProps extends BaseHTMLAttributes<Props> {
+interface TextProps {
   content: string;
-  themeColor?: 'dark' | 'light';
+  style?: CSSProperties
 }
 
-export function Text({ content, themeColor, ...rest }: TextProps) {
+export function Text({ content, style }: TextProps) {
   return (
-    <TextComponent themeColor={themeColor} {...rest}>
+    <TextComponent style={style}>
       {content}
     </TextComponent>
   )

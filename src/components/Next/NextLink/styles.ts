@@ -1,14 +1,9 @@
 import styled from "styled-components";
 
-interface TextLinkProps {
-  themeColor: "dark" | "light";
-}
-
-export const TextLink = styled.a<TextLinkProps>`
+export const TextLink = styled.a`
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 600;
-  color: ${({ theme, themeColor }) =>
-    themeColor === "light" ? theme.colors.white : theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   @media (max-width: 1080px) {
     font-size: ${({ theme }) => theme.sizes.medium};
   }

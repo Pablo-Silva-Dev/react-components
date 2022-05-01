@@ -26,6 +26,7 @@ interface HeaderProps {
     fourthUrlLink?: string;
     fivethUrlLink?: string;
     sixthUrlLink?: string;
+    linkStyle?: CSSProperties;
     logoImagePath: string;
     logoImageAlt: string;
     logoImageSize?: "small" | "medium" | "large";
@@ -50,6 +51,7 @@ export function Header({
     fourthUrlTitle,
     fivethUrlTitle,
     sixthUrlTitle,
+    linkStyle,
     logoImagePath,
     logoImageAlt,
     logoImageSize,
@@ -90,36 +92,42 @@ export function Header({
                     <NextLink
                         title={firstUrlTitle}
                         url={firstUrlLink}
+                        style={linkStyle}
                     />
                 }
                 {secondUrlLink &&
                     <NextLink
                         title={secondUrlTitle}
                         url={secondUrlLink}
+                        style={linkStyle}
                     />
                 }
                 {thirdUrlLink &&
                     <NextLink
                         title={thirdUrlTitle}
                         url={thirdUrlLink}
+                        style={linkStyle}
                     />
                 }
                 {fourthUrlLink &&
                     <NextLink
                         title={fourthUrlTitle}
                         url={fourthUrlLink}
+                        style={linkStyle}
                     />
                 }
                 {fivethUrlLink &&
                     <NextLink
                         title={fivethUrlTitle}
                         url={fivethUrlLink}
+                        style={linkStyle}
                     />
                 }
                 {sixthUrlLink &&
                     <NextLink
                         title={sixthUrlTitle}
                         url={sixthUrlLink}
+                        style={linkStyle}
                     />
                 }
 

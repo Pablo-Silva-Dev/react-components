@@ -5,7 +5,7 @@ import { TextLink } from './styles'
 interface NextLinkProps {
     url: string;
     title: string;
-    style?: CSSProperties
+    style?: CSSProperties;
 }
 
 export function NextLink({ url, title, style }: NextLinkProps) {

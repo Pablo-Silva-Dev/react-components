@@ -1,17 +1,16 @@
-import React, { BaseHTMLAttributes } from 'react';
+import React, { CSSProperties } from 'react';
 import { Title as TitleComponent } from './styles';
 
-interface Props { }
 
-interface TitleProps extends BaseHTMLAttributes<Props> {
+interface TitleProps {
   content: string;
-  themeColor?: "dark" | "light";
+  style?: CSSProperties;
 }
 
-export function Title({ themeColor, content }: TitleProps) {
+export function Title({ content, style }: TitleProps) {
   return (
     <TitleComponent
-      themeColor={themeColor}
+      style={style}
     >
       {content}
     </TitleComponent>
