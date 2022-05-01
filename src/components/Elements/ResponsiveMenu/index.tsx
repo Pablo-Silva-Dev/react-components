@@ -54,6 +54,7 @@ export function ResponsiveMenu({
     return (
         <Container
             direction={direction}
+            role='menu'
         >
             <MenuContainer
                 style={style}
@@ -65,6 +66,7 @@ export function ResponsiveMenu({
                         onClick={closeResponsiveMenu}
                         size={32}
                         color={theme.colors.white}
+                        role='dialog'
                     />
                 </CloseMenuButton>
                 {firstUrlLink &&
