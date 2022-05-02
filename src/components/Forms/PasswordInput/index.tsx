@@ -1,4 +1,4 @@
-import React, { CSSProperties, InputHTMLAttributes, ReactNode } from 'react';
+import React, { CSSProperties, InputHTMLAttributes } from 'react';
 import { Container, Input, IconContainer } from './styles';
 import { FiEyeOff, FiEye } from 'react-icons/fi'
 

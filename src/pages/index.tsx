@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'react'
+import { ChangeEvent, FormEvent } from 'react'
 
 import Head from 'next/head'
 import { SubTitle } from '../components/Typography/SubTitle'
@@ -14,11 +14,14 @@ import { Container } from '../styles'
 import { FiAlertCircle } from 'react-icons/fi'
 import { EmailInput } from '../components/Forms/EmailInput'
 import { PasswordInput } from '../components/Forms/PasswordInput'
+import { Loading } from '../components/Animations/Loading'
+import { SubmitButton } from '../components/Forms/SubmitButton'
 
 export default function Home() {
 
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
   const [visiblePassword, setVisiblePassword] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [input, setInput] = useState('fdfs')
 
   function openResponsiveMenu() {
@@ -26,6 +29,17 @@ export default function Home() {
   }
   function closeResponsiveMenu() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
+  }
+
+  async function sendData(e: FormEvent) {
+
+    e.preventDefault()
+    setLoading(true)
+
+    const timing = await setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+    return () => clearTimeout(timing)
   }
 
   return (
@@ -92,7 +106,14 @@ export default function Home() {
         togglePassword={() => setVisiblePassword(!visiblePassword)}
         passwordIsVisible={visiblePassword}
       />
-      <p>{input}</p>
+      <form onSubmit={sendData}>
+
+        <SubmitButton
+          loading={loading}
+          title='Enviar'
+          disabled={loading}
+        />
+      </form>
     </Container>
   )
 }
