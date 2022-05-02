@@ -21,6 +21,7 @@ export function EmailInput({ showsIcon, iconStyle, ...rest }: EmailInputProps) {
             }
             <Input
                 type='email'
+                required
                 {...rest}
             />
         </Container>

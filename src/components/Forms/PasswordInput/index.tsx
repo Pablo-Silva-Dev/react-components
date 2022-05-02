@@ -30,6 +30,7 @@ export function PasswordInput({
             }
             <Input
                 type={passwordIsVisible ? 'text' : 'password'}
+                required
                 {...rest}
             />
         </Container>
