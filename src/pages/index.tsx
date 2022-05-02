@@ -1,3 +1,5 @@
+import {ChangeEvent} from 'react'
+
 import Head from 'next/head'
 import { SubTitle } from '../components/Typography/SubTitle'
 import { Title } from '../components/Typography/Title'
@@ -6,10 +8,15 @@ import { Header } from '../components/Elements/Header'
 import { useState } from 'react'
 import { ResponsiveMenu } from '../components/Elements/ResponsiveMenu'
 import NextProgress from 'next-progress'
+import { TextInput } from '../components/Forms/TextInput'
+import { Container } from '../styles'
+
+import {FiAlertCircle} from 'react-icons/fi'
 
 export default function Home() {
 
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
+  const [input, setInput] = useState('fdfs')
 
   function openResponsiveMenu() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
@@ -19,7 +26,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <Container>
       <Head>
         <title>PSD - React Components</title>
       </Head>
@@ -65,6 +72,12 @@ export default function Home() {
       <Text
         content='sdfsdf'
       />
-    </div>
+      <TextInput
+        value={input}
+        icon={<FiAlertCircle/>}
+        onChange={(e : ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+      />
+      <p>{input}</p>
+    </Container>
   )
 }

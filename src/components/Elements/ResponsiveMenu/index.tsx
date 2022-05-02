@@ -54,8 +54,8 @@ export function ResponsiveMenu({
     return (
         <Container
             direction={direction}
-            role='menu'
-        >
+                role='menu'
+            >
             <MenuContainer
                 style={style}
             >

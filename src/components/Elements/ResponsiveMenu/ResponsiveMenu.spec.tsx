@@ -32,4 +32,21 @@ describe('ResponsiveMenu', () => {
             expect(responsiveMenu).toBeInTheDocument()
 
     })
+    
+    it('should close responsiveMenu', () => {
+        const  {debug} = render(
+            <ResponsiveMenu
+                direction={'vertical'}
+                closeResponsiveMenu={() => { }}
+            />,{
+                wrapper: StyledProvider
+            })
+
+            const responsiveMenu = screen.getByRole('menu')
+            const closeResponsiveMenuButton = screen.getByRole('dialog')
+
+            fireEvent.click(closeResponsiveMenuButton)
+            expect(responsiveMenu).toBeInTheDocument()
+
+    })
 })
