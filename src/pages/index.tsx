@@ -12,6 +12,7 @@ import { TextInput } from '../components/Forms/TextInput'
 import { Container } from '../styles'
 
 import {FiAlertCircle} from 'react-icons/fi'
+import { EmailInput } from '../components/Forms/EmailInput'
 
 export default function Home() {
 
@@ -75,6 +76,11 @@ export default function Home() {
       <TextInput
         value={input}
         icon={<FiAlertCircle/>}
+        onChange={(e : ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+      />
+      <EmailInput
+        value={input}
+        showsIcon
         onChange={(e : ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
       />
       <p>{input}</p>

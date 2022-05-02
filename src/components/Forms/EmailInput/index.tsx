@@ -1,24 +1,26 @@
 import React, { CSSProperties, InputHTMLAttributes, ReactNode } from 'react';
 import { Container, Input, IconContainer } from './styles';
+import { FiMail } from 'react-icons/fi'
 
 interface Props { }
 
-export interface TextInputProps extends InputHTMLAttributes<Props> {
-    icon?: ReactNode;
-    iconStyle?: CSSProperties
+export interface EmailInputProps extends InputHTMLAttributes<Props> {
+    iconStyle?: CSSProperties;
+    showsIcon: boolean;
 }
 
-export function TextInput({ icon, iconStyle, ...rest }: TextInputProps) {
+export function EmailInput({ showsIcon, iconStyle, ...rest }: EmailInputProps) {
     return (
         <Container>
-            {icon &&
+            {showsIcon &&
                 <IconContainer
                     style={iconStyle}
                 >
-                    {icon}
+                    <FiMail />
                 </IconContainer>
             }
             <Input
+                type='email'
                 {...rest}
             />
         </Container>

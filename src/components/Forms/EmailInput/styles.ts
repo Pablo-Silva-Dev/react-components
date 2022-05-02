@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   min-width: 240px;
   margin: 2px;
-  `;
+`;
 
 export const IconContainer = styled.div`
   display: flex;
