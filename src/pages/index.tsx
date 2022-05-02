@@ -1,4 +1,4 @@
-import {ChangeEvent} from 'react'
+import { ChangeEvent } from 'react'
 
 import Head from 'next/head'
 import { SubTitle } from '../components/Typography/SubTitle'
@@ -11,12 +11,14 @@ import NextProgress from 'next-progress'
 import { TextInput } from '../components/Forms/TextInput'
 import { Container } from '../styles'
 
-import {FiAlertCircle} from 'react-icons/fi'
+import { FiAlertCircle } from 'react-icons/fi'
 import { EmailInput } from '../components/Forms/EmailInput'
+import { PasswordInput } from '../components/Forms/PasswordInput'
 
 export default function Home() {
 
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
+  const [visiblePassword, setVisiblePassword] = useState(true)
   const [input, setInput] = useState('fdfs')
 
   function openResponsiveMenu() {
@@ -31,7 +33,7 @@ export default function Home() {
       <Head>
         <title>PSD - React Components</title>
       </Head>
-      <NextProgress  options={{ showSpinner: false }} />
+      <NextProgress options={{ showSpinner: false }} />
       <Header
         firstUrlTitle='Home'
         firstUrlLink='/test'
@@ -75,13 +77,20 @@ export default function Home() {
       />
       <TextInput
         value={input}
-        icon={<FiAlertCircle/>}
-        onChange={(e : ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+        icon={<FiAlertCircle />}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
       />
       <EmailInput
         value={input}
         showsIcon
-        onChange={(e : ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+      />
+      <PasswordInput
+        value={input}
+        showsIcon
+        onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+        togglePassword={() => setVisiblePassword(!visiblePassword)}
+        passwordIsVisible={visiblePassword}
       />
       <p>{input}</p>
     </Container>
