@@ -7,7 +7,6 @@ import { Text } from '../components/Typography/Text'
 import { Header } from '../components/Elements/Header'
 import { useState } from 'react'
 import { ResponsiveMenu } from '../components/Elements/ResponsiveMenu'
-import NextProgress from 'next-progress'
 import { TextInput } from '../components/Forms/TextInput'
 import { Container } from '../styles'
 
@@ -18,6 +17,7 @@ import { Loading } from '../components/Animations/Loading'
 import { SubmitButton } from '../components/Forms/SubmitButton'
 import { PrimaryButton } from '../components/Elements/PrimaryButton'
 import { SecondaryButton } from '../components/Elements/SecondaryButton'
+import NextProgressComponent from '../components/Next/NextProgress'
 
 export default function Home() {
 
@@ -49,7 +49,7 @@ export default function Home() {
       <Head>
         <title>PSD - React Components</title>
       </Head>
-      <NextProgress options={{ showSpinner: false }} />
+      <NextProgressComponent />
       <Header
         firstUrlTitle='Home'
         firstUrlLink='/test'
