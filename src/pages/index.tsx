@@ -16,6 +16,8 @@ import { EmailInput } from '../components/Forms/EmailInput'
 import { PasswordInput } from '../components/Forms/PasswordInput'
 import { Loading } from '../components/Animations/Loading'
 import { SubmitButton } from '../components/Forms/SubmitButton'
+import { PrimaryButton } from '../components/Elements/PrimaryButton'
+import { SecondaryButton } from '../components/Elements/SecondaryButton'
 
 export default function Home() {
 
@@ -114,6 +116,18 @@ export default function Home() {
           disabled={loading}
         />
       </form>
+      <PrimaryButton
+          loading={loading}
+          title='Enviar'
+          disabled={loading}
+          onClick={() =>{}}
+      />
+      <SecondaryButton
+          loading={loading}
+          title='Enviar'
+          disabled={loading}
+          onClick={() =>{}}
+      />
     </Container>
   )
 }
