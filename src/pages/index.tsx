@@ -18,8 +18,13 @@ import { SubmitButton } from '../components/Forms/SubmitButton'
 import { PrimaryButton } from '../components/Elements/PrimaryButton'
 import { SecondaryButton } from '../components/Elements/SecondaryButton'
 import NextProgressComponent from '../components/Next/NextProgress'
+import { CardInfo } from '../components/Elements/CardInfo'
+import { useTheme } from 'styled-components'
+import { PricingCard } from '../components/Elements/PricingCard'
 
 export default function Home() {
+
+  const theme = useTheme()
 
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
   const [visiblePassword, setVisiblePassword] = useState(true)
@@ -69,7 +74,7 @@ export default function Home() {
       />
       {isResponsiveMenuOpen &&
         <ResponsiveMenu
-          direction='vertical'
+          direction='horizontal'
           firstUrlTitle='Home'
           firstUrlLink='sdfsdfsdfsdf'
           secondUrlTitle='ssdfsdfsdfdfjh'
@@ -127,6 +132,18 @@ export default function Home() {
           title='Enviar'
           disabled={loading}
           onClick={() =>{}}
+      />
+      <CardInfo 
+        title='Soluções para empresas'
+        content='skdjfskdhfkjsfdhsdkfj'
+      />
+      <PricingCard
+        title='Assinatura anual'
+        totalPrice='399,90'
+        dealsPrice='299,99'
+        finishPurchase={() => {}}
+        oldPrice='499,29'
+        firstResourceText='Acesso vip'
       />
     </Container>
   )
