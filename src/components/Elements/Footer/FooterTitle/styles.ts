@@ -7,5 +7,5 @@ export const Container = styled.h3`
   width: 80%;
   max-width: 240px;
   word-wrap: break-word;
-  margin: 8px 0;
+  margin: 40px 0 4px;
 `;

@@ -16,13 +16,11 @@ export const Container = styled.footer`
     grid-template-areas: 
     "First Second Third" 
     "Fourth Fiveth Sixth";
-    grid-gap: 20px;
   }
   @media (max-width: 720px) {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: 1fr;
     grid-template-areas: "First" "Second" "Third" "Fourth" "Fiveth" "Sixth";
-    grid-gap: 20px;
   }
 `;
 

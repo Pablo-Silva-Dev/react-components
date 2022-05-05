@@ -31,6 +31,9 @@ import { FooterThirdSection } from '../components/Elements/Footer/FooterThirdSec
 import { FooterFourthSection } from '../components/Elements/Footer/FooterFourthSection'
 import { FooterFivethSection } from '../components/Elements/Footer/FooterFivethSection'
 import { FooterSixthSection } from '../components/Elements/Footer/FooterSixthSection'
+import { RevealZoom } from '../components/Animations/RevealZoom'
+import { RevealFade } from '../components/Animations/RevealFade'
+import { RevealFlip } from '../components/Animations/RevealFlip'
 
 
 export default function Home() {
@@ -148,14 +151,19 @@ export default function Home() {
         title='Soluções para empresas'
         content='skdjfskdhfkjsfdhsdkfj'
       />
-      <PricingCard
-        title='Assinatura anual'
-        totalPrice='399,90'
-        dealsPrice='299,99'
-        finishPurchase={() => { }}
-        oldPrice='499,29'
-        firstResourceText='Acesso vip'
-      />
+      <RevealFlip
+        right
+      >
+
+        <PricingCard
+          title='Assinatura anual'
+          totalPrice='399,90'
+          dealsPrice='299,99'
+          finishPurchase={() => { }}
+          oldPrice='499,29'
+          firstResourceText='Acesso vip'
+        />
+      </RevealFlip>
 
       <Footer>
         <FooterFirstSection>
@@ -188,6 +196,14 @@ export default function Home() {
         <FooterFourthSection>
           <FooterTitle
             content='Departamento'
+          />
+          <FooterLink
+            content='Placas de vídeo'
+            url='/'
+          />
+          <FooterLink
+            content='Placas de vídeo'
+            url='/'
           />
           <FooterLink
             content='Placas de vídeo'
