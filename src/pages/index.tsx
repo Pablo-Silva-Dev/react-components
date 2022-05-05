@@ -31,9 +31,8 @@ import { FooterThirdSection } from '../components/Elements/Footer/FooterThirdSec
 import { FooterFourthSection } from '../components/Elements/Footer/FooterFourthSection'
 import { FooterFivethSection } from '../components/Elements/Footer/FooterFivethSection'
 import { FooterSixthSection } from '../components/Elements/Footer/FooterSixthSection'
-import { RevealZoom } from '../components/Animations/RevealZoom'
-import { RevealFade } from '../components/Animations/RevealFade'
-import { RevealFlip } from '../components/Animations/RevealFlip'
+import { RevealFade } from '../components/Animations/Reveal/RevealFade'
+import { CountUpAnimation } from '../components/Animations/Loading/CountUp'
 
 
 export default function Home() {
@@ -151,19 +150,23 @@ export default function Home() {
         title='Soluções para empresas'
         content='skdjfskdhfkjsfdhsdkfj'
       />
-      <RevealFlip
-        right
-      >
 
-        <PricingCard
-          title='Assinatura anual'
-          totalPrice='399,90'
-          dealsPrice='299,99'
-          finishPurchase={() => { }}
-          oldPrice='499,29'
-          firstResourceText='Acesso vip'
-        />
-      </RevealFlip>
+
+
+      <PricingCard
+        title='Assinatura anual'
+        totalPrice='399,90'
+        dealsPrice='299,99'
+        finishPurchase={() => { }}
+        oldPrice='499,29'
+        firstResourceText='Acesso vip'
+      />
+
+      <CountUpAnimation
+        end={300}
+        start={40}
+        duration={4}
+      />
 
       <Footer>
         <FooterFirstSection>
