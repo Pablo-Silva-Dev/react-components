@@ -21,6 +21,8 @@ import NextProgressComponent from '../components/Next/NextProgress'
 import { CardInfo } from '../components/Elements/CardInfo'
 import { useTheme } from 'styled-components'
 import { PricingCard } from '../components/Elements/PricingCard'
+import { Footer } from '../components/Elements/Footer'
+import { ImageSlider } from '../components/Elements/ImageSlider'
 
 export default function Home() {
 
@@ -145,6 +147,21 @@ export default function Home() {
         oldPrice='499,29'
         firstResourceText='Acesso vip'
       />
+      <ImageSlider 
+        firstImgUrl='/img1.jpg'
+        secondImgUrl='/img2.jpg'
+        thirdImgUrl='/img3.jpg'
+        fourthImgUrl='/img4.jpg'
+        imgWidth={1080}
+        imgHeight={500}
+        imgAlt='PSD'
+        showDots={true}
+        autoplay={true}
+        slidesToScroll={1}
+        slidesToShow={1}
+        speed={250}
+      />
+      <Footer />
     </Container>
   )
 }
