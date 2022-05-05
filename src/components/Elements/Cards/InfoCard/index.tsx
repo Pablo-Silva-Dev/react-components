@@ -7,7 +7,7 @@ import {
     IconsContainer
 } from './styles';
 
-interface CardInfoProps {
+interface InfoCardProps {
     title: string;
     content: string;
     children?: ReactNode;
@@ -16,13 +16,13 @@ interface CardInfoProps {
     className?: string;
 }
 
-export function CardInfo({
+export function InfoCard({
     title,
     content,
     url,
     children,
     style
-}: CardInfoProps) {
+}: InfoCardProps) {
     return (
         <Container
             onClick={() => window.location.href = url}

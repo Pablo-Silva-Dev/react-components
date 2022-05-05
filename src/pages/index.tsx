@@ -18,7 +18,7 @@ import { SubmitButton } from '../components/Forms/SubmitButton'
 import { PrimaryButton } from '../components/Elements/PrimaryButton'
 import { SecondaryButton } from '../components/Elements/SecondaryButton'
 import NextProgressComponent from '../components/Next/NextProgress'
-import { CardInfo } from '../components/Elements/CardInfo'
+import { InfoCard } from '../components/Elements/Cards/InfoCard'
 import { useTheme } from 'styled-components'
 import { PricingCard } from '../components/Elements/PricingCard'
 import { Footer } from '../components/Elements/Footer'
@@ -33,6 +33,8 @@ import { FooterFivethSection } from '../components/Elements/Footer/FooterFivethS
 import { FooterSixthSection } from '../components/Elements/Footer/FooterSixthSection'
 import { RevealFade } from '../components/Animations/Reveal/RevealFade'
 import { CountUpAnimation } from '../components/Animations/Loading/CountUp'
+import { TitleCard } from '../components/Elements/Cards/TitleCard'
+
 
 
 export default function Home() {
@@ -146,12 +148,10 @@ export default function Home() {
         disabled={loading}
         onClick={() => { }}
       />
-      <CardInfo
+      <InfoCard
         title='Soluções para empresas'
         content='skdjfskdhfkjsfdhsdkfj'
       />
-
-
 
       <PricingCard
         title='Assinatura anual'
@@ -162,11 +162,11 @@ export default function Home() {
         firstResourceText='Acesso vip'
       />
 
-      <CountUpAnimation
-        end={300}
-        start={40}
-        duration={4}
-      />
+     <TitleCard 
+      title='Some title'
+      content='Some content'
+     />
+     
 
       <Footer>
         <FooterFirstSection>

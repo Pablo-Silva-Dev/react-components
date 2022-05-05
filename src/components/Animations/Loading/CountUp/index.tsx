@@ -40,11 +40,10 @@ export function CountUpAnimation({
             suffix={typeof (suffix) !== 'undefined' ? suffix : ''}
             onEnd={onEnd}
             onStart={onStart}
-            style={style}
         >
             {({ countUpRef }) => (
                 <>
-                    <span ref={countUpRef} />
+                    <span style={style} ref={countUpRef} />
                 </>
             )}
         </CountUp>
