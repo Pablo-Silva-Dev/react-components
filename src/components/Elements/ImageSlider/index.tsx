@@ -42,8 +42,8 @@ export function ImageSlider({
         dots: showDots,
         infinite: true,
         speed: speed,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: slidesToShow,
+        slidesToScroll: slidesToScroll,
         autoplay,
         acessibility: true
     };

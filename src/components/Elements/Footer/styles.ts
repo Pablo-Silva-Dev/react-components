@@ -6,96 +6,69 @@ export const Container = styled.footer`
   background-color: ${({ theme }) => theme.colors.black};
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: " solutions about questions social developer";
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: "First Second Third Fourth Fiveth Sixth";
   padding: 12px;
   margin-top: 24vh;
+  @media (max-width: 1440px) {
+    grid-template-rows: 2fr;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-areas: 
+    "First Second Third" 
+    "Fourth Fiveth Sixth";
+    grid-gap: 20px;
+  }
   @media (max-width: 720px) {
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-columns: 1fr;
-    grid-template-areas: "solutions" "about" "questions" "social" "developer";
+    grid-template-areas: "First" "Second" "Third" "Fourth" "Fiveth" "Sixth";
     grid-gap: 20px;
   }
 `;
 
-export const DeveloperContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  grid-area: developer;
-`;
-
-export const SolutionsContainer = styled.div`
+export const FirstContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  grid-area: solutions;
+  grid-area: First;
 `;
 
-export const AboutContainer = styled.div`
+export const SecondContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  grid-area: about;
+  grid-area: Second;
 `;
 
-export const QuestionsContainer = styled.div`
+export const ThirdContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  grid-area: questions;
+  grid-area: Third;
 `;
 
-export const SocialContainer = styled.div`
+export const FourthContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  grid-area: social;
-  @media (max-width: 720px) {
-    margin-left: 8%;
-  }
+  grid-area: Fourth;
 `;
 
-export const SocialTitleContainer = styled.div`
-  margin-left: 24px;
-  margin-bottom: 8px;
-  width: 100%;
-`;
-
-export const SocialContentContainer = styled.div`
+export const FivethContainer = styled.div`
   display: flex;
-  width: 100%;
+  flex-direction: column;
   justify-content: flex-start;
-  padding-left: 12px;
+  align-items: center;
+  grid-area: Fiveth;
 `;
-
-export const FooterSubTitle = styled.h3`
-  font-size: 16px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.white};
-  width: 80%;
-  margin: 8px 0;
-`;
-
-export const FooterText = styled.a`
-  font-size: 12px;
-  font-weight: 200;
-  color: ${({ theme }) => theme.colors.element_base};
-  width: 80%;
-  cursor: pointer;
-  margin: 4px;
-`;
-
-export const InfoText = styled.p`
-  font-size: 10px;
-  font-weight: 200;
-  color: ${({ theme }) => theme.colors.white};
-  width: 80%;
-  cursor: pointer;
-  margin: 4px;
+export const SixthContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: Sixth;
 `;

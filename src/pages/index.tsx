@@ -23,6 +23,15 @@ import { useTheme } from 'styled-components'
 import { PricingCard } from '../components/Elements/PricingCard'
 import { Footer } from '../components/Elements/Footer'
 import { ImageSlider } from '../components/Elements/ImageSlider'
+import { FooterLink } from '../components/Elements/Footer/FooterLink'
+import { FooterFirstSection } from '../components/Elements/Footer/FooterFirstSection'
+import { FooterTitle } from '../components/Elements/Footer/FooterTitle'
+import { FooterSecondSection } from '../components/Elements/Footer/FooterSecondSection'
+import { FooterThirdSection } from '../components/Elements/Footer/FooterThirdSection'
+import { FooterFourthSection } from '../components/Elements/Footer/FooterFourthSection'
+import { FooterFivethSection } from '../components/Elements/Footer/FooterFivethSection'
+import { FooterSixthSection } from '../components/Elements/Footer/FooterSixthSection'
+
 
 export default function Home() {
 
@@ -124,18 +133,18 @@ export default function Home() {
         />
       </form>
       <PrimaryButton
-          loading={loading}
-          title='Enviar'
-          disabled={loading}
-          onClick={() =>{}}
+        loading={loading}
+        title='Enviar'
+        disabled={loading}
+        onClick={() => { }}
       />
       <SecondaryButton
-          loading={loading}
-          title='Enviar'
-          disabled={loading}
-          onClick={() =>{}}
+        loading={loading}
+        title='Enviar'
+        disabled={loading}
+        onClick={() => { }}
       />
-      <CardInfo 
+      <CardInfo
         title='Soluções para empresas'
         content='skdjfskdhfkjsfdhsdkfj'
       />
@@ -143,25 +152,67 @@ export default function Home() {
         title='Assinatura anual'
         totalPrice='399,90'
         dealsPrice='299,99'
-        finishPurchase={() => {}}
+        finishPurchase={() => { }}
         oldPrice='499,29'
         firstResourceText='Acesso vip'
       />
-      <ImageSlider 
-        firstImgUrl='/img1.jpg'
-        secondImgUrl='/img2.jpg'
-        thirdImgUrl='/img3.jpg'
-        fourthImgUrl='/img4.jpg'
-        imgWidth={1080}
-        imgHeight={500}
-        imgAlt='PSD'
-        showDots={true}
-        autoplay={true}
-        slidesToScroll={1}
-        slidesToShow={1}
-        speed={250}
-      />
-      <Footer />
+
+      <Footer>
+        <FooterFirstSection>
+          <FooterTitle
+            content='Departamento'
+          />
+          <FooterLink
+            content='Placas de vídeo'
+            url='/'
+          />
+        </FooterFirstSection>
+        <FooterSecondSection>
+          <FooterTitle
+            content='Departamento'
+          />
+          <FooterLink
+            content='Placas de vídeo'
+            url='/'
+          />
+        </FooterSecondSection>
+        <FooterThirdSection>
+          <FooterTitle
+            content='Departamento'
+          />
+          <FooterLink
+            content='Placas de vídeo'
+            url='/'
+          />
+        </FooterThirdSection>
+        <FooterFourthSection>
+          <FooterTitle
+            content='Departamento'
+          />
+          <FooterLink
+            content='Placas de vídeo'
+            url='/'
+          />
+        </FooterFourthSection>
+        <FooterFivethSection>
+          <FooterTitle
+            content='Departamento'
+          />
+          <FooterLink
+            content='Placas de vídeo'
+            url='/'
+          />
+        </FooterFivethSection>
+        <FooterSixthSection>
+          <FooterTitle
+            content='Departamento'
+          />
+          <FooterLink
+            content='Placas de vídeo'
+            url='/'
+          />
+        </FooterSixthSection>
+      </Footer >
     </Container>
   )
 }
