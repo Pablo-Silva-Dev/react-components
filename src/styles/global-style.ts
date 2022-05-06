@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 100%;
         font-family: monospace;
         scroll-behavior: smooth;
+        background: ${(props) => props.theme.colors.element_base};
     }
     body{
         overflow-x: hidden;

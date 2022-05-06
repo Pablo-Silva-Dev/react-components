@@ -9,4 +9,9 @@ export const Container = styled.a`
   word-wrap: break-word;
   cursor: pointer;
   margin: 4px;
+  @media (max-width: 720px){
+    margin: auto;
+    width: 100%;
+    text-align: center;
+  }
 `;

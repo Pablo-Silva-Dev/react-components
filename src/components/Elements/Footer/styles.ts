@@ -8,7 +8,7 @@ export const Container = styled.footer`
   grid-template-rows: 1fr;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas: "First Second Third Fourth Fiveth Sixth";
-  padding: 12px;
+  padding: 32px;
   margin-top: 24vh;
   @media (max-width: 1440px) {
     grid-template-rows: 2fr;
@@ -54,6 +54,7 @@ export const FourthContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   grid-area: Fourth;
+
 `;
 
 export const FivethContainer = styled.div`

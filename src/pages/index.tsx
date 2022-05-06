@@ -34,6 +34,7 @@ import { FooterSixthSection } from '../components/Elements/Footer/FooterSixthSec
 import { RevealFade } from '../components/Animations/Reveal/RevealFade'
 import { CountUpAnimation } from '../components/Animations/Loading/CountUp'
 import { TitleCard } from '../components/Elements/Cards/TitleCard'
+import { ImageCard } from '../components/Elements/Cards/ImageCard'
 
 
 
@@ -162,11 +163,18 @@ export default function Home() {
         firstResourceText='Acesso vip'
       />
 
-     <TitleCard 
-      title='Some title'
-      content='Some content'
-     />
-     
+      <TitleCard
+        title='Some title'
+        content='Some content'
+      />
+
+      <ImageCard
+        imgAlt='PSD'
+        imgUrl='/img1.jpg'
+        imgDescription='sdfsdlifhsdilfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfgfsdfsdfsdfsdf'
+        imgTitle='SJDF'
+      />
+
 
       <Footer>
         <FooterFirstSection>
