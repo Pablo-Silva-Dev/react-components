@@ -12,7 +12,7 @@ const theme = {
     background_primary: "#ffffff",
     background_secondary: "#e0dedc",
     title: "#111111",
-    text: "#222222",
+    text: "#333333",
     element_base: "#e6e6e6",
     success: "#4fd934",
     alert: "#d97934",

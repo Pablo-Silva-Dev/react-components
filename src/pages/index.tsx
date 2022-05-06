@@ -35,6 +35,7 @@ import { RevealFade } from '../components/Animations/Reveal/RevealFade'
 import { CountUpAnimation } from '../components/Animations/Loading/CountUp'
 import { TitleCard } from '../components/Elements/Cards/TitleCard'
 import { ImageCard } from '../components/Elements/Cards/ImageCard'
+import { TestimonialCard } from '../components/Elements/Cards/TestimonialCard'
 
 
 
@@ -165,7 +166,7 @@ export default function Home() {
 
       <TitleCard
         title='Some title'
-        content='Some content'
+        content='Some content sjdfh sjldfhsl dlsfsjdf dfjdf dfjd dfdf dfdf fdf  df dfkdf sdkf dfl'
       />
 
       <ImageCard
@@ -173,6 +174,14 @@ export default function Home() {
         imgUrl='/img1.jpg'
         imgDescription='sdfsdlifhsdilfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfgfsdfsdfsdfsdf'
         imgTitle='SJDF'
+      />
+      <TestimonialCard
+        alt='PSD'
+        personPhotoUrl='/img1.jpg'
+        personRole='Programador'
+        stars={5}
+        testimonial='sdfsdlifhsdilfddfgdfgdfgdfgdfgdfgfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgddfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfgfsdfsdfsdfsdf'
+        personName='SJDF'
       />
 
 
