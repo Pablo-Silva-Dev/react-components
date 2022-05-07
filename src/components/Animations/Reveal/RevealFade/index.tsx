@@ -1,13 +1,13 @@
 import { ReactNode } from 'react';
 import Fade from 'react-reveal/Fade'
 
+
 interface FadeReveal {
     children: ReactNode;
     left?: boolean;
     right?: boolean;
     top?: boolean;
     bottom?: boolean;
-
 }
 
 export function RevealFade({
@@ -15,8 +15,8 @@ export function RevealFade({
     left,
     right,
     top,
-    bottom
- }: FadeReveal) {
+    bottom,
+}: FadeReveal) {
     return (
         <Fade
             left={left}
