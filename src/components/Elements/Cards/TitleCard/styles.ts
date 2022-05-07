@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -31,7 +29,7 @@ export const TitleContainer = styled.div`
   width: 100%;
   height: 40px;
   border-radius: 8px 8px 0 0;
-  z-index: 999;
+  box-shadow: ${({ theme }) => theme.shadows.soft};
 `;
 export const ContentContainer = styled.div`
   display: flex;
@@ -50,15 +48,16 @@ export const Title = styled.h2`
   }
 `;
 
-export const Text = styled.span`
-  font-size: ${({ theme }) => theme.sizes.large};
+export const Text = styled.p`
+  font-size: ${({ theme }) => theme.sizes.medium};
   font-weight: 300;
   color: ${({ theme }) => theme.colors.text};
-  padding: 12px;
-  text-align: justify;
+  padding: 8px;
+  margin: 12px 0;
   word-wrap: break-word;
+  width: 100%;
   @media (max-width: 720px) {
-    font-size: ${({ theme }) => theme.sizes.medium};
+    font-size: ${({ theme }) => theme.sizes.normal};
   }
 `;
 

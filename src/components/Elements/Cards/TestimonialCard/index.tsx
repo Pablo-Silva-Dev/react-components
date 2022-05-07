@@ -39,8 +39,6 @@ export function TestimonialCard({
 
     const generateStars = Array.from(Array(stars).keys())
 
-    console.log(generateStars)
-
     return (
         <Container
             style={style}

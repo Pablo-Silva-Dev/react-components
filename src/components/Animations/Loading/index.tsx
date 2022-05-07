@@ -16,6 +16,7 @@ export function Loading({ size, type }: LoadingProps) {
             color={theme.colors.primary}
             height={size === 'large' ? 72 : size === 'small' ? 40 : 56}
             width={size === 'large' ? 72 : size === 'small' ? 40 : 56}
+            data-testid='loading-id'
         />
     )
 }
