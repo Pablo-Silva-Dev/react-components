@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import { screen, render } from '@testing-library/react'
-import { Loading } from './'
+import { CountUpAnimation } from '.'
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../../../themes/theme';
+import { theme } from '../../../../themes/theme';
 
 interface ChildrenProps {
     children: ReactNode;
@@ -20,14 +20,16 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
 describe('Loading', () => {
     it('should render correctly', () => {
         render(
-            <Loading
+            <CountUpAnimation
+                start={100}
+                end={1000}
             />,
             {
                 wrapper: StyledProvider
             }
         )
 
-        const component = screen.getByTestId('loading-id')
+        const component = screen.getByText(100)
 
         expect(component).toBeInTheDocument()
 

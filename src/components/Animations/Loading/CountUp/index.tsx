@@ -40,6 +40,7 @@ export function CountUpAnimation({
             suffix={typeof (suffix) !== 'undefined' ? suffix : ''}
             onEnd={onEnd}
             onStart={onStart}
+            data-testid='countup-id'
         >
             {({ countUpRef }) => (
                 <>
