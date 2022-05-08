@@ -25,7 +25,7 @@ describe('TestimonialCard', () => {
                 personName='testimonialcard-person-name'
                 testimonial='tertimonialcard-testimonial'
                 stars={4}
-                personPhotoUrl='testimonialcard-person-photo-url'
+                personPhotoUrl='/testimonialcard-person-photo-url'
                 data-testid='testimonialcard-id'
             />, {
             wrapper: StyledProvider
