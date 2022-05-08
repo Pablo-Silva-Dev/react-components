@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../../../themes/theme'
-import { ImageCard } from './'
+import { InfoCard } from '.'
 
 interface ChildrenProps {
     children: ReactNode
@@ -17,19 +17,19 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('ImageCard', () => {
+describe('InfoCard', () => {
     it('should render correctly', () => {
         render(
-            <ImageCard
-                imgAlt='imagecard-alt'
-                imgUrl='/'
-                data-testid='imagecard-id'
+            <InfoCard
+                content='infocard content'
+                title='infocard title'
+                data-testid='infocard-id'
             />, {
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByTestId('imagecard-id')
+        const component = screen.getByTestId('infocard-id')
 
         expect(component).toBeInTheDocument()
 

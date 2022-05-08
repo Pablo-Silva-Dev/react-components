@@ -27,6 +27,7 @@ export function InfoCard({
         <Container
             onClick={() => window.location.href = url}
             style={style}
+            data-testid='infocard-id'
         >
             <TitleCard>{title}</TitleCard>
             <TextCard>{content}</TextCard>
