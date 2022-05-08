@@ -19,11 +19,12 @@ export function PasswordInput({
     ...rest
 }: PasswordInputProps) {
     return (
-        <Container>
+        <Container
+        >
             {showsIcon &&
                 <IconContainer
-                    onClick={togglePassword}
-                    style={iconStyle}
+                onClick={togglePassword}
+                style={iconStyle}
                 >
                     {passwordIsVisible ? <FiEye /> : <FiEyeOff />}
                 </IconContainer>
@@ -31,6 +32,7 @@ export function PasswordInput({
             <Input
                 type={passwordIsVisible ? 'text' : 'password'}
                 required
+                data-testid='passwordinput-id'
                 {...rest}
             />
         </Container>
