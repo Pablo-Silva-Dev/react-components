@@ -27,6 +27,7 @@ export function ImageCard({
                 alt={imgAlt}
                 width={320}
                 height={320}
+                data-testid='imagecard-id'
             />
 
             {imgTitle &&
