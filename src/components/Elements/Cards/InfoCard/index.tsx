@@ -11,7 +11,7 @@ interface InfoCardProps {
     title: string;
     content: string;
     children?: ReactNode;
-    url?: string;
+    openUrl?: (url: string) => void;
     style?: CSSProperties;
     className?: string;
 }
@@ -19,13 +19,13 @@ interface InfoCardProps {
 export function InfoCard({
     title,
     content,
-    url,
+    openUrl,
     children,
     style
 }: InfoCardProps) {
     return (
         <Container
-            onClick={() => window.location.href = url}
+            onClick={() => openUrl('url')}
             style={style}
             data-testid='infocard-id'
         >

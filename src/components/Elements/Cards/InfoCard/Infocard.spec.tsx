@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../../../themes/theme'
@@ -33,5 +33,25 @@ describe('InfoCard', () => {
 
         expect(component).toBeInTheDocument()
 
+    })
+
+    it('should call function to open url', () => {
+
+        const fn = jest.fn()
+
+        render(
+            <InfoCard
+                content='infocard content'
+                title='infocard title'
+                data-testid='infocard-id'
+                openUrl={fn}
+            />, {
+            wrapper: StyledProvider
+        }
+        )
+
+        const component = screen.getByTestId('infocard-id')
+        fireEvent.click(component)
+        expect(fn).toBeCalled()
     })
 })

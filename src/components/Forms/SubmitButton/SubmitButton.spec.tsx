@@ -16,11 +16,11 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
         </ThemeProvider>
     )
 }
-  
+
 
 describe('SubmitButton', () => {
     it('should render correctly', () => {
-        const { debug } = render(
+        render(
             <SubmitButton
                 disabled={false}
                 loading={false}
@@ -35,7 +35,7 @@ describe('SubmitButton', () => {
     })
 
     it('should render correctly loading animation while loading', () => {
-        const { debug } = render(
+        render(
             <SubmitButton
                 disabled={false}
                 loading
