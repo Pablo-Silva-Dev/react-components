@@ -18,7 +18,7 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
 
 describe('FooterTitle', () => {
     it('should render correctly', () => {
-        const { debug } = render(
+         render(
             <FooterTitle
                 content='footer-title-content'
             />, {

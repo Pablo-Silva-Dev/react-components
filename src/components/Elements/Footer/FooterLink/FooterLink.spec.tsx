@@ -18,7 +18,7 @@ const StyledProvider : React.FC = ({children} : ChildrenProps) => {
 
 describe('FooterLink', () => {
     it('should render correctly', () => {
-      const {debug} =  render(
+      render(
         <FooterLink
             content='footer-link-content'
             url='/'
