@@ -31,11 +31,11 @@ describe('PasswordInput', () => {
         )
 
         const component = screen.getByTestId('passwordinput-id')
-
         expect(component).toBeInTheDocument()
 
     })
-    it('should be as password type when not visible', () => {
+
+    it('should be as password type when input is not visible', () => {
         render(
             <PasswordInput
                 showsIcon
@@ -48,7 +48,6 @@ describe('PasswordInput', () => {
         )
 
         const component = screen.getByTestId('passwordinput-id')
-
         expect(component).toHaveAttribute('type', 'password')
 
     })

@@ -21,6 +21,7 @@ export function SubmitButton({
         <Container
             type='submit'
             disabled={disabled}
+            data-testid='submit-button-test-id'
         >
             {loading ?
                 <ReactLoading
@@ -28,6 +29,7 @@ export function SubmitButton({
                     color={theme.colors.white}
                     height={40}
                     width={40}
+                    data-testid='submit-button-children-test-id'
                 />
                 :
                 title
