@@ -37,7 +37,8 @@ import { TitleCard } from '../components/Elements/Cards/TitleCard'
 import { ImageCard } from '../components/Elements/Cards/ImageCard'
 import { TestimonialCard } from '../components/Elements/Cards/TestimonialCard'
 import { GroupInfo } from '../components/Elements/GroupInfo'
-import { MdConnectWithoutContact} from 'react-icons/md'
+import { MdConnectWithoutContact } from 'react-icons/md'
+import { NewsletterCard } from '../components/Elements/Cards/NewsletterCard'
 
 
 
@@ -186,13 +187,20 @@ export default function Home() {
         personName='SJDF'
       />
 
-     <GroupInfo
-      title='Fast'
-      content='Most fast in the country'
-     >
-       <MdConnectWithoutContact size={32} color='red'/>
-     </GroupInfo>
+      <GroupInfo
+        title='Fast'
+        content='Most fast in the country'
+      >
+        <MdConnectWithoutContact size={32} color='red' />
+      </GroupInfo>
 
+      <NewsletterCard
+        title='Receive our emails'
+        namePlaceholder='name'
+        emailPlaceholder='email'
+        subtitle='Fill the form to get access'
+        submit={async () => { }}
+      />
 
       <Footer>
         <FooterFirstSection>

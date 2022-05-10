@@ -5,12 +5,12 @@ import {
     TitleContainer,
     Text,
     Title
- } from './styles';
+} from './styles';
 
 interface GroupInfoProps {
     children: ReactNode;
     title: string;
-    content: string;
+    content?: string;
     style?: CSSProperties;
     titleStyle?: CSSProperties;
     contentStyle?: CSSProperties;
@@ -35,13 +35,15 @@ export function GroupInfo({
                 >{title}
                 </Title>
             </TitleContainer>
-            <ContentContainer>
-                <Text
-                    style={contentStyle}
-                >
-                    {content}
-                </Text>
-            </ContentContainer>
+            {content &&
+                <ContentContainer>
+                    <Text
+                        style={contentStyle}
+                    >
+                        {content}
+                    </Text>
+                </ContentContainer>
+            }
         </Container>
     )
 }
