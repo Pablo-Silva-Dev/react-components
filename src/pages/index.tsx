@@ -36,6 +36,8 @@ import { CountUpAnimation } from '../components/Animations/Loading/CountUp'
 import { TitleCard } from '../components/Elements/Cards/TitleCard'
 import { ImageCard } from '../components/Elements/Cards/ImageCard'
 import { TestimonialCard } from '../components/Elements/Cards/TestimonialCard'
+import { GroupInfo } from '../components/Elements/GroupInfo'
+import { MdConnectWithoutContact} from 'react-icons/md'
 
 
 
@@ -183,6 +185,13 @@ export default function Home() {
         testimonial='sdfsdlifhsdilfddfgdfgdfgdfgdfgdfgfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgddfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfgfsdfsdfsdfsdf'
         personName='SJDF'
       />
+
+     <GroupInfo
+      title='Fast'
+      content='Most fast in the country'
+     >
+       <MdConnectWithoutContact size={32} color='red'/>
+     </GroupInfo>
 
 
       <Footer>
