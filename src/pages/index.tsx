@@ -41,6 +41,8 @@ import { MdConnectWithoutContact } from 'react-icons/md'
 import { NewsletterCard } from '../components/Elements/Cards/NewsletterCard'
 import { GoogleMap } from '../components/Elements/GoogleMap'
 import { VideoModal } from '../components/Modals/VideoModal'
+import Collapsible from 'react-collapsible'
+import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo'
 
 
 
@@ -226,6 +228,19 @@ export default function Home() {
         isOpen={videoModalOpen}
         addressUrl='https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=0'
         onRequestClose={closeVideoModal}
+      />
+
+      <CollapsibleInfo
+        title='Até quando terei acesso ao curso?'
+        content='O acesso é vitalício'
+      />
+      <CollapsibleInfo
+        title='Até quando terei acesso ao curso?'
+        content='O acesso é vitalício'
+      />
+      <CollapsibleInfo
+        title='Até quando terei acesso ao curso?'
+        content='O acesso é vitalício'
       />
 
 
