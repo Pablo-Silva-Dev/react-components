@@ -13,7 +13,7 @@ export const Container = styled.div`
       width: 640px;
   }
   @media(max-width: 720px){
-      width: 80%;
+      width: 92%;
       margin: 0 auto;
       align-items: center;
   }

@@ -24,7 +24,7 @@ export const Container = styled.div`
     width: 400px;
   }
   @media (max-width: 480px) {
-    width: 80%;
+    width: 92%;
   }
 `;
 
@@ -32,7 +32,7 @@ export const TitleCard = styled.h2`
   font-size: ${({ theme }) => theme.sizes.xlarge};
   font-weight: 600;
   color: ${({ theme }) => theme.colors.white};
-  width: 80%;
+  width: 92%;
   margin: 0 auto;
   text-align: center;
   @media (max-width: 1080px) {
@@ -47,7 +47,7 @@ export const TextCard = styled.span`
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 200;
   color: ${({ theme }) => theme.colors.element_base};
-  width: 80%;
+  width: 92%;
   text-align: center;
   @media (max-width: 1080px) {
     width: 50%;

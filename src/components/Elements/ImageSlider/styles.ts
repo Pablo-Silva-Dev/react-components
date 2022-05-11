@@ -18,7 +18,7 @@ export const SlickContainer = styled.div`
     align-self: center;
     margin: auto;
     @media (max-width: 720px) {
-      width: 80%;
+      width: 92%;
     }
   }
 `;

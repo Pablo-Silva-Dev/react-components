@@ -16,7 +16,7 @@ export const Container = styled.div`
     margin: 1.2rem auto;
   }
   @media(max-width: 720px){
-    width: 80%;
+    width: 92%;
   }
 `;
 
@@ -40,7 +40,7 @@ export const Title = styled.h2`
   font-size: ${({ theme }) => theme.sizes.xlarge};
   font-weight: 600;
   color: ${({ theme }) => theme.colors.white};
-  width: 80%;
+  width: 92%;
   margin: .4rem auto;
   text-align: center;
   @media (max-width: 1080px) {

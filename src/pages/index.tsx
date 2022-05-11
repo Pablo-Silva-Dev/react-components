@@ -39,6 +39,7 @@ import { TestimonialCard } from '../components/Elements/Cards/TestimonialCard'
 import { GroupInfo } from '../components/Elements/GroupInfo'
 import { MdConnectWithoutContact } from 'react-icons/md'
 import { NewsletterCard } from '../components/Elements/Cards/NewsletterCard'
+import { GoogleMap } from '../components/Elements/GoogleMap'
 
 
 
@@ -201,6 +202,12 @@ export default function Home() {
         subtitle='Fill the form to get access'
         submit={async () => { }}
       />
+
+
+     <GoogleMap
+      addressUrl='https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed'
+      size='medium'
+     />
 
       <Footer>
         <FooterFirstSection>

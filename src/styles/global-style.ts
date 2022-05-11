@@ -50,7 +50,7 @@ export const GlobalStyle = createGlobalStyle`
             color: ${(props) => props.theme.colors.black}
         }
         @media(max-width: 720px){
-            width: 80%;
+            width: 92%;
         }
   }
   .react-modal-overlay{
