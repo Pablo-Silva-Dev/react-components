@@ -40,6 +40,7 @@ import { GroupInfo } from '../components/Elements/GroupInfo'
 import { MdConnectWithoutContact } from 'react-icons/md'
 import { NewsletterCard } from '../components/Elements/Cards/NewsletterCard'
 import { GoogleMap } from '../components/Elements/GoogleMap'
+import { VideoModal } from '../components/Modals/VideoModal'
 
 
 
@@ -51,12 +52,19 @@ export default function Home() {
   const [visiblePassword, setVisiblePassword] = useState(true)
   const [loading, setLoading] = useState(false)
   const [input, setInput] = useState('fdfs')
+  const [videoModalOpen, setVideoModalOpen] = useState(false)
 
   function openResponsiveMenu() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
   }
   function closeResponsiveMenu() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
+  }
+  function openVideoModal() {
+    setVideoModalOpen(true)
+  }
+  function closeVideoModal() {
+    setVideoModalOpen(false)
   }
 
   async function sendData(e: FormEvent) {
@@ -204,10 +212,23 @@ export default function Home() {
       />
 
 
-     <GoogleMap
-      addressUrl='https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed'
-      size='medium'
-     />
+      <GoogleMap
+        addressUrl='https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed'
+        size='medium'
+      />
+
+      <PrimaryButton
+        title='Assistir vídeo'
+        onClick={openVideoModal}
+      />
+
+      <VideoModal
+        isOpen={videoModalOpen}
+        addressUrl='https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=0'
+        onRequestClose={closeVideoModal}
+      />
+
+
 
       <Footer>
         <FooterFirstSection>
