@@ -43,6 +43,8 @@ import { GoogleMap } from '../components/Elements/GoogleMap'
 import { VideoModal } from '../components/Modals/VideoModal'
 import Collapsible from 'react-collapsible'
 import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo'
+import { GradientText } from '../components/Typography/GradientText'
+
 
 
 
@@ -242,8 +244,20 @@ export default function Home() {
         title='Até quando terei acesso ao curso?'
         content='O acesso é vitalício'
       />
+      <div
+        style={{
+          background: '#000000'
+        }}
+      >
+        <GradientText
+          content='Some content here'
+          direction='right-to-left'
+          primaryColor='red'
+          secondaryColor='yellow'
+          textType='text'
+        />
 
-
+      </div>
 
       <Footer>
         <FooterFirstSection>

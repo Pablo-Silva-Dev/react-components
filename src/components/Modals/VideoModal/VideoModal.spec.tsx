@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../../themes/theme'
-import { GoogleMap } from './'
+import { VideoModal } from './'
 
 interface ChildrenProps {
     children: ReactNode
@@ -16,17 +16,19 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('GoogleMap', () => {
+describe('VideoModal', () => {
     it('should render correctly', () => {
         render(
-            <GoogleMap
+            <VideoModal
                 addressUrl='/'
-                data-testid='googlemap-id'
-            />, {
-            wrapper: StyledProvider
-        }
+                isOpen
+                onRequestClose={() => { }}
+            />,
+            {
+                wrapper: StyledProvider
+            }
         )
-        const component = screen.getByTestId('googlemap-id')
+        const component = screen.getByRole('dialog')
         expect(component).toBeInTheDocument()
     })
 })

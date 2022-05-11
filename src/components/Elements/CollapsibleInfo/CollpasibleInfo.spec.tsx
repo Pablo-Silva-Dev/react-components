@@ -18,7 +18,7 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
 
 describe('CollapsibleInfo', () => {
     it('should render correctly', () => {
-        const { debug } = render(
+        render(
             <CollapsibleInfo
                 title='collapsibleinfo-title'
                 content='collapsibleinfo-content'
