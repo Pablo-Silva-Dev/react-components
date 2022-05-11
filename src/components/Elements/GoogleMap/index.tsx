@@ -11,6 +11,7 @@ return (
   <Container
     src={addressUrl}
     size={size}
+    data-testid='googlemap-id'
   />
 )
 }
