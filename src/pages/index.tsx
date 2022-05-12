@@ -44,7 +44,8 @@ import { VideoModal } from '../components/Modals/VideoModal'
 import Collapsible from 'react-collapsible'
 import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo'
 import { GradientText } from '../components/Typography/GradientText'
-import { ProductCard } from '../components/Elements/ProductCard'
+import { ProductCard } from '../components/Elements/Cards/ProductCard'
+import { ContactCard } from '../components/Elements/Cards/ContactCard'
 
 
 
@@ -138,19 +139,26 @@ export default function Home() {
         personName='Pablo Silva'
       />
 
-      <ProductCard 
-        addToCart={async () => {}}
-        addToFavorites={async () => {}}
-        removeFromFavorites={async () => {}}
+      <ProductCard
+        addToCart={async () => { }}
+        addToFavorites={async () => { }}
+        removeFromFavorites={async () => { }}
         imgUrl='https://images.kabum.com.br/produtos/fotos/113405/monitor-lg-led-25-full-hd-ips-hdmi-1ms-25um58-g_1591183670_gg.jpg'
         imgAlt='PSD'
         title='Monitor Gamer LG 25 IPS, Ultra Wide, 75 Hz, Full HD, 99% sRGB, HDMI, VESA - 25UM58-G'
         price='R$1059,99'
         ratings={4.5}
         priceOnCredit='Ou até 12x de R$89,90 no cartão'
-        share={async () => {}}
+        share={async () => { }}
         isFavorited={favorited}
         isOnCard={onCart}
+      />
+      <ContactCard
+        title="Informações de contato"
+        phone="31 9 85187963"
+        email="suportepablosilvadev@gmail.com"
+        address='Rua Sebastitão de Abreu, 216 Loanda'
+        whatsappConversationUrl="http://api.whatsapp.com/send?phone=5531985187963"
       />
 
 

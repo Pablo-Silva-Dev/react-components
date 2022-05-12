@@ -1,0 +1,78 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.white};
+  width: 320px;
+  min-height: 240px;
+  border-radius: 4px;
+  box-shadow: ${({ theme }) => theme.shadows.soft};
+  padding: 16px;
+  margin: 8px;
+  position: relative;
+`;
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12px auto;
+  padding: 8px;
+  @media (max-width: 720px) {
+    width: 80%;
+    font-size: ${({ theme }) => theme.sizes.large}
+  }
+  `;
+
+export const Title = styled.h3`
+  font-size: ${({ theme }) => theme.sizes.xlarge}
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.black};
+  width: 80%;
+  text-align: center;
+  @media (max-width: 1080px) {
+    width: 80%;
+    font-size: ${({ theme }) => theme.sizes.xlarge}
+  }
+  @media (max-width: 720px) {
+    width: 80%;
+    font-size: ${({ theme }) => theme.sizes.large}
+  }
+  
+  `;
+
+export const Text = styled.span`
+  margin-left: 12px;
+  font-weight: 300;
+  color: ${({ theme }) => theme.colors.text};
+  text-align: center;
+  font-size: ${({ theme }) => theme.sizes.large};
+  @media (max-width: 1080px) {
+    margin-top: 12px;
+  }
+  @media (max-width: 720px) {
+    text-align: center;
+    font-size: ${({ theme }) => theme.sizes.medium};
+  }
+  `;
+
+export const WhatsappButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 56px;
+  border-radius: 4px;
+  background-color: ${({ theme }) => theme.colors.success};
+  color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.sizes.large};
+  font-weight: 500;
+  @media (max-width: 720px) {
+    width: 80%;
+    text-align: center;
+    font-size: ${({ theme }) => theme.sizes.normal}
+  }
+`;
