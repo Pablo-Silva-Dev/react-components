@@ -44,6 +44,7 @@ import { VideoModal } from '../components/Modals/VideoModal'
 import Collapsible from 'react-collapsible'
 import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo'
 import { GradientText } from '../components/Typography/GradientText'
+import { ProductCard } from '../components/Elements/ProductCard'
 
 
 
@@ -53,10 +54,8 @@ export default function Home() {
   const theme = useTheme()
 
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
-  const [visiblePassword, setVisiblePassword] = useState(true)
-  const [loading, setLoading] = useState(false)
-  const [input, setInput] = useState('fdfs')
-  const [videoModalOpen, setVideoModalOpen] = useState(false)
+  const [favorited, setFavorited] = useState(true)
+  const [onCart, setOnCart] = useState(false)
 
   function openResponsiveMenu() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
@@ -64,23 +63,8 @@ export default function Home() {
   function closeResponsiveMenu() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
   }
-  function openVideoModal() {
-    setVideoModalOpen(true)
-  }
-  function closeVideoModal() {
-    setVideoModalOpen(false)
-  }
 
-  async function sendData(e: FormEvent) {
 
-    e.preventDefault()
-    setLoading(true)
-
-    const timing = await setTimeout(() => {
-      setLoading(false)
-    }, 1000)
-    return () => clearTimeout(timing)
-  }
 
   return (
     <Container>
@@ -120,52 +104,6 @@ export default function Home() {
           closeResponsiveMenu={closeResponsiveMenu}
         />
       }
-      <Title
-        content='sdfsdf'
-      />
-      <SubTitle
-        content='sdfsdf'
-      />
-      <Text
-        content='sdfsdf'
-      />
-      <TextInput
-        value={input}
-        icon={<FiAlertCircle />}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
-      />
-      <EmailInput
-        value={input}
-        showsIcon
-        onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
-      />
-      <PasswordInput
-        value={input}
-        showsIcon
-        onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
-        togglePassword={() => setVisiblePassword(!visiblePassword)}
-        passwordIsVisible={visiblePassword}
-      />
-      <form onSubmit={sendData}>
-
-        <SubmitButton
-          loading={loading}
-          title='Enviar'
-          disabled={loading}
-        />
-      </form>
-      <PrimaryButton
-        loading={loading}
-        title='Enviar'
-        disabled={loading}
-        onClick={() => { }}
-      />
-      <SecondaryButton
-        loading={loading}
-        title='Enviar'
-        disabled={loading}
-        onClick={() => { }}
-      />
       <InfoCard
         title='Soluções para empresas'
         content='skdjfskdhfkjsfdhsdkfj'
@@ -197,67 +135,24 @@ export default function Home() {
         personRole='Programador'
         stars={5}
         testimonial='sdfsdlifhsdilfddfgdfgdfgdfgdfgdfgfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgddfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfgfsdfsdfsdfsdf'
-        personName='SJDF'
+        personName='Pablo Silva'
       />
 
-      <GroupInfo
-        title='Fast'
-        content='Most fast in the country'
-      >
-        <MdConnectWithoutContact size={32} color='red' />
-      </GroupInfo>
-
-      <NewsletterCard
-        title='Receive our emails'
-        namePlaceholder='name'
-        emailPlaceholder='email'
-        subtitle='Fill the form to get access'
-        submit={async () => { }}
+      <ProductCard 
+        addToCart={async () => {}}
+        addToFavorites={async () => {}}
+        removeFromFavorites={async () => {}}
+        imgUrl='https://images.kabum.com.br/produtos/fotos/113405/monitor-lg-led-25-full-hd-ips-hdmi-1ms-25um58-g_1591183670_gg.jpg'
+        imgAlt='PSD'
+        title='Monitor Gamer LG 25 IPS, Ultra Wide, 75 Hz, Full HD, 99% sRGB, HDMI, VESA - 25UM58-G'
+        price='R$1059,99'
+        ratings={4.5}
+        priceOnCredit='Ou até 12x de R$89,90 no cartão'
+        share={async () => {}}
+        isFavorited={favorited}
+        isOnCard={onCart}
       />
 
-
-      <GoogleMap
-        addressUrl='https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed'
-        size='medium'
-      />
-
-      <PrimaryButton
-        title='Assistir vídeo'
-        onClick={openVideoModal}
-      />
-
-      <VideoModal
-        isOpen={videoModalOpen}
-        addressUrl='https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=0'
-        onRequestClose={closeVideoModal}
-      />
-
-      <CollapsibleInfo
-        title='Até quando terei acesso ao curso?'
-        content='O acesso é vitalício'
-      />
-      <CollapsibleInfo
-        title='Até quando terei acesso ao curso?'
-        content='O acesso é vitalício'
-      />
-      <CollapsibleInfo
-        title='Até quando terei acesso ao curso?'
-        content='O acesso é vitalício'
-      />
-      <div
-        style={{
-          background: '#000000'
-        }}
-      >
-        <GradientText
-          content='Some content here'
-          direction='right-to-left'
-          primaryColor='red'
-          secondaryColor='yellow'
-          textType='text'
-        />
-
-      </div>
 
       <Footer>
         <FooterFirstSection>

@@ -37,7 +37,7 @@ export function TestimonialCard({
 }: TestimonialCardProps) {
 
 
-    const generateStars = Array.from(Array(stars).keys())
+    const generateStars  : number[] = Array.from(Array(stars).keys())
 
     return (
         <Container
