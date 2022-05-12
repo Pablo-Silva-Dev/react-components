@@ -46,6 +46,8 @@ import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo'
 import { GradientText } from '../components/Typography/GradientText'
 import { ProductCard } from '../components/Elements/Cards/ProductCard'
 import { ContactCard } from '../components/Elements/Cards/ContactCard'
+import { Switcher } from '../components/Forms/Switch'
+import { CheckBox } from '../components/Forms/CheckBox'
 
 
 
@@ -57,12 +59,17 @@ export default function Home() {
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
   const [favorited, setFavorited] = useState(true)
   const [onCart, setOnCart] = useState(false)
+  const [check, setCheck] = useState(false)
 
   function openResponsiveMenu() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
   }
   function closeResponsiveMenu() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
+  }
+
+  function toggleCheck(){
+    setCheck(!check)
   }
 
 
@@ -161,6 +168,10 @@ export default function Home() {
         whatsappConversationUrl="http://api.whatsapp.com/send?phone=5531985187963"
       />
 
+      <CheckBox
+        checked={check}
+        onChange={toggleCheck}
+      />
 
       <Footer>
         <FooterFirstSection>
