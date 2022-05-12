@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import Image from 'next/image'
-import { MdOutlineStarPurple500 } from 'react-icons/md'
+import StarRatings from 'react-star-ratings'
 
 import {
     Container,
@@ -16,7 +16,7 @@ interface TestimonialCardProps {
     personName: string;
     personRole?: string;
     testimonial: string;
-    stars: 4 | 5;
+    ratings: 1 | 2 | 3 | 4 | 5 | 1.5 | 2.5 | 3.5 | 4.5 | 5.5;
     style?: CSSProperties;
     textStyle?: CSSProperties;
     titleStyle?: CSSProperties;
@@ -29,15 +29,12 @@ export function TestimonialCard({
     personName,
     personRole,
     testimonial,
-    stars,
+    ratings,
     style,
     textStyle,
     titleStyle,
     roleTextStyle
 }: TestimonialCardProps) {
-
-
-    const generateStars  : number[] = Array.from(Array(stars).keys())
 
     return (
         <Container
@@ -64,9 +61,14 @@ export function TestimonialCard({
             </Text>
 
             <StarsContainer>
-                {generateStars.map(star => (
-                    <MdOutlineStarPurple500 color='#ffc400' size={20} key={star} />
-                ))}
+                <StarRatings
+                    rating={ratings}
+                    starRatedColor="#ffc400"
+                    numberOfStars={5}
+                    starDimension="20px"
+                    starSpacing="2px"
+                    name='rating'
+                />
             </StarsContainer>
 
             <Title
@@ -81,7 +83,7 @@ export function TestimonialCard({
             {
                 personRole &&
                 <SubTitle
-                style={roleTextStyle}
+                    style={roleTextStyle}
                 >
                     {
                         personRole?.length > 32 ?
