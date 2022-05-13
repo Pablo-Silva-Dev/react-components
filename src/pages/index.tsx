@@ -48,6 +48,7 @@ import { ProductCard } from '../components/Elements/Cards/ProductCard'
 import { ContactCard } from '../components/Elements/Cards/ContactCard'
 import { Switcher } from '../components/Forms/Switch'
 import { CheckBox } from '../components/Forms/CheckBox'
+import { Avatar } from '../components/Elements/Avatar'
 
 
 
@@ -171,6 +172,12 @@ export default function Home() {
       <CheckBox
         checked={check}
         onChange={toggleCheck}
+      />
+
+      <Avatar 
+          imageUrl='https://avatars.githubusercontent.com/u/54117323?v=4'
+          imgAlt='PSD'
+          size='large'
       />
 
       <Footer>
