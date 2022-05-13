@@ -49,6 +49,7 @@ import { ContactCard } from '../components/Elements/Cards/ContactCard'
 import { Switcher } from '../components/Forms/Switch'
 import { CheckBox } from '../components/Forms/CheckBox'
 import { Avatar } from '../components/Elements/Avatar'
+import { StarsRating, StarsRatingCard } from '../components/Elements/StarsRating'
 
 
 
@@ -69,7 +70,7 @@ export default function Home() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
   }
 
-  function toggleCheck(){
+  function toggleCheck() {
     setCheck(!check)
   }
 
@@ -174,10 +175,18 @@ export default function Home() {
         onChange={toggleCheck}
       />
 
-      <Avatar 
-          imageUrl='https://avatars.githubusercontent.com/u/54117323?v=4'
-          imgAlt='PSD'
-          size='large'
+      <Avatar
+        imageUrl='https://avatars.githubusercontent.com/u/54117323?v=4'
+        imgAlt='PSD'
+        size='large'
+      />
+
+
+      <StarsRatingCard
+        title='Avaliar aula'
+        rating={4}
+        avaliationLabels={['Very bad', 'Bad', 'Good', 'Very good', 'Excelent']}
+      
       />
 
       <Footer>

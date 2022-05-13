@@ -9,26 +9,6 @@ interface AvatarProps {
     style?: CSSProperties;
 }
 
-/* export const Container = styled.div<AvatarProps>`
-  border-radius: 50%;
-  width: ${({ size }) =>
-    size === "tiny"
-      ? 40
-      : size === "small"
-      ? 64
-      : size === "large"
-      ? 112
-      : 88};
-  height: ${({ size }) =>
-    size === "tiny"
-      ? 40
-      : size === "small"
-      ? 64
-      : size === "large"
-      ? 112
-      : 88};
-`; */
-
 export function Avatar({ imageUrl, imgAlt, size, style }: AvatarProps) {
     return (
         <Container
