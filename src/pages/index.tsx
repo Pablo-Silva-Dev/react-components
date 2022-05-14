@@ -49,7 +49,7 @@ import { ContactCard } from '../components/Elements/Cards/ContactCard'
 import { Switcher } from '../components/Forms/Switch'
 import { CheckBox } from '../components/Forms/CheckBox'
 import { Avatar } from '../components/Elements/Avatar'
-import { StarsRating, StarsRatingCard } from '../components/Elements/StarsRating'
+import { StarsRatingCard } from '../components/Elements/Cards/StarsRatingCard'
 
 
 
@@ -183,10 +183,10 @@ export default function Home() {
 
 
       <StarsRatingCard
+        onClick={() => { }}
         title='Avaliar aula'
         rating={4}
         avaliationLabels={['Very bad', 'Bad', 'Good', 'Very good', 'Excelent']}
-      
       />
 
       <Footer>
