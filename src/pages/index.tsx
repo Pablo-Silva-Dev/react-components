@@ -50,6 +50,7 @@ import { Switcher } from '../components/Forms/Switch'
 import { CheckBox } from '../components/Forms/CheckBox'
 import { Avatar } from '../components/Elements/Avatar'
 import { StarsRatingCard } from '../components/Elements/Cards/StarsRatingCard'
+import { ProfileCard } from '../components/Elements/Cards/ProfileCard'
 
 
 
@@ -174,19 +175,25 @@ export default function Home() {
         checked={check}
         onChange={toggleCheck}
       />
-
-      <Avatar
-        imageUrl='https://avatars.githubusercontent.com/u/54117323?v=4'
-        imgAlt='PSD'
-        size='large'
-      />
-
-
       <StarsRatingCard
         onClick={() => { }}
         title='Avaliar aula'
         rating={4}
         avaliationLabels={['Very bad', 'Bad', 'Good', 'Very good', 'Excelent']}
+      />
+
+      <ProfileCard
+        imgUrl='https://avatars.githubusercontent.com/u/54117323?v=4'
+        imgAlt='sdjlfh'
+        bio='ilfddfgdfgdfgdfgdfgdfgfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgddfgdfgdfgdfxgdfddfgdfgdfgdfgdfg'
+        title='Pablo Silva'
+        githubUrl='/'
+        instagramUrl='/'
+        linkedinUrl='/'
+        facebookUrl='/'
+        twitterUrl='/'
+        youtubeUrl='/'
+
       />
 
       <Footer>
