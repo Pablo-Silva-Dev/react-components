@@ -1,5 +1,7 @@
 import { ChangeEvent, FormEvent } from 'react'
 
+import * as AnimationCoding from '../../public/react_animation.json'
+
 import Head from 'next/head'
 import { SubTitle } from '../components/Typography/SubTitle'
 import { Title } from '../components/Typography/Title'
@@ -31,8 +33,8 @@ import { FooterThirdSection } from '../components/Elements/Footer/FooterThirdSec
 import { FooterFourthSection } from '../components/Elements/Footer/FooterFourthSection'
 import { FooterFivethSection } from '../components/Elements/Footer/FooterFivethSection'
 import { FooterSixthSection } from '../components/Elements/Footer/FooterSixthSection'
-import { RevealFade } from '../components/Animations/Reveal/RevealFade'
-import { CountUpAnimation } from '../components/Animations/Loading/CountUp'
+import { RevealFade } from '../components/Animations/RevealFade'
+import { CountUpAnimation } from '../components/Animations/CountUp'
 import { TitleCard } from '../components/Elements/Cards/TitleCard'
 import { ImageCard } from '../components/Elements/Cards/ImageCard'
 import { TestimonialCard } from '../components/Elements/Cards/TestimonialCard'
@@ -51,6 +53,7 @@ import { CheckBox } from '../components/Forms/CheckBox'
 import { Avatar } from '../components/Elements/Avatar'
 import { StarsRatingCard } from '../components/Elements/Cards/StarsRatingCard'
 import { ProfileCard } from '../components/Elements/Cards/ProfileCard'
+import { LottieAnimation } from '../components/Animations/Lottie'
 
 
 
@@ -182,6 +185,7 @@ export default function Home() {
         avaliationLabels={['Very bad', 'Bad', 'Good', 'Very good', 'Excelent']}
       />
 
+
       <ProfileCard
         imgUrl='https://avatars.githubusercontent.com/u/54117323?v=4'
         imgAlt='sdjlfh'
@@ -195,6 +199,12 @@ export default function Home() {
         youtubeUrl='/'
 
       />
+
+          <LottieAnimation
+            animation={AnimationCoding}
+            height={300}
+            width={300}
+          />
 
       <Footer>
         <FooterFirstSection>

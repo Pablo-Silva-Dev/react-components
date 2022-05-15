@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { screen, render } from '@testing-library/react'
 import { CountUpAnimation } from '.'
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../../../../themes/theme';
+import { theme } from '../../../themes/theme';
 
 interface ChildrenProps {
     children: ReactNode;

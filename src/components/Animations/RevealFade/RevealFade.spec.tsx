@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react'
-import {RevealFade} from './'
+import {RevealFade} from '.'
 
 describe('RevealFade', () => {
     it('should render correctly', () => {
