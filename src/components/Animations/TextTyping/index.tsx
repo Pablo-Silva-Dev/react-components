@@ -4,25 +4,29 @@ import { Container } from './styles';
 interface TextTypingProps {
     wrapper: 'p' | 'h2'
     firstText: string;
-    finalText: string;
     secondText?: string;
     thirdText?: string;
     fourthText?: string;
-    repeat?: number | 'infinity';
-    delay?: number;
+    firstTextDelay: number;
+    secondTextDelay?: number;
+    thirdTextDelay?: number;
+    fourthTextDelay?: number;
+    repeat?: number;
     showsCursor?: boolean;
     className?: string;
 }
 
 export function TextTyping({
     firstText,
-    finalText,
     secondText,
     thirdText,
     fourthText,
+    firstTextDelay,
+    secondTextDelay,
+    thirdTextDelay,
+    fourthTextDelay,
     wrapper,
     repeat,
-    delay,
     showsCursor,
     className
 }: TextTypingProps) {
@@ -33,11 +37,13 @@ export function TextTyping({
                 sequence={
                     [
                         firstText,
+                        firstTextDelay,
                         secondText && secondText,
+                        secondTextDelay && secondTextDelay,
                         thirdText && thirdText,
+                        thirdTextDelay && thirdTextDelay,
                         fourthText && fourthText,
-                        delay,
-                        finalText
+                        fourthTextDelay && fourthTextDelay,
                     ]
                 }
                 wrapper={wrapper}

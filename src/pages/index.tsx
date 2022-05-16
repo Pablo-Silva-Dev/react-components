@@ -139,9 +139,9 @@ export default function Home() {
       <TextTyping
         firstText='React is a good tool'
         secondText='NodeJS is a good tool'
-        finalText='React Native is a good tool'
+        firstTextDelay={2000}
+        secondTextDelay={300}
         repeat={2}
-        delay={100}
         wrapper='h2'
       />
 
