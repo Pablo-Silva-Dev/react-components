@@ -71,6 +71,7 @@ export function ProfileCard({
                         alt={imgAlt}
                         width={120}
                         height={120}
+                        data-testid='profile-card-id'
                     />
                 </AvatarContainer>
             </ColorContainer>

@@ -10,7 +10,6 @@ describe('LottieAnimation', () => {
                 animation={CodingAnimation}
                 height={200}
                 width={200}
-                data-testid='lottie-id'
             />
         )
         const component = screen.getByLabelText('animation')

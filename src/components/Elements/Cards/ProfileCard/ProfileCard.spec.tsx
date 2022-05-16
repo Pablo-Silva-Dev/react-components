@@ -2,14 +2,13 @@ import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../../../themes/theme'
-import { TestimonialCard } from '.'
+import { ProfileCard } from './'
 
 interface ChildrenProps {
     children: ReactNode
 }
 
 const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
-
     return (
         <ThemeProvider theme={theme}>
             {children}
@@ -17,24 +16,19 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('TestimonialCard', () => {
+describe('ProfileCard', () => {
     it('should render correctly', () => {
         render(
-            <TestimonialCard
-                alt='testimonialcard-alt'
-                personName='testimonialcard-person-name'
-                testimonial='tertimonialcard-testimonial'
-                ratings={4}
-                personPhotoUrl='/testimonialcard-person-photo-url'
-                data-testid='testimonialcard-id'
+            <ProfileCard
+                imgAlt='profilecard-img-alt'
+                imgUrl='/profilecard-img-url'
+                title='profile-card-title'
+                data-testid='profile-card-id'
             />, {
             wrapper: StyledProvider
         }
         )
-
-        const component = screen.getByTestId('testimonialcard-id')
-
-        expect(component).toBeInTheDocument()
-
+        const component = screen.getByTestId('profile-card-id')
+        expect(component).toHaveAttribute('alt', 'profilecard-img-alt')
     })
 })
