@@ -17,6 +17,7 @@ export function Avatar({ imageUrl, imgAlt, size, style }: AvatarProps) {
         >
             <Image
                 src={imageUrl}
+                data-testid='avatar-id'
                 width={size === "tiny"
                     ? 40
                     : size === "small"

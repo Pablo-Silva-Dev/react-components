@@ -32,7 +32,6 @@ export function TextTyping({
 }: TextTypingProps) {
     return (
         <Container>
-
             <TypeAnimation
                 sequence={
                     [
