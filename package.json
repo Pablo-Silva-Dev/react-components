@@ -10,6 +10,7 @@
     "test": "jest --watchAll"
   },
   "dependencies": {
+    "@types/react-vertical-timeline-component": "^3.3.3",
     "next": "12.1.5",
     "next-auth": "^4.3.4",
     "next-progress": "^2.2.0",
@@ -27,6 +28,7 @@
     "react-slick": "^0.29.0",
     "react-star-ratings": "^2.3.0",
     "react-switch": "^6.0.0",
+    "react-vertical-timeline-component": "^3.5.2",
     "rgt": "^1.0.7",
     "sass": "^1.51.0",
     "slick-carousel": "^1.8.1",

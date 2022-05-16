@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent } from 'react'
+import 'react-vertical-timeline-component/style.min.css';
 
 import * as AnimationCoding from '../../public/react_animation.json'
 
@@ -39,7 +40,7 @@ import { TitleCard } from '../components/Elements/Cards/TitleCard'
 import { ImageCard } from '../components/Elements/Cards/ImageCard'
 import { TestimonialCard } from '../components/Elements/Cards/TestimonialCard'
 import { GroupInfo } from '../components/Elements/GroupInfo'
-import { MdConnectWithoutContact } from 'react-icons/md'
+import { MdConnectWithoutContact, MdEmail } from 'react-icons/md'
 import { NewsletterCard } from '../components/Elements/Cards/NewsletterCard'
 import { GoogleMap } from '../components/Elements/GoogleMap'
 import { VideoModal } from '../components/Modals/VideoModal'
@@ -54,6 +55,8 @@ import { Avatar } from '../components/Elements/Avatar'
 import { StarsRatingCard } from '../components/Elements/Cards/StarsRatingCard'
 import { ProfileCard } from '../components/Elements/Cards/ProfileCard'
 import { LottieAnimation } from '../components/Animations/Lottie'
+import { Timeline } from '../components/Elements/Timeline'
+import { TimelineElement } from '../components/Elements/Timeline/TimelineElement';
 
 
 
@@ -200,11 +203,51 @@ export default function Home() {
 
       />
 
-          <LottieAnimation
-            animation={AnimationCoding}
-            height={300}
-            width={300}
-          />
+      <LottieAnimation
+        animation={AnimationCoding}
+        height={300}
+        width={300}
+        loop={false}
+      />
+
+      <Timeline
+        animated
+      >
+        <TimelineElement
+          date='12-11-2022'
+          content='sdufhsdf'
+          title='Some title'
+          iconBgColor='red'
+          icon={<MdConnectWithoutContact color='white' />}
+          lineColor='red'
+        />
+        <TimelineElement
+          date='12-11-2022'
+          content='sdufhsdf'
+          title='Some title'
+          iconBgColor='red'
+          icon={<MdConnectWithoutContact color='white' />}
+          lineColor='red'
+        />
+        <TimelineElement
+          date='12-11-2022'
+          content='sdufhsdf'
+          title='Some title'
+          iconBgColor='red'
+          icon={<MdConnectWithoutContact color='white' />}
+          lineColor='red'
+        />
+        <TimelineElement
+          content='sdufhsdf'
+          title='Some title'
+          iconBgColor='red'
+          icon={<MdConnectWithoutContact color='white' />}
+          lineColor='red'
+          lastElement
+        />
+      </Timeline>
+
+
 
       <Footer>
         <FooterFirstSection>
