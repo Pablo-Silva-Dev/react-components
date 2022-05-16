@@ -18,7 +18,7 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
 
 describe('ProductCard', () => {
     it('should render correctly', () => {
-        const { debug } = render(
+        render(
             <ProductCard
                 addToCart={async () => { }}
                 addToFavorites={async () => { }}
@@ -32,9 +32,6 @@ describe('ProductCard', () => {
             wrapper: StyledProvider
         }
         )
-
-        debug()
-
         const component = screen.getByText('productcard-title')
         expect(component).toBeInTheDocument()
 
