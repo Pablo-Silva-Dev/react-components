@@ -90,4 +90,8 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     cursor: pointer;
   }
+
+  .typing2{
+      color: green
+  }
 `;

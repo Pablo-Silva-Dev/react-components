@@ -57,6 +57,7 @@ import { ProfileCard } from '../components/Elements/Cards/ProfileCard'
 import { LottieAnimation } from '../components/Animations/Lottie'
 import { Timeline } from '../components/Elements/Timeline'
 import { TimelineElement } from '../components/Elements/Timeline/TimelineElement';
+import { TextTyping } from '../components/Animations/TextTyping';
 
 
 
@@ -135,117 +136,14 @@ export default function Home() {
         firstResourceText='Acesso vip'
       />
 
-      <TitleCard
-        title='Some title'
-        content='Some content sjdfh sjldfhsl dlsfsjdf dfjdf dfjd dfdf dfdf fdf  df dfkdf sdkf dfl'
+      <TextTyping
+        firstText='React is a good tool'
+        secondText='NodeJS is a good tool'
+        finalText='React Native is a good tool'
+        repeat={2}
+        delay={100}
+        wrapper='h2'
       />
-
-      <ImageCard
-        imgAlt='PSD'
-        imgUrl='/img1.jpg'
-        imgDescription='sdfsdlifhsdilfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfgfsdfsdfsdfsdf'
-        imgTitle='SJDF'
-      />
-      <TestimonialCard
-        alt='PSD'
-        personPhotoUrl='/img1.jpg'
-        personRole='Programador'
-        ratings={2.5}
-        testimonial='sdfsdlifhsdilfddfgdfgdfgdfgdfgdfgfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgddfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfgfsdfsdfsdfsdf'
-        personName='Pablo Silva'
-      />
-
-      <ProductCard
-        addToCart={async () => { }}
-        addToFavorites={async () => { }}
-        removeFromFavorites={async () => { }}
-        imgUrl='https://images.kabum.com.br/produtos/fotos/113405/monitor-lg-led-25-full-hd-ips-hdmi-1ms-25um58-g_1591183670_gg.jpg'
-        imgAlt='PSD'
-        title='Monitor Gamer LG 25 IPS, Ultra Wide, 75 Hz, Full HD, 99% sRGB, HDMI, VESA - 25UM58-G'
-        price='R$1059,99'
-        ratings={4.5}
-        priceOnCredit='Ou até 12x de R$89,90 no cartão'
-        share={async () => { }}
-        isFavorited={favorited}
-        isOnCard={onCart}
-      />
-      <ContactCard
-        title="Informações de contato"
-        phone="31 9 85187963"
-        email="suportepablosilvadev@gmail.com"
-        address='Rua Sebastitão de Abreu, 216 Loanda'
-        whatsappConversationUrl="http://api.whatsapp.com/send?phone=5531985187963"
-      />
-
-      <CheckBox
-        checked={check}
-        onChange={toggleCheck}
-      />
-      <StarsRatingCard
-        onClick={() => { }}
-        title='Avaliar aula'
-        rating={4}
-        avaliationLabels={['Very bad', 'Bad', 'Good', 'Very good', 'Excelent']}
-      />
-
-
-      <ProfileCard
-        imgUrl='https://avatars.githubusercontent.com/u/54117323?v=4'
-        imgAlt='sdjlfh'
-        bio='ilfddfgdfgdfgdfgdfgdfgfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgdfddfgdfgdfgdfgdfgdfgdfgdfgdfgdfxgddfgdfgdfgdfxgdfddfgdfgdfgdfgdfg'
-        title='Pablo Silva'
-        githubUrl='/'
-        instagramUrl='/'
-        linkedinUrl='/'
-        facebookUrl='/'
-        twitterUrl='/'
-        youtubeUrl='/'
-
-      />
-
-      <LottieAnimation
-        animation={AnimationCoding}
-        height={300}
-        width={300}
-        loop={false}
-      />
-
-      <Timeline
-        animated
-      >
-        <TimelineElement
-          date='12-11-2022'
-          content='sdufhsdf'
-          title='Some title'
-          iconBgColor='red'
-          icon={<MdConnectWithoutContact color='white' />}
-          lineColor='red'
-        />
-        <TimelineElement
-          date='12-11-2022'
-          content='sdufhsdf'
-          title='Some title'
-          iconBgColor='red'
-          icon={<MdConnectWithoutContact color='white' />}
-          lineColor='red'
-        />
-        <TimelineElement
-          date='12-11-2022'
-          content='sdufhsdf'
-          title='Some title'
-          iconBgColor='red'
-          icon={<MdConnectWithoutContact color='white' />}
-          lineColor='red'
-        />
-        <TimelineElement
-          content='sdufhsdf'
-          title='Some title'
-          iconBgColor='red'
-          icon={<MdConnectWithoutContact color='white' />}
-          lineColor='red'
-          lastElement
-        />
-      </Timeline>
 
 
 
