@@ -59,6 +59,7 @@ import { Timeline } from '../components/Elements/Timeline'
 import { TimelineElement } from '../components/Elements/Timeline/TimelineElement';
 import { TextTyping } from '../components/Animations/TextTyping';
 import { Select } from '../components/Forms/Select';
+import { TextArea } from '../components/Forms/TextArea';
 
 export default function Home() {
 
@@ -158,6 +159,9 @@ export default function Home() {
       />
 
       <p>{option}</p>
+
+      <TextArea
+      />
 
 
       <Footer>

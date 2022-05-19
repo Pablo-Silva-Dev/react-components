@@ -9,7 +9,6 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     html{
-        font-size: 100%;
         font-family: monospace;
         scroll-behavior: smooth;
         background: ${(props) => props.theme.colors.element_base};

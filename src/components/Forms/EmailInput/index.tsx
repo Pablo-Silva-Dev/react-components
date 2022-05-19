@@ -1,4 +1,4 @@
-import React, { CSSProperties, InputHTMLAttributes, ReactNode } from 'react';
+import { CSSProperties, InputHTMLAttributes } from 'react';
 import { Container, Input, IconContainer } from './styles';
 import { FiMail } from 'react-icons/fi'
 

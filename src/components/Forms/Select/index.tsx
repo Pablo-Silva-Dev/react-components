@@ -1,18 +1,18 @@
-import { ChangeEvent, CSSProperties } from 'react';
+import { ChangeEvent, CSSProperties, SelectHTMLAttributes } from 'react';
 import { SelectInput, Option } from './styles'
+
+interface Props{}
 
 interface OptionProps {
     value: string | number;
     label: string | number;
 }
 
-interface SelectProps {
+interface SelectProps extends SelectHTMLAttributes<Props>{
     options: OptionProps[];
     name: string;
     onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
-    disabled?: boolean;
     selectPlaceholder?: string;
-    style?: CSSProperties;
     optionStyle?: CSSProperties;
 }
 
@@ -20,18 +20,18 @@ export function Select({
     name,
     options,
     onChange,
-    disabled,
+    required,
     selectPlaceholder,
-    style,
-    optionStyle
+    optionStyle,
+    ...rest
 }: SelectProps) {
     return (
         (
             <SelectInput
                 name={name}
                 onChange={onChange}
-                style={style}
-                disabled={disabled}
+                required={required}
+                {...rest}
             >
                 {
                     selectPlaceholder &&
