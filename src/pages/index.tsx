@@ -58,17 +58,22 @@ import { LottieAnimation } from '../components/Animations/Lottie'
 import { Timeline } from '../components/Elements/Timeline'
 import { TimelineElement } from '../components/Elements/Timeline/TimelineElement';
 import { TextTyping } from '../components/Animations/TextTyping';
-
-
-
+import { Select } from '../components/Forms/Select';
 
 export default function Home() {
 
   const theme = useTheme()
 
+  const optionsTest = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
+  ]
+
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
   const [favorited, setFavorited] = useState(true)
   const [onCart, setOnCart] = useState(false)
+  const [option, setOption] = useState('')
   const [check, setCheck] = useState(false)
 
   function openResponsiveMenu() {
@@ -145,6 +150,14 @@ export default function Home() {
         wrapper='h2'
       />
 
+      <Select
+        name='Some name'
+        options={optionsTest}
+        onChange={e => setOption(e.target.value)}
+        selectPlaceholder='Defina uma comida'
+      />
+
+      <p>{option}</p>
 
 
       <Footer>

@@ -91,7 +91,10 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
-  .typing2{
-      color: green
-  }
+
+    .select-test{
+        background: black;
+        width: 400px;
+        color: cyan;
+    }
 `;
