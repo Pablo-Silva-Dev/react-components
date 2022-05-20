@@ -2,9 +2,9 @@ import { CSSProperties } from 'react';
 import ReactLoading from 'react-loading';
 import { useTheme } from 'styled-components';
 import { Container, Title } from './styles';
-import { FaFacebook } from 'react-icons/fa'
+import { GrGithub } from 'react-icons/gr'
 
-interface FacebookSignButtonProps {
+interface GitHubSignButtonProps {
     title: string;
     onClick: () => Promise<void>;
     disabled?: boolean;
@@ -14,7 +14,7 @@ interface FacebookSignButtonProps {
     style?: CSSProperties;
 }
 
-export function FacebookSignButton({
+export function GitHubSignButton({
     title,
     onClick,
     disabled,
@@ -22,7 +22,7 @@ export function FacebookSignButton({
     loading,
     className,
     style
-}: FacebookSignButtonProps) {
+}: GitHubSignButtonProps) {
 
     const theme = useTheme()
 
@@ -44,9 +44,8 @@ export function FacebookSignButton({
                 />
                 :
                 <>
-                    <FaFacebook
+                    <GrGithub
                         size={24}
-                        color='#346add'
                     />
                     <Title>
                         {title}

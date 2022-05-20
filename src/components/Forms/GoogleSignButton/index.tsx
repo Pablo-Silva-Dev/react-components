@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import ReactLoading from 'react-loading';
 import { useTheme } from 'styled-components';
-import { Container } from './styles';
+import { Container, Title } from './styles';
 import { FcGoogle } from 'react-icons/fc'
 
 interface GoogleSignButtonProps {
@@ -47,7 +47,9 @@ export function GoogleSignButton({
                     <FcGoogle
                         size={24}
                     />
-                    {title}
+                    <Title>
+                        {title}
+                    </Title>
                 </>
             }
         </Container>

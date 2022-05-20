@@ -65,6 +65,7 @@ import { StepProgress } from '../components/Elements/StepProgress';
 import { ModalBox } from '../components/Modals/ModalBox';
 import { GoogleSignButton } from '../components/Forms/GoogleSignButton';
 import { FacebookSignButton } from '../components/Forms/FacebookSignButton';
+import { GitHubSignButton } from '../components/Forms/GitHubSignButton';
 
 export default function Home() {
 
@@ -189,7 +190,7 @@ export default function Home() {
         disabled={false}
         loading={false}
         title='Entrar com o Google'
-        themeColor='dark'
+        themeColor='light'
         onClick={async () => {}}
       />
 
@@ -197,7 +198,14 @@ export default function Home() {
         disabled={false}
         loading={false}
         title='Entrar com o Facebook'
-        themeColor='dark'
+        themeColor='light'
+        onClick={async () => {}}
+      />
+      <GitHubSignButton
+        disabled={false}
+        loading={false}
+        title='Entrar com o GitHub'
+        themeColor='light'
         onClick={async () => {}}
       />
 
