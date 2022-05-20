@@ -8,7 +8,7 @@ interface ModalBoxProps {
 const modalAnimation = keyframes`
     0%{
       opacity: .8;
-      transform: translateY(100px);
+      transform: translateY(200px);
     };
     100%{
       opacity: 1;

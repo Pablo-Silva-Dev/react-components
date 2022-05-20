@@ -63,6 +63,7 @@ import { TextArea } from '../components/Forms/TextArea';
 import { RadioGroup } from '../components/Forms/RadioGroup';
 import { StepProgress } from '../components/Elements/StepProgress';
 import { ModalBox } from '../components/Modals/ModalBox';
+import { GoogleSignButton } from '../components/Forms/GoogleSignButton';
 
 export default function Home() {
 
@@ -182,6 +183,14 @@ export default function Home() {
       >
         Open modal
         </button>
+
+      <GoogleSignButton
+        disabled={false}
+        loading={false}
+        title='Entrar com o Google'
+        themeColor='light'
+        onClick={async () => {}}
+      />
       <Footer>
         <FooterFirstSection>
           <FooterTitle
