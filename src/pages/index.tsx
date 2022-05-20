@@ -60,6 +60,7 @@ import { TimelineElement } from '../components/Elements/Timeline/TimelineElement
 import { TextTyping } from '../components/Animations/TextTyping';
 import { Select } from '../components/Forms/Select';
 import { TextArea } from '../components/Forms/TextArea';
+import { RadioGroup } from '../components/Forms/RadioGroup';
 
 export default function Home() {
 
@@ -72,6 +73,7 @@ export default function Home() {
   ]
 
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
+  const [select, setSelect] = useState('');
   const [favorited, setFavorited] = useState(true)
   const [onCart, setOnCart] = useState(false)
   const [option, setOption] = useState('')
@@ -86,6 +88,12 @@ export default function Home() {
 
   function toggleCheck() {
     setCheck(!check)
+  }
+
+
+  const handleSelectChange = (event) => {
+    const value = event.target.value;
+    setSelect(value);
   }
 
 
@@ -161,6 +169,13 @@ export default function Home() {
       <p>{option}</p>
 
       <TextArea
+      />
+
+      <RadioGroup
+        name='Some name'
+        options={optionsTest}
+        onChange={handleSelectChange}
+        checked={select === select}
       />
 
 

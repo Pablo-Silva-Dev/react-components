@@ -91,9 +91,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 
-    .select-test{
-        background: black;
-        width: 400px;
-        color: cyan;
+    .test{
+        width: 100px;
+        background: red;
     }
 `;
