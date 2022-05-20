@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watchAll"
+    "test": "jest --watch"
   },
   "dependencies": {
     "@types/react-vertical-timeline-component": "^3.3.3",

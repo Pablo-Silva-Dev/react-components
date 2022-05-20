@@ -33,6 +33,7 @@ export function GitHubSignButton({
             className={className}
             style={style}
             onClick={onClick}
+            data-testid='githubsignbutton-id'
         >
             {loading ?
                 <ReactLoading

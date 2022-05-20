@@ -33,6 +33,7 @@ export function GoogleSignButton({
             className={className}
             style={style}
             onClick={onClick}
+            data-testid='googlesignbutton-id'
         >
             {loading ?
                 <ReactLoading
