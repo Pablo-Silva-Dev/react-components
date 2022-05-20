@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../../themes/theme'
-import { FacebookSignButton } from './'
+import { GoogleSignInButton } from '.'
 
 interface ChildrenProps {
     children: ReactNode
@@ -16,20 +16,20 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('FacebookSignButton', () => {
+describe('googleSignInButton', () => {
     it('should render correctly', () => {
       render(
-            <FacebookSignButton
+            <GoogleSignInButton
 
                 onClick={async () => { }}
-                title='Facebooksignbutton-title'
-                data-testid='facebooksignbutton-id'
+                title='googleSignInbutton-title'
+                data-testid='googleSignInbutton-id'
             />, {
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByTestId('facebooksignbutton-id')
+        const component = screen.getByTestId('googleSignInbutton-id')
         expect(component).toBeInTheDocument()
 
     })

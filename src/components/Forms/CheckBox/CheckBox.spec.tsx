@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../../themes/theme'
-import { GitHubSignButton } from './'
+import { CheckBox } from './'
 
 interface ChildrenProps {
     children: ReactNode
@@ -16,21 +16,18 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('GitHubSignButton', () => {
+describe('CheckBox', () => {
     it('should render correctly', () => {
-      render(
-            <GitHubSignButton
-
-                onClick={async () => { }}
-                title='githubsignbutton-title'
-                data-testid='githubsignbutton-id'
+        render(
+            <CheckBox
+                checked={false}
+                onChange={() => { }}
             />, {
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByTestId('githubsignbutton-id')
+        const component = screen.getByRole('checkbox')
         expect(component).toBeInTheDocument()
-
     })
 })

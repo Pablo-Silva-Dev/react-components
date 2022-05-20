@@ -1,8 +1,8 @@
 import React, { CSSProperties } from 'react';
 import { EmailInput } from '../EmailInput';
-import { FacebookSignButton } from '../FacebookSignButton';
-import { GitHubSignButton } from '../GitHubSignButton';
-import { GoogleSignButton } from '../GoogleSignButton';
+import { FacebookSignInButton } from '../FacebookSignInButton';
+import { GitHubSignInButton } from '../GitHubSignInButton';
+import { GoogleSignInButton } from '../GoogleSignInButton';
 import { PasswordInput } from '../PasswordInput';
 import { SubmitButton } from '../SubmitButton';
 import {
@@ -43,21 +43,21 @@ export function SignUpForm({
         >
             <Title>{title}</Title>
             <ButtonsContainer>
-                <GitHubSignButton
+                <GitHubSignInButton
                     disabled={false}
                     loading={false}
                     title='Entrar com o GitHub'
                     themeColor='light'
                     onClick={async () => { }}
                 />
-                <FacebookSignButton
+                <FacebookSignInButton
                     disabled={false}
                     loading={false}
                     title='Entrar com o Facebook'
                     themeColor='light'
                     onClick={async () => { }}
                 />
-                <GoogleSignButton
+                <GoogleSignInButton
                     disabled={false}
                     loading={false}
                     title='Entrar com o Google'

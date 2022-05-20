@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../../themes/theme'
-import { GoogleSignButton } from './'
+import { GitHubSignInButton } from '.'
 
 interface ChildrenProps {
     children: ReactNode
@@ -16,20 +16,20 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('googleSignButton', () => {
+describe('GitHubSignInButton', () => {
     it('should render correctly', () => {
       render(
-            <GoogleSignButton
+            <GitHubSignInButton
 
                 onClick={async () => { }}
-                title='googlesignbutton-title'
-                data-testid='googlesignbutton-id'
+                title='githubSignInbutton-title'
+                data-testid='githubSignInbutton-id'
             />, {
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByTestId('googlesignbutton-id')
+        const component = screen.getByTestId('githubSignInbutton-id')
         expect(component).toBeInTheDocument()
 
     })

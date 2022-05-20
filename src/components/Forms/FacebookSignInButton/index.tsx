@@ -2,9 +2,9 @@ import { CSSProperties } from 'react';
 import ReactLoading from 'react-loading';
 import { useTheme } from 'styled-components';
 import { Container, Title } from './styles';
-import { FcGoogle } from 'react-icons/fc'
+import { FaFacebook } from 'react-icons/fa'
 
-interface GoogleSignButtonProps {
+interface FacebookSignInButtonProps {
     title: string;
     onClick: () => Promise<void>;
     disabled?: boolean;
@@ -14,7 +14,7 @@ interface GoogleSignButtonProps {
     style?: CSSProperties;
 }
 
-export function GoogleSignButton({
+export function FacebookSignInButton({
     title,
     onClick,
     disabled,
@@ -22,7 +22,7 @@ export function GoogleSignButton({
     loading,
     className,
     style
-}: GoogleSignButtonProps) {
+}: FacebookSignInButtonProps) {
 
     const theme = useTheme()
 
@@ -33,7 +33,7 @@ export function GoogleSignButton({
             className={className}
             style={style}
             onClick={onClick}
-            data-testid='googlesignbutton-id'
+            data-testid='facebookSignInbutton-id'
         >
             {loading ?
                 <ReactLoading
@@ -45,8 +45,9 @@ export function GoogleSignButton({
                 />
                 :
                 <>
-                    <FcGoogle
+                    <FaFacebook
                         size={24}
+                        color='#346add'
                     />
                     <Title>
                         {title}

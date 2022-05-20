@@ -63,9 +63,9 @@ import { TextArea } from '../components/Forms/TextArea';
 import { RadioGroup } from '../components/Forms/RadioGroup';
 import { StepProgress } from '../components/Elements/StepProgress';
 import { ModalBox } from '../components/Modals/ModalBox';
-import { GoogleSignButton } from '../components/Forms/GoogleSignButton';
-import { FacebookSignButton } from '../components/Forms/FacebookSignButton';
-import { GitHubSignButton } from '../components/Forms/GitHubSignButton';
+import { GoogleSignButton } from '../components/Forms/GoogleSignInButton';
+import { FacebookSignButton } from '../components/Forms/FacebookSignInButton';
+import { GitHubSignButton } from '../components/Forms/GitHubSignInButton';
 import { SignUpForm } from '../components/Forms/SignUpForm';
 
 export default function Home() {

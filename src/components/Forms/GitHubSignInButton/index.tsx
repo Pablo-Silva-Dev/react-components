@@ -4,7 +4,7 @@ import { useTheme } from 'styled-components';
 import { Container, Title } from './styles';
 import { GrGithub } from 'react-icons/gr'
 
-interface GitHubSignButtonProps {
+interface GitHubSignInButtonProps {
     title: string;
     onClick: () => Promise<void>;
     disabled?: boolean;
@@ -14,7 +14,7 @@ interface GitHubSignButtonProps {
     style?: CSSProperties;
 }
 
-export function GitHubSignButton({
+export function GitHubSignInButton({
     title,
     onClick,
     disabled,
@@ -22,7 +22,7 @@ export function GitHubSignButton({
     loading,
     className,
     style
-}: GitHubSignButtonProps) {
+}: GitHubSignInButtonProps) {
 
     const theme = useTheme()
 
@@ -33,7 +33,7 @@ export function GitHubSignButton({
             className={className}
             style={style}
             onClick={onClick}
-            data-testid='githubsignbutton-id'
+            data-testid='githubSignInbutton-id'
         >
             {loading ?
                 <ReactLoading
