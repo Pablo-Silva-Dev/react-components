@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
       *{
@@ -83,6 +83,7 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         justify-content: center;
         align-items: center;
+        
   }
 
   .collapsible-info-parent{
@@ -95,4 +96,9 @@ export const GlobalStyle = createGlobalStyle`
         width: 100px;
         background: red;
     }
+
+    
+    
+
+
 `;

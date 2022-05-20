@@ -7,6 +7,7 @@ interface ModalBoxProps {
     children?: ReactNode;
     className?: string;
     overlayClassName?: string;
+    showAnimation?: boolean
 }
 
 export function ModalBox({
@@ -14,7 +15,8 @@ export function ModalBox({
     onRequestClose,
     children,
     className,
-    overlayClassName
+    overlayClassName,
+    showAnimation
 }: ModalBoxProps) {
 
     return (
@@ -23,6 +25,7 @@ export function ModalBox({
             onRequestClose={onRequestClose}
             className={className}
             overlayClassName={overlayClassName}
+            showAnimation={showAnimation}
         >
            {children}
         </Container>

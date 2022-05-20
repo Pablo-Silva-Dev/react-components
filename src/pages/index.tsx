@@ -94,7 +94,7 @@ export default function Home() {
   ]
 
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState(true)
   const [select, setSelect] = useState('ASD');
   const [favorited, setFavorited] = useState(true)
   const [onCart, setOnCart] = useState(false)
@@ -167,6 +167,21 @@ export default function Home() {
         currentIndex={progressIndex}
       />
 
+      <ModalBox
+      isOpen={modal}
+      onRequestClose={() => setModal(false)}
+      overlayClassName='react-modal-overlay'
+      className='active-modal'
+      showAnimation
+      >
+        <h1>It is a modal</h1>  
+        <p>lorem ipsum dolor sit amet, consectet</p>
+      </ModalBox>
+      <button
+        onClick={() => setModal(true)}
+      >
+        Open modal
+        </button>
       <Footer>
         <FooterFirstSection>
           <FooterTitle
