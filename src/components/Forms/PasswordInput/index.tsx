@@ -6,9 +6,9 @@ interface Props { }
 
 export interface PasswordInputProps extends InputHTMLAttributes<Props> {
     iconStyle?: CSSProperties;
-    showsIcon: boolean;
-    passwordIsVisible: boolean;
-    togglePassword: () => void;
+    showsIcon?: boolean;
+    passwordIsVisible?: boolean;
+    togglePassword?: () => void;
 }
 
 export function PasswordInput({

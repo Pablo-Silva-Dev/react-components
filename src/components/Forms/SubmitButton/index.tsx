@@ -5,14 +5,16 @@ import { Container } from './styles';
 
 interface SubmitButtonProps {
     title: string;
-    disabled: boolean;
-    loading: boolean;
+    disabled?: boolean;
+    loading?: boolean;
+    onClick: () => Promise<void>;
 }
 
 export function SubmitButton({
     title,
     disabled,
     loading,
+    onClick
 }: SubmitButtonProps) {
 
     const theme = useTheme()
@@ -22,6 +24,7 @@ export function SubmitButton({
             type='submit'
             disabled={disabled}
             data-testid='submit-button-test-id'
+            onClick={onClick}
         >
             {loading ?
                 <ReactLoading

@@ -66,6 +66,7 @@ import { ModalBox } from '../components/Modals/ModalBox';
 import { GoogleSignButton } from '../components/Forms/GoogleSignButton';
 import { FacebookSignButton } from '../components/Forms/FacebookSignButton';
 import { GitHubSignButton } from '../components/Forms/GitHubSignButton';
+import { SignUpForm } from '../components/Forms/SignUpForm';
 
 export default function Home() {
 
@@ -186,27 +187,14 @@ export default function Home() {
         Open modal
         </button>
 
-      <GoogleSignButton
-        disabled={false}
-        loading={false}
-        title='Entrar com o Google'
-        themeColor='light'
-        onClick={async () => {}}
-      />
+   
 
-      <FacebookSignButton
-        disabled={false}
-        loading={false}
-        title='Entrar com o Facebook'
-        themeColor='light'
-        onClick={async () => {}}
-      />
-      <GitHubSignButton
-        disabled={false}
-        loading={false}
-        title='Entrar com o GitHub'
-        themeColor='light'
-        onClick={async () => {}}
+      <SignUpForm 
+        title='Login'
+        subtitle='Ou cadastre-se agora'
+        submitButtonTitle='Cadastrar'
+        addtionalText='Ao cadastrar você automaticamente concorda com nossa politica e termos de uso.'
+        forgotPasswordButtonTitle='Esqueceu sua senha?'
       />
 
 

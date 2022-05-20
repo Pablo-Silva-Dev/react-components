@@ -6,7 +6,7 @@ interface Props { }
 
 export interface EmailInputProps extends InputHTMLAttributes<Props> {
     iconStyle?: CSSProperties;
-    showsIcon: boolean;
+    showsIcon?: boolean;
 }
 
 export function EmailInput({ showsIcon, iconStyle, ...rest }: EmailInputProps) {
