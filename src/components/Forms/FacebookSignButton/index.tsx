@@ -33,6 +33,7 @@ export function FacebookSignButton({
             className={className}
             style={style}
             onClick={onClick}
+            data-testid='facebooksignbutton-id'
         >
             {loading ?
                 <ReactLoading
