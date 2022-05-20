@@ -64,6 +64,7 @@ import { RadioGroup } from '../components/Forms/RadioGroup';
 import { StepProgress } from '../components/Elements/StepProgress';
 import { ModalBox } from '../components/Modals/ModalBox';
 import { GoogleSignButton } from '../components/Forms/GoogleSignButton';
+import { FacebookSignButton } from '../components/Forms/FacebookSignButton';
 
 export default function Home() {
 
@@ -188,9 +189,19 @@ export default function Home() {
         disabled={false}
         loading={false}
         title='Entrar com o Google'
-        themeColor='light'
+        themeColor='dark'
         onClick={async () => {}}
       />
+
+      <FacebookSignButton
+        disabled={false}
+        loading={false}
+        title='Entrar com o Facebook'
+        themeColor='dark'
+        onClick={async () => {}}
+      />
+
+
       <Footer>
         <FooterFirstSection>
           <FooterTitle
