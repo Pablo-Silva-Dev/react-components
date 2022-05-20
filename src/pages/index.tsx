@@ -62,6 +62,7 @@ import { Select } from '../components/Forms/Select';
 import { TextArea } from '../components/Forms/TextArea';
 import { RadioGroup } from '../components/Forms/RadioGroup';
 import { StepProgress } from '../components/Elements/StepProgress';
+import { ModalBox } from '../components/Modals/ModalBox';
 
 export default function Home() {
 
@@ -93,6 +94,7 @@ export default function Home() {
   ]
 
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
+  const [modal, setModal] = useState(false)
   const [select, setSelect] = useState('ASD');
   const [favorited, setFavorited] = useState(true)
   const [onCart, setOnCart] = useState(false)
@@ -164,6 +166,7 @@ export default function Home() {
         steps={steps}
         currentIndex={progressIndex}
       />
+
       <Footer>
         <FooterFirstSection>
           <FooterTitle
