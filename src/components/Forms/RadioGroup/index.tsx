@@ -46,9 +46,9 @@ export function RadioGroup({
                     <RadioButton
                         type="radio"
                         name={name}
-                        value={opt.value}
-                        checked={checked}
                         onChange={onChange}
+                        value={opt.value}
+                        defaultChecked={checked}
                     />
                     <RadioButtonLabel />
                     <Option

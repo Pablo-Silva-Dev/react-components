@@ -46,7 +46,7 @@ export const RadioButton = styled.input`
     }
   }
   ${(props) =>
-    props.checked &&
+    props.defaultChecked &&
     ` 
     &:checked + ${RadioButtonLabel} {
       background: ${props.theme.colors.primary};

@@ -73,7 +73,7 @@ export default function Home() {
   ]
 
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
-  const [select, setSelect] = useState('');
+  const [select, setSelect] = useState('ASD');
   const [favorited, setFavorited] = useState(true)
   const [onCart, setOnCart] = useState(false)
   const [option, setOption] = useState('')
@@ -93,7 +93,9 @@ export default function Home() {
 
   const handleSelectChange = (event) => {
     const value = event.target.value;
+    console.log(value)
     setSelect(value);
+
   }
 
 
@@ -166,7 +168,6 @@ export default function Home() {
         selectPlaceholder='Defina uma comida'
       />
 
-      <p>{option}</p>
 
       <TextArea
       />
@@ -178,6 +179,7 @@ export default function Home() {
         checked={select === select}
       />
 
+      <p>{select}</p>
 
       <Footer>
         <FooterFirstSection>
