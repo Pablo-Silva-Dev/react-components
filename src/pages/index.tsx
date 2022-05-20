@@ -61,6 +61,7 @@ import { TextTyping } from '../components/Animations/TextTyping';
 import { Select } from '../components/Forms/Select';
 import { TextArea } from '../components/Forms/TextArea';
 import { RadioGroup } from '../components/Forms/RadioGroup';
+import { StepProgress } from '../components/Elements/StepProgress';
 
 export default function Home() {
 
@@ -72,12 +73,32 @@ export default function Home() {
     { value: 'vanilla', label: 'Vanilla' }
   ]
 
+  const steps = [
+    {
+      status: 'complete',
+      process: 'Confirm payment'
+    },
+    {
+      status: 'running',
+      process: 'Product separation'
+    },
+    {
+      status: 'pendent',
+      process: 'Product in transit'
+    },
+    {
+      status: 'pendent',
+      process: 'Product received'
+    }
+  ]
+
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
   const [select, setSelect] = useState('ASD');
   const [favorited, setFavorited] = useState(true)
   const [onCart, setOnCart] = useState(false)
   const [option, setOption] = useState('')
   const [check, setCheck] = useState(false)
+  const [progressIndex, setProgressIndex] = useState(2)
 
   function openResponsiveMenu() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
@@ -138,49 +159,11 @@ export default function Home() {
           closeResponsiveMenu={closeResponsiveMenu}
         />
       }
-      <InfoCard
-        title='Soluções para empresas'
-        content='skdjfskdhfkjsfdhsdkfj'
+
+      <StepProgress
+        steps={steps}
+        currentIndex={progressIndex}
       />
-
-      <PricingCard
-        title='Assinatura anual'
-        totalPrice='399,90'
-        dealsPrice='299,99'
-        finishPurchase={() => { }}
-        oldPrice='499,29'
-        firstResourceText='Acesso vip'
-      />
-
-      <TextTyping
-        firstText='React is a good tool'
-        secondText='NodeJS is a good tool'
-        firstTextDelay={2000}
-        secondTextDelay={300}
-        repeat={2}
-        wrapper='h2'
-      />
-
-      <Select
-        name='Some name'
-        options={optionsTest}
-        onChange={e => setOption(e.target.value)}
-        selectPlaceholder='Defina uma comida'
-      />
-
-
-      <TextArea
-      />
-
-      <RadioGroup
-        name='Some name'
-        options={optionsTest}
-        onChange={handleSelectChange}
-        checked={select === select}
-      />
-
-      <p>{select}</p>
-
       <Footer>
         <FooterFirstSection>
           <FooterTitle
