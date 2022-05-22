@@ -10,6 +10,9 @@ export const Container = styled.div`
   padding: 16px;
   box-shadow: ${({ theme }) => theme.shadows.soft};
   background-color: ${({ theme }) => theme.colors.white};
+  & button {
+    margin-top: 4px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -70,12 +73,10 @@ export const ForgotPasswordButton = styled.button`
   height: 40px;
   margin: 32px auto 0;
   background-color: transparent;
-  border-radius: 4px;
   color: ${({ theme }) => theme.colors.primary};
-  border: 1px solid ${({ theme }) => theme.colors.primary};
 
   &:disabled {
-    background-color: ${({ theme }) => theme.colors.white};
-    border-color: ${({ theme }) => theme.colors.primary_light};
+    opacity: 0.5;
+    cursor: default;
   }
 `;

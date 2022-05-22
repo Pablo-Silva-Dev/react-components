@@ -49,7 +49,9 @@ export function FacebookSignInButton({
                         size={24}
                         color='#346add'
                     />
-                    <Title>
+                    <Title
+                        themeColor={themeColor}
+                    >
                         {title}
                     </Title>
                 </>

@@ -63,9 +63,6 @@ import { TextArea } from '../components/Forms/TextArea';
 import { RadioGroup } from '../components/Forms/RadioGroup';
 import { StepProgress } from '../components/Elements/StepProgress';
 import { ModalBox } from '../components/Modals/ModalBox';
-import { GoogleSignButton } from '../components/Forms/GoogleSignInButton';
-import { FacebookSignButton } from '../components/Forms/FacebookSignInButton';
-import { GitHubSignButton } from '../components/Forms/GitHubSignInButton';
 import { SignUpForm } from '../components/Forms/SignUpForm';
 
 export default function Home() {
@@ -103,7 +100,8 @@ export default function Home() {
   const [favorited, setFavorited] = useState(true)
   const [onCart, setOnCart] = useState(false)
   const [option, setOption] = useState('')
-  const [check, setCheck] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [disabled, setDisabled] = useState(false)
   const [progressIndex, setProgressIndex] = useState(2)
 
   function openResponsiveMenu() {
@@ -113,16 +111,26 @@ export default function Home() {
     setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
   }
 
-  function toggleCheck() {
-    setCheck(!check)
-  }
-
+  /*  function toggleCheck() {
+     setCheck(!check)
+   }
+  */
 
   const handleSelectChange = (event) => {
     const value = event.target.value;
     console.log(value)
     setSelect(value);
 
+  }
+
+  async function signIn() {
+    setLoading(true)
+    setDisabled(true)
+    const timerSignIn = await setTimeout(() => {
+      setLoading(false)
+      setDisabled(false)
+    }, 2000)
+    return () => clearTimeout(timerSignIn)
   }
 
 
@@ -172,29 +180,36 @@ export default function Home() {
       />
 
       <ModalBox
-      isOpen={modal}
-      onRequestClose={() => setModal(false)}
-      overlayClassName='react-modal-overlay'
-      className='active-modal'
-      showAnimation
+        isOpen={modal}
+        onRequestClose={() => setModal(false)}
+        overlayClassName='react-modal-overlay'
+        className='active-modal'
+        showAnimation
       >
-        <h1>It is a modal</h1>  
+        <h1>It is a modal</h1>
         <p>lorem ipsum dolor sit amet, consectet</p>
       </ModalBox>
       <button
         onClick={() => setModal(true)}
       >
         Open modal
-        </button>
+      </button>
 
-   
 
-      <SignUpForm 
-        title='Login'
-        subtitle='Ou cadastre-se agora'
+
+      <SignUpForm
+        formTitle='Login'
+        formSubtitle='Ou cadastre-se agora'
         submitButtonTitle='Cadastrar'
-        addtionalText='Ao cadastrar você automaticamente concorda com nossa politica e termos de uso.'
-        forgotPasswordButtonTitle='Esqueceu sua senha?'
+        formAddtionalText='Ao cadastrar você automaticamente concorda com nossa politica e termos de uso.' googleSignInButtonTitle='sdhfj'
+        githubSignInButtonTitle='KKKKKK'
+        facebookSignInButtonTitle='SDAS'
+        buttonsDisabled={disabled}
+        buttonsLoading={loading}
+        forgotPasswordButtonTitle='Esqueci minha senha'
+        passwordForget={signIn}
+        submit={signIn}
+        socialButtonsColorScheme='dark'
       />
 
 

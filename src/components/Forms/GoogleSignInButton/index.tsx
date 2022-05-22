@@ -48,7 +48,9 @@ export function GoogleSignInButton({
                     <FcGoogle
                         size={24}
                     />
-                    <Title>
+                    <Title
+                        themeColor={themeColor}
+                    >
                         {title}
                     </Title>
                 </>

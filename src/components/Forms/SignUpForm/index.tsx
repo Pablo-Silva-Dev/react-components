@@ -1,4 +1,6 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties } from 'react';
+import ReactLoading from 'react-loading';
+import { useTheme } from 'styled-components';
 import { EmailInput } from '../EmailInput';
 import { FacebookSignInButton } from '../FacebookSignInButton';
 import { GitHubSignInButton } from '../GitHubSignInButton';
@@ -16,79 +18,126 @@ import {
 } from './styles';
 
 interface SignUpFormProps {
-    title: string;
+    formTitle: string;
+    formSubtitle?: string;
+    formAddtionalText?: string;
     submitButtonTitle: string;
-    forgotPasswordButtonTitle?: string;
-    addtionalText?: string;
+    googleSignInButtonTitle: string;
+    githubSignInButtonTitle: string;
+    facebookSignInButtonTitle: string;
+    forgotPasswordButtonTitle: string;
+    emailPlaceholder?: string;
+    passwordPlaceholder?: string;
+    passwordConfirmationPlaceholder?: string;
     submit: () => Promise<void>;
-    subtitle?: string;
-    className?: string;
+    passwordForget?: () => Promise<void>;
+    signInWithGitHub?: () => Promise<void>;
+    signInWithGoogle?: () => Promise<void>;
+    signInWithFacebook?: () => Promise<void>;
+    socialButtonsColorScheme?: 'light' | 'dark'
+    buttonsDisabled?: boolean;
+    buttonsLoading?: boolean;
     style?: CSSProperties;
+    className?: string;
 }
 
 export function SignUpForm({
-    title,
+    formTitle,
     submitButtonTitle,
     forgotPasswordButtonTitle,
     submit,
-    addtionalText,
-    subtitle,
+    googleSignInButtonTitle,
+    githubSignInButtonTitle,
+    facebookSignInButtonTitle,
+    passwordForget,
+    signInWithFacebook,
+    signInWithGoogle,
+    signInWithGitHub,
+    formAddtionalText,
+    emailPlaceholder,
+    passwordPlaceholder,
+    passwordConfirmationPlaceholder,
+    formSubtitle,
+    buttonsDisabled,
+    buttonsLoading,
+    socialButtonsColorScheme,
     className,
     style
 }: SignUpFormProps) {
+
+    const theme = useTheme()
+
     return (
         <Container
             className={className}
             style={style}
         >
-            <Title>{title}</Title>
+            <Title>{formTitle}</Title>
             <ButtonsContainer>
-                <GitHubSignInButton
-                    disabled={false}
-                    loading={false}
-                    title='Entrar com o GitHub'
-                    themeColor='light'
-                    onClick={async () => { }}
-                />
-                <FacebookSignInButton
-                    disabled={false}
-                    loading={false}
-                    title='Entrar com o Facebook'
-                    themeColor='light'
-                    onClick={async () => { }}
-                />
-                <GoogleSignInButton
-                    disabled={false}
-                    loading={false}
-                    title='Entrar com o Google'
-                    themeColor='light'
-                    onClick={async () => { }}
-                />
+                {
+                    googleSignInButtonTitle &&
+                    <GoogleSignInButton
+                        disabled={buttonsDisabled}
+                        title={googleSignInButtonTitle}
+                        themeColor={socialButtonsColorScheme}
+                        onClick={signInWithGoogle}
+                    />
+                }
+                {
+                    githubSignInButtonTitle &&
+                    <GitHubSignInButton
+                        disabled={buttonsDisabled}
+                        title={githubSignInButtonTitle}
+                        themeColor={socialButtonsColorScheme}
+                        onClick={signInWithGitHub}
+                    />
+                }
+                {
+                    facebookSignInButtonTitle &&
+                    <FacebookSignInButton
+                        disabled={buttonsDisabled}
+                        title={facebookSignInButtonTitle}
+                        themeColor={socialButtonsColorScheme}
+                        onClick={signInWithFacebook}
+                    />
+                }
             </ButtonsContainer>
-            <Divider />
-            <SubTitle>{subtitle}</SubTitle>
+            {
+                formSubtitle &&
+                <>
+                    <Divider />
+                    <SubTitle>{formSubtitle}</SubTitle>
+                </>
+            }
             <EmailInput
-                placeholder='Email'
-                required
+                placeholder={emailPlaceholder}
             />
             <PasswordInput
-                placeholder='Senha'
-                required
+                placeholder={passwordPlaceholder}
             />
             <PasswordInput
-                placeholder='Confirmação de senha'
+                placeholder={passwordConfirmationPlaceholder}
             />
             <SubmitButton
                 title={submitButtonTitle}
+                disabled={buttonsDisabled}
                 onClick={submit}
+                loading={buttonsLoading}
             />
-
-            <ForgotPasswordButton>
-                {forgotPasswordButtonTitle}
-            </ForgotPasswordButton>
-            {addtionalText &&
+            {
+                forgotPasswordButtonTitle &&
+                <ForgotPasswordButton
+                    onClick={passwordForget}
+                    disabled={buttonsDisabled}
+                >
+                    {
+                        forgotPasswordButtonTitle
+                    }
+                </ForgotPasswordButton>
+            }
+            {formAddtionalText &&
                 <Text>
-                    {addtionalText}
+                    {formAddtionalText}
                 </Text>
             }
         </Container>

@@ -9,7 +9,7 @@ interface GitHubSignInButtonProps {
     onClick: () => Promise<void>;
     disabled?: boolean;
     loading?: boolean;
-    themeColor?: 'dark' | 'light',
+    themeColor?: 'light' | 'dark',
     className?: string;
     style?: CSSProperties;
 }
@@ -47,8 +47,15 @@ export function GitHubSignInButton({
                 <>
                     <GrGithub
                         size={24}
+                        color={
+                            themeColor === 'dark' ?
+                                theme.colors.white :
+                                theme.colors.black
+                        }
                     />
-                    <Title>
+                    <Title
+                        themeColor={themeColor}
+                    >
                         {title}
                     </Title>
                 </>

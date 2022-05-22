@@ -14,15 +14,18 @@ export const Container = styled.button<GoogleSignButtonProps>`
   border-radius: 4px;
   box-shadow: ${({ theme }) => theme.shadows.soft};
   background-color: ${({ themeColor, theme }) =>
-    themeColor === "light" ? theme.colors.white : theme.colors.black};
+    themeColor === "dark" ?  theme.colors.black : theme.colors.white };
 
   &:disabled {
     opacity: 0.8;
+    background-color: ${({ theme, themeColor }) => 
+    themeColor === "dark" ? theme.colors.black : theme.colors.white};
+    cursor: default;
   }
 `;
 
 export const Title = styled.h4<GoogleSignButtonProps>`
   color: ${({ themeColor, theme }) =>
-    themeColor === "light" ? theme.colors.black : theme.colors.black};
+    themeColor === "dark" ? theme.colors.white : theme.colors.black};
   margin-left: 12px;
 `;
