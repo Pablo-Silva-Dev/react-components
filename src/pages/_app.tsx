@@ -3,6 +3,7 @@ import { GlobalStyle } from '../styles/global-style'
 import { theme } from '../themes/theme'
 import { SessionProvider } from 'next-auth/react'
 import NextProgress from "next-progress";
+import Layout from '../Layout';
 
 function App({
   Component,
@@ -12,8 +13,10 @@ function App({
     <SessionProvider>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <NextProgress />
-        <Component {...pageProps} />
+        <Layout>
+          <NextProgress />
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </SessionProvider>
   )

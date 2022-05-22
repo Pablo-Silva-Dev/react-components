@@ -7,7 +7,6 @@ export const Container = styled.footer`
   display: flex;
   justify-content: space-around;
   padding: 32px;
-  margin-top: 24vh;
   @media (max-width: 1440px) {
     display: grid;
     grid-template-rows: 2fr;

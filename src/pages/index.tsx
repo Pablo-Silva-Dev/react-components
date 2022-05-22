@@ -3,7 +3,6 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import * as AnimationCoding from '../../public/react_animation.json'
 
-import Head from 'next/head'
 import { SubTitle } from '../components/Typography/SubTitle'
 import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
@@ -64,180 +63,13 @@ import { RadioGroup } from '../components/Forms/RadioGroup';
 import { StepProgress } from '../components/Elements/StepProgress';
 import { ModalBox } from '../components/Modals/ModalBox';
 import { SignUpForm } from '../components/Forms/SignUpForm';
+import { DropdownSelect } from '../components/Elements/DropdownSelect';
+
 
 export default function Home() {
-
-  const theme = useTheme()
-
-  const optionsTest = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
-  ]
-
-  const steps = [
-    {
-      status: 'complete',
-      process: 'Confirm payment'
-    },
-    {
-      status: 'running',
-      process: 'Product separation'
-    },
-    {
-      status: 'pendent',
-      process: 'Product in transit'
-    },
-    {
-      status: 'pendent',
-      process: 'Product received'
-    }
-  ]
-
-  const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
-  const [modal, setModal] = useState(true)
-  const [select, setSelect] = useState('ASD');
-  const [favorited, setFavorited] = useState(true)
-  const [onCart, setOnCart] = useState(false)
-  const [option, setOption] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [disabled, setDisabled] = useState(false)
-  const [progressIndex, setProgressIndex] = useState(2)
-
-  function openResponsiveMenu() {
-    setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
-  }
-  function closeResponsiveMenu() {
-    setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
-  }
-
-  /*  function toggleCheck() {
-     setCheck(!check)
-   }
-  */
-
-  const handleSelectChange = (event) => {
-    const value = event.target.value;
-    console.log(value)
-    setSelect(value);
-
-  }
-
-  async function signIn() {
-    setLoading(true)
-    setDisabled(true)
-    const timerSignIn = await setTimeout(() => {
-      setLoading(false)
-      setDisabled(false)
-    }, 2000)
-    return () => clearTimeout(timerSignIn)
-  }
-
-
-
   return (
     <Container>
-      <Head>
-        <title>PSD - React Components</title>
-      </Head>
-      <NextProgressComponent />
-      <Header
-        firstUrlTitle='Home'
-        firstUrlLink='/test'
-        secondUrlTitle='ssdfsdfsdfdfjh'
-        secondUrlLink='sdjsdfsdfdffh'
-        thirdUrlTitle='sdfsdfsdfjh'
-        thirdUrlLink='sdsdfsdfsdfjfh'
-        fourthUrlTitle='sdfjsdfsdfhsdf'
-        fourthUrlLink='sdsdfdsfjfh'
-        fivethUrlTitle='sdfdfsdfdsfjhsdf'
-        fivethUrlLink='sdjsdfsdfdffh'
-        sixthUrlTitle='sdfjfdfffhsdf'
-        sixthUrlLink='sddfdsfsdfjfh'
-        logoImageAlt='sdfsdfsdfsdf'
-        logoImagePath='/logo.png'
-        openResponsiveMenu={openResponsiveMenu}
-      />
-      {isResponsiveMenuOpen &&
-        <ResponsiveMenu
-          direction='horizontal'
-          firstUrlTitle='Home'
-          firstUrlLink='sdfsdfsdfsdf'
-          secondUrlTitle='ssdfsdfsdfdfjh'
-          secondUrlLink='sdjsdfsdfdffh'
-          thirdUrlTitle='sdfsdfsdfjh'
-          thirdUrlLink='sdsdfsdfsdfjfh'
-          fourthUrlTitle='sdfjsdfsdfhsdf'
-          fourthUrlLink='sdsdfdsfjfh'
-          fivethUrlTitle='sdfdfsdfdsfjhsdf'
-          closeResponsiveMenu={closeResponsiveMenu}
-        />
-      }
-
-      <Footer>
-        <FooterFirstSection>
-          <FooterTitle
-            content='Departamento'
-          />
-          <FooterLink
-            content='Placas de vídeo'
-            url='/'
-          />
-        </FooterFirstSection>
-        <FooterSecondSection>
-          <FooterTitle
-            content='Departamento'
-          />
-          <FooterLink
-            content='Placas de vídeo'
-            url='/'
-          />
-        </FooterSecondSection>
-        <FooterThirdSection>
-          <FooterTitle
-            content='Departamento'
-          />
-          <FooterLink
-            content='Placas de vídeo'
-            url='/'
-          />
-        </FooterThirdSection>
-        <FooterFourthSection>
-          <FooterTitle
-            content='Departamento'
-          />
-          <FooterLink
-            content='Placas de vídeo'
-            url='/'
-          />
-          <FooterLink
-            content='Placas de vídeo'
-            url='/'
-          />
-          <FooterLink
-            content='Placas de vídeo'
-            url='/'
-          />
-        </FooterFourthSection>
-        <FooterFivethSection>
-          <FooterTitle
-            content='Departamento'
-          />
-          <FooterLink
-            content='Placas de vídeo'
-            url='/'
-          />
-        </FooterFivethSection>
-        <FooterSixthSection>
-          <FooterTitle
-            content='Departamento'
-          />
-          <FooterLink
-            content='Placas de vídeo'
-            url='/'
-          />
-        </FooterSixthSection>
-      </Footer >
+      <p>OK</p>
     </Container>
   )
 }
