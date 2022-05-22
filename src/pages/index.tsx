@@ -174,45 +174,6 @@ export default function Home() {
         />
       }
 
-      <StepProgress
-        steps={steps}
-        currentIndex={progressIndex}
-      />
-
-      <ModalBox
-        isOpen={modal}
-        onRequestClose={() => setModal(false)}
-        overlayClassName='react-modal-overlay'
-        className='active-modal'
-        showAnimation
-      >
-        <h1>It is a modal</h1>
-        <p>lorem ipsum dolor sit amet, consectet</p>
-      </ModalBox>
-      <button
-        onClick={() => setModal(true)}
-      >
-        Open modal
-      </button>
-
-
-
-      <SignUpForm
-        formTitle='Login'
-        formSubtitle='Ou cadastre-se agora'
-        submitButtonTitle='Cadastrar'
-        formAddtionalText='Ao cadastrar você automaticamente concorda com nossa politica e termos de uso.' googleSignInButtonTitle='sdhfj'
-        githubSignInButtonTitle='KKKKKK'
-        facebookSignInButtonTitle='SDAS'
-        buttonsDisabled={disabled}
-        buttonsLoading={loading}
-        forgotPasswordButtonTitle='Esqueci minha senha'
-        passwordForget={signIn}
-        submit={signIn}
-        socialButtonsColorScheme='dark'
-      />
-
-
       <Footer>
         <FooterFirstSection>
           <FooterTitle

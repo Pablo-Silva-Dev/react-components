@@ -4,18 +4,17 @@ export const Container = styled.footer`
   width: 100%;
   min-height: 20vh;
   background-color: ${({ theme }) => theme.colors.black};
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: "First Second Third Fourth Fiveth Sixth";
+  display: flex;
+  justify-content: space-around;
   padding: 32px;
   margin-top: 24vh;
   @media (max-width: 1440px) {
+    display: grid;
     grid-template-rows: 2fr;
     grid-template-columns: repeat(3, 2fr);
-    grid-template-areas: 
-    "First Second Third" 
-    "Fourth Fiveth Sixth";
+    grid-template-areas:
+      "First Second Third"
+      "Fourth Fiveth Sixth";
   }
   @media (max-width: 720px) {
     grid-template-rows: repeat(6, 1fr);
@@ -26,6 +25,7 @@ export const Container = styled.footer`
 
 export const FirstContainer = styled.div`
   display: flex;
+  min-width: 240px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -34,6 +34,7 @@ export const FirstContainer = styled.div`
 
 export const SecondContainer = styled.div`
   display: flex;
+  min-width: 240px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -42,6 +43,7 @@ export const SecondContainer = styled.div`
 
 export const ThirdContainer = styled.div`
   display: flex;
+  min-width: 240px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -50,15 +52,16 @@ export const ThirdContainer = styled.div`
 
 export const FourthContainer = styled.div`
   display: flex;
+  min-width: 240px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   grid-area: Fourth;
-
 `;
 
 export const FivethContainer = styled.div`
   display: flex;
+  min-width: 240px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -66,6 +69,7 @@ export const FivethContainer = styled.div`
 `;
 export const SixthContainer = styled.div`
   display: flex;
+  min-width: 240px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
