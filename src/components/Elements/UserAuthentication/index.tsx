@@ -1,6 +1,8 @@
 import { useSession, signOut } from 'next-auth/react'
 import Image from 'next/image';
 import { useRouter } from 'next/router'
+import {FaUser} from 'react-icons/fa'
+import { useTheme } from 'styled-components';
 
 import { Button, Container, LogoutButton } from './styles';
 
@@ -16,6 +18,7 @@ export function UserAuthentication({
 
     const { data: session } = useSession()
     const router = useRouter()
+    const theme = useTheme()
 
     if (session) {
         return (
@@ -41,6 +44,9 @@ export function UserAuthentication({
 
         return (
             <Container>
+                <FaUser
+                    color={theme.colors.white}
+                />
                 <Button
                     onClick={() => router.push(`${redirectPath}`)}
                 >

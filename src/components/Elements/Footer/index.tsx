@@ -7,15 +7,18 @@ import {
 interface FooterProps {
     children: ReactNode;
     style?: CSSProperties;
+    className?: string;
 }
 
 export function Footer({
     children,
-    style
+    style,
+    className
 }: FooterProps) {
     return (
         <Container
             style={style}
+            className={className}
         >
             {children}
         </Container>

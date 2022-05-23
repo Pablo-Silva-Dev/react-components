@@ -1,65 +1,50 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactNode } from "react";
+import { Container, } from './styles';
+
+interface HeaderProps {
+    children: ReactNode;
+    style?: CSSProperties;
+    className?: string;
+}
+
+export function Header({
+    children,
+    style,
+    className
+}: HeaderProps) {
+    return (
+        <Container
+            style={style}
+            className={className}
+        >
+            {children}
+        </Container>
+    )
+}
+
+
+
+/* import { CSSProperties, ReactNode } from 'react';
 import { MdMenu } from 'react-icons/md';
 import { useTheme } from 'styled-components';
-import { NextLink } from '../../Next/NextLink';
 import { Logo } from '../Logo';
+import { HeaderLink } from './HeaderLink';
 import { UserAuthentication } from '../UserAuthentication';
 import {
     AuthenticationContainer,
     Container,
-    LinksContainer,
-    LogoContainer,
     ResponsiveMenuContainer
 } from './styles';
+import { HeaderLogoContainer } from './HeaderLogoContainer';
+import { HeaderLinksContainer } from './HeaderLinksContainer';
 
-
-interface HeaderProps {
-    firstUrlTitle?: string;
-    secondUrlTitle?: string;
-    thirdUrlTitle?: string;
-    fourthUrlTitle?: string;
-    fivethUrlTitle?: string;
-    sixthUrlTitle?: string;
-    firstUrlLink?: string;
-    secondUrlLink?: string;
-    thirdUrlLink?: string;
-    fourthUrlLink?: string;
-    fivethUrlLink?: string;
-    sixthUrlLink?: string;
-    linkStyle?: CSSProperties;
-    logoImagePath: string;
-    logoImageAlt: string;
-    logoImageSize?: "small" | "medium" | "large";
-    logoImageStyle?: CSSProperties;
-    authenticationRedirectPath?: string;
-    authenticationImageAlt?: string;
-    openResponsiveMenu: () => void;
-    showsAuthenticationContainer?: boolean;
-    style?: CSSProperties;
-}
 
 export function Header({
-    firstUrlLink,
-    secondUrlLink,
-    thirdUrlLink,
-    fourthUrlLink,
-    fivethUrlLink,
-    sixthUrlLink,
-    firstUrlTitle,
-    secondUrlTitle,
-    thirdUrlTitle,
-    fourthUrlTitle,
-    fivethUrlTitle,
-    sixthUrlTitle,
-    linkStyle,
     logoImagePath,
     logoImageAlt,
     logoImageSize,
     logoImageStyle,
-    authenticationImageAlt,
-    authenticationRedirectPath,
     openResponsiveMenu,
-    showsAuthenticationContainer,
     style
 }: HeaderProps) {
 
@@ -79,67 +64,45 @@ export function Header({
                     }}
                 />
             </ResponsiveMenuContainer>
-            <LogoContainer>
+            <HeaderLogoContainer>
                 <Logo
                     imageUrl={logoImagePath}
                     imgAlt={logoImageAlt}
                     size={logoImageSize}
                     style={logoImageStyle}
                 />
-            </LogoContainer>
-            <LinksContainer>
-                {firstUrlLink &&
-                    <NextLink
-                        title={firstUrlTitle}
-                        url={firstUrlLink}
-                        style={linkStyle}
-                    />
-                }
-                {secondUrlLink &&
-                    <NextLink
-                        title={secondUrlTitle}
-                        url={secondUrlLink}
-                        style={linkStyle}
-                    />
-                }
-                {thirdUrlLink &&
-                    <NextLink
-                        title={thirdUrlTitle}
-                        url={thirdUrlLink}
-                        style={linkStyle}
-                    />
-                }
-                {fourthUrlLink &&
-                    <NextLink
-                        title={fourthUrlTitle}
-                        url={fourthUrlLink}
-                        style={linkStyle}
-                    />
-                }
-                {fivethUrlLink &&
-                    <NextLink
-                        title={fivethUrlTitle}
-                        url={fivethUrlLink}
-                        style={linkStyle}
-                    />
-                }
-                {sixthUrlLink &&
-                    <NextLink
-                        title={sixthUrlTitle}
-                        url={sixthUrlLink}
-                        style={linkStyle}
-                    />
-                }
+            </HeaderLogoContainer>
+            <HeaderLinksContainer>
+                <HeaderLink
+                    content='Home'
+                    url='/'
+                />
+                <HeaderLink
+                    content='Hosdfsdfme'
+                    url='/'
+                />
+                <HeaderLink
+                    content='Home'
+                    url='/'
+                />
+                <HeaderLink
+                    content='Hosdfffffffffsdfme'
+                    url='/'
+                />
+                <HeaderLink
+                    content='Home'
+                    url='/'
+                />
+                <HeaderLink
+                    content='Hosdfffffffffsdfme'
+                    url='/'
+                />
+                <HeaderLink
+                    content='Home'
+                    url='/'
+                />
 
-            </LinksContainer>
-            {showsAuthenticationContainer &&
-                <AuthenticationContainer>
-                    <UserAuthentication
-                        redirectPath={authenticationRedirectPath}
-                        imageAlt={authenticationImageAlt}
-                    />
-                </AuthenticationContainer>
-            }
+            </HeaderLinksContainer>
         </Container>
     )
-}
+} */

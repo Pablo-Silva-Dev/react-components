@@ -12,6 +12,11 @@ import { FooterTitle } from "../components/Elements/Footer/FooterTitle";
 import { Header } from "../components/Elements/Header";
 import { ResponsiveMenu } from "../components/Elements/ResponsiveMenu";
 import { Container } from "./styles";
+import { HeaderLogoContainer } from "../components/Elements/Header/HeaderLogoContainer";
+import { Logo } from "../components/Elements/Logo";
+import { HeaderLinksContainer } from "../components/Elements/Header/HeaderLinksContainer";
+import { HeaderLink } from "../components/Elements/Header/HeaderLink";
+import { HeaderResponsiveMenu } from "../components/Elements/Header/HeaderResponsiveMenu";
 
 interface LayoutProps {
     children: ReactNode;
@@ -31,38 +36,65 @@ export default function Layout({ children }: LayoutProps) {
     return (
         <Container>
             <NextProgressComponent />
-            <Header
-                firstUrlTitle='Home'
-                firstUrlLink='/test'
-                secondUrlTitle='ssdfsdfsdfdfjh'
-                secondUrlLink='sdjsdfsdfdffh'
-                thirdUrlTitle='sdfsdfsdfjh'
-                thirdUrlLink='sdsdfsdfsdfjfh'
-                fourthUrlTitle='sdfjsdfsdfhsdf'
-                fourthUrlLink='sdsdfdsfjfh'
-                fivethUrlTitle='sdfdfsdfdsfjhsdf'
-                fivethUrlLink='sdjsdfsdfdffh'
-                sixthUrlTitle='sdfjfdfffhsdf'
-                sixthUrlLink='sddfdsfsdfjfh'
-                logoImageAlt='sdfsdfsdfsdf'
-                logoImagePath='/logo.png'
-                openResponsiveMenu={openResponsiveMenu}
-            />
-            {isResponsiveMenuOpen &&
-                <ResponsiveMenu
-                    direction='horizontal'
-                    firstUrlTitle='Home'
-                    firstUrlLink='sdfsdfsdfsdf'
-                    secondUrlTitle='ssdfsdfsdfdfjh'
-                    secondUrlLink='sdjsdfsdfdffh'
-                    thirdUrlTitle='sdfsdfsdfjh'
-                    thirdUrlLink='sdsdfsdfsdfjfh'
-                    fourthUrlTitle='sdfjsdfsdfhsdf'
-                    fourthUrlLink='sdsdfdsfjfh'
-                    fivethUrlTitle='sdfdfsdfdsfjhsdf'
-                    closeResponsiveMenu={closeResponsiveMenu}
+            <Header>
+                <HeaderResponsiveMenu
+                    openResponsiveMenu={openResponsiveMenu}
                 />
-            }
+                  
+                <HeaderLogoContainer>
+                    <Logo
+                        imageUrl='/logo.png'
+                        imgAlt='React Components PSD'
+                        size='medium'
+                    />
+                </HeaderLogoContainer>
+                <HeaderLinksContainer>
+                    <HeaderLink
+                        content='Home'
+                        url='/'
+                    />
+                    <HeaderLink
+                        content='Hosdfsdfme'
+                        url='/'
+                    />
+                    <HeaderLink
+                        content='Home'
+                        url='/'
+                    />
+                    <HeaderLink
+                        content='Hosdfffffffffsdfme'
+                        url='/'
+                    />
+                    <HeaderLink
+                        content='Home'
+                        url='/'
+                    />
+                    <HeaderLink
+                        content='Hosdfffffffffsdfme'
+                        url='/'
+                    />
+                    <HeaderLink
+                        content='Home'
+                        url='/'
+                    />
+
+                </HeaderLinksContainer>
+                {isResponsiveMenuOpen &&
+                    <ResponsiveMenu
+                        direction='horizontal'
+                        firstUrlTitle='Home'
+                        firstUrlLink='sdfsdfsdfsdf'
+                        secondUrlTitle='ssdfsdfsdfdfjh'
+                        secondUrlLink='sdjsdfsdfdffh'
+                        thirdUrlTitle='sdfsdfsdfjh'
+                        thirdUrlLink='sdsdfsdfsdfjfh'
+                        fourthUrlTitle='sdfjsdfsdfhsdf'
+                        fourthUrlLink='sdsdfdsfjfh'
+                        fivethUrlTitle='sdfdfsdfdsfjhsdf'
+                        closeResponsiveMenu={closeResponsiveMenu}
+                    />
+                }
+            </Header>
             <main>{children}</main>
             <Footer>
                 <FooterFirstSection>
