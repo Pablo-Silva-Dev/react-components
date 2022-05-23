@@ -17,12 +17,15 @@ import { Logo } from "../components/Elements/Logo";
 import { HeaderLinksContainer } from "../components/Elements/Header/HeaderLinksContainer";
 import { HeaderLink } from "../components/Elements/Header/HeaderLink";
 import { HeaderResponsiveMenu } from "../components/Elements/Header/HeaderResponsiveMenu";
+import { useTheme } from "styled-components";
 
 interface LayoutProps {
     children: ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
+
+    const theme = useTheme()
 
     const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
 
@@ -39,6 +42,9 @@ export default function Layout({ children }: LayoutProps) {
             <Header>
                 <HeaderResponsiveMenu
                     openResponsiveMenu={openResponsiveMenu}
+                    responsiveMenuIconStyle={{
+                        color: theme.colors.secondary
+                    }}
                 />
                   
                 <HeaderLogoContainer>
