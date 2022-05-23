@@ -11,8 +11,4 @@ export const Container = styled.header`
 `;
 
 
-export const AuthenticationContainer = styled.div`
-  margin-right: 1.4rem;
-`;
-
 

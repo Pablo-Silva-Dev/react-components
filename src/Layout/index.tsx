@@ -18,6 +18,8 @@ import { HeaderLinksContainer } from "../components/Elements/Header/HeaderLinksC
 import { HeaderLink } from "../components/Elements/Header/HeaderLink";
 import { HeaderResponsiveMenu } from "../components/Elements/Header/HeaderResponsiveMenu";
 import { useTheme } from "styled-components";
+import { HeaderAuthenticationContainer } from "../components/Elements/Header/HeaderAuthenticationContainer";
+import { UserAuthentication } from "../components/Elements/UserAuthentication";
 
 interface LayoutProps {
     children: ReactNode;
@@ -40,13 +42,28 @@ export default function Layout({ children }: LayoutProps) {
         <Container>
             <NextProgressComponent />
             <Header>
+                {isResponsiveMenuOpen &&
+                    <ResponsiveMenu
+                        direction='horizontal'
+                        firstUrlTitle='Home'
+                        firstUrlLink='sdfsdfsdfsdf'
+                        secondUrlTitle='ssdfsdfsdfdfjh'
+                        secondUrlLink='sdjsdfsdfdffh'
+                        thirdUrlTitle='sdfsdfsdfjh'
+                        thirdUrlLink='sdsdfsdfsdfjfh'
+                        fourthUrlTitle='sdfjsdfsdfhsdf'
+                        fourthUrlLink='sdsdfdsfjfh'
+                        fivethUrlTitle='sdfdfsdfdsfjhsdf'
+                        closeResponsiveMenu={closeResponsiveMenu}
+                    />
+                }
                 <HeaderResponsiveMenu
                     openResponsiveMenu={openResponsiveMenu}
                     responsiveMenuIconStyle={{
                         color: theme.colors.secondary
                     }}
                 />
-                  
+
                 <HeaderLogoContainer>
                     <Logo
                         imageUrl='/logo.png'
@@ -83,23 +100,14 @@ export default function Layout({ children }: LayoutProps) {
                         content='Home'
                         url='/'
                     />
-
                 </HeaderLinksContainer>
-                {isResponsiveMenuOpen &&
-                    <ResponsiveMenu
-                        direction='horizontal'
-                        firstUrlTitle='Home'
-                        firstUrlLink='sdfsdfsdfsdf'
-                        secondUrlTitle='ssdfsdfsdfdfjh'
-                        secondUrlLink='sdjsdfsdfdffh'
-                        thirdUrlTitle='sdfsdfsdfjh'
-                        thirdUrlLink='sdsdfsdfsdfjfh'
-                        fourthUrlTitle='sdfjsdfsdfhsdf'
-                        fourthUrlLink='sdsdfdsfjfh'
-                        fivethUrlTitle='sdfdfsdfdsfjhsdf'
-                        closeResponsiveMenu={closeResponsiveMenu}
+                <HeaderAuthenticationContainer>
+                    <UserAuthentication 
+                        imageAlt="PSD"
+                        redirectPath="/"
                     />
-                }
+                </HeaderAuthenticationContainer>
+
             </Header>
             <main>{children}</main>
             <Footer>
