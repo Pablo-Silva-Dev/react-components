@@ -64,12 +64,15 @@ import { StepProgress } from '../components/Elements/StepProgress';
 import { ModalBox } from '../components/Modals/ModalBox';
 import { SignUpForm } from '../components/Forms/SignUpForm';
 import { DropdownSelect } from '../components/Elements/DropdownSelect';
+import SearchInput from '../components/Elements/SearchInput';
 
 
 export default function Home() {
   return (
     <Container>
-      <p>OK</p>
+      <SearchInput
+        placeholder='Faça uma busca'
+      />
     </Container>
   )
 }
