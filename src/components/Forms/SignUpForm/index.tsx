@@ -1,6 +1,4 @@
 import { CSSProperties } from 'react';
-import ReactLoading from 'react-loading';
-import { useTheme } from 'styled-components';
 import { EmailInput } from '../EmailInput';
 import { FacebookSignInButton } from '../FacebookSignInButton';
 import { GitHubSignInButton } from '../GitHubSignInButton';
@@ -64,8 +62,6 @@ export function SignUpForm({
     className,
     style
 }: SignUpFormProps) {
-
-    const theme = useTheme()
 
     return (
         <Container

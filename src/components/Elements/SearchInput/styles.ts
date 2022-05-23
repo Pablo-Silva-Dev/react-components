@@ -13,4 +13,7 @@ export const Input = styled.input`
   &:focus {
     outline: 2px solid ${(props) => props.theme.colors.primary};
   }
+  &:disabled {
+    opacity: .8;
+  }
 `;

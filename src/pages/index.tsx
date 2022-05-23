@@ -65,13 +65,34 @@ import { ModalBox } from '../components/Modals/ModalBox';
 import { SignUpForm } from '../components/Forms/SignUpForm';
 import { DropdownSelect } from '../components/Elements/DropdownSelect';
 import SearchInput from '../components/Elements/SearchInput';
+import {  ListLink } from '../components/Elements/List';
 
 
 export default function Home() {
+
+
+  const list = [
+    {content: 'Placas de vídeo', url:'/', iconName:'like'},
+    {content: 'Memorias ram', url:'/'},
+    {content: 'Processadores', url:'/', iconName:'like'},
+    {content: 'Monitores', url:'/', iconName:'like'},
+    {content: 'Armazenamento', url:'/d'},
+  ]
+
+
   return (
     <Container>
       <SearchInput
         placeholder='Faça uma busca'
+      />
+      <ListLink
+        items={list}
+        stripped
+        iconsStyle={{
+          color: 'orange',
+        }}
+        iconsSize={22}
+     
       />
     </Container>
   )
