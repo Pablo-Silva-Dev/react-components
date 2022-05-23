@@ -12,7 +12,7 @@ export function HeaderLogoContainer({
   children,
   logoContainerStyle,
   logoContainerClassName
- }: HeaderLogoContainerProps) {
+}: HeaderLogoContainerProps) {
   return (
     <Container
       style={logoContainerStyle}
