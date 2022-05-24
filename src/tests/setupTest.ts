@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import "@testing-library/jest-dom/extend-expect";
 import 'jest-canvas-mock'
 
-//for React Slick tests
+//FOR REACT SLICK TEST
 //@ts-ignore
 window.matchMedia =
   window.matchMedia ||
@@ -15,3 +15,23 @@ window.matchMedia =
       onchange: () => {},
     };
   };
+
+  //FOR TIMELINELEMENT COMPONENT TEST
+
+  class IntersectionObserver {
+    observe = jest.fn()
+    disconnect = jest.fn()
+    unobserve = jest.fn()
+  }
+  
+  Object.defineProperty(window, 'IntersectionObserver', {
+    writable: true,
+    configurable: true,
+    value: IntersectionObserver,
+  })
+  
+  Object.defineProperty(global, 'IntersectionObserver', {
+    writable: true,
+    configurable: true,
+    value: IntersectionObserver,
+  })

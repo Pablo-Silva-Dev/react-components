@@ -34,6 +34,7 @@ export function TimelineElement({
         <>
             {lastElement ?
                 <VerticalTimelineElement
+                    data-testid="timelinelement-lastchild-testid"
                     iconStyle={{
                         background: iconBgColor || theme.colors.primary
                     }}
