@@ -65,7 +65,7 @@ import { ModalBox } from '../components/Modals/ModalBox';
 import { SignUpForm } from '../components/Forms/SignUpForm';
 import { DropdownSelect } from '../components/Elements/DropdownSelect';
 import SearchInput from '../components/Elements/SearchInput';
-import { ListLink } from '../components/Elements/List';
+import { ListLink } from '../components/Elements/ListLink';
 import { ClipboardButton } from '../components/Elements/ClipboardButton';
 
 

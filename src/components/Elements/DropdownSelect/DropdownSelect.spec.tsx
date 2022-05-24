@@ -1,6 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import { ReactNode } from 'react'
-import { ThemeProvider } from 'styled-components'
 import { DropdownSelect } from './'
 
 const list = ['foo', 'bar']
