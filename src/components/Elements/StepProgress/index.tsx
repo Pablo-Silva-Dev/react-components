@@ -8,7 +8,7 @@ import {
     StepTitle
 } from './styles';
 
-interface TaskProps {
+export interface TaskProps {
     process: string;
     status: string;
 }
