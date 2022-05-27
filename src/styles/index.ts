@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-grow: auto;
   width: 80vw;
   min-height: 80vh;
-  padding-top: 40px;
+  padding: 40px;
 `;
 
 export const ComponentContainer = styled.div`

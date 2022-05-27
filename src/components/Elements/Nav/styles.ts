@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 16px;
   width: 12vw;
-  height: 80vh;
+  height: 100vh;
   overflow: auto;
   background-color: ${({ theme }) => theme.colors.primary_dark};
   @media (max-width: 1440px) {

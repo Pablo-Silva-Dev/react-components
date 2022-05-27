@@ -19,7 +19,6 @@ export function CountUpAnimation({
     start,
     end,
     duration,
-    separator,
     decimals,
     decimal,
     prefix,
@@ -33,7 +32,6 @@ export function CountUpAnimation({
             start={start}
             end={end}
             duration={duration}
-            separator={separator}
             decimals={decimals}
             decimal={decimal}
             prefix={typeof (prefix) !== 'undefined' ? prefix : ''}

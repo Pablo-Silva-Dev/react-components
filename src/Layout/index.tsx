@@ -23,6 +23,14 @@ import { UserAuthentication } from "../components/Elements/UserAuthentication";
 import { Nav } from "../components/Elements/Nav";
 import { NavTitle } from "../components/Elements/Nav/NavTitle";
 import { NavLink } from "../components/Elements/Nav/NavLink";
+import {
+    animationComponentsLinkList,
+    elementsComponentsLinkList,
+    formComponentsLinkList,
+    modalomponentsLinkList,
+    nextComponentsLinkList,
+    typographyComponentsLinkList
+ } from '../data/componentsListLinks'
 
 interface LayoutProps {
     children: ReactNode;
@@ -74,53 +82,77 @@ export default function Layout({ children }: LayoutProps) {
                         size='medium'
                     />
                 </HeaderLogoContainer>
-                <HeaderLinksContainer>
-                    <HeaderLink
-                        content='Home'
-                        url='/'
-                    />
-                    <HeaderLink
-                        content='Hosdfsdfme'
-                        url='/'
-                    />
-                    <HeaderLink
-                        content='Home'
-                        url='/'
-                    />
-                    <HeaderLink
-                        content='Hosdfffffffffsdfme'
-                        url='/'
-                    />
-                    <HeaderLink
-                        content='Home'
-                        url='/'
-                    />
-                    <HeaderLink
-                        content='Hosdfffffffffsdfme'
-                        url='/'
-                    />
-                    <HeaderLink
-                        content='Home'
-                        url='/'
-                    />
-                </HeaderLinksContainer>
-                <HeaderAuthenticationContainer>
-                    <UserAuthentication
-                        imageAlt="PSD"
-                        redirectPath="/"
-                    />
-                </HeaderAuthenticationContainer>
+
 
             </Header>
             <MainContainer>
                 <Nav>
                     <NavTitle
-                        content='Typography'
+                        content='Animations'
                     />
-                    <NavLink
-                        content='Checkbox'
-                        url='/checkbox'
+                    {animationComponentsLinkList.map(link => (
+                        <NavLink
+                            key={link.content}
+                            content={link.content}
+                            url={link.url}
+                        />
+                    ))}
+                    
+                    <NavTitle
+                        content='Elements'
                     />
+                    {elementsComponentsLinkList.map(link => (
+                        <NavLink
+                            key={link.content}
+                            content={link.content}
+                            url={link.url}
+                        />
+                    ))}
+                    <NavTitle
+                        content='Forms'
+                    />
+                    {formComponentsLinkList.map(link => (
+                        <NavLink
+                            key={link.content}
+                            content={link.content}
+                            url={link.url}
+                        />
+                    ))}
+
+                    <NavTitle
+                        content='Modals'
+                    />
+                    {modalomponentsLinkList.map(link => (
+                        <NavLink
+                            key={link.content}
+                            content={link.content}
+                            url={link.url}
+                        />
+                    ))}
+
+                    <NavTitle
+                        content='Next'
+                    />
+                    {nextComponentsLinkList.map(link => (
+                        <NavLink
+                            key={link.content}
+                            content={link.content}
+                            url={link.url}
+                        />
+                    ))}
+                    
+                    <NavTitle
+                        content='Next'
+                    />
+                    {typographyComponentsLinkList.map(link => (
+                        <NavLink
+                            key={link.content}
+                            content={link.content}
+                            url={link.url}
+                        />
+                    ))}
+
+               
                 </Nav>
                 <main>{children}</main>
             </MainContainer>
