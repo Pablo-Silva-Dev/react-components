@@ -20,6 +20,9 @@ import { HeaderResponsiveMenu } from "../components/Elements/Header/HeaderRespon
 import { useTheme } from "styled-components";
 import { HeaderAuthenticationContainer } from "../components/Elements/Header/HeaderAuthenticationContainer";
 import { UserAuthentication } from "../components/Elements/UserAuthentication";
+import { Nav } from "../components/Elements/Nav";
+import { NavTitle } from "../components/Elements/Nav/NavTitle";
+import { NavLink } from "../components/Elements/Nav/NavLink";
 
 interface LayoutProps {
     children: ReactNode;
@@ -110,7 +113,15 @@ export default function Layout({ children }: LayoutProps) {
 
             </Header>
             <MainContainer>
-
+                <Nav>
+                    <NavTitle
+                        content='Typography'
+                    />
+                    <NavLink
+                        content='Checkbox'
+                        url='/checkbox'
+                    />
+                </Nav>
                 <main>{children}</main>
             </MainContainer>
             <Footer>

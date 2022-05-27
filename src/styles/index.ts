@@ -4,8 +4,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  min-height: 64vh;
+  flex-grow: auto;
+  width: 80vw;
+  min-height: 80vh;
   padding-top: 40px;
 `;
 
@@ -14,6 +15,9 @@ export const ComponentContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 800px;
+  @media (max-width: 1080px) {
+    width: 640px;
+  }
   @media (max-width: 720px) {
     width: 80%;
   }
