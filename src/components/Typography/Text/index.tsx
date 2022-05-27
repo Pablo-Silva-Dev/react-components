@@ -4,12 +4,16 @@ import { Text as TextComponent } from './styles';
 
 interface TextProps {
   content: string;
-  style?: CSSProperties
+  style?: CSSProperties;
+  className?: string;
 }
 
-export function Text({ content, style }: TextProps) {
+export function Text({ content, style, className }: TextProps) {
   return (
-    <TextComponent style={style}>
+    <TextComponent
+      style={style}
+      className={className}
+    >
       {content}
     </TextComponent>
   )
