@@ -1,4 +1,4 @@
-import { RevealFade as RevealFadeAnimation } from '../components/Animations/RevealFade'
+import { RevealFlip as RevealFlipAnimation } from '../components/Animations/RevealFlip'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -10,10 +10,10 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function RevealFade() {
+export default function RevealFlip() {
 
     const props = {
-        children: 'Description: Element wrapped by RevealFade. Type: ReacNode. Required.',
+        children: 'Description: Element wrapped by RevealFlip. Type: ReacNode. Required.',
         top: 'Description: Reveals content from top.',
         bottom: 'Description: Reveals content from bottom.',
         left: 'Description: Reveals content from left.',
@@ -25,18 +25,18 @@ export default function RevealFade() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='RevealFade'
+                        content='RevealFlip'
                     />
                     <Text
-                        content='Used to display RevealFade animation.'
+                        content='Used to display RevealFlip animation.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <RevealFadeAnimation
-                        top
+                    <RevealFlipAnimation
+                        right
                     >
                         <h3>It is a children.</h3>
-                    </RevealFadeAnimation>
+                    </RevealFlipAnimation>
                 </PreviewContainer>
 
                 <PropsContainer>
