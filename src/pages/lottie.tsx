@@ -1,35 +1,43 @@
-import { Loading as LoadingAnimation } from '../components/Animations/Loading'
+import { LottieAnimation } from '../components/Animations/Lottie'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
-import { ComponentContainer, Container, DescriptionContainer, PreviewContainer, PropsContainer } from "../styles";
+import {
+    ComponentContainer,
+    Container,
+    DescriptionContainer,
+    PreviewContainer,
+    PropsContainer
+} from "../styles";
+import animation from '../../public/react_animation.json'
 
-export default function Loading() {
+export default function Lottie() {
 
     const props = {
-        start: 'Description: Animation size. Type: "small" | "medium" | "large".',
-        type: 'Description: Animation type. Type: "bars" | "bubbles" | "balls" | "blank" | "cylon" | "spin" | "spokes" |"cubes" | "spinningBubbles".',
-        className: 'Description: ClassName. Type: String.'
-
-
+        animation: 'Description: Animation size. Type: JSON object. Required.',
+        width: 'Description: Animation width. Type: Number. Required.',
+        height: 'Description: Animation height. Type: Number. Required.',
+        autoplay: 'Description: Autoplay. Type: boolean.',
+        loop: 'Description: Loop. Type: boolean.',
+        style: 'Description: Animation style. Type: CSS Properties.'
     }
-
 
     return (
         <Container>
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='Loading'
+                        content='Lottie'
                     />
                     <Text
-                        content='Used to display loading animation.'
+                        content='Used to display Lottie animation.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <LoadingAnimation
-                        size='medium'
-                        type='spinningBubbles'
+                    <LottieAnimation
+                        animation={animation}
+                        width={300}
+                        height={300}
                     />
                 </PreviewContainer>
 

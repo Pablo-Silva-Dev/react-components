@@ -3,13 +3,19 @@ import { CheckBox } from '../components/Forms/CheckBox'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
-import { ComponentContainer, Container, DescriptionContainer, PreviewContainer, PropsContainer } from "../styles";
+import {
+    ComponentContainer,
+    Container,
+    DescriptionContainer,
+    PreviewContainer,
+    PropsContainer
+} from "../styles";
 
 export default function Checkbox() {
 
     const props = {
-        checked: `If is checked | Type: Boolean | Required: true.`,
-        onChange: 'Callback when checked state changes | Type: Function | Required: true.'
+        checked: `Checked boolean value. Type: Boolean. Required.`,
+        onChange: 'Callback when checked state changes. Type: Function. Required.'
     }
 
     const [checkBox, setCheckBox] = useState(false)

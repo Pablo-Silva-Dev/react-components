@@ -4,9 +4,10 @@ import { useTheme } from 'styled-components';
 interface LoadingProps {
     size?: 'small' | 'medium' | 'large';
     type?: ReactLoadingProps['type']
+    className?: string
 }
 
-export function Loading({ size, type }: LoadingProps) {
+export function Loading({ size, type, className }: LoadingProps) {
 
     const theme = useTheme()
 
@@ -17,6 +18,7 @@ export function Loading({ size, type }: LoadingProps) {
             height={size === 'large' ? 72 : size === 'small' ? 40 : 56}
             width={size === 'large' ? 72 : size === 'small' ? 40 : 56}
             data-testid='loading-id'
+            className={className}
         />
     )
 }

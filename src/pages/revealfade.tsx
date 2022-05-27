@@ -1,36 +1,43 @@
-import { Loading as LoadingAnimation } from '../components/Animations/Loading'
+import { RevealFade as RevealFadeAnimation } from '../components/Animations/RevealFade'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
-import { ComponentContainer, Container, DescriptionContainer, PreviewContainer, PropsContainer } from "../styles";
+import {
+    ComponentContainer,
+    Container,
+    DescriptionContainer,
+    PreviewContainer,
+    PropsContainer
+} from "../styles";
 
-export default function Loading() {
+export default function RevealFade() {
 
     const props = {
-        start: 'Description: Animation size. Type: "small" | "medium" | "large".',
-        type: 'Description: Animation type. Type: "bars" | "bubbles" | "balls" | "blank" | "cylon" | "spin" | "spokes" |"cubes" | "spinningBubbles".',
+        top: 'Description: Reveals content from top.',
+        bottom: 'Description: Reveals content from bottom.',
+        left: 'Description: Reveals content from left.',
+        right: 'Description: Reveals content from right.',
+        style: 'Description: Animation style. Type: CSS Properties.',
         className: 'Description: ClassName. Type: String.'
-
-
     }
-
 
     return (
         <Container>
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='Loading'
+                        content='RevealFade'
                     />
                     <Text
-                        content='Used to display loading animation.'
+                        content='Used to display RevealFade animation.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <LoadingAnimation
-                        size='medium'
-                        type='spinningBubbles'
-                    />
+                    <RevealFadeAnimation
+                        top
+                    >
+                        <p>It is a children.</p>
+                    </RevealFadeAnimation>
                 </PreviewContainer>
 
                 <PropsContainer>

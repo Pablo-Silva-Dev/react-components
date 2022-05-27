@@ -13,6 +13,7 @@ interface CountUpProps {
     onStart?: () => void
     onEnd?: () => void
     style?: CSSProperties;
+    className?: string;
 }
 
 export function CountUpAnimation({
@@ -25,7 +26,8 @@ export function CountUpAnimation({
     suffix,
     onStart,
     onEnd,
-    style
+    style,
+    className
 }: CountUpProps) {
     return (
         <CountUp
@@ -39,6 +41,7 @@ export function CountUpAnimation({
             onEnd={onEnd}
             onStart={onStart}
             data-testid='countup-id'
+            className={className}
         >
             {({ countUpRef }) => (
                 <>

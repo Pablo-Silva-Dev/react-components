@@ -2,11 +2,11 @@ export const animationComponentsLinkList = [
   { content: "CountUp", url: "/countup" },
   { content: "Loading", url: "/loading" },
   { content: "Lottie", url: "/lottie" },
-  { content: "RevealFade", url: "/revealFade" },
-  { content: "RevealFlip", url: "/revealFlip" },
-  { content: "RevealRotate", url: "/revealRotate" },
-  { content: "RevealZoom", url: "/revealZoom" },
-  { content: "TextTyping", url: "/textTyping" },
+  { content: "RevealFade", url: "/revealfade" },
+  { content: "RevealFlip", url: "/revealflip" },
+  { content: "RevealRotate", url: "/revealrotate" },
+  { content: "RevealZoom", url: "/revealzoom" },
+  { content: "TextTyping", url: "/texttyping" },
 ];
 
 export const elementsComponentsLinkList = [
