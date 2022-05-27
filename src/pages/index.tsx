@@ -10,7 +10,7 @@ import { Header } from '../components/Elements/Header'
 import { useState } from 'react'
 import { ResponsiveMenu } from '../components/Elements/ResponsiveMenu'
 import { TextInput } from '../components/Forms/TextInput'
-import { Container } from '../styles'
+import { ComponentContainer, Container, DescriptionContainer, PreviewContainer, PropsContainer } from '../styles'
 
 import { FiAlertCircle } from 'react-icons/fi'
 import { EmailInput } from '../components/Forms/EmailInput'
@@ -72,11 +72,11 @@ import { ClipboardButton } from '../components/Elements/ClipboardButton';
 export default function Home() {
 
 
+
+
   return (
     <Container>
-      <SearchInput
-        placeholder='Faça uma busca'
-      />
+    
     </Container>
   )
 }

@@ -1,6 +1,6 @@
 import Checkbox from 'rc-checkbox';
 
-interface CheckboxProps {
+export interface CheckboxProps {
     checked: boolean
     onChange: () => void;
 }

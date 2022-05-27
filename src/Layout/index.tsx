@@ -11,7 +11,7 @@ import { FooterThirdSection } from "../components/Elements/Footer/FooterThirdSec
 import { FooterTitle } from "../components/Elements/Footer/FooterTitle";
 import { Header } from "../components/Elements/Header";
 import { ResponsiveMenu } from "../components/Elements/ResponsiveMenu";
-import { Container } from "./styles";
+import { Container, MainContainer } from "./styles";
 import { HeaderLogoContainer } from "../components/Elements/Header/HeaderLogoContainer";
 import { Logo } from "../components/Elements/Logo";
 import { HeaderLinksContainer } from "../components/Elements/Header/HeaderLinksContainer";
@@ -102,14 +102,17 @@ export default function Layout({ children }: LayoutProps) {
                     />
                 </HeaderLinksContainer>
                 <HeaderAuthenticationContainer>
-                    <UserAuthentication 
+                    <UserAuthentication
                         imageAlt="PSD"
                         redirectPath="/"
                     />
                 </HeaderAuthenticationContainer>
 
             </Header>
-            <main>{children}</main>
+            <MainContainer>
+
+                <main>{children}</main>
+            </MainContainer>
             <Footer>
                 <FooterFirstSection>
                     <FooterTitle
