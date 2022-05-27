@@ -9,18 +9,22 @@ import {
     PreviewContainer,
     PropsContainer
 } from "../styles";
-import animation from '../../public/react_animation.json'
 
 export default function TextTyper() {
 
     const props = {
-        animation: 'Description: Animation size. Type: JSON object. Required.',
-        width: 'Description: Animation width. Type: Number. Required.',
-        height: 'Description: Animation height. Type: Number. Required.',
-        autoplay: 'Description: Autoplay. Type: boolean.',
-        loop: 'Description: Loop. Type: boolean.',
-        style: 'Description: Animation style. Type: CSS Properties.'
+        textList: 'Description: An array containing texts to display. Is suported until 8 texts. Type: string[]. Required.',
+        textDelay: 'Description: Text delay in MS. Type: Number.',
+        wrapper: 'Description: HTML element to render the animation. Type: "p" | "h1" |"h2" | "h3" | "h4" | "h5" | "h6".',
+        repeatTimes: 'Description: Number of times to repeat the whole animation. Type: Number.',
+        showsCursor: 'Description: If the cursour should be visible. Type: Boolean. Default: true.',
+        className: 'Description: ClassName. Type: String.'
     }
+
+    const list = [
+        'one', 'two', 'three', 'four', 'five', 'six'
+    ]
+    
 
     return (
         <Container>
@@ -35,14 +39,14 @@ export default function TextTyper() {
                 </DescriptionContainer>
                 <PreviewContainer>
                     <TextTyperAnimation
-                        firstText='It is the first text'
-                        firstTextDelay={100}
-                        secondText='It is the second text'
+                        textList={list}
+                        textDelay={100}
                         wrapper='h2'
-                        repeat={1}
+                        className=''
+                        showsCursor
+
                     />
                 </PreviewContainer>
-
                 <PropsContainer>
                     <SubTitle
                         content='Props:'

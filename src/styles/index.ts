@@ -21,7 +21,7 @@ export const ComponentContainer = styled.div`
   @media (max-width: 720px) {
     width: 80%;
   }
-`;
+  `;
 
 export const DescriptionContainer = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ export const DescriptionContainer = styled.div`
   align-items: flex-start;
   padding: 16px;
   width: 100%;
-`;
+  `;
 
 export const PreviewContainer = styled.div`
   display: flex;
@@ -39,10 +39,12 @@ export const PreviewContainer = styled.div`
   width: 100%;
   min-height: 240px;
   background-color: ${({ theme }) => theme.colors.element_base};
-`;
+  `;
 
 export const PropsContainer = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.silver};
+  max-height: 480px;
+  overflow-x: auto;
   padding: 16px;
-`;
+  `;

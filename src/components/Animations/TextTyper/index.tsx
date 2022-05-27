@@ -2,29 +2,21 @@ import TypeAnimation from 'react-type-animation';
 import { Container } from './styles';
 
 interface TextTyperProps {
-    wrapper: 'p' | 'h2'
-    firstText: string;
+    wrapper: 'p' | 'h1' |'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+    textList: string[];
     secondText?: string;
     thirdText?: string;
     fourthText?: string;
-    firstTextDelay: number;
-    secondTextDelay?: number;
-    thirdTextDelay?: number;
-    fourthTextDelay?: number;
+    textDelay: number;
     repeat?: number;
     showsCursor?: boolean;
     className?: string;
 }
 
+
 export function TextTyper({
-    firstText,
-    secondText,
-    thirdText,
-    fourthText,
-    firstTextDelay,
-    secondTextDelay,
-    thirdTextDelay,
-    fourthTextDelay,
+    textList,
+    textDelay,
     wrapper,
     repeat,
     showsCursor,
@@ -35,14 +27,22 @@ export function TextTyper({
             <TypeAnimation
                 sequence={
                     [
-                        firstText,
-                        firstTextDelay,
-                        secondText && secondText,
-                        secondTextDelay && secondTextDelay,
-                        thirdText && thirdText,
-                        thirdTextDelay && thirdTextDelay,
-                        fourthText && fourthText,
-                        fourthTextDelay && fourthTextDelay,
+                        textList[0],
+                        textDelay,
+                        textList[1] && textList[1],
+                        textDelay,
+                        textList[2] && textList[2],
+                        textDelay,
+                        textList[3] && textList[3],
+                        textDelay,
+                        textList[4] && textList[4],
+                        textDelay,
+                        textList[5] && textList[5],
+                        textDelay,
+                        textList[6] && textList[6],
+                        textDelay,
+                        textList[7] && textList[7],
+                        textDelay,
                     ]
                 }
                 wrapper={wrapper}
