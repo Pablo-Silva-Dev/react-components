@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { TextTyping } from './'
 import { theme } from '../../../themes/theme'
+import { TextTyper } from '.'
 
 interface ChildrenProps {
     children: ReactNode
@@ -16,11 +16,11 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('TextTyping', () => {
+describe('TextTyper', () => {
     it('should render correctly', () => {
         const rendered = render(
-            <TextTyping
-                firstText='texttyping-first-text'
+            <TextTyper
+                firstText='TextTyper-first-text'
                 firstTextDelay={100}
                 wrapper='p'
             />, {

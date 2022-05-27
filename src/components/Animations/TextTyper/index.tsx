@@ -1,7 +1,7 @@
 import TypeAnimation from 'react-type-animation';
 import { Container } from './styles';
 
-interface TextTypingProps {
+interface TextTyperProps {
     wrapper: 'p' | 'h2'
     firstText: string;
     secondText?: string;
@@ -16,7 +16,7 @@ interface TextTypingProps {
     className?: string;
 }
 
-export function TextTyping({
+export function TextTyper({
     firstText,
     secondText,
     thirdText,
@@ -29,7 +29,7 @@ export function TextTyping({
     repeat,
     showsCursor,
     className
-}: TextTypingProps) {
+}: TextTyperProps) {
     return (
         <Container>
             <TypeAnimation

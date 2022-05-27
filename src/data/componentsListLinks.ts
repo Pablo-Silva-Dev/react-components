@@ -6,7 +6,7 @@ export const animationComponentsLinkList = [
   { content: "RevealFlip", url: "/revealflip" },
   { content: "RevealRotate", url: "/revealrotate" },
   { content: "RevealZoom", url: "/revealzoom" },
-  { content: "TextTyping", url: "/texttyping" },
+  { content: "TextTyper", url: "/texttyper" },
 ];
 
 export const elementsComponentsLinkList = [
