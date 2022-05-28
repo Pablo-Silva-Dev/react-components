@@ -1,18 +1,20 @@
 import Image from 'next/image'
 import { CSSProperties } from 'react';
 import { Container } from './styles';
+import {name} from '../../../../package.json'
 
 interface AvatarProps {
     imageUrl: string;
-    imgAlt: string;
     size?: 'tiny' | 'small' | 'medium' | 'large';
     style?: CSSProperties;
+    className?: string;
 }
 
-export function Avatar({ imageUrl, imgAlt, size, style }: AvatarProps) {
+export function Avatar({ imageUrl, size, style, className }: AvatarProps) {
     return (
         <Container
             style={style}
+            className={className}
             size={size}
         >
             <Image
@@ -32,10 +34,11 @@ export function Avatar({ imageUrl, imgAlt, size, style }: AvatarProps) {
                         : size === "large"
                             ? 112
                             : 88}
-                alt={imgAlt}
+                alt={name}
                 style={{
                     borderRadius: '50%'
                 }}
+                quality={100}
             />
         </Container>
     )

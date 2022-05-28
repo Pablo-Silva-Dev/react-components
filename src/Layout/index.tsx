@@ -14,12 +14,8 @@ import { ResponsiveMenu } from "../components/Elements/ResponsiveMenu";
 import { Container, MainContainer } from "./styles";
 import { HeaderLogoContainer } from "../components/Elements/Header/HeaderLogoContainer";
 import { Logo } from "../components/Elements/Logo";
-import { HeaderLinksContainer } from "../components/Elements/Header/HeaderLinksContainer";
-import { HeaderLink } from "../components/Elements/Header/HeaderLink";
-import { HeaderResponsiveMenu } from "../components/Elements/Header/HeaderResponsiveMenuButton";
+import {  HeaderResponsiveMenuButton } from "../components/Elements/Header/HeaderResponsiveMenuButton";
 import { useTheme } from "styled-components";
-import { HeaderAuthenticationContainer } from "../components/Elements/Header/HeaderAuthenticationContainer";
-import { UserAuthentication } from "../components/Elements/UserAuthentication";
 import { Nav } from "../components/Elements/Nav";
 import { NavTitle } from "../components/Elements/Nav/NavTitle";
 import { NavLink } from "../components/Elements/Nav/NavLink";
@@ -68,7 +64,7 @@ export default function Layout({ children }: LayoutProps) {
                         closeResponsiveMenu={closeResponsiveMenu}
                     />
                 }
-                <HeaderResponsiveMenu
+                <HeaderResponsiveMenuButton
                     openResponsiveMenu={openResponsiveMenu}
                     responsiveMenuIconStyle={{
                         color: theme.colors.secondary

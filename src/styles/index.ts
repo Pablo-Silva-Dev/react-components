@@ -44,7 +44,7 @@ export const PreviewContainer = styled.div`
 
 export const PropsContainer = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.silver};
+  background-color: ${({ theme }) => theme.colors.background_secondary};
   max-height: 480px;
   overflow-x: auto;
   padding: 16px;

@@ -21,7 +21,6 @@ describe('Avatar', () => {
     it('should render correctly', () => {
         render(
             <Avatar
-                imgAlt='avatar-img-alt'
                 imageUrl='/avatar-img-url'
                 data-testid='avatar-id'
             />, {
@@ -30,7 +29,7 @@ describe('Avatar', () => {
         )
 
         const component = screen.getByTestId('avatar-id')
-        expect(component).toHaveAttribute('alt', 'avatar-img-alt')
+        expect(component).toBeInTheDocument()
 
     })
 })

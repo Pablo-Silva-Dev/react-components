@@ -10,7 +10,7 @@ const theme = {
     tertiary_light: "#99e8a6",
     tertiary_dark: "#017d47",
     background_primary: "#ffffff",
-    background_secondary: "#e0dedc",
+    background_secondary: "#f2f0ee",
     title: "#111111",
     text: "#333333",
     element_base: "#e6e6e6",
