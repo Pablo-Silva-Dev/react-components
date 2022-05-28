@@ -8,7 +8,7 @@ import {
 } from './styles';
 
 interface GroupInfoProps {
-    children: ReactNode;
+    children?: ReactNode;
     title: string;
     content?: string;
     style?: CSSProperties;
