@@ -4,9 +4,6 @@ import { Container } from './styles';
 interface TextTyperProps {
     wrapper: 'p' | 'h1' |'h2' | 'h3' | 'h4' | 'h5' | 'h6'
     textList: string[];
-    secondText?: string;
-    thirdText?: string;
-    fourthText?: string;
     textDelay: number;
     repeat?: number;
     showsCursor?: boolean;

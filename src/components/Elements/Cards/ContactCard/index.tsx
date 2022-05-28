@@ -22,10 +22,6 @@ interface ContactCardProps {
     titleStyle?: CSSProperties
 }
 
-function openExternUrl(url: string) {
-    return window.open(url, "_blank");
-}
-
 export function ContactCard({
     title,
     email,
@@ -95,7 +91,7 @@ export function ContactCard({
             </Text>
             {whatsappConversationUrl &&
                 <WhatsappButton
-                    onClick={() => openExternUrl(whatsappConversationUrl)}
+                    onClick={() => window.open(whatsappConversationUrl, "_blank")}
                 >
                     <FaWhatsappSquare
                         color={theme.colors.white}

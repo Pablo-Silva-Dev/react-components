@@ -16,12 +16,14 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
+const list = ['one', 'two', 'three', 'four']
+
 describe('TextTyper', () => {
     it('should render correctly', () => {
         const rendered = render(
             <TextTyper
-                firstText='TextTyper-first-text'
-                firstTextDelay={100}
+                textList={list}
+                textDelay={100}
                 wrapper='p'
             />, {
             wrapper: StyledProvider
