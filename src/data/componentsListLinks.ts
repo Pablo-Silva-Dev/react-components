@@ -12,7 +12,7 @@ export const animationComponentsLinkList = [
 export const elementsComponentsLinkList = [
   { content: "Avatar", url: "/avatar" },
   { content: "Cards", url: "/cards" },
-  { content: "ClipboardButton", url: "/clipboardButton" },
+  { content: "ClipboardButton", url: "/clipboardbutton" },
   { content: "CollapsibleInfo", url: "/collapsibleinfo" },
   { content: "DropdownSelect", url: "/dropdownselect" },
   { content: "Footer", url: "/footer" },

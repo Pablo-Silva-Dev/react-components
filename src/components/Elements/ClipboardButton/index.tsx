@@ -1,12 +1,14 @@
 import { CSSProperties } from 'react';
 import { MdContentCopy } from 'react-icons/md';
+import { useTheme } from 'styled-components';
+import { useCopyToClipboard } from '../../../hooks/useClipboard';
 import { Container, Text } from './styles';
 
 interface ClipboardButtonProps {
-    onClick: () => void;
-    isCopied: boolean;
+    content: string;
     copiedFeedbackMessage: string;
     notCopiedFeedbackMessage: string;
+    onCopy?: () => void;
     style?: CSSProperties;
     className?: string;
     iconStyle?: CSSProperties;
@@ -14,29 +16,37 @@ interface ClipboardButtonProps {
 }
 
 export function ClipboardButton({
-    isCopied,
+    content,
     copiedFeedbackMessage,
     notCopiedFeedbackMessage,
-    onClick,
+    onCopy,
     style,
     iconStyle,
     className,
     iconClassName
 }: ClipboardButtonProps) {
 
+    const theme = useTheme()
+    const [value, copy] = useCopyToClipboard()
+
     return (
         <Container
             style={style}
             className={className}
-            onClick={onClick}
+            onClick={() => { copy(content).then(() => onCopy())}}
         >
             <MdContentCopy
-                size={24}
+                size={32}
                 className={iconClassName}
-                style={iconStyle}
+                style={iconStyle || {
+                    backgroundColor: theme.colors.white,
+                    padding: 8,
+                    borderRadius: 4,
+                    margin: 8
+                }}
             />
             <Text>{
-                isCopied ?
+                value ?
                     copiedFeedbackMessage
                     :
                     notCopiedFeedbackMessage
