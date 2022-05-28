@@ -5,6 +5,7 @@ export function DropdownSelect({ ...rest }: ReactDropdownProps) {
     return (
         <Dropdown
             {...rest}
+            
         />
     )
 }
