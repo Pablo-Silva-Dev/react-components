@@ -34,6 +34,7 @@ export const DescriptionContainer = styled.div`
 
 export const PreviewContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;

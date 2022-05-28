@@ -1,4 +1,5 @@
-import { TextTyper as TextTyperAnimation } from '../components/Animations/TextTyper'
+import { useState } from 'react';
+import { RadioGroup as  RadioGroupComponent } from '../components/Forms/RadioGroup';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -10,42 +11,44 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function TextTyper() {
+export default function RadioGroup() {
 
     const props = {
-        textList: 'Description: An array containing texts to display. Is suported until 8 texts. Type: string[]. Required.',
-        textDelay: 'Description: Text delay in MS. Type: Number.',
-        wrapper: 'Description: HTML element to render the animation. Type: "p" | "h1" |"h2" | "h3" | "h4" | "h5" | "h6".',
-        repeatTimes: 'Description: Number of times to repeat the whole animation. Type: Number.',
-        showsCursor: 'Description: If the cursour should be visible. Type: Boolean. Default: true.',
-        className: 'Description: ClassName. Type: String.'
+        options: 'Array of options. Type: {value: string, label: string}[]. Required.',
+        onChange: 'Function invoked at chaning. Type: Function. Required.',
+        style: 'Description: Input style. Type: CSS Properties.',
+        className: 'Description: ClassName. Type: String.',
+        labelStyle: 'Description: Label style. Type: CSS Properties.',
+        labelClassName: 'Description: ClassName. Type: String.'
     }
 
-    const list = [
-        'one', 'two', 'three', 'four', 'five', 'six'
+    const options = [
+        { value: 'chocolate', label: 'chocolate' },
+        { value: 'cherry', label: 'cherry' },
+        { value: 'apple', label: 'apple' },
     ]
-    
+
+    const [selectedOption, setSelectedOption] = useState('')
+
     return (
         <Container>
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='TextTyper'
+                        content='RadioGroup'
                     />
                     <Text
-                        content='Used to display TextTyper animation.'
+                        content='Used to confirm terms and check boolean types.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <TextTyperAnimation
-                        textList={list}
-                        textDelay={100}
-                        wrapper='h2'
-                        className=''
-                        showsCursor
-
+                    <RadioGroupComponent
+                        options={options}
+                        onChange={(e) => setSelectedOption(e.target.value)}
                     />
+                    <p>{selectedOption}</p>
                 </PreviewContainer>
+
                 <PropsContainer>
                     <SubTitle
                         content='Props:'

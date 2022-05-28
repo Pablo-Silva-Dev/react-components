@@ -13,10 +13,8 @@ interface OptionProps {
 }
 
 interface RadioGroupProps {
-    checked: boolean;
     options: OptionProps[];
     onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-    name: string;
     labelStyle?: CSSProperties;
     labelClassName?: string;
     style?: CSSProperties;
@@ -24,8 +22,6 @@ interface RadioGroupProps {
 }
 
 export function RadioGroup({
-    checked,
-    name,
     options,
     onChange,
     style,
@@ -45,10 +41,10 @@ export function RadioGroup({
                 >
                     <RadioButton
                         type="radio"
-                        name={name}
+                        name="default"
                         onChange={onChange}
                         value={opt.value}
-                        defaultChecked={checked}
+                        defaultChecked={true}
                     />
                     <RadioButtonLabel />
                     <Option
