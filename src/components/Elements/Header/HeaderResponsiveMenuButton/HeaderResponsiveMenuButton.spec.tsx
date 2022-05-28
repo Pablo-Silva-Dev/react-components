@@ -2,7 +2,7 @@ import {fireEvent, render, screen} from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../../../themes/theme'
-import  {HeaderResponsiveMenu } from './'
+import  {HeaderResponsiveMenuButton } from '.'
 
 interface ChildrenProps{
     children: ReactNode
@@ -16,34 +16,34 @@ const StyledProvider : React.FC = ({children} : ChildrenProps) => {
     )
 }
 
-describe('HeaderResponsiveMenu', () => {
+describe('HeaderResponsiveMenuButton', () => {
 
     const openResponsiveMenu = jest.fn();
     it('should render correctly', () => {
     render(
-        <HeaderResponsiveMenu
+        <HeaderResponsiveMenuButton
         openResponsiveMenu={openResponsiveMenu}
-        data-testid='headerresponsivemenu-id'
+        data-testid='HeaderResponsiveMenuButton-id'
         />,{
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByTestId('headerresponsivemenu-id')
+        const component = screen.getByTestId('HeaderResponsiveMenuButton-id')
         expect(component).toBeInTheDocument()
     })
 
     it('should call openResponsiveMenu function correctly', () => {
     render(
-        <HeaderResponsiveMenu
+        <HeaderResponsiveMenuButton
         openResponsiveMenu={openResponsiveMenu}
-        data-testid='headerresponsivemenu-id'
+        data-testid='HeaderResponsiveMenuButton-id'
         />,{
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByTestId('headerresponsivemenu-id')
+        const component = screen.getByTestId('HeaderResponsiveMenuButton-id')
         fireEvent.click(component)
         expect(openResponsiveMenu).toBeCalled()
     })

@@ -16,7 +16,7 @@ import { HeaderLogoContainer } from "../components/Elements/Header/HeaderLogoCon
 import { Logo } from "../components/Elements/Logo";
 import { HeaderLinksContainer } from "../components/Elements/Header/HeaderLinksContainer";
 import { HeaderLink } from "../components/Elements/Header/HeaderLink";
-import { HeaderResponsiveMenu } from "../components/Elements/Header/HeaderResponsiveMenu";
+import { HeaderResponsiveMenu } from "../components/Elements/Header/HeaderResponsiveMenuButton";
 import { useTheme } from "styled-components";
 import { HeaderAuthenticationContainer } from "../components/Elements/Header/HeaderAuthenticationContainer";
 import { UserAuthentication } from "../components/Elements/UserAuthentication";

@@ -2,7 +2,7 @@ import { CSSProperties, useState } from 'react';
 import { MdMenu } from 'react-icons/md';
 import { Container } from './styles';
 
-interface HeaderResponsiveMenuProps {
+interface HeaderResponsiveMenuButtonProps {
     openResponsiveMenu: () => void;
     responsiveMenuContainerStyle?: CSSProperties;
     responsiveMenuContainerClassName?: string;
@@ -10,13 +10,13 @@ interface HeaderResponsiveMenuProps {
     responsiveMenuIconClassName?: string;
 }
 
-export function HeaderResponsiveMenu({
+export function HeaderResponsiveMenuButton({
     openResponsiveMenu,
     responsiveMenuContainerStyle,
     responsiveMenuContainerClassName,
     responsiveMenuIconStyle,
     responsiveMenuIconClassName
-}: HeaderResponsiveMenuProps) {
+}: HeaderResponsiveMenuButtonProps) {
 
     return (
         <Container
@@ -28,7 +28,7 @@ export function HeaderResponsiveMenu({
                 size={32}
                 style={responsiveMenuIconStyle}
                 className={responsiveMenuIconClassName}
-                data-testid='headerresponsivemenu-id'
+                data-testid='HeaderResponsiveMenuButton-id'
             />
         </Container>
     )
