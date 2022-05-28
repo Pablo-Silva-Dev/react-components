@@ -28,6 +28,7 @@ export function HeaderResponsiveMenu({
                 size={32}
                 style={responsiveMenuIconStyle}
                 className={responsiveMenuIconClassName}
+                data-testid='headerresponsivemenu-id'
             />
         </Container>
     )
