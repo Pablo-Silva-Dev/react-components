@@ -12,8 +12,8 @@ function App({
   return (
     <SessionProvider>
       <ThemeProvider theme={theme}>
-        <Layout>
         <GlobalStyle />
+        <Layout>
           <NextProgress />
           <Component {...pageProps} />
         </Layout>

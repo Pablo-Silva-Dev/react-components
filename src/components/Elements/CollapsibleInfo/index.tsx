@@ -1,28 +1,45 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, ReactNode } from 'react';
 import { CollapsibleTrigger, Container, Text } from './styles';
 
 interface CollapsibleInfoProps {
     title: string;
     content: string;
+    transitionTime?: number;
     titleStyle?: CSSProperties;
     contentStyle?: CSSProperties;
+    contentContainerStyle?: CSSProperties
+    titleClassName?: string;
+    contentClassName?: string;
+    contentContainerClassName?: string;
 }
 
 export function CollapsibleInfo({
     title,
     content,
+    transitionTime = 200,
     titleStyle,
-    contentStyle
+    contentStyle,
+    contentContainerStyle,
+    titleClassName,
+    contentClassName,
+    contentContainerClassName
 }: CollapsibleInfoProps) {
     return (
         <CollapsibleTrigger
             trigger={title}
-            transitionTime={200}
-            triggerStyle={titleStyle}
+            transitionTime={transitionTime}
+            triggerStyle={titleStyle || {
+                cursor: 'pointer'
+            }}
+            triggerClassName={titleClassName}
         >
-            <Container>
+            <Container
+                style={contentContainerStyle}
+                className={contentContainerClassName}
+            >
                 <Text
                     style={contentStyle}
+                    className={contentClassName}
                 >
                     {content}
                 </Text>
