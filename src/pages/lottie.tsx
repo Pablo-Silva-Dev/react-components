@@ -10,6 +10,7 @@ import {
     PropsContainer
 } from "../styles";
 import animation from '../../public/react_animation.json'
+import { DisplayCode } from '../components/Display/DisplayCode';
 
 export default function Lottie() {
 
@@ -63,6 +64,15 @@ export default function Lottie() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <LottieAnimation
+                        animation={animation}
+                        width={300}
+                        height={300}
+                    />"
+                />
             </ComponentContainer>
         </Container>
     )

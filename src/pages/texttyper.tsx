@@ -1,4 +1,5 @@
 import { TextTyper as TextTyperAnimation } from '../components/Animations/TextTyper'
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -24,7 +25,7 @@ export default function TextTyper() {
     const list = [
         'one', 'two', 'three', 'four', 'five', 'six'
     ]
-    
+
     return (
         <Container>
             <ComponentContainer>
@@ -68,6 +69,17 @@ export default function TextTyper() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <TextTyperAnimation
+                    textList={list}
+                    textDelay={100}
+                    wrapper='h2'
+                    className=''
+                    showsCursor
+                />"
+                />
             </ComponentContainer>
         </Container>
     )

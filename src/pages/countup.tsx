@@ -1,4 +1,5 @@
 import { CountUpAnimation } from '../components/Animations/CountUp'
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -8,7 +9,7 @@ import {
     DescriptionContainer,
     PreviewContainer,
     PropsContainer
- } from "../styles";
+} from "../styles";
 
 export default function CountUp() {
 
@@ -69,6 +70,17 @@ export default function CountUp() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <CountUpAnimation
+                    end={99.99}
+                    start={0}
+                    duration={2}
+                    decimal=','
+                    decimals={2}
+                />"
+                />
             </ComponentContainer>
         </Container>
     )

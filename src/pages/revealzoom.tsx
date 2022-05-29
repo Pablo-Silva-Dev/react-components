@@ -1,4 +1,5 @@
 import { RevealZoom as RevealZoomAnimation } from '../components/Animations/RevealZoom'
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -33,7 +34,7 @@ export default function RevealZoom() {
                 </DescriptionContainer>
                 <PreviewContainer>
                     <RevealZoomAnimation
-                        right
+                        bottom
                     >
                         <h3>It is a children.</h3>
                     </RevealZoomAnimation>
@@ -61,6 +62,14 @@ export default function RevealZoom() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <RevealZoomAnimation
+                    bottom>
+                    <h3>It is a children.</h3>
+                </RevealZoomAnimation>"
+                />
             </ComponentContainer>
         </Container>
     )

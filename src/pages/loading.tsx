@@ -1,4 +1,5 @@
 import { Loading as LoadingAnimation } from '../components/Animations/Loading'
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -55,6 +56,14 @@ export default function Loading() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <LoadingAnimation
+                    size='medium'
+                    type='spinningBubbles'
+                    />"
+                />
             </ComponentContainer>
         </Container>
     )

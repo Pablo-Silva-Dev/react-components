@@ -1,4 +1,5 @@
 import { RevealFade as RevealFadeAnimation } from '../components/Animations/RevealFade'
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -61,6 +62,14 @@ export default function RevealFade() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <RevealFadeAnimation
+                    top>
+                    <h3>It is a children.</h3>
+                </RevealFadeAnimation>"
+                />
             </ComponentContainer>
         </Container>
     )

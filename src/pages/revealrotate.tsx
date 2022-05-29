@@ -1,4 +1,5 @@
 import { RevealRotate as RevealRotateAnimation } from '../components/Animations/RevealRotate'
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -61,6 +62,14 @@ export default function RevealRotate() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <RevealRotateAnimation
+                    left>
+                    <h3>It is a children.</h3>
+                </RevealRotateAnimation>"
+                />
             </ComponentContainer>
         </Container>
     )

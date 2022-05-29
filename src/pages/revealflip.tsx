@@ -1,4 +1,5 @@
 import { RevealFlip as RevealFlipAnimation } from '../components/Animations/RevealFlip'
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -61,6 +62,14 @@ export default function RevealFlip() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <RevealFlipAnimation
+                    right>
+                    <h3>It is a children.</h3>
+                </RevealFlipAnimation>"
+                />
             </ComponentContainer>
         </Container>
     )
