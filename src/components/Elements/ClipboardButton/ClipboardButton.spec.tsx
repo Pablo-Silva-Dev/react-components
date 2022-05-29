@@ -20,8 +20,7 @@ describe('ClipboardButton', () => {
     it('should render correctly', () => {
         render(
             <ClipboardButton
-                isCopied={false}
-                onClick={() => { }}
+                content='clipboardbutton-content'
                 copiedFeedbackMessage='clipboardbutton-copied-feedback-message'
                 notCopiedFeedbackMessage='clipboardbutton-not-copied-feedback-message'
             />,
@@ -31,22 +30,6 @@ describe('ClipboardButton', () => {
         )
 
         const component = screen.getByText('clipboardbutton-not-copied-feedback-message')
-        expect(component).toBeInTheDocument()
-    })
-    it('should change feedback message when content is copyed', () => {
-        render(
-            <ClipboardButton
-                isCopied={true}
-                onClick={() => { }}
-                copiedFeedbackMessage='clipboardbutton-copied-feedback-message'
-                notCopiedFeedbackMessage='clipboardbutton-not-copied-feedback-message'
-            />,
-            {
-                wrapper: StyledProvider
-            }
-        )
-
-        const component = screen.getByText('clipboardbutton-copied-feedback-message')
         expect(component).toBeInTheDocument()
     })
 })
