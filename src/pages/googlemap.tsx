@@ -1,7 +1,5 @@
-import { Code } from '@chakra-ui/react'
-import { CountUpAnimation } from '../components/Animations/CountUp';
-import { InfoCard } from '../components/Elements/Cards/InfoCard';
-import { CodeContainer } from '../components/Display/CodeContainer';
+import { DisplayInfo } from '../components/Display/DisplayInfo';
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { GoogleMap as GoogleMapComponent } from '../components/Elements/GoogleMap'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
@@ -61,12 +59,12 @@ export default function GoogleMap() {
                         </>
                     ))}
                 </PropsContainer>
-                <InfoCard
+                <DisplayInfo
                     title='Important:'
                     content='You must to use addressUrl prop in the format: https://maps.google.com/maps?q=your_address_comes_here&output=embed. You can use https://google-map-generator.com/ to help you to generate the addressUrl in the correct format, otherwise your map will break.'
                 />
-                <CodeContainer
-                //eslint-disable-next-line
+                <DisplayCode
+                    //eslint-disable-next-line
                     children="
                         <GoogleMapComponent
                         addressUrl='https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed'

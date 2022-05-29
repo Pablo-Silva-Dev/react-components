@@ -1,8 +1,8 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../../../../themes/theme'
-import { InfoCard } from '.'
+import { DisplayInfo } from '.'
+import { theme } from '../../../themes/theme'
 
 interface ChildrenProps {
     children: ReactNode
@@ -17,19 +17,19 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('InfoCard', () => {
+describe('DisplayInfo', () => {
     it('should render correctly', () => {
         render(
-            <InfoCard
-                content='infocard content'
-                title='infocard title'
-                data-testid='infocard-id'
+            <DisplayInfo
+                content='DisplayInfo content'
+                title='DisplayInfo title'
+                data-testid='DisplayInfo-id'
             />, {
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByTestId('infocard-id')
+        const component = screen.getByTestId('DisplayInfo-id')
 
         expect(component).toBeInTheDocument()
 
@@ -40,17 +40,17 @@ describe('InfoCard', () => {
         const fn = jest.fn()
 
         render(
-            <InfoCard
-                content='infocard content'
-                title='infocard title'
-                data-testid='infocard-id'
+            <DisplayInfo
+                content='DisplayInfo content'
+                title='DisplayInfo title'
+                data-testid='DisplayInfo-id'
                 openUrl={fn}
             />, {
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByTestId('infocard-id')
+        const component = screen.getByTestId('DisplayInfo-id')
         fireEvent.click(component)
         expect(fn).toBeCalled()
     })

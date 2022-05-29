@@ -2,11 +2,11 @@ import { Code as CodeComponent } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { Container, Title } from './styles';
 
-interface CodeContainerProps{
+interface DisplayCodeProps{
     children: ReactNode
 }
 
-export function CodeContainer({children} : CodeContainerProps) {
+export function DisplayCode({children} : DisplayCodeProps) {
     return (
         <Container>
             <Title>Code</Title>
