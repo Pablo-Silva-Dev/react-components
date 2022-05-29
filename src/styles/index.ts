@@ -8,6 +8,9 @@ export const Container = styled.div`
   width: 80vw;
   min-height: 80vh;
   padding: 40px;
+  @media(max-width: 720px){
+    width: 98%;
+  }
 `;
 
 export const ComponentContainer = styled.div`
@@ -19,7 +22,7 @@ export const ComponentContainer = styled.div`
     width: 640px;
   }
   @media (max-width: 720px) {
-    width: 80%;
+    width: 100%;
   }
   `;
 

@@ -1,3 +1,4 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from '../styles/global-style'
 import { theme } from '../themes/theme'
@@ -11,13 +12,15 @@ function App({
 }) {
   return (
     <SessionProvider>
-      <ThemeProvider theme={theme}>
-        <Layout>
-        <GlobalStyle />
-          <NextProgress />
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
+      <ChakraProvider>
+        <ThemeProvider theme={theme}>
+          <Layout>
+          <GlobalStyle />
+            <NextProgress />
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </ChakraProvider>
     </SessionProvider>
   )
 }

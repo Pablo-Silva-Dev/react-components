@@ -10,7 +10,11 @@
     "test": "jest --watchAll"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.1.2",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
     "@types/react-vertical-timeline-component": "^3.3.3",
+    "framer-motion": "6",
     "global": "^4.4.0",
     "next": "12.1.5",
     "next-auth": "^4.3.4",

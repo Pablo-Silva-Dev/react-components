@@ -4,37 +4,27 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  width: 320px;
-  height: 400px;
-  background-color: ${({ theme }) => theme.colors.black};
-  border-radius: 8px;
-  margin: 0.8rem;
+  align-items: flex-start;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.white};
+  box-shadow: ${({theme}) => theme.shadows.soft};
+  border-left: 2px solid ${({ theme }) => theme.colors.primary};
+  margin: 8px auto;
   padding: 16px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  &:hover {
-    transform: scale(1.02);
-  }
+
   @media (max-width: 1080px) {
     width: 640px;
-    margin: 0.8rem auto;
   }
+
   @media (max-width: 720px) {
-    width: 400px;
-  }
-  @media (max-width: 480px) {
-    width: 92%;
+    width: 100%;
   }
 `;
 
-export const TitleCard = styled.h2`
-  font-size: ${({ theme }) => theme.sizes.xlarge};
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.white};
-  width: 92%;
-  margin: 0 auto;
-  text-align: center;
+export const TitleCard = styled.h3`
+  font-size: ${({ theme }) => theme.sizes.large};
+  font-weight: 400;
+  color: ${({ theme }) => theme.colors.black};
   @media (max-width: 1080px) {
     width: 50%;
   }
@@ -44,16 +34,12 @@ export const TitleCard = styled.h2`
 `;
 
 export const TextCard = styled.span`
-  font-size: ${({ theme }) => theme.sizes.large};
+  font-size: ${({ theme }) => theme.sizes.medium};
   font-weight: 200;
-  color: ${({ theme }) => theme.colors.element_base};
-  width: 92%;
-  text-align: center;
-  @media (max-width: 1080px) {
-    width: 50%;
-  }
+  color: ${({ theme }) => theme.colors.text};
+  word-break: break-word;
   @media (max-width: 720px) {
-    font-size: ${({ theme }) => theme.sizes.medium};
+    font-size: ${({ theme }) => theme.sizes.normal};
   }
 `;
 
