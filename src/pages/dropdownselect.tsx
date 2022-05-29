@@ -1,6 +1,6 @@
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { DropdownSelect as DropdownSelectComponent } from '../components/Elements/DropdownSelect'
 import { NextLink } from '../components/Next/NextLink';
-import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
 import {
@@ -15,7 +15,7 @@ export default function DropdownSelect() {
 
     const options = [
         'one', 'two', 'three'
-      ]
+    ]
 
     return (
         <Container>
@@ -39,6 +39,16 @@ export default function DropdownSelect() {
                         url='https://www.npmjs.com/package/react-dropdown'
                     />
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    const options = [
+                        'one', 'two', 'three'
+                      ]
+                    <DropdownSelectComponent
+                    options={options}
+                    />"
+                />
             </ComponentContainer>
         </Container>
     )

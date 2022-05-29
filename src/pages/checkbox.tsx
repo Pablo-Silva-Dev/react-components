@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { CheckBox } from '../components/Forms/CheckBox'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
@@ -60,6 +61,14 @@ export default function Checkbox() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <CheckBox
+                    checked={checkBox}
+                    onChange={() => setCheckBox(!checkBox)}
+                    />"
+                />
             </ComponentContainer>
         </Container>
     )

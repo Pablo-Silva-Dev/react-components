@@ -1,3 +1,4 @@
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { CollapsibleInfo as CollapsibleInfoComponent } from '../components/Elements/CollapsibleInfo'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
@@ -64,6 +65,14 @@ export default function CollapsibleInfo() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <CollapsibleInfoComponent
+                        content='Your content here'
+                        title='Title content here'
+                    />"
+                />
             </ComponentContainer>
         </Container>
     )

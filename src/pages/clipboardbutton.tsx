@@ -1,4 +1,5 @@
 import toast, { Toaster } from 'react-hot-toast'
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { ClipboardButton as ClipboardButtonComponent } from '../components/Elements/ClipboardButton'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
@@ -73,6 +74,16 @@ export default function ClipboardButton() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <ClipboardButtonComponent
+                    content={myContent}
+                    copiedFeedbackMessage='Copied!'
+                    notCopiedFeedbackMessage='Click here to copy your content.'
+                    onCopy={() => toast.success('Content copied!')}
+                    />"
+                />
             </ComponentContainer>
         </Container>
     )

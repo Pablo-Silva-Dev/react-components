@@ -1,4 +1,5 @@
 import { useTheme } from 'styled-components';
+import { DisplayCode } from '../components/Display/DisplayCode';
 import { Footer as FooterComponent } from '../components/Elements/Footer'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
@@ -64,6 +65,17 @@ export default function Footer() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <FooterComponent
+                        style={{
+                            backgroundColor: theme.colors.primary_light
+                        }}
+                    >
+                        <p>Your content comes here</p>
+                    </FooterComponent>"
+                />
             </ComponentContainer>
         </Container>
     )
