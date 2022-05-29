@@ -8,12 +8,15 @@ import {
 } from './styles';
 
 interface GroupInfoProps {
-    children?: ReactNode;
     title: string;
     content?: string;
+    children?: ReactNode;
     style?: CSSProperties;
+    className?: string;
     titleStyle?: CSSProperties;
+    titleClassName?: string;
     contentStyle?: CSSProperties;
+    contentClassName?: string;
 }
 
 export function GroupInfo({
@@ -22,16 +25,21 @@ export function GroupInfo({
     content,
     style,
     titleStyle,
-    contentStyle
+    contentStyle,
+    className,
+    titleClassName,
+    contentClassName
 }: GroupInfoProps) {
     return (
         <Container
             style={style}
+            className={className}
         >
             <TitleContainer>
                 {children}
                 <Title
                     style={titleStyle}
+                    className={titleClassName}
                 >{title}
                 </Title>
             </TitleContainer>
@@ -39,6 +47,7 @@ export function GroupInfo({
                 <ContentContainer>
                     <Text
                         style={contentStyle}
+                        className={contentClassName}
                     >
                         {content}
                     </Text>

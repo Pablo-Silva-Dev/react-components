@@ -16,7 +16,7 @@ align-items: center;
 export const ContentContainer = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: center;
+padding: 16px;
 align-items: center;
 `;
 
@@ -24,6 +24,8 @@ export const Text = styled.span`
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 300;
   color: ${({ theme }) => theme.colors.text};
+  word-break: break-word;
+  text-align: center;
   @media (max-width: 720px) {
     font-size: ${({ theme }) => theme.sizes.medium};
   }
