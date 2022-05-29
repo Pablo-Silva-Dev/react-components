@@ -20,10 +20,10 @@ interface SignUpFormProps {
     formSubtitle?: string;
     formAddtionalText?: string;
     submitButtonTitle: string;
-    googleSignInButtonTitle: string;
-    githubSignInButtonTitle: string;
-    facebookSignInButtonTitle: string;
-    forgotPasswordButtonTitle: string;
+    googleSignInButtonTitle?: string;
+    githubSignInButtonTitle?: string;
+    facebookSignInButtonTitle?: string;
+    forgotPasswordButtonTitle?: string;
     emailPlaceholder?: string;
     passwordPlaceholder?: string;
     passwordConfirmationPlaceholder?: string;
