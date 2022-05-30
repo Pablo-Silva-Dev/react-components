@@ -1,8 +1,8 @@
 import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import {
-    HeaderLogoContainer as HeaderLogoContainerComponent
-} from '../components/Elements/Header/HeaderLogoContainer'
+    HeaderAuthenticationContainer as HeaderAuthenticationUserContainerComponent
+} from '../components/Elements/Header/HeaderAuthenticationContainer'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -13,14 +13,15 @@ import {
     PreviewContainer,
     PropsContainer
 } from "../styles";
-import { Logo } from '../components/Elements/Logo';
+import { UserAuthentication } from '../components/Elements/UserAuthentication';
 
-export default function HeaderLogoContainer() {
+export default function HeaderAuthenticationUserContainer() {
 
     const props = {
         children: 'Description: React elements to display. Type: ReactNode. Required.',
-        style: 'Description: HeaderLogoContainer style. Type: CSS Properties.',
-        className: 'Description: HeaderLogoContainer className. Type: String.'
+        style: 'Description: HeaderAuthenticationUserContainer style. Type: CSS Properties.',
+        className: 'Description: HeaderAuthenticationUserContainer className. Type: String.'
+        
     }
 
     const theme = useTheme()
@@ -30,24 +31,25 @@ export default function HeaderLogoContainer() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='HeaderLogoContainer'
+                        content='HeaderAuthenticationUserContainer'
                     />
                     <Text
-                        content='Used to display Logo on header.'
+                        content='Used to display AuthenticationUser on header.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <HeaderLogoContainerComponent
+                    <HeaderAuthenticationUserContainerComponent
                         style={{
                             backgroundColor: theme.colors.primary,
-                            width: '100%',
                             padding: 12
                         }}
                     >
-                        <Logo
-                            imageUrl='https://www.pablosilvadev.com.br/logo.svg'
-                        />
-                    </HeaderLogoContainerComponent >
+                     <UserAuthentication 
+                        redirectPath='/'
+                        logInButtonTitle='Sign In'
+                        logOutButtonTitle='Sign Out'
+                     />
+                    </HeaderAuthenticationUserContainerComponent >
                 </PreviewContainer>
 
                 <PropsContainer>
@@ -75,17 +77,18 @@ export default function HeaderLogoContainer() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <HeaderLogoContainerComponent
-                        style={{
-                            backgroundColor: theme.colors.primary,
-                            width: '100%',
-                            padding: 12
-                        }}
+                    <HeaderAuthenticationUserContainerComponent
+                    style={{
+                        backgroundColor: theme.colors.primary,
+                        padding: 12
+                    }}
                     >
-                        <Logo
-                            imageUrl='https://www.pablosilvadev.com.br/logo.svg'
+                        <UserAuthentication 
+                            redirectPath='/'
+                            logInButtonTitle='Sign In'
+                            logOutButtonTitle='Sign Out'
                         />
-                    </HeaderLogoContainerComponent >"
+                    </HeaderAuthenticationUserContainerComponent >"
                 />
             </ComponentContainer>
         </Container>

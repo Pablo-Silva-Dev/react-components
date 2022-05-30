@@ -1,19 +1,35 @@
 import { useSession, signOut } from 'next-auth/react'
 import Image from 'next/image';
 import { useRouter } from 'next/router'
-import {FaUser} from 'react-icons/fa'
+import { CSSProperties } from 'react';
+import { FaUser } from 'react-icons/fa'
 import { useTheme } from 'styled-components';
+import { name } from '../../../../package.json'
 
 import { Button, Container, LogoutButton } from './styles';
 
 interface UserAuthenticationProps {
     redirectPath: string;
-    imageAlt: string;
+    logOutButtonTitle: string;
+    logInButtonTitle: string;
+    className?: string;
+    style?: CSSProperties;
+    logOutButtonClassName?: string;
+    logOutButtonStyle?: CSSProperties;
+    logInButtonStyle?: CSSProperties;
+    logInButtonClassName?: string;
 }
 
 export function UserAuthentication({
     redirectPath,
-    imageAlt
+    logOutButtonTitle,
+    logInButtonTitle,
+    style,
+    className,
+    logInButtonStyle,
+    logOutButtonClassName,
+    logOutButtonStyle,
+    logInButtonClassName
 }: UserAuthenticationProps) {
 
     const { data: session } = useSession()
@@ -22,20 +38,25 @@ export function UserAuthentication({
 
     if (session) {
         return (
-            <Container>
+            <Container
+                style={style}
+                className={className}
+            >
                 <Image
                     src={session.user.image}
                     width={80}
                     height={80}
-                    alt={imageAlt}
+                    alt={name}
                     style={{
                         borderRadius: 48
                     }}
                 />
                 <LogoutButton
                     onClick={() => signOut()}
+                    style={logOutButtonStyle}
+                    className={logOutButtonClassName}
                 >
-                    Sair
+                    {logOutButtonTitle}
                 </LogoutButton>
             </Container>
         )
@@ -49,8 +70,10 @@ export function UserAuthentication({
                 />
                 <Button
                     onClick={() => router.push(`${redirectPath}`)}
+                    style={logInButtonStyle}
+                    className={logInButtonClassName}
                 >
-                    Fazer login
+                    {logInButtonTitle}
                 </Button>
             </Container>
         )
