@@ -1,8 +1,8 @@
 import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import {
-    HeaderLinksContainer as HeaderLinksContainerComponent
-} from '../components/Elements/Header/HeaderLinksContainer'
+    HeaderLogoContainer as HeaderLogoContainerComponent
+} from '../components/Elements/Header/HeaderLogoContainer'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -14,13 +14,14 @@ import {
     PropsContainer
 } from "../styles";
 import { HeaderLink } from '../components/Elements/Header/HeaderLink';
+import { Logo } from '../components/Elements/Logo';
 
-export default function HeaderLinksContainer() {
+export default function HeaderLogoContainer() {
 
     const props = {
         children: 'Description: React elements to display. Type: ReactNode. Required.',
-        style: 'Description: HeaderLinksContainer style. Type: CSS Properties.',
-        className: 'Description: HeaderLinksContainer className. Type: String.'
+        style: 'Description: HeaderLogoContainer style. Type: CSS Properties.',
+        className: 'Description: HeaderLogoContainer className. Type: String.'
     }
 
     const theme = useTheme()
@@ -30,28 +31,24 @@ export default function HeaderLinksContainer() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='HeaderLinksContainer'
+                        content='HeaderLogoContainer'
                     />
                     <Text
-                        content='Used to display links on header.'
+                        content='Used to display Logo on header.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <HeaderLinksContainerComponent
+                    <HeaderLogoContainerComponent
                         style={{
                             backgroundColor: theme.colors.primary,
                             width: '100%',
                             padding: 12
                         }}
                     >
-                        <HeaderLink
-                            content='Header Link'
-                            url='/'
-                            style={{
-                                color: theme.colors.element_base,
-                            }}
+                        <Logo
+                            imageUrl='https://www.pablosilvadev.com.br/logo.svg'
                         />
-                    </HeaderLinksContainerComponent >
+                    </HeaderLogoContainerComponent >
                 </PreviewContainer>
 
                 <PropsContainer>
@@ -79,21 +76,17 @@ export default function HeaderLinksContainer() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <HeaderLinksContainerComponent
-                    style={{
-                        backgroundColor: theme.colors.primary,
-                        width: '100%',
-                        padding: 12
-                    }}
-                >
-                        <HeaderLink
-                            content='Header Link'
-                            url='/'
-                            style={{
-                                color: theme.colors.element_base,
-                            }}
+                    <HeaderLogoContainerComponent
+                        style={{
+                            backgroundColor: theme.colors.primary,
+                            width: '100%',
+                            padding: 12
+                        }}
+                    >
+                        <Logo
+                            imageUrl='https://www.pablosilvadev.com.br/logo.svg'
                         />
-                    </HeaderLinksContainerComponent >"
+                    </HeaderLogoContainerComponent >"
                 />
             </ComponentContainer>
         </Container>

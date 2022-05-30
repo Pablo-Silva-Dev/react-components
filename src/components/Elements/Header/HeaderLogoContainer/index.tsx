@@ -3,20 +3,20 @@ import { Container } from './styles';
 
 interface HeaderLogoContainerProps {
   children: ReactNode;
-  logoContainerStyle?: CSSProperties;
-  logoContainerClassName?: string;
+  style?: CSSProperties;
+  className?: string;
 
 }
 
 export function HeaderLogoContainer({
   children,
-  logoContainerStyle,
-  logoContainerClassName
+  style,
+  className
 }: HeaderLogoContainerProps) {
   return (
     <Container
-      style={logoContainerStyle}
-      className={logoContainerClassName}
+      style={style}
+      className={className}
     >
       {children}
     </Container>
