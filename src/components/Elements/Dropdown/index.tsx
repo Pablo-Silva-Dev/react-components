@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { CSSProperties } from 'react';
+import { CSSProperties } from 'react';
 import { Container, ListItem, TextLink } from './styles';
 import Icon from 'supercons'
 
@@ -15,13 +15,14 @@ interface ListProps {
     style?: CSSProperties;
     className?: string;
     iconsStyle?: CSSProperties;
-    iconsSize: number;
+    iconsSize?: number;
     itemStyle?: CSSProperties;
+    itemClassName?: string;
     textItemStyle?: CSSProperties;
     textItemClassName?: string;
 }
 
-export function ListLink({
+export function Dropdown({
     items,
     stripped,
     style,
@@ -36,7 +37,7 @@ export function ListLink({
         <Container
             style={style}
             className={className}
-            data-testid='listlink-testid'
+            data-testid='Dropdown-testid'
         >
             {stripped ?
                 items.map((item, index) => (
@@ -50,7 +51,7 @@ export function ListLink({
                                 style={iconsStyle}
                             >
                                 <Icon
-                                    gluph={item.iconName} size={iconsSize}
+                                    glyph={item.iconName} size={iconsSize}
                                 />
                             </div>
                             <Link href={item.url} passHref>
@@ -84,7 +85,7 @@ export function ListLink({
                             key={item.content}
                         >
                             <Icon
-                                gluph={item.iconName} size={iconsSize}
+                                glyph={item.iconName} size={iconsSize}
                             />
                             <Link href={item.url} passHref>
                                 <TextLink

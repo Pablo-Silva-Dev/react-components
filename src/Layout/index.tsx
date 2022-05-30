@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import NextProgressComponent from "../components/Next/NextProgress";
+import { useTheme } from "styled-components";
 import { Footer } from "../components/Elements/Footer";
 import { FooterFirstSection } from "../components/Elements/Footer/FooterFirstSection";
 import { FooterFivethSection } from "../components/Elements/Footer/FooterFivethSection";
@@ -10,15 +10,14 @@ import { FooterSixthSection } from "../components/Elements/Footer/FooterSixthSec
 import { FooterThirdSection } from "../components/Elements/Footer/FooterThirdSection";
 import { FooterTitle } from "../components/Elements/Footer/FooterTitle";
 import { Header } from "../components/Elements/Header";
-import { ResponsiveMenu } from "../components/Elements/ResponsiveMenu";
-import { Container, MainContainer } from "./styles";
 import { HeaderLogoContainer } from "../components/Elements/Header/HeaderLogoContainer";
+import { HeaderResponsiveMenuButton } from "../components/Elements/Header/HeaderResponsiveMenuButton";
 import { Logo } from "../components/Elements/Logo";
-import {  HeaderResponsiveMenuButton } from "../components/Elements/Header/HeaderResponsiveMenuButton";
-import { useTheme } from "styled-components";
 import { Nav } from "../components/Elements/Nav";
-import { NavTitle } from "../components/Elements/Nav/NavTitle";
 import { NavLink } from "../components/Elements/Nav/NavLink";
+import { NavTitle } from "../components/Elements/Nav/NavTitle";
+import { ResponsiveMenu } from "../components/Elements/ResponsiveMenu";
+import NextProgressComponent from "../components/Next/NextProgress";
 import {
     animationComponentsLinkList,
     elementsComponentsLinkList,
@@ -26,7 +25,8 @@ import {
     modalomponentsLinkList,
     nextComponentsLinkList,
     typographyComponentsLinkList
- } from '../data/componentsListLinks'
+} from '../data/componentsListLinks';
+import { Container, MainContainer } from "./styles";
 
 interface LayoutProps {
     children: ReactNode;

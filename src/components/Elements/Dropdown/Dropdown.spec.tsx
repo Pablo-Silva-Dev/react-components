@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { Dropdown } from '.'
 import { theme } from '../../../themes/theme'
-import { ListLink } from '.'
 
 interface ChildrenProps {
     children: ReactNode
@@ -25,7 +25,7 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
 describe('List', () => {
     it('should render correctly', () => {
         const { debug } = render(
-            <ListLink
+            <Dropdown
                 iconsSize={12}
                 items={list}
             />, {
@@ -39,11 +39,11 @@ describe('List', () => {
     })
     it('should render a stripped list', () => {
         const { debug } = render(
-            <ListLink
+            <Dropdown
             iconsSize={12}
             items={list}
             stripped
-            data-testid='listlink-testid'
+            data-testid='Dropdown-testid'
             />, {
                 wrapper: StyledProvider
         }
@@ -51,7 +51,7 @@ describe('List', () => {
         
         debug()
         
-        const component = screen.getByTestId('listlink-testid').firstChild
+        const component = screen.getByTestId('Dropdown-testid').firstChild
         expect(component).toHaveClass('stripped')
     })
 })

@@ -2,14 +2,18 @@ import { Code as CodeComponent } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { Container, Title } from './styles';
 
-interface DisplayCodeProps{
-    children: ReactNode
+interface DisplayCodeProps {
+    children: ReactNode;
+    hideTitle?: boolean;
 }
 
-export function DisplayCode({children} : DisplayCodeProps) {
+export function DisplayCode({ children, hideTitle }: DisplayCodeProps) {
     return (
         <Container>
-            <Title>Code</Title>
+            {
+                !hideTitle &&
+                <Title>Code</Title>
+            }
             <CodeComponent
                 //eslint-disable-next-line
                 children={children}
