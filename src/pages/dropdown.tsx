@@ -86,7 +86,7 @@ export default function Dropdown() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <DropdownComponent
+                    <Dropdown
                         items={list}
                         iconsSize={24}
                         stripped

@@ -1,6 +1,6 @@
-import { DisplayInfo } from '../components/Display/DisplayInfo';
+import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { GoogleMap as GoogleMapComponent } from '../components/Elements/GoogleMap'
+import { Nav as NavComponent } from '../components/Elements/Nav'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -12,30 +12,39 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function GoogleMap() {
+export default function Nav() {
 
     const props = {
-        addressUrl: 'Description: Path containing Google Map URL. Type: String. Required.',
-        size: 'Description: Image size. Type: "small" | "medium" | "large". Default: "medium".',
+        children: 'Description: React elements to display. Type: ReactNode. Required.',
+        style: 'Description: Nav style. Type: CSS Properties.',
+        className: 'Description: Nav className. Type: String.'
     }
+
+    const theme = useTheme()
 
     return (
         <Container>
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='GoogleMap'
+                        content='Nav'
                     />
                     <Text
-                        content='Used to display a embeded GoogleMap iframe.'
+                        content='A Nav wrapper used to mount your Nav component. It is auto responsible by default.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <GoogleMapComponent
-                        addressUrl='https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed'
-                    />
+                    <NavComponent
+                        style={{
+                            display: 'flex',
+                            width: '50%',
+                            height: 400,
+                            backgroundColor: theme.colors.primary_light
+                        }}
+                    >
+                        <p>Your content comes here</p>
+                    </NavComponent>
                 </PreviewContainer>
-
 
                 <PropsContainer>
                     <SubTitle
@@ -59,16 +68,19 @@ export default function GoogleMap() {
                         </>
                     ))}
                 </PropsContainer>
-                <DisplayInfo
-                    title='Important:'
-                    content='You must to use addressUrl prop in the format: https://maps.google.com/maps?q=your_address_comes_here&output=embed. You can use https://google-map-generator.com/ to help you to generate the addressUrl in the correct format, otherwise your map will break.'
-                />
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                        <GoogleMap
-                        addressUrl='https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed'
-                        />"
+                    <NavComponent
+                        style={{
+                            display: 'flex',
+                            width: '50%',
+                            height: 400,
+                            backgroundColor: theme.colors.primary_light
+                        }}
+                    >
+                    <p>Your content comes here</p>
+                </NavComponent>"
                 />
             </ComponentContainer>
         </Container>

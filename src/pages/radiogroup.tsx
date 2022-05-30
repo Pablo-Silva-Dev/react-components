@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { RadioGroup as  RadioGroupComponent } from '../components/Forms/RadioGroup';
+import { DisplayCode } from '../components/Display/DisplayCode';
+import { RadioGroup as RadioGroupComponent } from '../components/Forms/RadioGroup';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -71,6 +72,24 @@ export default function RadioGroup() {
                         </>
                     ))}
                 </PropsContainer>
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    const options = [
+                        { value: 'chocolate', label: 'chocolate' },
+                        { value: 'cherry', label: 'cherry' },
+                        { value: 'apple', label: 'apple' },
+                    ]"
+                />
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    <RadioGroup
+                    options={options}
+                    onChange={(e) => setSelectedOption(e.target.value)}
+                    />"
+                    hideTitle
+                />
             </ComponentContainer>
         </Container>
     )

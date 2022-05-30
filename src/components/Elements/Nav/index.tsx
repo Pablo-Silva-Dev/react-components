@@ -3,12 +3,17 @@ import { Container } from './styles';
 
 
 interface NavProps {
-    children: ReactNode;
+    children?: ReactNode;
+    style?: CSSProperties;
+    className?: string
 }
 
-export function Nav({ children }: NavProps) {
+export function Nav({ children, style, className}: NavProps) {
     return (
-        <Container>
+        <Container
+            style={style}
+            className={className}
+        >
             {children}
         </Container>
     )

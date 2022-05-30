@@ -68,7 +68,7 @@ export default function CollapsibleInfo() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <CollapsibleInfoComponent
+                    <CollapsibleInfo
                         content='Your content here'
                         title='Title content here'
                     />"

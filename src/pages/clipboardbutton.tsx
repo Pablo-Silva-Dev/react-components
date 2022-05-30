@@ -77,7 +77,7 @@ export default function ClipboardButton() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <ClipboardButtonComponent
+                    <ClipboardButton
                     content={myContent}
                     copiedFeedbackMessage='Copied!'
                     notCopiedFeedbackMessage='Click here to copy your content.'

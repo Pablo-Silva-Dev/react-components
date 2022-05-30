@@ -73,14 +73,14 @@ export default function GroupInfo() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <GroupInfoComponent
+                    <GroupInfo
                     title='Some topic'
                     content='Minim occaecat aliquip aute magna do cillum ea ut non. Lorem ullamco esse magna deserunt ut laboris anim irure cillum id et magna. Sint duis minim ex laborum quis pariatur irure id. Nisi sit incididunt cupidatat do consectetur ea occaecat id esse sit qui adipisicing in. Duis in nulla aute non Lorem incididunt sint quis.'
                 >
                     <MdLightbulbOutline
                         size={24}
                     />
-                </GroupInfoComponent>"
+                </GroupInfo>"
                 />
             </ComponentContainer>
         </Container>

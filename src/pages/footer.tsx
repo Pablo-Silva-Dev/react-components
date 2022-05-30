@@ -68,13 +68,13 @@ export default function Footer() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <FooterComponent
+                    <Footer
                         style={{
                             backgroundColor: theme.colors.primary_light
                         }}
                     >
                         <p>Your content comes here</p>
-                    </FooterComponent>"
+                    </Footer>"
                 />
             </ComponentContainer>
         </Container>

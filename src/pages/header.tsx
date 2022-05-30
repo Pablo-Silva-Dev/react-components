@@ -68,13 +68,13 @@ export default function Header() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <HeaderComponent
+                    <Header
                         style={{
                             backgroundColor: theme.colors.primary_light
                         }}
                     >
                         <p>Your content comes here</p>
-                    </HeaderComponent>"
+                    </Header>"
                 />
             </ComponentContainer>
         </Container>
