@@ -16,7 +16,7 @@ export default function SearchInput() {
 
     const props = {
         value: 'Description: Search state. Type: String. Required.',
-        onChange: 'Description: Function used to update Search state . Type:(e: ChangeEvent<HTMLInputElement>) => void. Required.',
+        onChange: 'Description: Function used to update Search state. Type: (e: ChangeEvent<HTMLInputElement>) => void. Required.',
         placeholder: 'Description: HTMLInputElement placeholder.',
         disabled: 'Description: Disables the input. Type: Boolean.',
         style: 'Description: Input style. Type: CSS Properties.',
