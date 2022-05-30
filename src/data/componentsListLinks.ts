@@ -11,7 +11,6 @@ export const animationComponentsLinkList = [
 
 export const elementsComponentsLinkList = [
   { content: "Avatar", url: "/avatar" },
-  { content: "Cards", url: "/cards" },
   { content: "ClipboardButton", url: "/clipboardbutton" },
   { content: "CollapsibleInfo", url: "/collapsibleinfo" },
   { content: "Footer", url: "/footer" },
@@ -22,7 +21,6 @@ export const elementsComponentsLinkList = [
   { content: "Dropdown", url: "/dropdown" },
   { content: "Logo", url: "/logo" },
   { content: "Nav", url: "/nav" },
-  { content: "PricingCard", url: "/pricingcard" },
   { content: "PrimaryButton", url: "/primarybutton" },
   { content: "ResponsiveMenu", url: "/responsivemenu" },
   { content: "SearchInput", url: "/searchinput" },
@@ -31,6 +29,18 @@ export const elementsComponentsLinkList = [
   { content: "Timeline", url: "/timeline" },
   { content: "UserAuthentication", url: "/userauthentication" },
 ];
+
+export const cardsLinkList = [
+  { content: "ContactCard", url: "/contactcard" },
+  { content: "ImageCard", url: "/imagecard" },
+  { content: "NewsletterCard", url: "/newslettercard" },
+  { content: "PricingCard", url: "/pricingcard" },
+  { content: "ProductCard", url: "/productcard" },
+  { content: "ProfileCard", url: "/profilecard" },
+  { content: "StarsRatingCard", url: "/starsratingcard" },
+  { content: "TestimonialCard", url: "/testimonialcard" },
+  { content: "TitleCard", url: "/titlecard" },
+]
 
 export const formComponentsLinkList = [
   { content: "CheckBox", url: "/checkbox" },

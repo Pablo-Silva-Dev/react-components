@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { Container } from './styles';
 
 

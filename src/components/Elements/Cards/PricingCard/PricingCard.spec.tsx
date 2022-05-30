@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../../../themes/theme'
-import { PricingCard } from './'
+import { theme } from '../../../../themes/theme'
+import { PricingCard } from '.'
 
 interface ChildrenProps {
     children: ReactNode

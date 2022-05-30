@@ -20,6 +20,7 @@ import { ResponsiveMenu } from "../components/Elements/ResponsiveMenu";
 import NextProgressComponent from "../components/Next/NextProgress";
 import {
     animationComponentsLinkList,
+    cardsLinkList,
     elementsComponentsLinkList,
     formComponentsLinkList,
     modalomponentsLinkList,
@@ -74,7 +75,6 @@ export default function Layout({ children }: LayoutProps) {
                 <HeaderLogoContainer>
                     <Logo
                         imageUrl='/logo.png'
-                        imgAlt='React Components PSD'
                         size='medium'
                     />
                 </HeaderLogoContainer>
@@ -87,6 +87,16 @@ export default function Layout({ children }: LayoutProps) {
                         content='Animations'
                     />
                     {animationComponentsLinkList.map(link => (
+                        <NavLink
+                            key={link.content}
+                            content={link.content}
+                            url={link.url}
+                        />
+                    ))}
+                    <NavTitle
+                        content='Card'
+                    />
+                    {cardsLinkList.map(link => (
                         <NavLink
                             key={link.content}
                             content={link.content}

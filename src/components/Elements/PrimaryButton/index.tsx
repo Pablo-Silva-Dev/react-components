@@ -8,15 +8,19 @@ interface PrimaryButtonProps {
     disabled?: boolean;
     loading?: boolean;
     onClick: () => void;
+    size?: "tiny" | "small" | "medium" | "large";
     style?: CSSProperties;
+    className?: string;
 }
 
 export function PrimaryButton({
     title,
+    onClick,
     disabled,
     loading,
     style,
-    onClick
+    size,
+    className,
 }: PrimaryButtonProps) {
 
     const theme = useTheme()
@@ -26,6 +30,8 @@ export function PrimaryButton({
             onClick={onClick}
             disabled={disabled}
             style={style}
+            className={className}
+            size={size}
         >
             {loading ?
                 <ReactLoading

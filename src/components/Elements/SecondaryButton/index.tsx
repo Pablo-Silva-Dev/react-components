@@ -8,15 +8,19 @@ interface SecondaryButtonProps {
     disabled?: boolean;
     loading?: boolean;
     onClick: () => void;
+    size?: "tiny" | "small" | "medium" | "large";
     style?: CSSProperties;
+    className?: string;
 }
 
 export function SecondaryButton({
     title,
+    onClick,
     disabled,
     loading,
     style,
-    onClick
+    size,
+    className,
 }: SecondaryButtonProps) {
 
     const theme = useTheme()
@@ -26,6 +30,8 @@ export function SecondaryButton({
             onClick={onClick}
             disabled={disabled}
             style={style}
+            size={size}
+            className={className}
         >
             {loading ?
                 <ReactLoading
