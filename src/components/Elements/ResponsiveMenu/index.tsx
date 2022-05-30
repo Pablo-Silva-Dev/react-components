@@ -26,7 +26,7 @@ interface ResponsiveMenuProps {
     linkStyle?: CSSProperties;
     style?: CSSProperties;
     buttonStyle?: CSSProperties;
-    closeResponsiveMenu: () => void
+    toggleResponsiveMenu: () => void
 }
 
 export function ResponsiveMenu({
@@ -43,7 +43,7 @@ export function ResponsiveMenu({
     fourthUrlTitle,
     fivethUrlTitle,
     sixthUrlTitle,
-    closeResponsiveMenu,
+    toggleResponsiveMenu,
     style,
     buttonStyle,
     linkStyle
@@ -63,7 +63,7 @@ export function ResponsiveMenu({
                     style={buttonStyle}
                 >
                     <MdClose
-                        onClick={closeResponsiveMenu}
+                        onClick={toggleResponsiveMenu}
                         size={32}
                         color={theme.colors.white}
                         role='dialog'
@@ -72,7 +72,7 @@ export function ResponsiveMenu({
                 {firstUrlLink &&
                     <MenuItem
                         href={firstUrlLink}
-                        onClick={closeResponsiveMenu}
+                        onClick={toggleResponsiveMenu}
                         style={linkStyle}
                     >
                         {firstUrlTitle}
@@ -81,7 +81,7 @@ export function ResponsiveMenu({
                 {secondUrlLink &&
                     <MenuItem
                         href={secondUrlLink}
-                        onClick={closeResponsiveMenu}
+                        onClick={toggleResponsiveMenu}
                         style={linkStyle}
                     >
                         {secondUrlTitle}
@@ -90,7 +90,7 @@ export function ResponsiveMenu({
                 {thirdUrlLink &&
                     <MenuItem
                         href={thirdUrlLink}
-                        onClick={closeResponsiveMenu}
+                        onClick={toggleResponsiveMenu}
                         style={linkStyle}
                     >
                         {thirdUrlTitle}
@@ -99,7 +99,7 @@ export function ResponsiveMenu({
                 {fourthUrlLink &&
                     <MenuItem
                         href={fourthUrlLink}
-                        onClick={closeResponsiveMenu}
+                        onClick={toggleResponsiveMenu}
                         style={linkStyle}
                     >
                         {fourthUrlTitle}
@@ -108,7 +108,7 @@ export function ResponsiveMenu({
                 {fivethUrlLink &&
                     <MenuItem
                         href={fivethUrlLink}
-                        onClick={closeResponsiveMenu}
+                        onClick={toggleResponsiveMenu}
                         style={linkStyle}
                     >
                         {fivethUrlTitle}
@@ -117,7 +117,7 @@ export function ResponsiveMenu({
                 {sixthUrlLink &&
                     <MenuItem
                         href={sixthUrlLink}
-                        onClick={closeResponsiveMenu}
+                        onClick={toggleResponsiveMenu}
                         style={linkStyle}
                     >
                         {sixthUrlTitle}

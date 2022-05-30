@@ -39,12 +39,10 @@ export default function Layout({ children }: LayoutProps) {
 
     const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
 
-    function openResponsiveMenu() {
+    function toggleResponsiveMenu() {
         setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
     }
-    function closeResponsiveMenu() {
-        setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
-    }
+   
 
     return (
         <Container>
@@ -62,12 +60,12 @@ export default function Layout({ children }: LayoutProps) {
                         fourthUrlTitle='sdfjsdfsdfhsdf'
                         fourthUrlLink='sdsdfdsfjfh'
                         fivethUrlTitle='sdfdfsdfdsfjhsdf'
-                        closeResponsiveMenu={closeResponsiveMenu}
+                        toggleResponsiveMenu={toggleResponsiveMenu}
                     />
                 }
                 <HeaderResponsiveMenuButton
-                    openResponsiveMenu={openResponsiveMenu}
-                    responsiveMenuIconStyle={{
+                    toggleResponsiveMenu={toggleResponsiveMenu}
+                    iconStyle={{
                         color: theme.colors.secondary
                     }}
                 />

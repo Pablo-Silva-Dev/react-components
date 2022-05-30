@@ -3,31 +3,31 @@ import { MdMenu } from 'react-icons/md';
 import { Container } from './styles';
 
 interface HeaderResponsiveMenuButtonProps {
-    openResponsiveMenu: () => void;
-    responsiveMenuContainerStyle?: CSSProperties;
-    responsiveMenuContainerClassName?: string;
-    responsiveMenuIconStyle?: CSSProperties;
-    responsiveMenuIconClassName?: string;
+    toggleResponsiveMenu: () => void;
+    containerStyle?: CSSProperties;
+    containerClassName?: string;
+    iconStyle?: CSSProperties;
+    iconClassName?: string;
 }
 
 export function HeaderResponsiveMenuButton({
-    openResponsiveMenu,
-    responsiveMenuContainerStyle,
-    responsiveMenuContainerClassName,
-    responsiveMenuIconStyle,
-    responsiveMenuIconClassName
+    toggleResponsiveMenu,
+    containerStyle,
+    containerClassName,
+    iconStyle,
+    iconClassName
 }: HeaderResponsiveMenuButtonProps) {
 
     return (
         <Container
-            style={responsiveMenuContainerStyle}
-            className={responsiveMenuContainerClassName}
+            style={containerStyle}
+            className={containerClassName}
         >
             <MdMenu
-                onClick={openResponsiveMenu}
+                onClick={toggleResponsiveMenu}
                 size={32}
-                style={responsiveMenuIconStyle}
-                className={responsiveMenuIconClassName}
+                style={iconStyle}
+                className={iconClassName}
                 data-testid='HeaderResponsiveMenuButton-id'
             />
         </Container>

@@ -31,7 +31,7 @@ export const DescriptionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 16px;
+  padding: 16px 0;
   width: 100%;
   `;
 
