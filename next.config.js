@@ -7,7 +7,8 @@ const nextConfig = {
     domains: [
       'images.kabum.com.br',
       'avatars.githubusercontent.com',
-      'images.unsplash.com'
+      'images.unsplash.com',
+      'www.pablosilvadev.com.br'
 ]
   },
 }
