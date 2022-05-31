@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 12vw;
   height: 100vh;
   overflow: auto;
-  background-color: ${({ theme }) => theme.colors.primary_dark};
+  background-color: ${({ theme }) => theme.colors.element_base};
   @media (max-width: 1440px) {
     width: 20vw;
   }

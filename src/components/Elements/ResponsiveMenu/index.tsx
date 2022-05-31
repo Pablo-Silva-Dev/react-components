@@ -1,6 +1,7 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { MdClose } from 'react-icons/md'
 import { useTheme } from 'styled-components'
+import { NextLink } from '../../Next/NextLink';
 
 import {
     CloseMenuButton,
@@ -10,43 +11,23 @@ import {
 } from './styles';
 
 interface ResponsiveMenuProps {
-    direction: 'vertical' | 'horizontal'
-    firstUrlTitle?: string;
-    secondUrlTitle?: string;
-    thirdUrlTitle?: string;
-    fourthUrlTitle?: string;
-    fivethUrlTitle?: string;
-    sixthUrlTitle?: string;
-    firstUrlLink?: string;
-    secondUrlLink?: string;
-    thirdUrlLink?: string;
-    fourthUrlLink?: string;
-    fivethUrlLink?: string;
-    sixthUrlLink?: string;
-    linkStyle?: CSSProperties;
-    style?: CSSProperties;
-    buttonStyle?: CSSProperties;
     toggleResponsiveMenu: () => void
+    direction?: 'top' | 'right' | 'left'
+    children?: ReactNode;
+    style?: CSSProperties;
+    className?: string;
+    buttonStyle?: CSSProperties;
+    buttonClassName?: string;
+    menuStyle?: CSSProperties;
+    menuClassName?: string;
 }
 
 export function ResponsiveMenu({
-    direction,
-    firstUrlLink,
-    secondUrlLink,
-    thirdUrlLink,
-    fourthUrlLink,
-    fivethUrlLink,
-    sixthUrlLink,
-    firstUrlTitle,
-    secondUrlTitle,
-    thirdUrlTitle,
-    fourthUrlTitle,
-    fivethUrlTitle,
-    sixthUrlTitle,
+    direction = 'top',
     toggleResponsiveMenu,
+    children,
     style,
     buttonStyle,
-    linkStyle
 }: ResponsiveMenuProps) {
 
     const theme = useTheme()
@@ -54,8 +35,8 @@ export function ResponsiveMenu({
     return (
         <Container
             direction={direction}
-                role='menu'
-            >
+            role='menu'
+        >
             <MenuContainer
                 style={style}
             >
@@ -69,60 +50,7 @@ export function ResponsiveMenu({
                         role='dialog'
                     />
                 </CloseMenuButton>
-                {firstUrlLink &&
-                    <MenuItem
-                        href={firstUrlLink}
-                        onClick={toggleResponsiveMenu}
-                        style={linkStyle}
-                    >
-                        {firstUrlTitle}
-                    </MenuItem>
-                }
-                {secondUrlLink &&
-                    <MenuItem
-                        href={secondUrlLink}
-                        onClick={toggleResponsiveMenu}
-                        style={linkStyle}
-                    >
-                        {secondUrlTitle}
-                    </MenuItem>
-                }
-                {thirdUrlLink &&
-                    <MenuItem
-                        href={thirdUrlLink}
-                        onClick={toggleResponsiveMenu}
-                        style={linkStyle}
-                    >
-                        {thirdUrlTitle}
-                    </MenuItem>
-                }
-                {fourthUrlLink &&
-                    <MenuItem
-                        href={fourthUrlLink}
-                        onClick={toggleResponsiveMenu}
-                        style={linkStyle}
-                    >
-                        {fourthUrlTitle}
-                    </MenuItem>
-                }
-                {fivethUrlLink &&
-                    <MenuItem
-                        href={fivethUrlLink}
-                        onClick={toggleResponsiveMenu}
-                        style={linkStyle}
-                    >
-                        {fivethUrlTitle}
-                    </MenuItem>
-                }
-                {sixthUrlLink &&
-                    <MenuItem
-                        href={sixthUrlLink}
-                        onClick={toggleResponsiveMenu}
-                        style={linkStyle}
-                    >
-                        {sixthUrlTitle}
-                    </MenuItem>
-                }
+                {children}
             </MenuContainer>
         </Container>
     )

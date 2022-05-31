@@ -1,68 +1,62 @@
 import styled, { keyframes } from "styled-components";
 
 interface ResponsiveMenuProps {
-  direction: string;
+  direction: "top" | "right" | "left";
 }
 
 const menuAnimationVertical = keyframes`
     0%{height: 0px};
-    100%{height: 32vh};
+    100%{height: 24vh};
 `;
 
 const menuAnimationHorizontal = keyframes`
   0%{width: 0px};
-  100%{width: 64vw};
-`;
-
-const menuItemAnimation = keyframes`
-    0%{opacity: 0};
-    100%{opacity: 1};
+  100%{width: 280px};
 `;
 
 export const Container = styled.div<ResponsiveMenuProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: ${({ direction }) => (direction === "vertical" ? "20vh" : "100vh")};
-  width: ${({ direction }) => (direction === "vertical" ? "100%" : "32vh")};
+  height: ${({ direction }) => (direction === "top" ? "20vh" : "100%")};
+  width: ${({ direction }) => (direction === "top" ? "100%" : "300px")};
   position: fixed;
   top: 0;
-  right: 0;
+  left: ${({ direction }) => (direction === "left" ? 0 : 300)};
+  right: ${({ direction }) => (direction === "left" ? 300 : 0)};
+  border-left: ${({ direction, theme }) => (direction === "right" ? `1px solid ${theme.colors.silver}` : null)};
+  border-right: ${({ direction, theme }) => (direction === "left" ? `1px solid ${theme.colors.silver}` : null)};
+  border-bottom: ${({ direction, theme }) => (direction === "top" ? `1px solid ${theme.colors.silver}` : null)};
+  right: ${({ direction }) => (direction === "left" ? 300 : 0)};
   z-index: 999;
   animation: ${({ direction }) =>
-      direction === "vertical"
-        ? menuAnimationVertical
-        : menuAnimationHorizontal}
+      direction === "top" ? menuAnimationVertical : menuAnimationHorizontal}
     0.32s;
   -webkit-animation-fill-mode: forwards;
-  background-image: linear-gradient(
-    to bottom,
-    ${({ theme }) => theme.colors.black},
-    ${({ theme }) => theme.colors.text}
-  );
+  background-color: ${({ theme }) => theme.colors.element_base};
+  overflow: auto;
 `;
 
 export const MenuContainer = styled.div`
   width: 100%;
-  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   padding-top: 40px;
   position: relative;
+  padding: 40px 24px;
 `;
 
 export const MenuItem = styled.a`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.black};
   text-transform: capitalize;
   font-weight: 700;
   font-size: ${({ theme }) => theme.sizes.large};
   line-height: 32px;
   cursor: pointer;
-  animation: ${menuItemAnimation} 1s;
+  transition: all 0.3s ease;
   &:hover {
-    color: ${({ theme }) => theme.colors.secondary_light};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
@@ -70,9 +64,9 @@ export const CloseMenuButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
-  margin: 0 0 12px 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -16px;
+  margin-bottom: 32px;
   background-color: ${({ theme }) => theme.colors.error};
-  animation: ${menuItemAnimation} 2s;
 `;

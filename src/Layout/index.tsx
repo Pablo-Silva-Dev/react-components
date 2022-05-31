@@ -42,7 +42,6 @@ export default function Layout({ children }: LayoutProps) {
     function toggleResponsiveMenu() {
         setIsResponsiveMenuOpen(!isResponsiveMenuOpen)
     }
-   
 
     return (
         <Container>
@@ -50,18 +49,84 @@ export default function Layout({ children }: LayoutProps) {
             <Header>
                 {isResponsiveMenuOpen &&
                     <ResponsiveMenu
-                        direction='horizontal'
-                        firstUrlTitle='Home'
-                        firstUrlLink='sdfsdfsdfsdf'
-                        secondUrlTitle='ssdfsdfsdfdfjh'
-                        secondUrlLink='sdjsdfsdfdffh'
-                        thirdUrlTitle='sdfsdfsdfjh'
-                        thirdUrlLink='sdsdfsdfsdfjfh'
-                        fourthUrlTitle='sdfjsdfsdfhsdf'
-                        fourthUrlLink='sdsdfdsfjfh'
-                        fivethUrlTitle='sdfdfsdfdsfjhsdf'
                         toggleResponsiveMenu={toggleResponsiveMenu}
-                    />
+                        direction='left'
+                    >
+                        <NavTitle
+                            content='Animations'
+                        />
+                        {animationComponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                            />
+                        ))}
+                        <NavTitle
+                            content='Card'
+                        />
+                        {cardsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                            />
+                        ))}
+
+                        <NavTitle
+                            content='Elements'
+                        />
+                        {elementsComponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                            />
+                        ))}
+                        <NavTitle
+                            content='Forms'
+                        />
+                        {formComponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                            />
+                        ))}
+
+                        <NavTitle
+                            content='Modals'
+                        />
+                        {modalomponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                            />
+                        ))}
+
+                        <NavTitle
+                            content='Next'
+                        />
+                        {nextComponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                            />
+                        ))}
+
+                        <NavTitle
+                            content='Next'
+                        />
+                        {typographyComponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                            />
+                        ))}
+                    </ResponsiveMenu>
                 }
                 <HeaderResponsiveMenuButton
                     toggleResponsiveMenu={toggleResponsiveMenu}
@@ -101,7 +166,7 @@ export default function Layout({ children }: LayoutProps) {
                             url={link.url}
                         />
                     ))}
-                    
+
                     <NavTitle
                         content='Elements'
                     />
@@ -144,7 +209,7 @@ export default function Layout({ children }: LayoutProps) {
                             url={link.url}
                         />
                     ))}
-                    
+
                     <NavTitle
                         content='Next'
                     />
@@ -156,7 +221,7 @@ export default function Layout({ children }: LayoutProps) {
                         />
                     ))}
 
-               
+
                 </Nav>
                 <main>{children}</main>
             </MainContainer>
