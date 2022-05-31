@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { CheckBox } from '../components/Forms/CheckBox'
+import { StepProgress as StepProgressComponent } from '../components/Elements/StepProgress'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -12,29 +11,40 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function Checkbox() {
+export default function StepProgress() {
 
     const props = {
-        checked: `Checked boolean value. Type: Boolean. Required.`,
-        onChange: 'Callback when checked state changes. Type: Function. Required.'
+        currentIndex: 'Description: Active step index used to control the component. Type: Number. Required.',
+        steps: 'Description: An array containing all processes string. Type: string[]. Required.',
+        containerStyle: 'Description: Container style. Type: CSS Properties.',
+        containerClassName: 'Description: Container className. Type: String.',
+        stepItemStyle: 'Description: Step Item style. Type: CSS Properties.',
+        stepItemClassName: 'Description: Step Item className. Type: String.',
+        lineStyle: 'Description: Line style. Type: CSS Properties.',
+        lineClassName: 'Description: Line className. Type: String.',
+        textStyle: 'Description: Text style. Type: CSS Properties.',
+        textClassName: 'Description: Text className. Type: String.',
     }
 
-    const [checkBox, setCheckBox] = useState(false)
+    const steps = [
+        'Approving payment', 'In transit', 'Finished'
+    ]
+
     return (
         <Container>
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='Checkbox'
+                        content='StepProgress'
                     />
                     <Text
-                        content='Used to confirm terms and check boolean types.'
+                        content='Used to display the current status of a process.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <CheckBox
-                        checked={checkBox}
-                        onChange={() => setCheckBox(!checkBox)}
+                    <StepProgressComponent
+                        currentIndex={2}
+                         steps={steps}
                     />
                 </PreviewContainer>
 
@@ -63,9 +73,12 @@ export default function Checkbox() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <CheckBox
-                    checked={checkBox}
-                    onChange={() => setCheckBox(!checkBox)}
+                    const steps = [
+                        'Approving payment', 'In transit', 'Finished'
+                    ]
+                    <StepProgressComponent
+                      currentIndex={2}
+                      steps={steps}
                     />"
                 />
             </ComponentContainer>

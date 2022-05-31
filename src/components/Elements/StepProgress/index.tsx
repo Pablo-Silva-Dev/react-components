@@ -1,3 +1,4 @@
+import { CSSProperties } from 'react';
 import { MdCheck, } from 'react-icons/md'
 import { useTheme } from 'styled-components';
 import {
@@ -7,20 +8,30 @@ import {
     StepLine,
     StepTitle
 } from './styles';
-
-export interface TaskProps {
-    process: string;
-    status: string;
-}
-
 interface StepProgressProps {
     currentIndex: number;
-    steps: TaskProps[]
+    steps: string[],
+    stepItemStyle?: CSSProperties;
+    stepItemClassName?: string;
+    containerStyle?: CSSProperties;
+    containerClassName?: string;
+    lineStyle?: CSSProperties;
+    lineClassName?: string;
+    textStyle?: CSSProperties;
+    textClassName?: string;
 }
 
 export function StepProgress({
     steps,
-    currentIndex
+    currentIndex,
+    containerClassName,
+    containerStyle,
+    lineClassName,
+    lineStyle,
+    stepItemClassName,
+    stepItemStyle,
+    textClassName,
+    textStyle
 }: StepProgressProps) {
 
     const theme = useTheme()
@@ -28,10 +39,12 @@ export function StepProgress({
     return (
         <Container
             key={currentIndex}
+            style={containerStyle}
+            className={containerClassName}
         >
             {steps.map((step, index) => (
                 <StepContainer
-                    key={step.process}
+                    key={step}
                 >
                     <StepItem
                         style={{
@@ -48,7 +61,8 @@ export function StepProgress({
                                 '40px'
                                 :
                                 '24px'
-                        }}
+                        } || stepItemStyle}
+                        className={stepItemClassName}
                     >
                         {
                             currentIndex < index + 2 ?
@@ -58,9 +72,10 @@ export function StepProgress({
                         }
                     </StepItem>
                     <StepTitle
-
+                        style={textStyle}
+                        className={textClassName}
                     >
-                        {step.process}
+                        {step}
                     </StepTitle>
                     {index < (steps.length - 1) &&
                         <StepLine
@@ -69,7 +84,8 @@ export function StepProgress({
                                     theme.colors.success :
                                     theme.colors.primary,
 
-                            }}
+                            } || lineStyle}
+                            className={lineClassName}
                         />
                     }
                 </StepContainer>
