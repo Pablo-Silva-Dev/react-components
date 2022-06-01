@@ -51,7 +51,7 @@ export const cardsLinkList = [
 export const formComponentsLinkList = [
   { content: "CheckBox", url: "/checkbox" },
   { content: "EmailInput", url: "/emailinput" },
-  { content: "FacebookSignInButton", url: "/checkbox" },
+  { content: "FacebookSignInButton", url: "/facebooksigninbutton" },
   { content: "GitHubSignInButton", url: "/githubsigninbutton" },
   { content: "GoogleSignInButton", url: "/googlesigninbutton" },
   { content: "PasswordInput", url: "/passwordinput" },
