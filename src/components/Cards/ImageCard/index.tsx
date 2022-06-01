@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import Image from 'next/image'
 
 import { Container, ImageContainer, Text, Title } from './styles';
-import { name } from '../../../../package.json'
+import { name, dependencies } from '../../../../package.json'
 
 interface ImageCardProps {
     imgUrl: string;
@@ -37,28 +37,54 @@ export function ImageCard({
                 style={cardStyle}
                 className={glassEffect ? 'glassEffect' : cardClassName}
             >
-                <Image
-                    src={imgUrl}
-                    alt={name}
-                    width={
-                        imgSize === 'large' ?
-                            640 :
-                            imgSize === 'small'
-                                ?
-                                320 :
-                                480
-                    }
-                    height={
-                        imgSize === 'large' ?
-                            640 :
-                            imgSize === 'small'
-                                ?
-                                320 :
-                                480
-                    }
-                    objectFit='cover'
-                    data-testid='imagecard-id'
-                />
+                {dependencies.next ?
+                    <Image
+                        src={imgUrl}
+                        alt={name}
+                        width={
+                            imgSize === 'large' ?
+                                640 :
+                                imgSize === 'small'
+                                    ?
+                                    320 :
+                                    480
+                        }
+                        height={
+                            imgSize === 'large' ?
+                                640 :
+                                imgSize === 'small'
+                                    ?
+                                    320 :
+                                    480
+                        }
+                        objectFit='cover'
+                        data-testid='imagecard-id'
+                    />
+                    :
+                    //eslint-disable-next-line
+                    <img
+                        src={imgUrl}
+                        alt={name}
+                        width={
+                            imgSize === 'large' ?
+                                640 :
+                                imgSize === 'small'
+                                    ?
+                                    320 :
+                                    480
+                        }
+                        height={
+                            imgSize === 'large' ?
+                                640 :
+                                imgSize === 'small'
+                                    ?
+                                    320 :
+                                    480
+                        }
+                        data-testid='imagecard-id'
+                    />
+                }
+
 
                 {imgTitle &&
                     <Title

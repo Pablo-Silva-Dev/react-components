@@ -7,21 +7,28 @@ import {
     SubmitButton,
     Title,
     Text,
-    TitleContainer
+    TitleContainer,
+    NewsletterContainer
 } from './styles';
 
 
 interface NewsletterCardProps {
     title: string
     subtitle?: string
-    namePlaceholder: string
     emailPlaceholder: string
+    namePlaceholder?: string
     submit: () => Promise<void>
-    style?: CSSProperties
+    cardStyle?: CSSProperties
     inputStyle?: CSSProperties
     buttonStyle?: CSSProperties
-    titleStyle?: CSSProperties
-    subTitleStyle?: CSSProperties
+    newsletterTitleStyle?: CSSProperties
+    newsletterSubTitleStyle?: CSSProperties
+    cardClassName?: string;
+    inputClassName?: string;
+    buttonClassName?: string;
+    newsletterTitleClassName?: string;
+    newsletterSubTitleClassName?: string;
+    glassEffect?: boolean;
 }
 
 export function NewsletterCard({
@@ -30,53 +37,70 @@ export function NewsletterCard({
     namePlaceholder,
     emailPlaceholder,
     submit,
-    style,
+    cardStyle,
     buttonStyle,
     inputStyle,
-    titleStyle,
-    subTitleStyle
+    newsletterTitleStyle,
+    newsletterSubTitleStyle,
+    cardClassName,
+    buttonClassName,
+    inputClassName,
+    newsletterTitleClassName,
+    newsletterSubTitleClassName,
+    glassEffect
 }: NewsletterCardProps) {
     return (
         <Container
-            style={style}
         >
-            <TitleContainer>
-                <Title
-                    style={titleStyle}
-                >
-                    {title}
-                </Title>
-                <Text
-                    style={subTitleStyle}
-                >
-                    {subtitle}
-                </Text>
-            </TitleContainer>
-            <Form
-                onSubmit={submit}
+            <NewsletterContainer
+                className={glassEffect ? 'glassEffect' : cardClassName}
+                style={cardStyle}
             >
-                <Input
-                    type='text'
-                    name='name'
-                    placeholder={namePlaceholder}
-                    required
-                    style={inputStyle}
-                />
-                <Input
-                    type='email'
-                    name='email'
-                    placeholder={emailPlaceholder}
-                    required
-                    style={inputStyle}
-                />
-                <SubmitButton
-                    type='submit'
-                    style={buttonStyle}
+                <TitleContainer>
+                    <Title
+                        style={newsletterTitleStyle}
+                        className={newsletterTitleClassName}
+                    >
+                        {title}
+                    </Title>
+                    <Text
+                        style={newsletterSubTitleStyle}
+                        className={newsletterSubTitleClassName}
+                    >
+                        {subtitle}
+                    </Text>
+                </TitleContainer>
+                <Form
+                    onSubmit={submit}
                 >
-                    <MdEmail size={16} />
-                    Submit
-                </SubmitButton>
-            </Form>
+                    {
+                        namePlaceholder &&
+                        <Input
+                            type='text'
+                            name='name'
+                            placeholder={namePlaceholder}
+                            required
+                            style={inputStyle}
+                            className={inputClassName}
+                        />
+                    }
+                    <Input
+                        type='email'
+                        name='email'
+                        placeholder={emailPlaceholder}
+                        required
+                        style={inputStyle}
+                        className={inputClassName}
+                    />
+                    <SubmitButton
+                        type='submit'
+                        style={buttonStyle}
+                        className={buttonClassName}
+                    >
+                        Submit
+                    </SubmitButton>
+                </Form>
+            </NewsletterContainer>
 
         </Container>
     )
