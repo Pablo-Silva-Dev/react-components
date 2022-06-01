@@ -14,7 +14,7 @@ interface TimelineProps extends VerticalTimelineElementProps {
 
 export function Timeline({
     lineColor,
-    animated,
+    animated = false,
     children
 }: TimelineProps) {
 
