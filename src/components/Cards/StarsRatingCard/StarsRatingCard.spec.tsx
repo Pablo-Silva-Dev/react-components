@@ -1,15 +1,14 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../../../../themes/theme'
-import { ImageCard } from './'
+import { theme } from '../../../themes/theme'
+import { StarsRatingCard } from '.'
 
 interface ChildrenProps {
     children: ReactNode
 }
 
 const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
-
     return (
         <ThemeProvider theme={theme}>
             {children}
@@ -17,21 +16,21 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('ImageCard', () => {
+describe('StarsRatingCard', () => {
     it('should render correctly', () => {
         render(
-            <ImageCard
-                imgAlt='imagecard-alt'
-                imgUrl='/'
-                data-testid='imagecard-id'
+            <StarsRatingCard
+                onClick={() => { }}
+                rating={3}
+                title='starsratingcard-title'
             />, {
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByTestId('imagecard-id')
-
+        const component = screen.getByText('starsratingcard-title')
         expect(component).toBeInTheDocument()
+
 
     })
 })

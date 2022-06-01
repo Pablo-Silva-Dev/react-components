@@ -1,15 +1,14 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../../../../themes/theme'
-import { TestimonialCard } from '.'
+import { theme } from '../../../themes/theme'
+import { NewsletterCard } from '.'
 
 interface ChildrenProps {
     children: ReactNode
 }
 
 const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
-
     return (
         <ThemeProvider theme={theme}>
             {children}
@@ -17,24 +16,19 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('TestimonialCard', () => {
+describe('NewsletterCard', () => {
     it('should render correctly', () => {
         render(
-            <TestimonialCard
-                alt='testimonialcard-alt'
-                personName='testimonialcard-person-name'
-                testimonial='tertimonialcard-testimonial'
-                ratings={4}
-                personPhotoUrl='/testimonialcard-person-photo-url'
-                data-testid='testimonialcard-id'
+            <NewsletterCard
+                emailPlaceholder='newslettercard-email-placeholder'
+                namePlaceholder='newslettercard-name-placeholder'
+                submit={async () => { }}
+                title='newslettercard-title'
             />, {
             wrapper: StyledProvider
         }
         )
-
-        const component = screen.getByTestId('testimonialcard-id')
-
+        const component = screen.getByText('newslettercard-title')
         expect(component).toBeInTheDocument()
-
     })
 })

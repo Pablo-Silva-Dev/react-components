@@ -1,14 +1,15 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../../../../themes/theme'
-import { ProfileCard } from './'
+import { theme } from '../../../themes/theme'
+import { ImageCard } from '.'
 
 interface ChildrenProps {
     children: ReactNode
 }
 
 const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+
     return (
         <ThemeProvider theme={theme}>
             {children}
@@ -16,19 +17,21 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('ProfileCard', () => {
+describe('ImageCard', () => {
     it('should render correctly', () => {
         render(
-            <ProfileCard
-                imgAlt='profilecard-img-alt'
-                imgUrl='/profilecard-img-url'
-                title='profile-card-title'
-                data-testid='profile-card-id'
+            <ImageCard
+                imgAlt='imagecard-alt'
+                imgUrl='/'
+                data-testid='imagecard-id'
             />, {
             wrapper: StyledProvider
         }
         )
-        const component = screen.getByTestId('profile-card-id')
-        expect(component).toHaveAttribute('alt', 'profilecard-img-alt')
+
+        const component = screen.getByTestId('imagecard-id')
+
+        expect(component).toBeInTheDocument()
+
     })
 })

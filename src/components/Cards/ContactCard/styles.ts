@@ -1,18 +1,32 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  & .glassEffect {
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    background-color: rgba(17, 25, 40, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+`;
+export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.white};
   width: 320px;
-  min-height: 240px;
   border-radius: 4px;
   box-shadow: ${({ theme }) => theme.shadows.soft};
   padding: 16px;
   margin: 8px;
   position: relative;
+  & .card {
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    background-color: rgba(17, 25, 40, 0.24);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -23,12 +37,12 @@ export const TextContainer = styled.div`
   padding: 8px;
   @media (max-width: 720px) {
     width: 80%;
-    font-size: ${({ theme }) => theme.sizes.large}
+    font-size: ${({ theme }) => theme.sizes.large};
   }
-  `;
+`;
 
 export const Title = styled.h3`
-  font-size: ${({ theme }) => theme.sizes.xlarge}
+  font-size: ${({ theme }) => theme.sizes.xlarge};
   font-weight: 500;
   color: ${({ theme }) => theme.colors.black};
   width: 80%;
@@ -57,7 +71,7 @@ export const Text = styled.span`
     text-align: center;
     font-size: ${({ theme }) => theme.sizes.medium};
   }
-  `;
+`;
 
 export const WhatsappButton = styled.button`
   display: flex;
@@ -73,6 +87,6 @@ export const WhatsappButton = styled.button`
   @media (max-width: 720px) {
     width: 80%;
     text-align: center;
-    font-size: ${({ theme }) => theme.sizes.normal}
+    font-size: ${({ theme }) => theme.sizes.normal};
   }
 `;

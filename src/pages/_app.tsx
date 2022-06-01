@@ -14,8 +14,8 @@ function App({
     <SessionProvider>
       <ChakraProvider>
         <ThemeProvider theme={theme}>
-          <GlobalStyle />
           <Layout>
+          <GlobalStyle />
             <NextProgress />
             <Component {...pageProps} />
           </Layout>

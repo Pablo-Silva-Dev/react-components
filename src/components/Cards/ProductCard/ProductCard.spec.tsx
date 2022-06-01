@@ -1,15 +1,14 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../../../../themes/theme'
-import { TitleCard } from '.'
+import { theme } from '../../../themes/theme'
+import { ProductCard } from '.'
 
 interface ChildrenProps {
     children: ReactNode
 }
 
 const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
-
     return (
         <ThemeProvider theme={theme}>
             {children}
@@ -17,20 +16,23 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('TitleCard', () => {
+describe('ProductCard', () => {
     it('should render correctly', () => {
         render(
-            <TitleCard
-                title='titlecard-Title'
-                content='titlecard-content'
-                data-testid='titlecard-id'
+            <ProductCard
+                addToCart={async () => { }}
+                addToFavorites={async () => { }}
+                imgAlt='productcard-img-alt'
+                imgUrl='/productcard-img-url'
+                price='R$99,78'
+                priceOnCredit='R$109,88'
+                ratings={1.5}
+                title='productcard-title'
             />, {
             wrapper: StyledProvider
         }
         )
-
-        const component = screen.getByText('titlecard-content')
-
+        const component = screen.getByText('productcard-title')
         expect(component).toBeInTheDocument()
 
     })
