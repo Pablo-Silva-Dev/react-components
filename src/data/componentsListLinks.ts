@@ -11,6 +11,7 @@ export const animationComponentsLinkList = [
 
 export const elementsComponentsLinkList = [
   { content: "Avatar", url: "/avatar" },
+  { content: "AuthenticationManager", url: "/authenticationmanager" },
   { content: "ClipboardButton", url: "/clipboardbutton" },
   { content: "CollapsibleInfo", url: "/collapsibleinfo" },
   { content: "Drawer", url: "/drawer" },
@@ -33,7 +34,6 @@ export const elementsComponentsLinkList = [
   { content: "StepProgress", url: "/stepprogress" },
   { content: "Timeline", url: "/timeline" },
   { content: "TimelineElement", url: "/timelineelement" },
-  { content: "UserAuthentication", url: "/userauthentication" },
 ];
 
 export const cardsLinkList = [

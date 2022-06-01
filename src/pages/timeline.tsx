@@ -28,7 +28,7 @@ export default function Timeline() {
                         content='Timeline'
                     />
                     <Text
-                        content='Used to wrapper TimelineElement components and display a dynamic timeline.'
+                        content='Used to wrapper TimelineElement components and display events.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>

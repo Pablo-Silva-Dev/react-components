@@ -32,7 +32,7 @@ export default function TimelineElement() {
                         content='TimelineElement'
                     />
                     <Text
-                        content='Used to display a chronologic past event inside Timeline component.'
+                        content='Used to display a chronologic event inside Timeline component.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>

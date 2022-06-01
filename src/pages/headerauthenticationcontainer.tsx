@@ -1,8 +1,9 @@
 import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
+import { AuthenticationManager } from '../components/Elements/AuthenticationManager';
 import {
     HeaderAuthenticationContainer as HeaderAuthenticationUserContainerComponent
-} from '../components/Elements/Header/HeaderAuthenticationContainer'
+} from '../components/Elements/Header/HeaderAuthenticationContainer';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -13,7 +14,6 @@ import {
     PreviewContainer,
     PropsContainer
 } from "../styles";
-import { UserAuthentication } from '../components/Elements/UserAuthentication';
 
 export default function HeaderAuthenticationUserContainer() {
 
@@ -44,7 +44,7 @@ export default function HeaderAuthenticationUserContainer() {
                             padding: 12
                         }}
                     >
-                     <UserAuthentication 
+                     <AuthenticationManager 
                         redirectPath='/'
                         logInButtonTitle='Sign In'
                         logOutButtonTitle='Sign Out'
@@ -83,7 +83,7 @@ export default function HeaderAuthenticationUserContainer() {
                         padding: 12
                     }}
                     >
-                        <UserAuthentication 
+                        <AuthenticationManager 
                             redirectPath='/'
                             logInButtonTitle='Sign In'
                             logOutButtonTitle='Sign Out'
