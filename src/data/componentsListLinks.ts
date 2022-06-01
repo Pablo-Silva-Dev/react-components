@@ -32,6 +32,7 @@ export const elementsComponentsLinkList = [
   { content: "SecondaryButton", url: "/secondarybutton" },
   { content: "StepProgress", url: "/stepprogress" },
   { content: "Timeline", url: "/timeline" },
+  { content: "TimelineElement", url: "/timelineelement" },
   { content: "UserAuthentication", url: "/userauthentication" },
 ];
 
