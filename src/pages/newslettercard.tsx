@@ -32,9 +32,6 @@ export default function Avatar() {
         glassEffect: 'Description: Applies glassEffect className if true. Type: Boolean. Default: False.',
     }
 
-
-
-
     return (
         <Container>
             <ComponentContainer>
