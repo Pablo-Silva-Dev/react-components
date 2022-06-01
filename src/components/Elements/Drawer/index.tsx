@@ -1,17 +1,15 @@
 import { CSSProperties, ReactNode } from 'react';
-import { MdClose } from 'react-icons/md'
-import { useTheme } from 'styled-components'
-import { NextLink } from '../../Next/NextLink';
-
+import { MdClose } from 'react-icons/md';
+import { useTheme } from 'styled-components';
 import {
     CloseMenuButton,
     Container,
-    MenuContainer,
-    MenuItem
+    MenuContainer
 } from './styles';
 
-interface ResponsiveMenuProps {
-    toggleResponsiveMenu: () => void
+
+interface DrawerProps {
+    toggleDrawer: () => void
     direction?: 'top' | 'right' | 'left'
     children?: ReactNode;
     style?: CSSProperties;
@@ -22,13 +20,13 @@ interface ResponsiveMenuProps {
     menuClassName?: string;
 }
 
-export function ResponsiveMenu({
+export function Drawer({
     direction = 'top',
-    toggleResponsiveMenu,
+    toggleDrawer,
     children,
     style,
     buttonStyle,
-}: ResponsiveMenuProps) {
+}: DrawerProps) {
 
     const theme = useTheme()
 
@@ -44,7 +42,7 @@ export function ResponsiveMenu({
                     style={buttonStyle}
                 >
                     <MdClose
-                        onClick={toggleResponsiveMenu}
+                        onClick={toggleDrawer}
                         size={32}
                         color={theme.colors.white}
                         role='dialog'

@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-interface ResponsiveMenuProps {
+interface DrawerProps {
   direction: "top" | "right" | "left";
 }
 
@@ -14,7 +14,7 @@ const menuAnimationHorizontal = keyframes`
   100%{width: 280px};
 `;
 
-export const Container = styled.div<ResponsiveMenuProps>`
+export const Container = styled.div<DrawerProps>`
   display: flex;
   flex-direction: column;
   align-items: center;

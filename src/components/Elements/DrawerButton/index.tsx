@@ -1,22 +1,22 @@
-import { CSSProperties, useState } from 'react';
+import { CSSProperties } from 'react';
 import { MdMenu } from 'react-icons/md';
 import { Container } from './styles';
 
-interface HeaderResponsiveMenuButtonProps {
-    toggleResponsiveMenu: () => void;
+interface DrawerButtonProps {
+    toggleDrawer: () => void;
     containerStyle?: CSSProperties;
     containerClassName?: string;
     iconStyle?: CSSProperties;
     iconClassName?: string;
 }
 
-export function HeaderResponsiveMenuButton({
-    toggleResponsiveMenu,
+export function DrawerButton({
+    toggleDrawer,
     containerStyle,
     containerClassName,
     iconStyle,
     iconClassName
-}: HeaderResponsiveMenuButtonProps) {
+}: DrawerButtonProps) {
 
     return (
         <Container
@@ -24,11 +24,11 @@ export function HeaderResponsiveMenuButton({
             className={containerClassName}
         >
             <MdMenu
-                onClick={toggleResponsiveMenu}
+                onClick={toggleDrawer}
                 size={32}
                 style={iconStyle}
                 className={iconClassName}
-                data-testid='HeaderResponsiveMenuButton-id'
+                data-testid='DrawerButton-id'
             />
         </Container>
     )

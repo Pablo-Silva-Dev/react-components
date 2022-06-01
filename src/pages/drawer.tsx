@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { DisplayCode } from '../components/Display/DisplayCode';
+import { Drawer as DrawerComponent } from '../components/Elements/Drawer';
 import { PrimaryButton } from '../components/Elements/PrimaryButton';
-import { ResponsiveMenu as ResponsiveMenuComponent } from '../components/Elements/ResponsiveMenu'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -13,10 +13,10 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function ResponsiveMenu() {
+export default function Drawer() {
 
     const props = {
-        toggleResponsiveMenu: 'Description: Function to open/close the ResponsiveMenu. Type: Function. Required.',
+        toggleDrawer: 'Description: Function to open/close the Drawer. Type: Function. Required.',
         children: 'Description: React elements to display. Type: ReactNode.',
         direction: 'Description: Component reveals position. Type: "top" | "left" | "right". Default: "top".',
         style: 'Description: Container style. Type: CSS Properties.',
@@ -31,10 +31,10 @@ export default function ResponsiveMenu() {
 
   
 
-    const [responsiveMenu, setResponsiveMenu] = useState(true)
+    const [Drawer, setDrawer] = useState(true)
 
-    function toggleResponsiveMenu() {
-        setResponsiveMenu(!responsiveMenu)
+    function toggleDrawer() {
+        setDrawer(!Drawer)
     }
 
     return (
@@ -42,25 +42,24 @@ export default function ResponsiveMenu() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='ResponsiveMenu'
+                        content='Drawer'
                     />
                     <Text
                         content='Used to display user profile image.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    {responsiveMenu &&
-                        <ResponsiveMenuComponent
-                            toggleResponsiveMenu={toggleResponsiveMenu}
+                    {Drawer &&
+                        <DrawerComponent
+                            toggleDrawer={toggleDrawer}
                             direction='top'
                         >
-                            <p>I am a ResponsiveMenu children.</p>
-                        </ResponsiveMenuComponent>
+                            <p>I am a Drawer children.</p>
+                        </DrawerComponent>
                     }
                     <PrimaryButton
-                        onClick={toggleResponsiveMenu}
-                        title='Toggle Responsive Menu'
-                        size='large'
+                        onClick={toggleDrawer}
+                        title='Toggle Drawer'
                     />
 
                 </PreviewContainer>
@@ -90,13 +89,13 @@ export default function ResponsiveMenu() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    {responsiveMenu &&
-                        <ResponsiveMenuComponent
-                            toggleResponsiveMenu={toggleResponsiveMenu}
+                    {Drawer &&
+                        <DrawerComponent
+                            toggleDrawer={toggleDrawer}
                             direction='top'
                         >
-                            <p>I am a ResponsiveMenu children.</p>
-                        </ResponsiveMenuComponent>
+                            <p>I am a Drawer children.</p>
+                        </DrawerComponent>
                     }"
                 />
             </ComponentContainer>
