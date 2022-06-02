@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { FacebookSignInButton as FacebookSignInButtonComponent } from '../components/Forms/FacebookSignInButton';
+import { GoogleSignInButton as GoogleSignInButtonComponent } from '../components/Forms/GoogleSignInButton';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -12,7 +12,7 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function FacebookSignInButton() {
+export default function GoogleSignInButton() {
 
     const props = {
         title: 'Description: Button title. Type: String. Required.',
@@ -41,18 +41,19 @@ export default function FacebookSignInButton() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='FacebookSignInButton'
+                        content='GoogleSignInButton'
                     />
                     <Text
-                        content='A button with Facebook label and status indicator used to sign in with Facebook.'
+                        content='A button with Google label and status indicator used to sign in with Google.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <FacebookSignInButtonComponent
-                        title='Login with Facebook'
+                    <GoogleSignInButtonComponent
+                        title='Login with Google'
                         onClick={signIn}
                         disabled={loading}
                         loading={loading}
+                        themeColor='dark'
                     />
                 </PreviewContainer>
 
@@ -97,8 +98,8 @@ export default function FacebookSignInButton() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <FacebookSignInButtonComponent
-                        title='Login with Facebook'
+                    <GoogleSignInButtonComponent
+                        title='Login with Google'
                         onClick={sign}
                         disabled={loading}
                         loading={loading}

@@ -44,7 +44,7 @@ export default function GithubSignInButton() {
                         content='GithubSignInButton'
                     />
                     <Text
-                        content='A button with GitHub label with status indicator used to sign in with GitHub.'
+                        content='A button with GitHub label and status indicator used to sign in with GitHub.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>

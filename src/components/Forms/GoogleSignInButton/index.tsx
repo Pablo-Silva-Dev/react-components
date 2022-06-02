@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import ReactLoading from 'react-loading';
+import ReactLoading, { LoadingProps } from 'react-loading';
 import { useTheme } from 'styled-components';
 import { Container, Title } from './styles';
 import { FcGoogle } from 'react-icons/fc'
@@ -9,7 +9,8 @@ interface GoogleSignInButtonProps {
     onClick: () => Promise<void>;
     disabled?: boolean;
     loading?: boolean;
-    themeColor?: 'dark' | 'light',
+    themeColor?: 'dark' | 'light';
+    animationType?: LoadingProps['type'];
     className?: string;
     style?: CSSProperties;
 }
@@ -19,6 +20,7 @@ export function GoogleSignInButton({
     onClick,
     disabled,
     themeColor,
+    animationType,
     loading,
     className,
     style
@@ -33,14 +35,14 @@ export function GoogleSignInButton({
             className={className}
             style={style}
             onClick={onClick}
-            data-testid='googleSignInbutton-id'
+            data-testid='GoogleSignInbutton-id'
         >
             {loading ?
                 <ReactLoading
-                    type='bubbles'
-                    color={theme.colors.white}
-                    height={40}
-                    width={40}
+                    type={animationType ? animationType : 'bubbles'}
+                    color={themeColor === 'dark' ? theme.colors.white : theme.colors.primary}
+                    height={36}
+                    width={36}
                     data-testid='submit-button-children-test-id'
                 />
                 :
