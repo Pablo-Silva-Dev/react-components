@@ -1,7 +1,6 @@
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { SubTitle as SubTitleComponent } from '../components/Typography/SubTitle'
+import { Title as TitleComponent } from '../components/Typography/Title'
 import { Text } from "../components/Typography/Text";
-import { Title } from "../components/Typography/Title";
 import {
     ComponentContainer,
     Container,
@@ -10,10 +9,10 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function SubTitle() {
+export default function Title() {
 
     const props = {
-        content: 'Description: Subtitle text. Type: String. Required.',
+        content: 'Description: Title text. Type: String. Required.',
         style: 'Description: Style. Type: CSS Properties.',
         className: 'Description: ClassName. Type: String.'
     }
@@ -22,21 +21,21 @@ export default function SubTitle() {
         <Container>
             <ComponentContainer>
                 <DescriptionContainer>
-                    <Title
-                        content='SubTitle'
+                    <TitleComponent
+                        content='Title'
                     />
                     <Text
-                        content='Used to display a subtitle. It is a h3 element.'
+                        content='Used to display a Title. It is a h1 element.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <SubTitleComponent
-                        content='I am a subtitle'
+                    <TitleComponent
+                        content='I am a Title'
                     />
                 </PreviewContainer>
 
                 <PropsContainer>
-                    <SubTitleComponent
+                    <TitleComponent
                         content='Props:'
                         style={{
                             fontSize: 20,
@@ -45,7 +44,7 @@ export default function SubTitle() {
                     />
                     {Object.entries(props).map(prop => (
                         <>
-                            <SubTitleComponent
+                            <TitleComponent
                                 content={prop[0]}
                                 style={{
                                     fontSize: 16
@@ -60,8 +59,8 @@ export default function SubTitle() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <SubTitle
-                        content='I am a subtitle'
+                    <Title
+                        content='I am a Title'
                     />"
                 />
             </ComponentContainer>
