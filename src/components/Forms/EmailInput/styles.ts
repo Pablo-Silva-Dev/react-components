@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  @media(max-width: 720px){
+  @media (max-width: 720px) {
     width: 98%;
   }
 `;
@@ -14,12 +14,11 @@ export const IconContainer = styled.div`
   align-items: center;
   height: 37px;
   width: 37px;
-  margin: 4px;
-  margin-top: 1px; 
+  margin: 2px 4px 2px;
+  margin-top: 1px;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 4px;
   margin-right: 2px;
-
 `;
 
 export const Input = styled.input`
@@ -32,12 +31,14 @@ export const Input = styled.input`
   min-width: 240px;
   width: 100%;
   height: 40px;
-  margin: 0 4px 0 0;
+  margin: 0 4px 0 2px;
   padding: 16px;
   background: ${({ theme }) => theme.colors.white};
   border: 2px solid ${({ theme }) => theme.colors.element_base};
+  font-size: ${({ theme }) => theme.sizes.medium};
+
   @media (max-width: 720px) {
-    font-size: ${({ theme }) => theme.sizes.small};
+    font-size: ${({ theme }) => theme.sizes.normal};
   }
 
   &:focus {

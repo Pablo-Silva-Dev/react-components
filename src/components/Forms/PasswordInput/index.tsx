@@ -5,16 +5,22 @@ import { FiEyeOff, FiEye } from 'react-icons/fi'
 interface Props { }
 
 export interface PasswordInputProps extends InputHTMLAttributes<Props> {
-    iconStyle?: CSSProperties;
     showsIcon?: boolean;
     passwordIsVisible?: boolean;
     togglePassword?: () => void;
+    iconStyle?: CSSProperties;
+    iconClassName?: string;
+    inputStyle?: CSSProperties;
+    inputClassName?: string;
 }
 
 export function PasswordInput({
     showsIcon,
     iconStyle,
-    passwordIsVisible,
+    iconClassName,
+    inputStyle,
+    inputClassName,
+    passwordIsVisible = false,
     togglePassword,
     ...rest
 }: PasswordInputProps) {
@@ -23,14 +29,27 @@ export function PasswordInput({
         >
             {showsIcon &&
                 <IconContainer
-                onClick={togglePassword}
-                style={iconStyle}
+                    onClick={togglePassword}
                 >
-                    {passwordIsVisible ? <FiEye /> : <FiEyeOff />}
+                    {
+                        passwordIsVisible
+                            ?
+                            <FiEye
+                                style={iconStyle}
+                                className={iconClassName}
+                            />
+                            :
+                            <FiEyeOff
+                                style={iconStyle}
+                                className={iconClassName}
+                            />
+                    }
                 </IconContainer>
             }
             <Input
-                type={passwordIsVisible ? 'text' : 'password'}
+                style={inputStyle}
+                className={inputClassName}
+                type={passwordIsVisible && showsIcon ? 'text' : 'password'}
                 required
                 data-testid='passwordinput-id'
                 {...rest}
