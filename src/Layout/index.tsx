@@ -35,7 +35,6 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
 
-    const theme = useTheme()
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
@@ -209,7 +208,7 @@ export default function Layout({ children }: LayoutProps) {
                     ))}
 
                     <NavTitle
-                        content='Next'
+                        content='Typography'
                     />
                     {typographyComponentsLinkList.map(link => (
                         <NavLink

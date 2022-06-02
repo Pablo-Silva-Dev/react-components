@@ -77,7 +77,7 @@ export const nextComponentsLinkList = [
 
 export const typographyComponentsLinkList = [
   { content: "GradientText", url: "/gradienttext" },
-  { content: "SubTitle", url: "/subTitle" },
+  { content: "SubTitle", url: "/subtitle" },
   { content: "Text", url: "/text" },
   { content: "Title", url: "/title" },
 ];
