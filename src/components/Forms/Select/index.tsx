@@ -1,49 +1,60 @@
-import { ChangeEvent, CSSProperties, SelectHTMLAttributes } from 'react';
+import { CSSProperties, SelectHTMLAttributes } from 'react';
 import { SelectInput, Option } from './styles'
 
-interface Props{}
+interface Props { }
 
 interface OptionProps {
     value: string | number;
     label: string | number;
 }
 
-interface SelectProps extends SelectHTMLAttributes<Props>{
+interface SelectProps extends SelectHTMLAttributes<Props> {
     options: OptionProps[];
-    name: string;
-    onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
-    selectPlaceholder?: string;
+    selectPlaceholder: string;
     optionStyle?: CSSProperties;
+    optionClassName?: string;
+    inputStyle?: CSSProperties;
+    inputClassName?: string;
 }
 
 export function Select({
-    name,
     options,
-    onChange,
-    required,
     selectPlaceholder,
     optionStyle,
+    inputStyle,
+    inputClassName,
+    optionClassName,
     ...rest
 }: SelectProps) {
     return (
         (
             <SelectInput
-                name={name}
-                onChange={onChange}
-                required={required}
+                required
+                style={inputStyle}
+                className={inputClassName}
                 {...rest}
             >
                 {
                     selectPlaceholder &&
-                    <Option selected disabled>{selectPlaceholder}</Option>
-                }
-                {options.map(opt => (
-                    <Option key={opt.value} value={opt.label}
+                    <Option
+                        selected
+                        disabled
                         style={optionStyle}
+                        className={optionClassName}
                     >
-                        {opt.label}
+                        {selectPlaceholder}
                     </Option>
-                ))}
+                }
+                {
+                    options.map(opt => (
+                        <Option key={opt.value} value={opt.label}
+                            style={optionStyle}
+                            className={optionClassName}
+                        >
+                            {opt.label}
+                        </Option>
+                    ))
+                }
             </SelectInput>
         )
     )

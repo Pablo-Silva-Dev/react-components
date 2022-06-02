@@ -40,7 +40,7 @@ export const Input = styled.input`
   font-size: ${({ theme }) => theme.sizes.medium};
 
   @media (max-width: 720px) {
-    font-size: ${({ theme }) => theme.sizes.medium};
+    font-size: ${({ theme }) => theme.sizes.normal};
   }
 
   &:focus {

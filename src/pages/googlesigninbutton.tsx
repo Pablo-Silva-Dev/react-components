@@ -53,7 +53,6 @@ export default function GoogleSignInButton() {
                         onClick={signIn}
                         disabled={loading}
                         loading={loading}
-                        themeColor='dark'
                     />
                 </PreviewContainer>
 
