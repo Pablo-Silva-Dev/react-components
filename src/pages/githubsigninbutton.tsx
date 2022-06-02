@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { FacebookSignInButton as FacebookSignInButtonComponent } from '../components/Forms/FacebookSignInButton';
+import { GithubSignInButton as GitHubSignInButtonComponent } from '../components/Forms/GitHubSignInButton';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -12,7 +12,7 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function FacebookSignInButton() {
+export default function GithubSignInButton() {
 
     const props = {
         title: 'Description: Button title. Type: String. Required.',
@@ -41,18 +41,19 @@ export default function FacebookSignInButton() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='FacebookSignInButton'
+                        content='GithubSignInButton'
                     />
                     <Text
-                        content='A button with Facebook label with status indicator used to sign in with Facebook.'
+                        content='A button with GitHub label with status indicator used to sign in with GitHub.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <FacebookSignInButtonComponent
-                        title='Login with Facebook'
+                    <GitHubSignInButtonComponent
+                        title='Login with GitHub'
                         onClick={signIn}
                         disabled={loading}
                         loading={loading}
+                        themeColor='light'
                     />
                 </PreviewContainer>
 
@@ -97,8 +98,8 @@ export default function FacebookSignInButton() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <FacebookSignInButtonComponent
-                        title='Login with Facebook'
+                    <GithubSignInButtonComponent
+                        title='Login with GitHub'
                         onClick={sign}
                         disabled={loading}
                         loading={loading}

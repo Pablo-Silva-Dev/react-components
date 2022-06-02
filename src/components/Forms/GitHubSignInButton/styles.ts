@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-interface GoogleSignButtonProps {
+interface GithubSignInButtonProps {
   themeColor?: "dark" | "light";
 }
 
-export const Container = styled.button<GoogleSignButtonProps>`
+export const Container = styled.button<GithubSignInButtonProps>`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 24px 16px;
   width: 240px;
   height: 40px;
   border-radius: 4px;
@@ -16,7 +16,7 @@ export const Container = styled.button<GoogleSignButtonProps>`
   background-color: ${({ themeColor, theme }) =>
     themeColor === "dark" ?  theme.colors.black : theme.colors.white };
 
-  &:disabled {
+&:disabled {
     opacity: 0.8;
     background-color: ${({ theme, themeColor }) => 
     themeColor === "dark" ? theme.colors.black : theme.colors.white};
@@ -24,8 +24,9 @@ export const Container = styled.button<GoogleSignButtonProps>`
   }
 `;
 
-export const Title = styled.h4<GoogleSignButtonProps>`
+export const Title = styled.h4<GithubSignInButtonProps>`
   color: ${({ themeColor, theme }) =>
     themeColor === "dark" ? theme.colors.white : theme.colors.black};
   margin-left: 12px;
 `;
+

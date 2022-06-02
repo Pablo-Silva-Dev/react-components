@@ -1,28 +1,30 @@
 import { CSSProperties } from 'react';
-import ReactLoading from 'react-loading';
+import ReactLoading, { LoadingProps } from 'react-loading';
 import { useTheme } from 'styled-components';
 import { Container, Title } from './styles';
-import { GrGithub } from 'react-icons/gr'
+import { FaGithub } from 'react-icons/fa'
 
-interface GitHubSignInButtonProps {
+interface GithubSignInButtonProps {
     title: string;
     onClick: () => Promise<void>;
     disabled?: boolean;
     loading?: boolean;
-    themeColor?: 'light' | 'dark',
+    themeColor?: 'dark' | 'light';
+    animationType?: LoadingProps['type'];
     className?: string;
     style?: CSSProperties;
 }
 
-export function GitHubSignInButton({
+export function GithubSignInButton({
     title,
     onClick,
     disabled,
     themeColor,
+    animationType,
     loading,
     className,
     style
-}: GitHubSignInButtonProps) {
+}: GithubSignInButtonProps) {
 
     const theme = useTheme()
 
@@ -33,25 +35,21 @@ export function GitHubSignInButton({
             className={className}
             style={style}
             onClick={onClick}
-            data-testid='githubSignInbutton-id'
+            data-testid='GithubSignInbutton-id'
         >
             {loading ?
                 <ReactLoading
-                    type='bubbles'
-                    color={theme.colors.white}
-                    height={40}
-                    width={40}
+                    type={animationType ? animationType : 'bubbles'}
+                    color={themeColor === 'dark' ? theme.colors.white : theme.colors.primary}
+                    height={36}
+                    width={36}
                     data-testid='submit-button-children-test-id'
                 />
                 :
                 <>
-                    <GrGithub
+                    <FaGithub
                         size={24}
-                        color={
-                            themeColor === 'dark' ?
-                                theme.colors.white :
-                                theme.colors.black
-                        }
+                        color='#a0a0a0'
                     />
                     <Title
                         themeColor={themeColor}
