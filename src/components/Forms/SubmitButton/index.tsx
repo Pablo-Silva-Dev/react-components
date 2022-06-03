@@ -7,6 +7,7 @@ interface SubmitButtonProps {
     title: string;
     disabled?: boolean;
     loading?: boolean;
+    size?: "tiny" | "small" | "medium" | "large";
     onClick: () => Promise<void>;
 }
 
@@ -14,6 +15,7 @@ export function SubmitButton({
     title,
     disabled,
     loading,
+    size,
     onClick
 }: SubmitButtonProps) {
 
@@ -25,6 +27,7 @@ export function SubmitButton({
             disabled={disabled}
             data-testid='submit-button-test-id'
             onClick={onClick}
+            size={size}
         >
             {loading ?
                 <ReactLoading
