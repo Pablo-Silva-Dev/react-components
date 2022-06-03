@@ -5,7 +5,7 @@ interface ModalBoxProps {
     isOpen: boolean;
     onRequestClose: () => void;
     children?: ReactNode;
-    className?: string;
+    modalClassName?: string;
     overlayClassName?: string;
     showAnimation?: boolean
 }
@@ -14,16 +14,16 @@ export function ModalBox({
     isOpen,
     onRequestClose,
     children,
-    className,
+    modalClassName,
     overlayClassName,
-    showAnimation
+    showAnimation = true
 }: ModalBoxProps) {
 
     return (
         <Container
             isOpen={isOpen}
             onRequestClose={onRequestClose}
-            className={className}
+            className={modalClassName}
             overlayClassName={overlayClassName}
             showAnimation={showAnimation}
         >

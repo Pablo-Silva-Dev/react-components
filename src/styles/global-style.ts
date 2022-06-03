@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         width: 320px;
         height: 240px;
         padding: 1rem;
