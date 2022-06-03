@@ -1,24 +1,34 @@
-import React, { CSSProperties, InputHTMLAttributes, ReactNode } from 'react';
-import { Container, Input, IconContainer } from './styles';
+import { CSSProperties, InputHTMLAttributes, ReactNode } from 'react';
+import { Container, IconContainer, Input } from './styles';
 
 interface Props { }
 
 export interface TextInputProps extends InputHTMLAttributes<Props> {
+    showsIcon?: boolean;
+    inputStyle?: CSSProperties;
+    inputClassName?: string;
     icon?: ReactNode;
-    iconStyle?: CSSProperties
 }
 
-export function TextInput({ icon, iconStyle, ...rest }: TextInputProps) {
+export function TextInput({
+    showsIcon,
+    inputClassName,
+    inputStyle,
+    icon,
+    ...rest
+}: TextInputProps) {
     return (
         <Container>
-            {icon &&
-                <IconContainer
-                    style={iconStyle}
-                >
+            {showsIcon &&
+                <IconContainer>
                     {icon}
                 </IconContainer>
             }
             <Input
+                style={inputStyle}
+                className={inputClassName}
+                type='Text'
+                required
                 {...rest}
             />
         </Container>

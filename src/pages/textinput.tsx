@@ -1,7 +1,6 @@
-import { ChangeEvent, useState } from 'react';
+import { MdEmail } from 'react-icons/md';
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { TextArea as TextAreaComponent } from '../components/Forms/TextArea'
-import { NextLink } from '../components/Next/NextLink';
+import { TextInput as TextInputComponent } from '../components/Forms/TextInput'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -13,34 +12,30 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function TextArea() {
+export default function TextInput() {
 
     const props = {
-        showsCharactersCounting: 'Description: Display characters length validation if true. Type: Boolean. Default: true.',
-        currentLength: 'Description: A number to show the current characters length. Type: Number.',
-        maxCharacters: 'Description: Maximum text length allowed. Type: Number. Default: 120.',
-        labelValidationStyle: 'Description: Characters length LabelValidation style. Type: CSS Properties.',
-        labelValidationClassName: 'Description: Characters length LabelValidation className. Type: String.',
+        showsIcon: 'Description: Define if icons will be rendered. Type: Boolean.',
+        inputStyle: 'Description: Input style. Type: CSS Properties.',
+        inputClassName: 'Description: Input className. Type: String.',
+        icon: 'Description: A space to render your own icon. Type: ReactNode.',
     }
-
-    const [text, setText] = useState('')
 
     return (
         <Container>
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='TextArea'
+                        content='TextInput'
                     />
                     <Text
-                        content='A custom HTML TextArea component with number of characters validation.'
+                        content='A styled text input ready to be used containing all input attributes. It is responsible and has validations by default.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <TextAreaComponent
-                        onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setText(e.target.value)}
-                        showsCharactersCounting
-                        currentLength={text.length}
+                    <TextInputComponent
+                       showsIcon
+                       icon={<MdEmail/>}
                     />
                 </PreviewContainer>
 
@@ -52,7 +47,7 @@ export default function TextArea() {
                             fontWeight: 'bold'
                         }}
                     />
-                     {Object.entries(props).map(prop => (
+                    {Object.entries(props).map(prop => (
                         <>
                             <SubTitle
                                 content={prop[0]}
@@ -65,21 +60,18 @@ export default function TextArea() {
                             />
                         </>
                     ))}
-
                 </PropsContainer>
                 <DisplayCode
                     //eslint-disable-next-line
-                    children="const [text, setText] = useState('')"
+                    children="import { MdEmail } from 'react-icons/md';"
                 />
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <TextArea
-                    onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setText(e.target.value)}
-                    showsCharactersCounting
-                    currentLength={text.length}
-                />
-                    "
+                    <TextInput
+                        showsIcon
+                        icon={<MdEmail/>}
+                    />"
                     hideTitle
                 />
             </ComponentContainer>

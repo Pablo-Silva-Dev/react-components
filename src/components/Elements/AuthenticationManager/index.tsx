@@ -19,7 +19,7 @@ interface AuthenticationManagerProps {
     showsUserPhoto?: boolean;
     authenticationFeedbackText?: string;
     photoSize?: "small" | "medium" | "large";
-    children?: ReactNode;
+    icon?: ReactNode;
     containerClassName?: string;
     containerStyle?: CSSProperties;
     authenticationFeedbackTextClassStyle?: CSSProperties;
@@ -45,7 +45,7 @@ export function AuthenticationManager({
     showsUserPhoto,
     authenticationFeedbackText,
     photoSize,
-    children
+    icon
 }: AuthenticationManagerProps) {
 
     const { data: session } = useSession()
@@ -106,7 +106,7 @@ export function AuthenticationManager({
                 style={containerStyle}
                 className={containerClassName}
             >
-                {children}
+                {icon}
                 {
                     authenticationFeedbackText &&
                     <Text

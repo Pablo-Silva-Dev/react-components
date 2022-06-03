@@ -17,9 +17,7 @@ export default function EmailInput() {
         showsIcon: 'Description: Define if icons will be rendered. Type: Boolean.',
         inputStyle: 'Description: Input style. Type: CSS Properties.',
         inputClassName: 'Description: Input className. Type: String.',
-        iconStyle: 'Description: Icon style. Type: CSS Properties.',
-        iconClassName: 'Description: Icon className. Type: String.',
-        children: 'Description: A space to render your own icon. Type: ReactNode.',
+        icon: 'Description: A space to render your own icon. Type: ReactNode.',
     }
 
     return (

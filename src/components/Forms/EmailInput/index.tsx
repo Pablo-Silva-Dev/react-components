@@ -1,6 +1,6 @@
 import { CSSProperties, InputHTMLAttributes, ReactNode } from 'react';
-import { Container, Input, IconContainer } from './styles';
-import { FiMail } from 'react-icons/fi'
+import { FiMail } from 'react-icons/fi';
+import { Container, IconContainer, Input } from './styles';
 
 interface Props { }
 
@@ -10,16 +10,14 @@ export interface EmailInputProps extends InputHTMLAttributes<Props> {
     inputClassName?: string;
     iconStyle?: CSSProperties;
     iconClassName?: string;
-    children?: ReactNode;
+    icon?: ReactNode;
 }
 
 export function EmailInput({
     showsIcon,
-    iconStyle,
-    iconClassName,
     inputClassName,
     inputStyle,
-    children,
+    icon,
     ...rest
 }: EmailInputProps) {
     return (
@@ -28,16 +26,7 @@ export function EmailInput({
                 <IconContainer
 
                 >
-                    {
-                        children
-                            ?
-                            children
-                            :
-                            <FiMail
-                                style={iconStyle}
-                                className={iconClassName}
-                            />
-                    }
+                    {icon && icon}
                 </IconContainer>
             }
             <Input

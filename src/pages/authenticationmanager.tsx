@@ -31,7 +31,7 @@ export default function AuthenticationManager() {
         containerClassName: 'Description: Container className. Type: String.',
         authenticationFeedbackTextStyle: 'Description: AuthenticationFeedback style. Type: CSS Properties.',
         authenticationFeedbackTextClassName: 'Description: AuthenticationFeedback className. Type: String.',
-        children: 'Description: A space to render some Icon or SVG. Type: ReactNode.'
+        icon: 'Description: A space to render some Icon or SVG. Type: ReactNode.'
     }
 
 
