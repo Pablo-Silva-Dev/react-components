@@ -1,9 +1,7 @@
-import { MdAirplay, MdEmail } from 'react-icons/md';
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { TextInput as TextInputComponent } from '../components/Forms/TextInput'
-import { SubTitle } from "../components/Typography/SubTitle";
-import { Text } from "../components/Typography/Text";
-import { Title } from "../components/Typography/Title";
+import { SubTitle } from '../components/Typography/SubTitle';
+import { Text as TextComponent } from "../components/Typography/Text";
+import { Title } from '../components/Typography/Title';
 import {
     ComponentContainer,
     Container,
@@ -12,13 +10,12 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function TextInput() {
+export default function Text() {
 
     const props = {
-        showsIcon: 'Description: Define if icons will be rendered. Type: Boolean.',
-        inputStyle: 'Description: Input style. Type: CSS Properties.',
-        inputClassName: 'Description: Input className. Type: String.',
-        icon: 'Description: A space to render your own icon. Type: ReactNode.',
+        content: 'Description: Text text. Type: String. Required.',
+        style: 'Description: Style. Type: CSS Properties.',
+        className: 'Description: ClassName. Type: String.'
     }
 
     return (
@@ -26,21 +23,20 @@ export default function TextInput() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='TextInput'
+                        content='Text'
                     />
-                    <Text
-                        content='A styled text input ready to be used containing all input attributes. It is responsible and has validations by default.'
+                    <TextComponent
+                        content='Used to display a Text. It is a paragraph element.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <TextInputComponent
-                       showsIcon
-                       icon={<MdAirplay/>}
+                    <TextComponent
+                        content='I am a Text'
                     />
                 </PreviewContainer>
 
                 <PropsContainer>
-                    <SubTitle
+                    <TextComponent
                         content='Props:'
                         style={{
                             fontSize: 20,
@@ -55,7 +51,7 @@ export default function TextInput() {
                                     fontSize: 16
                                 }}
                             />
-                            <Text
+                            <TextComponent
                                 content={prop[1]}
                             />
                         </>
@@ -63,16 +59,10 @@ export default function TextInput() {
                 </PropsContainer>
                 <DisplayCode
                     //eslint-disable-next-line
-                    children="import { MdAirplay } from 'react-icons/md';"
-                />
-                <DisplayCode
-                    //eslint-disable-next-line
                     children="
-                    <TextInput
-                        showsIcon
-                        icon={<MdAirplay/>}
+                    <Text
+                        content='I am a Text'
                     />"
-                    hideTitle
                 />
             </ComponentContainer>
         </Container>

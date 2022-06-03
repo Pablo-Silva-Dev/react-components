@@ -1,3 +1,4 @@
+import { MdEmail } from 'react-icons/md';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { EmailInput as EmailInputComponent } from '../components/Forms/EmailInput'
 import { SubTitle } from "../components/Typography/SubTitle";
@@ -35,6 +36,7 @@ export default function EmailInput() {
                     <EmailInputComponent
                         placeholder='your e-mail'
                         showsIcon
+                        icon={<MdEmail/>}
                     />
                 </PreviewContainer>
 
