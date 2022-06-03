@@ -59,7 +59,7 @@ export const formComponentsLinkList = [
   { content: "Select", url: "/select" },
   { content: "SignUpForm", url: "/signupform" },
   { content: "SubmitButton", url: "/submitbutton" },
-  { content: "Switch", url: "/switch" },
+  { content: "Switcher", url: "/switcher" },
   { content: "TextArea", url: "/textarea" },
   { content: "TextInput", url: "/textinput" },
 ];

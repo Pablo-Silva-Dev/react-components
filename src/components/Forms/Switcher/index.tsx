@@ -11,8 +11,9 @@ export function Switcher({ ...rest }: ReactSwitchProps) {
             checkedIcon={false}
             uncheckedIcon={false}
             onColor={theme.colors.primary}
-            height={14}
+            height={16}
             width={40}
+            handleDiameter={20}
         />
     )
 }
