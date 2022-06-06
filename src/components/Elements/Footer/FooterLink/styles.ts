@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.a`
-  font-size: 12px;
   font-weight: 200;
   color: ${({ theme }) => theme.colors.element_base};
+  font-size: ${({ theme }) => theme.sizes.normal};
   width: 92%;
   max-width: 240px;
   word-wrap: break-word;
@@ -13,5 +13,6 @@ export const Container = styled.a`
     margin: auto;
     width: 100%;
     text-align: center;
+    font-size: ${({ theme }) => theme.sizes.small};
   }
 `;
