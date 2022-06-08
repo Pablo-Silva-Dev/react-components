@@ -32,7 +32,7 @@ export const elementsComponentsLinkList = [
   { content: "PrimaryButton", url: "/primarybutton" },
   { content: "SearchInput", url: "/searchinput" },
   { content: "SecondaryButton", url: "/secondarybutton" },
-  { content: "SocialCollection", url: "/socialcollection" },
+  { content: "SocialIcons", url: "/socialicons" },
   { content: "StepProgress", url: "/stepprogress" },
   { content: "Timeline", url: "/timeline" },
   { content: "TimelineElement", url: "/timelineelement" },
