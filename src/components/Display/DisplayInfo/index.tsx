@@ -11,7 +11,6 @@ interface DisplayInfoProps {
     title: string;
     content: string;
     children?: ReactNode;
-    openUrl?: (url: string) => void;
     style?: CSSProperties;
     className?: string;
 }
@@ -19,13 +18,11 @@ interface DisplayInfoProps {
 export function DisplayInfo({
     title,
     content,
-    openUrl,
     children,
     style
 }: DisplayInfoProps) {
     return (
         <Container
-            onClick={() => openUrl('url')}
             style={style}
             data-testid='DisplayInfo-id'
         >

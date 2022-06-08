@@ -40,6 +40,7 @@ export const PreviewContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 16px;
   width: 100%;
   min-height: 240px;
   background-color: ${({ theme }) => theme.colors.element_base};

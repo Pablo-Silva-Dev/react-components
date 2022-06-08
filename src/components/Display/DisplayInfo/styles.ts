@@ -35,7 +35,7 @@ export const TitleCard = styled.h3`
 
 export const TextCard = styled.span`
   font-size: ${({ theme }) => theme.sizes.medium};
-  font-weight: 200;
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.text};
   word-break: break-word;
   @media (max-width: 720px) {
