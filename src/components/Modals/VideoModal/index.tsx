@@ -3,26 +3,30 @@ import { Container } from './styles';
 import Modal from 'react-modal';
 
 interface VideoModalProps {
-    addressUrl: string
+    videoUrl: string
     isOpen: boolean;
     onRequestClose: () => void;
+    className?: string;
+    overlayClassName?: string;
 }
 
 export function VideoModal({
-    addressUrl,
+    videoUrl,
     isOpen,
-    onRequestClose
+    onRequestClose,
+    className,
+    overlayClassName,
 }: VideoModalProps) {
 
     return (
         <Modal
             isOpen={isOpen}
             onRequestClose={onRequestClose}
-            className='video-modal'
-            overlayClassName='react-modal-overlay-video'
+            className={className}
+            overlayClassName={overlayClassName}
         >
             <Container
-                src={addressUrl}
+                src={videoUrl}
             />
         </Modal>
     )

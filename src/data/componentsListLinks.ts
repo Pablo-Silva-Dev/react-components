@@ -14,6 +14,7 @@ export const elementsComponentsLinkList = [
   { content: "AuthenticationManager", url: "/authenticationmanager" },
   { content: "ClipboardButton", url: "/clipboardbutton" },
   { content: "CollapsibleInfo", url: "/collapsibleinfo" },
+  { content: "Divider", url: "/divider" },
   { content: "Drawer", url: "/drawer" },
   { content: "DrawerButton", url: "/drawerbutton" },
   { content: "Footer", url: "/footer" },
@@ -31,6 +32,7 @@ export const elementsComponentsLinkList = [
   { content: "PrimaryButton", url: "/primarybutton" },
   { content: "SearchInput", url: "/searchinput" },
   { content: "SecondaryButton", url: "/secondarybutton" },
+  { content: "SocialCollection", url: "/socialcollection" },
   { content: "StepProgress", url: "/stepprogress" },
   { content: "Timeline", url: "/timeline" },
   { content: "TimelineElement", url: "/timelineelement" },
@@ -71,6 +73,7 @@ export const modalomponentsLinkList = [
 
 export const nextComponentsLinkList = [
   { content: "NextHead", url: "/nexthead" },
+  { content: "NextImage", url: "/nextimage" },
   { content: "NextLink", url: "/nextlink" },
   { content: "NextProgress", url: "/nextprogress" },
 ];
