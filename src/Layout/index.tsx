@@ -1,13 +1,10 @@
 import { ReactNode, useState } from "react";
-import { useTheme } from "styled-components";
 import { Drawer } from "../components/Elements/Drawer";
 import { Footer } from "../components/Elements/Footer";
 import { FooterFirstSection } from "../components/Elements/Footer/FooterFirstSection";
-import { FooterFivethSection } from "../components/Elements/Footer/FooterFivethSection";
 import { FooterFourthSection } from "../components/Elements/Footer/FooterFourthSection";
 import { FooterLink } from "../components/Elements/Footer/FooterLink";
 import { FooterSecondSection } from "../components/Elements/Footer/FooterSecondSection";
-import { FooterSixthSection } from "../components/Elements/Footer/FooterSixthSection";
 import { FooterThirdSection } from "../components/Elements/Footer/FooterThirdSection";
 import { FooterTitle } from "../components/Elements/Footer/FooterTitle";
 import { Header } from "../components/Elements/Header";
@@ -129,7 +126,7 @@ export default function Layout({ children }: LayoutProps) {
                 }
                 <DrawerButton
                     toggleDrawer={toggleDrawer}
-                    
+
                 />
 
                 <HeaderLogoContainer>
@@ -267,24 +264,6 @@ export default function Layout({ children }: LayoutProps) {
                         url='/'
                     />
                 </FooterFourthSection>
-                <FooterFivethSection>
-                    <FooterTitle
-                        content='Departamento'
-                    />
-                    <FooterLink
-                        content='Placas de vídeo'
-                        url='/'
-                    />
-                </FooterFivethSection>
-                <FooterSixthSection>
-                    <FooterTitle
-                        content='Departamento'
-                    />
-                    <FooterLink
-                        content='Placas de vídeo'
-                        url='/'
-                    />
-                </FooterSixthSection>
             </Footer >
         </Container>
 

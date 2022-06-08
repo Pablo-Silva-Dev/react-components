@@ -6,7 +6,6 @@ export default function Home() {
 
   return (
     <Container> 
-        <TestComponent />
     </Container>
   )
 }
