@@ -7,17 +7,20 @@ interface NextLinkProps {
     title: string;
     openInSameWindow?: boolean;
     style?: CSSProperties;
+    className?: string;
 }
 
 export function NextLink({
     url,
     title,
     openInSameWindow,
-    style
+    style,
+    className
 }: NextLinkProps) {
     return (
         <Link href={url} passHref >
             <TextLink
+                className={className}
                 style={style}
                 target={
                     openInSameWindow

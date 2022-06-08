@@ -1,7 +1,6 @@
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { DisplayInfo } from '../components/Display/DisplayInfo';
-import { NextImage as NextImageComponent } from '../components/Next/NextImage'
-import { NextLink } from '../components/Next/NextLink';
+import { NextLink as NextLinkComponent } from '../components/Next/NextLink'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -13,14 +12,14 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function NextImage() {
+export default function NextLink() {
 
     const props = {
-        imgUrl: 'Description: The image address. Type: String. Required.',
-        width: 'Description: Define the image width. Type: Number. Required.',
-        height: 'Description: Define the image height. Type: Number. Required.',
-        style: 'Description: Image style. Type: CSSProperties.',
-        className: 'Description: Image className. Type: String.',
+        url: 'Description: The Link address. Type: String. Required.',
+        title: 'Description: The Link text to display. Type: String. Required.',
+        openInSameWindow: 'Description: Define if the link should be open in the same window. Default: False.',
+        style: 'Description: Link style. Type: CSSProperties.',
+        className: 'Description: Link className. Type: String.',
     }
 
     /*  imgUrl: string;
@@ -34,29 +33,18 @@ export default function NextImage() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='NextImage'
+                        content='NextLink'
                     />
                     <Text
-                        content='Used to use images in a NextJS project.'
+                        content='Used to use Links in a NextJS project.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <NextImageComponent
-                        imgUrl='https://images.unsplash.com/photo-1654659332294-3dd5664e0253?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
-                        width={400}
-                        height={320}
+                    <NextLinkComponent
+                        title='See docs.'
+                        url='https://nextjs.org/docs'
                     />
                 </PreviewContainer>
-                <DisplayInfo
-                    title='Important:'
-                    content='You must config your next.config.js file before to use NextImage component.'
-                >
-                    <NextLink
-                        title='See docs.'
-                        url='https://nextjs.org/docs/api-reference/next/image#domains'
-                    />
-                </DisplayInfo>
-
                 <PropsContainer>
                     <SubTitle
                         content='Props:'
@@ -82,10 +70,9 @@ export default function NextImage() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <NextImage
-                        imgUrl='https://images.unsplash.com/photo-1654659332294-3dd5664e0253?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
-                        width={400}
-                        height={320}
+                    <NextLinkComponent
+                        title='See docs.'
+                        url='https://nextjs.org/docs'
                     />"
                 />
             </ComponentContainer>
