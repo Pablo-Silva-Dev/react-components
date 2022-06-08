@@ -75,7 +75,6 @@ export const nextComponentsLinkList = [
   { content: "NextHead", url: "/nexthead" },
   { content: "NextImage", url: "/nextimage" },
   { content: "NextLink", url: "/nextlink" },
-  { content: "NextProgress", url: "/nextprogress" },
 ];
 
 export const typographyComponentsLinkList = [
