@@ -82,3 +82,32 @@ export const ChakraPasswordInput = styled(ChakraInput)`
     background: ${({ theme }) => theme.colors.element_base};
   }
 `
+export const ChakraConfirmPasswordInput = styled(ChakraInput)`
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  min-width: 240px;
+  width: 98%;
+  height: 40px;
+  margin: 2px auto;
+  padding: 16px;
+  background: ${({ theme }) => theme.colors.white};
+  border: 2px solid ${({ theme }) => theme.colors.element_base};
+  font-size: ${({ theme }) => theme.sizes.medium};
+
+  @media (max-width: 720px) {
+    font-size: ${({ theme }) => theme.sizes.normal};
+  }
+
+  &:focus {
+    border: 2px solid ${({ theme }) => theme.colors.primary};
+    outline: none;
+  }
+
+  &:disabled {
+    background: ${({ theme }) => theme.colors.element_base};
+  }
+`

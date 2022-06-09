@@ -1,15 +1,10 @@
 import { CSSProperties } from 'react';
-import * as yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup'
-import { FieldError, SubmitHandler, useForm, UseFormRegisterReturn,FieldValues } from 'react-hook-form'
+import { FieldError, UseFormRegisterReturn,FieldValues } from 'react-hook-form'
 
-
-import { EmailInput } from '../EmailInput';
 import { EmailValidator } from '../EmailInput/validator';
 import { FacebookSignInButton } from '../FacebookSignInButton';
 import { GitHubSignInButton } from '../GitHubSignInButton';
 import { GoogleSignInButton } from '../GoogleSignInButton';
-import { PasswordInput } from '../PasswordInput';
 import { SubmitButton } from '../SubmitButton';
 import {
     ButtonsContainer,

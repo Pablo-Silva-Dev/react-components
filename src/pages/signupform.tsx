@@ -4,7 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
 import * as yup from 'yup';
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { SignInForm as SignInFormComponent } from '../components/Forms/SignInForm';
+import { SignUpForm as SignUpFormComponent } from '../components/Forms/SignUpForm';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -17,25 +17,27 @@ import {
 } from "../styles";
 
 
-interface SignInFormDataProps {
+interface SignUpFormDataProps {
+    name: string;
     email: string
     password: string
+    confirmPassword: string
 }
 
-const handleSignIn: SubmitHandler<SignInFormDataProps> = async (values) => {
+const handleSignUp: SubmitHandler<SignUpFormDataProps> = async (values) => {
     await new Promise(resolve => setTimeout(resolve, 500))
-    toast.success(`Logged as ${values.email}`)
+    toast.success(`Registered with success as ${values.email}.`)
 }
 
-const recoveryPassword = async () => {}
-
-const signInFormSchema = yup.object().shape({
+const SignUpFormSchema = yup.object().shape({
+    name: yup.string().required('Name required.'),
     email: yup.string().required('Email required.').email('Email invalid'),
-    password: yup.string().required('Password required')
+    password: yup.string().required('Password required'),
+    confirmPassword: yup.string().required('Password confirmation required').oneOf([yup.ref('password')], 'Password must match'),
 })
 
 
-export default function SignInForm() {
+export default function SignUpForm() {
 
     const props = {
         formTitle: 'Description: Text to display as form title. Type: String. Required.',
@@ -44,15 +46,15 @@ export default function SignInForm() {
         forgotPasswordButtonTitle: 'Description: ForgotPasswordButtonTitle title. Type: String.',
         formSubtitle: 'Description: Text to display as form subtitle. Type: String.',
         formAdditionalText: 'Description: Additional text to display on bottom form. Type: String.',
-        githubSignInButtonTitle: 'Description: GitHubSignInButton title. Type: String.',
-        googleSignInButtonTitle: 'Description: GoogleSignInButton title. Type: String.',
-        facebookSignInButtonTitle: 'Description: FacebookSignInButton title. Type: String.',
+        githubSignUpButtonTitle: 'Description: GitHubSignUpButton title. Type: String.',
+        googleSignUpButtonTitle: 'Description: GoogleSignUpButton title. Type: String.',
+        facebookSignUpButtonTitle: 'Description: FacebookSignUpButton title. Type: String.',
         emailPlaceholder: 'Description: Placeholder for email input. Type: String.',
         passwordPlaceholder: 'Description: Placeholder for password input. Type: String.',
         passwordForget: 'Description: Function to invoke at click on forgotPasswordButton. Type: Async function.',
-        signInWithGitHub: 'Description: Function to invoke at trying to sign in with GitHub. Type: Async function.',
-        signInWithGoogle: 'Description: Function to invoke at trying to sign in with Google. Type: Async function.',
-        signInWithFacebook: 'Description: Function to invoke at trying to sign in with Facebook. Type: Async function.',
+        SignUpWithGitHub: 'Description: Function to invoke at trying to sign in with GitHub. Type: Async function.',
+        SignUpWithGoogle: 'Description: Function to invoke at trying to sign in with Google. Type: Async function.',
+        SignUpWithFacebook: 'Description: Function to invoke at trying to sign in with Facebook. Type: Async function.',
         buttonsDisabled: 'Disables all buttons if true. Type: Boolean.',
         buttonsLoading: 'Displays loading indicator into all buttons if true. Type: Boolean.',
         emailErrorMessage: 'Description: Displays the message error linked to email input. Type: FieldError.',
@@ -73,69 +75,58 @@ export default function SignInForm() {
         forgotPasswordButtonStyle: 'Description: forgotPasswordButton style. Type: CSS Properties.',
         iconStyle: 'Description: Icon style. Type: CSS Properties.',
         iconClassName: 'Description: Icon className. Type: String.',
-        githubSignInButtonClassName: 'Description: GitHubSignInButton className. Type: String.',
-        githubSignInButtonStyle: 'Description: GitHubSignInButton style. Type: CSS Properties.',
-        googleSignInButtonClassName: 'Description: GoogleSignInButton className. Type: String.',
-        googleSignInButtonStyle: 'Description: GoogleSignInButton style. Type: CSS Properties.',
-        facebookSignInButtonClassName: 'Description: FacebookSignInButton className. Type: String.',
-        facebookSignInButtonStyle: 'Description: FacebookSignInButton style. Type: CSS Properties.',
+        githubSignUpButtonClassName: 'Description: GitHubSignUpButton className. Type: String.',
+        githubSignUpButtonStyle: 'Description: GitHubSignUpButton style. Type: CSS Properties.',
+        googleSignUpButtonClassName: 'Description: GoogleSignUpButton className. Type: String.',
+        googleSignUpButtonStyle: 'Description: GoogleSignUpButton style. Type: CSS Properties.',
+        facebookSignUpButtonClassName: 'Description: FacebookSignUpButton className. Type: String.',
+        facebookSignUpButtonStyle: 'Description: FacebookSignUpButton style. Type: CSS Properties.',
         emailInputStyle: 'Description: EmailInput style. Type: CSS Properties.',
         emailInputClassName: 'Description: EmailInput className. Type: String.',
         passwordInputStyle: 'Description: PasswordInput style. Type: CSS Properties.',
         passwordInputClassName: 'Description: PasswordInput className. Type: String.',
     }
 
- 
-    const { register, handleSubmit, formState } = useForm<SignInFormDataProps>({
-        resolver: yupResolver(signInFormSchema)
-    })
-  
-    const [loading, setLoading] = useState(false)
 
-    async function signIn() {
-        setLoading(true)
-        const timer = setTimeout(() => {
-            setLoading(false)
-            return () => clearTimeout(timer)
-        }, 1000)
-    }
+    const { register, handleSubmit, formState } = useForm<SignUpFormDataProps>({
+        resolver: yupResolver(SignUpFormSchema)
+    })
+
 
     return (
         <Container>
-            <>
-            <Toaster
-                position='bottom-center'
-            />
-            </>
+            <div>
+                <Toaster
+                    position='bottom-center'
+                />
+            </div>
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='SignInForm'
+                        content='SignUpForm'
                     />
                     <Text
                         content='A complete sign in form with social authentication, own application authentication mechanism with form validation and recovery password option.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <SignInFormComponent
-                        formTitle='SignIn form'
-                        submitButtonTitle='Sign In'
-                        githubSignInButtonTitle='Sign In with GitHub'
-                        googleSignInButtonTitle='Sign In with Google'
-                        facebookSignInButtonTitle='Sign In with Facebook'
-                        formSubtitle='Sign In to discover our features.'
-                        formAdditionalText='Sign in'
-                        emailPlaceholder='email'
+                    <SignUpFormComponent
+                        formTitle='SignUp form'
+                        submitButtonTitle='Sign Up'
+                        formAdditionalText='Sign Up'
+                        namePlaceholder='your name'
+                        emailPlaceholder='your email'
                         passwordPlaceholder='your password'
-                        buttonsLoading={loading}
-                        buttonsDisabled={loading}
-                        passwordForget={recoveryPassword}
-                        forgotPasswordButtonTitle='Forgot my password'
+                        confirmPasswordPlaceholder='password confirmation'
+                        nameErrorMessage={formState.errors.name}
                         emailErrorMessage={formState.errors.email}
                         passwordErrorMessage={formState.errors.password}
+                        confirmPasswordErrorMessage={formState.errors.confirmPassword}
+                        nameRegister={register('name')}
                         emailRegister={register('email')}
                         passwordRegister={register('password')}
-                        submit={handleSubmit(handleSignIn)}
+                        confirmPasswordRegister={register('confirmPassword')}
+                        submit={handleSubmit(handleSignUp)}
                     />
                 </PreviewContainer>
 
@@ -164,18 +155,20 @@ export default function SignInForm() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    interface SignInFormDataProps {
+                    interface SignUpFormDataProps {
+                        name: string;
                         email: string
                         password: string
+                        confirmPassword: string
                     }
                     "
                 />
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    const handleSignIn: SubmitHandler<SignInFormDataProps> = async (values) => {
+                    const handleSignUp: SubmitHandler<SignUpFormDataProps> = async (values) => {
                         await new Promise(resolve => setTimeout(resolve, 500))
-                        toast.success(`Logged as ${values.email}`)
+                        toast.success(`Registered with success as ${values.email}.`)
                     }
                     "
                     hideTitle
@@ -183,69 +176,44 @@ export default function SignInForm() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    const recoveryPassword = async () => {}
-                    "
-                    hideTitle
-                />
-                <DisplayCode
-                    //eslint-disable-next-line
-                    children="
-                    const signInFormSchema = yup.object().shape({
+                    const SignUpFormSchema = yup.object().shape({
+                        name: yup.string().required('Name required.'),
                         email: yup.string().required('Email required.').email('Email invalid'),
-                        password: yup.string().required('Password required')
+                        password: yup.string().required('Password required'),
+                        confirmPassword: yup.string().required('Password confirmation required').oneOf([yup.ref('password')], 'Password must match'),
                     })
                     "
                     hideTitle
                 />
                 <DisplayCode
                     //eslint-disable-next-line
-                    children="const { register, handleSubmit, formState } = useForm<SignInFormDataProps>({
-                        resolver: yupResolver(signInFormSchema)
+                    children=" const { register, handleSubmit, formState } = useForm<SignUpFormDataProps>({
+                        resolver: yupResolver(SignUpFormSchema)
                     })
                     "
                     hideTitle
                 />
                 <DisplayCode
                     //eslint-disable-next-line
-                    children="const [loading, setLoading] = useState(false)"
-                    hideTitle
-                />
-                <DisplayCode
-                    //eslint-disable-next-line
                     children="
-                    async function signIn() {
-                        setLoading(true)
-                        const timer = setTimeout(() => {
-                            setLoading(false)
-                            return () => clearTimeout(timer)
-                        }, 1000)
-                    }
-                    "
-                    hideTitle
-                />
-                <DisplayCode
-                    //eslint-disable-next-line
-                    children="
-                    <SignInFormComponent
-                    formTitle='SignIn form'
-                    submitButtonTitle='Sign In'
-                    githubSignInButtonTitle='Sign In with GitHub'
-                    googleSignInButtonTitle='Sign In with Google'
-                    facebookSignInButtonTitle='Sign In with Facebook'
-                    formSubtitle='Sign In to discover our features.'
-                    formAdditionalText='Sign in'
-                    emailPlaceholder='email'
-                    passwordPlaceholder='your password'
-                    buttonsLoading={loading}
-                    buttonsDisabled={loading}
-                    passwordForget={recoveryPassword}
-                    forgotPasswordButtonTitle='Forgot my password'
-                    emailErrorMessage={formState.errors.email}
-                    passwordErrorMessage={formState.errors.password}
-                    emailRegister={register('email')}
-                    passwordRegister={register('password')}
-                    submit={handleSubmit(handleSignIn)}
-                />
+                    <SignUpFormComponent
+                        formTitle='SignUp form'
+                        submitButtonTitle='Sign Up'
+                        formAdditionalText='Sign Up'
+                        emailPlaceholder='your email'
+                        nameErrorMessage={formState.errors.name}
+                        nameRegister={register('name')}
+                        namePlaceholder='your name'
+                        passwordPlaceholder='your password'
+                        confirmPasswordPlaceholder='password confirmation'
+                        emailErrorMessage={formState.errors.email}
+                        passwordErrorMessage={formState.errors.password}
+                        confirmPasswordErrorMessage={formState.errors.confirmPassword}
+                        confirmPasswordRegister={register('confirmPassword')}
+                        emailRegister={register('email')}
+                        passwordRegister={register('password')}
+                        submit={handleSubmit(handleSignUp)}
+                    />
                 "
                     hideTitle
                 />

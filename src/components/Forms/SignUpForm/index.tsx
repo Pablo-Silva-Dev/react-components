@@ -1,43 +1,90 @@
 import { CSSProperties } from 'react';
-import { EmailInput } from '../EmailInput';
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form'
+
 import { FacebookSignInButton } from '../FacebookSignInButton';
 import { GitHubSignInButton } from '../GitHubSignInButton';
 import { GoogleSignInButton } from '../GoogleSignInButton';
-import { PasswordInput } from '../PasswordInput';
 import { SubmitButton } from '../SubmitButton';
 import {
     ButtonsContainer,
     Container,
     Divider, ForgotPasswordButton, SubTitle, Text, Title
 } from './styles';
+import { EmailValidator } from '../EmailInput/emailValidator';
+import { PasswordValidator } from '../PasswordInput/passwordValidator';
+import { ConfirmPasswordValidator } from '../PasswordInput/confirmPasswordValidator';
+import { TextInputValidator } from '../TextInput/textInputValidator';
 
-interface SignInFormProps {
+interface SignUpFormProps {
     formTitle: string;
     formSubtitle?: string;
-    formAddtionalText?: string;
+    formAdditionalText?: string;
     submitButtonTitle: string;
-    googleSignInButtonTitle?: string;
     githubSignInButtonTitle?: string;
     facebookSignInButtonTitle?: string;
     forgotPasswordButtonTitle?: string;
     emailPlaceholder?: string;
+    namePlaceholder?: string;
     passwordPlaceholder?: string;
-    passwordConfirmationPlaceholder?: string;
-    submit: () => Promise<void>;
+    confirmPasswordPlaceholder?: string;
+    submit?: () => Promise<void>;
     passwordForget?: () => Promise<void>;
-    signInWithGitHub?: () => Promise<void>;
-    signInWithGoogle?: () => Promise<void>;
-    signInWithFacebook?: () => Promise<void>;
+    SignInWithGitHub?: () => Promise<void>;
+    SignInWithGoogle?: () => Promise<void>;
+    SignInWithFacebook?: () => Promise<void>;
     buttonsDisabled?: boolean;
     buttonsLoading?: boolean;
     formContainerStyle?: CSSProperties;
     formContainerClassName?: string;
+    formTitleStyle?: CSSProperties;
+    formTitleClassName?: string;
+    submitButtonStyle?: CSSProperties;
+    submitButtonClassName?: string;
+    forgotPasswordButtonStyle?: CSSProperties;
+    forgotPasswordButtonClassName?: string;
+    formSubtitleStyle?: CSSProperties;
+    formSubtitleClassName?: string;
+    formAdditionalTextStyle?: CSSProperties;
+    formAdditionalTextClassName?: string;
+    googleSignInButtonTitle?: string;
+    googleSignInButtonClassName?: string;
+    githubSignInButtonClassName?: string;
+    facebookSignInButtonClassName?: string;
+    googleSignInButtonStyle?: CSSProperties;
+    githubSignInButtonStyle?: CSSProperties;
+    facebookSignInButtonStyle?: CSSProperties;
+    emailInputStyle?: CSSProperties;
+    nameInputStyle?: CSSProperties;
+    passwordInputStyle?: CSSProperties;
+    emailInputClassName?: string;
+    nameInputClassName?: string;
+    passwordInputClassName?: string;
+    emailErrorMessage?: FieldError;
+    nameErrorMessage?: FieldError;
+    passwordErrorMessage?: FieldError;
+    confirmPasswordErrorMessage?: FieldError;
+    emailRegister?: UseFormRegisterReturn;
+    nameRegister?: UseFormRegisterReturn;
+    passwordRegister?: UseFormRegisterReturn;
+    confirmPasswordRegister?: UseFormRegisterReturn;
 }
 
-export function SignInForm({
+export function SignUpForm({
     formTitle,
     submitButtonTitle,
     forgotPasswordButtonTitle,
+    formSubtitle,
+    formAdditionalText,
+    formTitleStyle,
+    formTitleClassName,
+    submitButtonStyle,
+    submitButtonClassName,
+    forgotPasswordButtonStyle,
+    forgotPasswordButtonClassName,
+    formSubtitleStyle,
+    formSubtitleClassName,
+    formAdditionalTextStyle,
+    formAdditionalTextClassName,
     submit,
     googleSignInButtonTitle,
     githubSignInButtonTitle,
@@ -49,33 +96,54 @@ export function SignInForm({
     githubSignInButtonClassName,
     facebookSignInButtonClassName,
     passwordForget,
-    signInWithFacebook,
-    signInWithGoogle,
-    signInWithGitHub,
-    formAddtionalText,
+    SignInWithFacebook,
+    SignInWithGoogle,
+    SignInWithGitHub,
+    namePlaceholder,
     emailPlaceholder,
     passwordPlaceholder,
-    passwordConfirmationPlaceholder,
-    formSubtitle,
+    confirmPasswordPlaceholder,
+    confirmPasswordErrorMessage,
+    confirmPasswordRegister,
     buttonsDisabled,
     buttonsLoading,
     formContainerClassName,
-    formContainerStyle
-}: SignInFormProps) {
+    formContainerStyle,
+    emailErrorMessage,
+    passwordErrorMessage,
+    emailRegister,
+    passwordRegister,
+    emailInputStyle,
+    emailInputClassName,
+    passwordInputStyle,
+    passwordInputClassName,
+    nameErrorMessage,
+    nameRegister,
+    nameInputClassName,
+    nameInputStyle
+}: SignUpFormProps) {
+
 
     return (
         <Container
             className={formContainerClassName}
             style={formContainerStyle}
         >
-            <Title>{formTitle}</Title>
+            <Title
+                style={formTitleStyle}
+                className={formTitleClassName}
+            >
+                {formTitle}
+            </Title>
             <ButtonsContainer>
                 {
                     googleSignInButtonTitle &&
                     <GoogleSignInButton
                         disabled={buttonsDisabled}
                         title={googleSignInButtonTitle}
-                        onClick={signInWithGoogle}
+                        onClick={SignInWithGoogle}
+                        className={googleSignInButtonClassName}
+                        style={googleSignInButtonStyle}
                     />
                 }
                 {
@@ -83,7 +151,9 @@ export function SignInForm({
                     <GitHubSignInButton
                         disabled={buttonsDisabled}
                         title={githubSignInButtonTitle}
-                        onClick={signInWithGitHub}
+                        onClick={SignInWithGitHub}
+                        className={githubSignInButtonClassName}
+                        style={githubSignInButtonStyle}
                     />
                 }
                 {
@@ -91,7 +161,9 @@ export function SignInForm({
                     <FacebookSignInButton
                         disabled={buttonsDisabled}
                         title={facebookSignInButtonTitle}
-                        onClick={signInWithFacebook}
+                        onClick={SignInWithFacebook}
+                        className={facebookSignInButtonClassName}
+                        style={facebookSignInButtonStyle}
                     />
                 }
             </ButtonsContainer>
@@ -99,38 +171,69 @@ export function SignInForm({
                 formSubtitle &&
                 <>
                     <Divider />
-                    <SubTitle>{formSubtitle}</SubTitle>
+                    <SubTitle
+                        className={formSubtitleClassName}
+                        style={formSubtitleStyle}
+                    >
+                        {formSubtitle}
+                    </SubTitle>
                 </>
             }
-            <EmailInput
-                placeholder={emailPlaceholder}
+            <TextInputValidator
+                error={nameErrorMessage}
+                textInputPlaceholder={namePlaceholder}
+                style={nameInputStyle}
+                className={nameInputClassName}
+                {...nameRegister}
             />
-            <PasswordInput
-                placeholder={passwordPlaceholder}
+            <EmailValidator
+                error={emailErrorMessage}
+                emailPlaceholder={emailPlaceholder}
+                style={emailInputStyle}
+                className={emailInputClassName}
+                {...emailRegister}
             />
-            <PasswordInput
-                placeholder={passwordConfirmationPlaceholder}
+            <PasswordValidator
+                error={passwordErrorMessage}
+                passwordPlaceholder={passwordPlaceholder}
+                style={passwordInputStyle}
+                className={passwordInputClassName}
+                {...passwordRegister}
+            />
+            <ConfirmPasswordValidator
+                error={confirmPasswordErrorMessage}
+                confirmPasswordPlaceholder={confirmPasswordPlaceholder}
+                style={passwordInputStyle}
+                className={passwordInputClassName}
+                {...confirmPasswordRegister}
             />
             <SubmitButton
                 title={submitButtonTitle}
                 disabled={buttonsDisabled}
                 onClick={submit}
                 loading={buttonsLoading}
+                className={submitButtonClassName}
+                style={submitButtonStyle}
             />
             {
                 forgotPasswordButtonTitle &&
                 <ForgotPasswordButton
                     onClick={passwordForget}
                     disabled={buttonsDisabled}
+                    style={forgotPasswordButtonStyle}
+                    className={forgotPasswordButtonClassName}
                 >
                     {
                         forgotPasswordButtonTitle
                     }
                 </ForgotPasswordButton>
             }
-            {formAddtionalText &&
-                <Text>
-                    {formAddtionalText}
+            {formAdditionalText &&
+                <Text
+                    style={formAdditionalTextStyle}
+                    className={formAdditionalTextClassName}
+                >
+                    {formAdditionalText}
                 </Text>
             }
         </Container>
