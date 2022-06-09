@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { SignInForm } from '.'
 import { theme } from '../../../themes/theme'
-import { SignUpForm } from './'
 
 interface ChildrenProps {
     children: ReactNode
@@ -16,27 +16,27 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('SignUpForm', () => {
+describe('SignInForm', () => {
     it('should render correctly', () => {
         render(
-            <SignUpForm
-                formTitle='signupform-title'
+            <SignInForm
+                formTitle='SignInForm-title'
                 submit={async () => { }}
-                submitButtonTitle='signupform-submit-button-title'
+                submitButtonTitle='SignInForm-submit-button-title'
             />, {
             wrapper: StyledProvider
         }
         )
-        const component = screen.getByText('signupform-submit-button-title')
+        const component = screen.getByText('SignInForm-submit-button-title')
         expect(component).toBeTruthy()
     })
     it('should render GoogleSignInButton correctly', () => {
        render(
-            <SignUpForm
-                formTitle='signupform-title'
+            <SignInForm
+                formTitle='SignInForm-title'
                 githubSignInButtonTitle='githubsigninbutton-title'
                 submit={async () => { }}
-                submitButtonTitle='signupform-submit-button-title'
+                submitButtonTitle='SignInForm-submit-button-title'
             />, {
             wrapper: StyledProvider
         }
@@ -46,11 +46,11 @@ describe('SignUpForm', () => {
     })
     it('should render GitHubSignInButton correctly', () => {
        render(
-            <SignUpForm
-                formTitle='signupform-title'
+            <SignInForm
+                formTitle='SignInForm-title'
                 facebookSignInButtonTitle='facebooksigninbutton-title'
                 submit={async () => { }}
-                submitButtonTitle='signupform-submit-button-title'
+                submitButtonTitle='SignInForm-submit-button-title'
             />, {
             wrapper: StyledProvider
         }
@@ -60,11 +60,11 @@ describe('SignUpForm', () => {
     })
     it('should render FaceookSignInButton correctly', () => {
        render(
-            <SignUpForm
-                formTitle='signupform-title'
+            <SignInForm
+                formTitle='SignInForm-title'
                 googleSignInButtonTitle='googlesigninbutton-title'
                 submit={async () => { }}
-                submitButtonTitle='signupform-submit-button-title'
+                submitButtonTitle='SignInForm-submit-button-title'
             />, {
             wrapper: StyledProvider
         }
@@ -74,11 +74,11 @@ describe('SignUpForm', () => {
     })
     it('should render ForgotPasswordButton correctly', () => {
        render(
-            <SignUpForm
-                formTitle='signupform-title'
+            <SignInForm
+                formTitle='SignInForm-title'
                 forgotPasswordButtonTitle='forgotpasswordbutton-title'
                 submit={async () => { }}
-                submitButtonTitle='signupform-submit-button-title'
+                submitButtonTitle='SignInForm-submit-button-title'
             />, {
             wrapper: StyledProvider
         }
@@ -88,11 +88,11 @@ describe('SignUpForm', () => {
     })
     it('should render FormSubtitle  correctly', () => {
        render(
-            <SignUpForm
-                formTitle='signupform-title'
+            <SignInForm
+                formTitle='SignInForm-title'
                 formSubtitle='formsubtitle-content'
                 submit={async () => { }}
-                submitButtonTitle='signupform-submit-button-title'
+                submitButtonTitle='SignInForm-submit-button-title'
             />, {
             wrapper: StyledProvider
         }
@@ -102,11 +102,11 @@ describe('SignUpForm', () => {
     })
     it('should render FormAddtionalText   correctly', () => {
        render(
-            <SignUpForm
-                formTitle='signupform-title'
+            <SignInForm
+                formTitle='SignInForm-title'
                 formAddtionalText ='formaddtionaltext-content'
                 submit={async () => { }}
-                submitButtonTitle='signupform-submit-button-title'
+                submitButtonTitle='SignInForm-submit-button-title'
             />, {
             wrapper: StyledProvider
         }

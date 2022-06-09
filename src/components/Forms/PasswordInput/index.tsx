@@ -14,7 +14,7 @@ export interface PasswordInputProps extends InputHTMLAttributes<Props> {
     inputClassName?: string;
 }
 
-export function PasswordInput({
+export const PasswordInput = ({
     showsIcon,
     iconStyle,
     iconClassName,
@@ -23,7 +23,7 @@ export function PasswordInput({
     passwordIsVisible = false,
     togglePassword,
     ...rest
-}: PasswordInputProps) {
+}: PasswordInputProps) =>  {
     return (
         <Container
         >

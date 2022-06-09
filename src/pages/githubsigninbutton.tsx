@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { GithubSignInButton as GitHubSignInButtonComponent } from '../components/Forms/GitHubSignInButton';
+import { GitHubSignInButton as GitHubSignInButtonComponent } from '../components/Forms/GitHubSignInButton';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";

@@ -1,3 +1,4 @@
+import { CSSProperties } from 'react';
 import ReactLoading from 'react-loading';
 import { useTheme } from 'styled-components';
 
@@ -9,6 +10,9 @@ interface SubmitButtonProps {
     loading?: boolean;
     size?: "tiny" | "small" | "medium" | "large";
     onClick: () => Promise<void>;
+    style?: CSSProperties;
+    className?: string;
+    
 }
 
 export function SubmitButton({
@@ -16,7 +20,9 @@ export function SubmitButton({
     disabled,
     loading,
     size,
-    onClick
+    onClick,
+    style,
+    className
 }: SubmitButtonProps) {
 
     const theme = useTheme()
@@ -28,6 +34,8 @@ export function SubmitButton({
             data-testid='submit-button-test-id'
             onClick={onClick}
             size={size}
+            style={style}
+            className={className}
         >
             {loading ?
                 <ReactLoading

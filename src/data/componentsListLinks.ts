@@ -59,6 +59,7 @@ export const formComponentsLinkList = [
   { content: "PasswordInput", url: "/passwordinput" },
   { content: "RadioGroup", url: "/radiogroup" },
   { content: "Select", url: "/select" },
+  { content: "SignInForm", url: "/signinform" },
   { content: "SignUpForm", url: "/signupform" },
   { content: "SubmitButton", url: "/submitbutton" },
   { content: "Switcher", url: "/switcher" },

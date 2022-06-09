@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.1.2",
     "@emotion/react": "11",
     "@emotion/styled": "11",
+    "@hookform/resolvers": "^2.9.0",
     "@types/react-vertical-timeline-component": "^3.3.3",
     "framer-motion": "6",
     "global": "^4.4.0",
@@ -26,6 +27,7 @@
     "react-countup": "^6.2.0",
     "react-dom": "18.1.0",
     "react-dropdown": "^1.10.0",
+    "react-hook-form": "^7.31.3",
     "react-hot-toast": "^2.2.0",
     "react-icons": "^4.3.1",
     "react-loading": "^2.0.3",
@@ -43,7 +45,8 @@
     "sass": "^1.51.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
-    "supercons": "^0.0.1"
+    "supercons": "^0.0.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",

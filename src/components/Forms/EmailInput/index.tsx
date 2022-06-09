@@ -1,5 +1,5 @@
 import { CSSProperties, InputHTMLAttributes, ReactNode } from 'react';
-import { FiMail } from 'react-icons/fi';
+
 import { Container, IconContainer, Input } from './styles';
 
 interface Props { }
@@ -13,13 +13,13 @@ export interface EmailInputProps extends InputHTMLAttributes<Props> {
     icon?: ReactNode;
 }
 
-export function EmailInput({
+export const EmailInput = ({
     showsIcon,
     inputClassName,
     inputStyle,
     icon,
     ...rest
-}: EmailInputProps) {
+}: EmailInputProps) => {
     return (
         <Container>
             {showsIcon &&

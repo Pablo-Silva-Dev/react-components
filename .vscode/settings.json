@@ -1,3 +1,6 @@
 {
-    "tabnine.inlineHintColor": "#0088ff"
+    "tabnine.inlineHintColor": "#0088ff",
+    "cSpell.words": [
+        "chakra"
+    ]
 }

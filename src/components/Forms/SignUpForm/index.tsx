@@ -8,14 +8,10 @@ import { SubmitButton } from '../SubmitButton';
 import {
     ButtonsContainer,
     Container,
-    Divider,
-    SubTitle,
-    Title,
-    Text,
-    ForgotPasswordButton
+    Divider, ForgotPasswordButton, SubTitle, Text, Title
 } from './styles';
 
-interface SignUpFormProps {
+interface SignInFormProps {
     formTitle: string;
     formSubtitle?: string;
     formAddtionalText?: string;
@@ -32,14 +28,13 @@ interface SignUpFormProps {
     signInWithGitHub?: () => Promise<void>;
     signInWithGoogle?: () => Promise<void>;
     signInWithFacebook?: () => Promise<void>;
-    socialButtonsColorScheme?: 'light' | 'dark'
     buttonsDisabled?: boolean;
     buttonsLoading?: boolean;
-    style?: CSSProperties;
-    className?: string;
+    formContainerStyle?: CSSProperties;
+    formContainerClassName?: string;
 }
 
-export function SignUpForm({
+export function SignInForm({
     formTitle,
     submitButtonTitle,
     forgotPasswordButtonTitle,
@@ -47,6 +42,12 @@ export function SignUpForm({
     googleSignInButtonTitle,
     githubSignInButtonTitle,
     facebookSignInButtonTitle,
+    googleSignInButtonStyle,
+    githubSignInButtonStyle,
+    facebookSignInButtonStyle,
+    googleSignInButtonClassName,
+    githubSignInButtonClassName,
+    facebookSignInButtonClassName,
     passwordForget,
     signInWithFacebook,
     signInWithGoogle,
@@ -58,15 +59,14 @@ export function SignUpForm({
     formSubtitle,
     buttonsDisabled,
     buttonsLoading,
-    socialButtonsColorScheme,
-    className,
-    style
-}: SignUpFormProps) {
+    formContainerClassName,
+    formContainerStyle
+}: SignInFormProps) {
 
     return (
         <Container
-            className={className}
-            style={style}
+            className={formContainerClassName}
+            style={formContainerStyle}
         >
             <Title>{formTitle}</Title>
             <ButtonsContainer>
@@ -75,7 +75,6 @@ export function SignUpForm({
                     <GoogleSignInButton
                         disabled={buttonsDisabled}
                         title={googleSignInButtonTitle}
-                        themeColor={socialButtonsColorScheme}
                         onClick={signInWithGoogle}
                     />
                 }
@@ -84,7 +83,6 @@ export function SignUpForm({
                     <GitHubSignInButton
                         disabled={buttonsDisabled}
                         title={githubSignInButtonTitle}
-                        themeColor={socialButtonsColorScheme}
                         onClick={signInWithGitHub}
                     />
                 }
@@ -93,7 +91,6 @@ export function SignUpForm({
                     <FacebookSignInButton
                         disabled={buttonsDisabled}
                         title={facebookSignInButtonTitle}
-                        themeColor={socialButtonsColorScheme}
                         onClick={signInWithFacebook}
                     />
                 }

@@ -4,7 +4,7 @@ import { useTheme } from 'styled-components';
 import { Container, Title } from './styles';
 import { FaGithub } from 'react-icons/fa'
 
-interface GithubSignInButtonProps {
+interface GitHubSignInButtonProps {
     title: string;
     onClick: () => Promise<void>;
     disabled?: boolean;
@@ -15,7 +15,7 @@ interface GithubSignInButtonProps {
     style?: CSSProperties;
 }
 
-export function GithubSignInButton({
+export function GitHubSignInButton({
     title,
     onClick,
     disabled,
@@ -24,7 +24,7 @@ export function GithubSignInButton({
     loading,
     className,
     style
-}: GithubSignInButtonProps) {
+}: GitHubSignInButtonProps) {
 
     const theme = useTheme()
 
@@ -35,7 +35,7 @@ export function GithubSignInButton({
             className={className}
             style={style}
             onClick={onClick}
-            data-testid='GithubSignInbutton-id'
+            data-testid='GitHubSignInButton-id'
         >
             {loading ?
                 <ReactLoading
@@ -49,7 +49,7 @@ export function GithubSignInButton({
                 <>
                     <FaGithub
                         size={24}
-                        color='#a0a0a0'
+                        color='#757575'
                     />
                     <Title
                         themeColor={themeColor}
