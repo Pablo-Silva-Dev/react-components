@@ -19,110 +19,145 @@ import {
   Text,
   PriceOnCreditText,
   ShareButton,
+  SubContainer,
 } from './styles';
+import { CSSProperties, ReactNode } from 'react';
 
 interface ProductCardProps {
   title: string;
   price: string;
-  priceOnCredit: string;
+  priceOnCredit?: string;
   imgUrl: string;
-  imgAlt: string;
-  ratings: 1 | 2 | 3 | 4 | 5 | 1.5 | 2.5 | 3.5 | 4.5 | 5.5;
+  ratings?: '1' | '2' | '3' | '4' | '5';
   addToCart: () => Promise<void>;
-  addToFavorites: () => Promise<void>;
+  addToCartButtonTitle: string;
+  addToFavorites?: () => Promise<void>;
   removeFromFavorites?: () => Promise<void>;
   share?: () => Promise<void>;
-  isOnCard?: boolean;
   isFavorited?: boolean;
+  children?: ReactNode
+  cardStyle?: CSSProperties;
+  cardClassName?: string;
+  titleStyle?: CSSProperties;
+  titleClassName?: string;
+  parcelledPriceStyle?: CSSProperties;
+  parcelledPriceClassName?: string;
+  purchaseButtonStyle?: CSSProperties;
+  purchaseButtonClassName?: string;
+  totalPriceStyle?: CSSProperties;
+  totalPriceClassName?: string;
+  glassEffect?: boolean;
 }
 
 export function ProductCard({
   title,
   price,
   priceOnCredit,
+  addToCartButtonTitle,
   ratings,
   imgUrl,
-  imgAlt,
   addToCart,
   addToFavorites,
-  isOnCard,
   isFavorited,
   removeFromFavorites,
-  share
+  share,
+  children,
+  cardClassName,
+  cardStyle,
+  parcelledPriceClassName,
+  parcelledPriceStyle,
+  purchaseButtonClassName,
+  purchaseButtonStyle,
+  titleClassName,
+  titleStyle,
+  totalPriceClassName,
+  totalPriceStyle,
+  glassEffect
 }: ProductCardProps) {
 
   const theme = useTheme()
 
   return (
     <Container>
-      {isFavorited ?
-        <FavoriteButton
-          onClick={removeFromFavorites}
+      <SubContainer
+        style={cardStyle}
+        className={glassEffect ? 'glassEffect' : cardClassName}
+      >
+        {isFavorited ?
+          <FavoriteButton
+            onClick={removeFromFavorites}
+          >
+            <MdOutlineFavorite
+              color={theme.colors.primary}
+              size={24}
+            />
+          </FavoriteButton>
+          :
+          <FavoriteButton
+            onClick={addToFavorites}
+          >
+            <MdFavoriteBorder
+              color={theme.colors.element_base}
+              size={24}
+            />
+          </FavoriteButton>
+        }
+        <ShareButton
+          onClick={share}
         >
-          <MdOutlineFavorite
-            color={theme.colors.primary}
+          <MdShare
+            color={theme.colors.silver}
             size={24}
           />
-        </FavoriteButton>
-        :
-        <FavoriteButton
-          onClick={addToFavorites}
+        </ShareButton>
+        <Title
+          style={titleStyle}
+          className={titleClassName}
         >
-          <MdFavoriteBorder
-            color={theme.colors.element_base}
-            size={24}
-          />
-        </FavoriteButton>
-      }
-      <ShareButton>
-        <MdShare
-          color={theme.colors.silver}
-          size={24}
-        />
-      </ShareButton>
-      <Title>
-        {title.length > 72 ? title.substring(0, 72).concat('...') : title}
-      </Title>
-      <Image
-        src={imgUrl}
-        width={200}
-        height={200}
-        alt={imgAlt}
-      />
-      <RatingsContainer>
-        <StarRatings
-          rating={ratings}
-          starRatedColor="#ffc400"
-          numberOfStars={5}
-          starDimension="20px"
-          starSpacing="2px"
-          name='rating'
-        />
-      </RatingsContainer>
-      <PriceText>
-        {price}
-      </PriceText>
-      <Text>À vista no PIX</Text>
-      <PriceOnCreditText>
-        {priceOnCredit}
-      </PriceOnCreditText>
-      {isOnCard ?
-
-        <Title>
-          Adicionado ao carrinho
+          {title.length > 72 ? title.substring(0, 72).concat('...') : title}
         </Title>
-        :
+        <Image
+          src={imgUrl}
+          width={200}
+          height={200}
+          alt='product'
+        />
+        <RatingsContainer>
+          <StarRatings
+            rating={parseInt(ratings)}
+            starRatedColor="#ffc400"
+            numberOfStars={5}
+            starDimension="20px"
+            starSpacing="2px"
+            name='rating'
+          />
+        </RatingsContainer>
+        <PriceText
+          style={totalPriceStyle}
+          className={totalPriceClassName}
+        >
+          {price}
+        </PriceText>
+        {priceOnCredit &&
+          <PriceOnCreditText
+            style={parcelledPriceStyle}
+            className={parcelledPriceClassName}
+          >
+            {priceOnCredit}
+          </PriceOnCreditText>}
+        {children}
         <PurchaseButton
           onClick={addToCart}
+          style={purchaseButtonStyle}
+          className={purchaseButtonClassName}
         >
           <MdShoppingCart
             color={theme.colors.element_base}
             size={24}
           />
-          Adicionar ao carrinho
+          {addToCartButtonTitle}
         </PurchaseButton>
-
-      }
+      </SubContainer>
     </Container>
   )
 }
