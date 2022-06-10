@@ -90,6 +90,9 @@ export const PurchaseButton = styled.button`
   width: 88%;
   height: 32px;
   margin: 1.2rem auto;
+  @media (max-width: 720px) {
+    font-size: ${({ theme }) => theme.sizes.medium};
+  }
 `;
 
 export const OldPrice = styled.h3`

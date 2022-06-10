@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  & .glassEffect {
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    background-color: rgba(17, 25, 40, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+`;
+export const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +21,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadows.soft};
   @media (max-width: 720px) {
-    width: 240px;
+    width: 98%;
   }
 `;
 
@@ -28,6 +36,7 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.colors.text};
   padding: 8px 4px;
   margin: 12px 0;
+  text-align: center;
   word-wrap: break-word;
   width: 100%;
   @media (max-width: 720px) {

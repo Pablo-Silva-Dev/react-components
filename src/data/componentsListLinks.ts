@@ -45,7 +45,6 @@ export const cardsLinkList = [
   { content: "PricingCard", url: "/pricingcard" },
   { content: "ProductCard", url: "/productcard" },
   { content: "ProfileCard", url: "/profilecard" },
-  { content: "StarsRatingCard", url: "/starsratingcard" },
   { content: "TestimonialCard", url: "/testimonialcard" },
   { content: "TitleCard", url: "/titlecard" },
 ]

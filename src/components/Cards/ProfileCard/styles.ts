@@ -6,18 +6,25 @@ interface ProfileCardProps {
 }
 
 export const Container = styled.div`
+  & .glassEffect {
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    background-color: rgba(17, 25, 40, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+`;
+export const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 320px;
-  min-height: 320px;
   margin: 8px;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadows.soft};
   @media (max-width: 720px) {
-    width: 240px;
+    width: 98%;
   }
 `;
 
@@ -59,6 +66,7 @@ export const Text = styled.p`
   padding: 8px 4px;
   margin: 8px auto;
   word-wrap: break-word;
+  text-align: center;
   width: 100%;
   @media (max-width: 720px) {
     font-size: ${({ theme }) => theme.sizes.normal};
@@ -68,7 +76,7 @@ export const Text = styled.p`
 export const Title = styled.h3`
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 500;
-  margin-top: 56px;
+  margin-top: 48px;
   color: ${({ theme }) => theme.colors.title};
   padding: 8px 4px;
   text-align: right;

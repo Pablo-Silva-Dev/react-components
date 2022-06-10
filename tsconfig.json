@@ -24,7 +24,7 @@
     "**/*.ts",
     "**/*.tsx",
     "styled.d.ts",
-    "src/themes/styled.d.ts",
+    "src/themes/styled.d.ts", "src/pages/profilecardtsx",
   ],
   "files" : [
     "src/themes/styled.d.ts",

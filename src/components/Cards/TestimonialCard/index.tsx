@@ -5,6 +5,7 @@ import StarRatings from 'react-star-ratings'
 import {
     Container,
     StarsContainer,
+    SubContainer,
     SubTitle,
     Text,
     Title
@@ -12,86 +13,102 @@ import {
 
 interface TestimonialCardProps {
     personPhotoUrl: string;
-    alt: string;
     personName: string;
     personRole?: string;
     testimonial: string;
-    ratings: 1 | 2 | 3 | 4 | 5 | 1.5 | 2.5 | 3.5 | 4.5 | 5.5;
-    style?: CSSProperties;
-    textStyle?: CSSProperties;
+    ratings?: "1" | "2" | "3" | "4" | "5";
+    cardStyle?: CSSProperties;
+    testimonialTextStyle?: CSSProperties;
     titleStyle?: CSSProperties;
-    roleTextStyle?: CSSProperties;
+    roletestimonialTextStyle?: CSSProperties;
+    cardClassName?: string;
+    titleClassName?: string;
+    testimonialClassName?: string;
+    roletestimonialClassName?: string;
+    glassEffect?: boolean;
 }
 
 export function TestimonialCard({
     personPhotoUrl,
-    alt,
     personName,
     personRole,
     testimonial,
     ratings,
-    style,
-    textStyle,
+    cardStyle,
+    testimonialTextStyle,
     titleStyle,
-    roleTextStyle
+    roletestimonialTextStyle,
+    cardClassName,
+    roletestimonialClassName,
+    testimonialClassName,
+    titleClassName,
+    glassEffect
 }: TestimonialCardProps) {
 
     return (
-        <Container
-            style={style}
-            data-testid='testimonialcard-id'
-        >
-            <Image
-                src={personPhotoUrl}
-                alt={alt}
-                width={120}
-                height={120}
-                style={{
-                    borderRadius: '50%',
-                }}
-            />
-            <Text
-                style={textStyle}
+        <Container>
+            <SubContainer
+                style={cardStyle}
+                className={glassEffect ? 'glassEffect' : cardClassName}
+                data-testid='testimonialcard-id'
             >
-                {
-                    testimonial?.length > 320 ?
-                        testimonial.substring(0, 320).concat('...') :
-                        testimonial
-                }
-            </Text>
-
-            <StarsContainer>
-                <StarRatings
-                    rating={ratings}
-                    starRatedColor="#ffc400"
-                    numberOfStars={5}
-                    starDimension="20px"
-                    starSpacing="2px"
-                    name='rating'
+                <Image
+                    src={personPhotoUrl}
+                    alt='photo'
+                    width={120}
+                    height={120}
+                    style={{
+                        borderRadius: '50%',
+                    }}
                 />
-            </StarsContainer>
-
-            <Title
-                style={titleStyle}
-            >
-                {
-                    personName?.length > 24 ?
-                        personName.substring(0, 24).concat('...') :
-                        personName
-                }
-            </Title>
-            {
-                personRole &&
-                <SubTitle
-                    style={roleTextStyle}
+                <Text
+                    style={testimonialTextStyle}
+                    className={testimonialClassName}
                 >
                     {
-                        personRole?.length > 32 ?
-                            personRole.substring(0, 32).concat('...') :
-                            personRole
+                        testimonial?.length > 320 ?
+                            testimonial.substring(0, 320).concat('...') :
+                            testimonial
                     }
-                </SubTitle>
-            }
+                </Text>
+
+                {ratings &&
+                    <StarsContainer>
+                        <StarRatings
+                            rating={parseInt(ratings)}
+                            starRatedColor="#ffc400"
+                            numberOfStars={5}
+                            starDimension="20px"
+                            starSpacing="2px"
+                            name='rating'
+                        />
+                    </StarsContainer>
+                }
+
+                <Title
+                    style={titleStyle}
+                    className={titleClassName}
+                >
+                    {
+                        personName?.length > 24 ?
+                            personName.substring(0, 24).concat('...') :
+                            personName
+                    }
+                </Title>
+                {
+                    personRole &&
+                    <SubTitle
+                        style={roletestimonialTextStyle}
+                        className={roletestimonialClassName}
+                    >
+                        {
+                            personRole?.length > 32 ?
+                                personRole.substring(0, 32).concat('...') :
+                                personRole
+                        }
+                    </SubTitle>
+                }
+            </SubContainer>
         </Container>
     )
 }
