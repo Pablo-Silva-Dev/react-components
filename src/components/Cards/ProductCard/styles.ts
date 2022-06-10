@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  & .glassEffect {
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    background-color: rgba(17, 25, 40, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+`;
+export const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
