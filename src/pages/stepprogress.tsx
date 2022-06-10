@@ -75,11 +75,16 @@ export default function StepProgress() {
                     children="
                     const steps = [
                         'Approving payment', 'In transit', 'Finished'
-                    ]
+                    ]"
+                    />
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
                     <StepProgressComponent
-                      currentIndex={2}
-                      steps={steps}
+                    currentIndex={2}
+                    steps={steps}
                     />"
+                    hideTitle
                 />
             </ComponentContainer>
         </Container>

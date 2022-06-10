@@ -35,10 +35,10 @@ export default function Avatar() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='CardImage'
+                        content='ImageCard'
                     />
                     <Text
-                        content='Used to display a Card Image.'
+                        content='A complete image card..'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>

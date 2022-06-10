@@ -1,75 +1,143 @@
+import { CSSProperties, ReactNode } from 'react';
 import {
-    Container, DealsPrice, InfoContainer, OldPrice, PriceContainer, PurchaseButton,
-    RecomendationBadge, Text, TextItem, Title
+
+    Container, DealsMonthPrice,
+    Divider, InfoContainer,
+    OldPrice,
+    PriceContainer,
+    PurchaseButton,
+    RecommendationBadge,
+    ResourceContainer,
+    SubContainer,
+    Text,
+    TextItem,
+    Title
 } from './styles';
 
 interface PricingCardProps {
     title: string;
-    firstResourceText: string;
-    secondResourceText?: string;
-    thirdResourceText?: string;
-    fourthResourceText?: string;
-    fivethResourceText?: string;
-    oldPrice: string;
-    dealsPrice: string;
+    resources: string[];
+    resourceIcon?: ReactNode;
+    oldPrice?: string;
+    dealsMonthPrice: string;
+    purchaseButtonTitle: string;
     totalPrice: string;
-    finishPurchase: () => void;
-    isRecomended?: boolean
+    finishPurchase: () => Promise<void>;
+    recommendationTitle?: string;
+    cardStyle?: CSSProperties;
+    cardClassName?: string;
+    titleStyle?: CSSProperties;
+    titleClassName?: string;
+    resourcesStyle?: CSSProperties;
+    resourcesClassName?: string;
+    oldPriceStyle?: CSSProperties;
+    oldPriceClassName?: string;
+    dealsMonthPriceStyle?: CSSProperties;
+    dealsMonthPriceClassName?: string;
+    purchaseButtonStyle?: CSSProperties;
+    purchaseButtonClassName?: string;
+    totalPriceStyle?: CSSProperties;
+    totalPriceClassName?: string;
+    recommendationTitleStyle?: CSSProperties;
+    recommendationTitleClassName?: string;
+    chidlren?: ReactNode;
+    glassEffect?: boolean;
 }
 
 export function PricingCard({
     title,
-    firstResourceText,
-    secondResourceText,
-    thirdResourceText,
-    fourthResourceText,
-    fivethResourceText,
+    resources,
+    resourceIcon,
     oldPrice,
-    dealsPrice,
+    dealsMonthPrice,
     totalPrice,
-    isRecomended,
-    finishPurchase
+    recommendationTitle,
+    purchaseButtonTitle,
+    finishPurchase,
+    cardClassName,
+    cardStyle,
+    dealsMonthPriceClassName,
+    dealsMonthPriceStyle,
+    oldPriceClassName,
+    oldPriceStyle,
+    purchaseButtonClassName,
+    purchaseButtonStyle,
+    recommendationTitleClassName,
+    recommendationTitleStyle,
+    resourcesClassName,
+    resourcesStyle,
+    titleClassName,
+    titleStyle,
+    totalPriceClassName,
+    totalPriceStyle,
+    chidlren,
+    glassEffect
 }: PricingCardProps) {
     return (
         <Container>
-            {isRecomended &&
-                <RecomendationBadge>
-                    Recomendado
-                </RecomendationBadge>
-            }
-            <Title>{title}</Title>
-            <InfoContainer>
-                <TextItem>{firstResourceText}</TextItem>
-                {
-                    secondResourceText &&
-                    <TextItem>{secondResourceText}</TextItem>
-                }
-                {
-                    thirdResourceText &&
-                    <TextItem>{thirdResourceText}</TextItem>
-                }
-                {
-                    fourthResourceText &&
-                    <TextItem>{fourthResourceText}</TextItem>
-                }
-                {
-                    fivethResourceText &&
-                    <TextItem>{fivethResourceText}</TextItem>
-                }
-            </InfoContainer>
-            <PriceContainer>
-                <Text>de</Text>
-                <OldPrice>{oldPrice}</OldPrice>
-                <Text>por</Text>
-                <DealsPrice>{dealsPrice}</DealsPrice>
-                <Text>ou</Text>
-                <Text>{totalPrice}</Text>
-            </PriceContainer>
-            <PurchaseButton
-                onClick={finishPurchase}
+            <SubContainer
+                className={glassEffect ? 'glassEffect' : cardClassName}
+                style={cardStyle}
             >
-                Quero esse Plano
-            </PurchaseButton>
+                {recommendationTitle &&
+                    <RecommendationBadge
+                        className={recommendationTitleClassName}
+                        style={recommendationTitleStyle}
+                    >
+                        {recommendationTitle}
+                    </RecommendationBadge>
+                }
+                <Title
+                    className={titleClassName}
+                    style={titleStyle}
+                >
+                    {title}
+                </Title>
+                <InfoContainer>
+                    {resources.map(resource => (
+                        <ResourceContainer
+                            key={resource}
+                        >
+                            {resourceIcon && resourceIcon}
+                            <TextItem
+                                className={resourcesClassName}
+                                style={resourcesStyle}
+                            >
+                                {resource}
+                            </TextItem>
+                        </ResourceContainer>
+                    ))}
+                </InfoContainer>
+                <Divider />
+                <PriceContainer>
+                    <OldPrice
+                        className={oldPriceClassName}
+                        style={oldPriceStyle}
+                    >
+                        {oldPrice}
+                    </OldPrice>
+                    <DealsMonthPrice
+                        className={dealsMonthPriceClassName}
+                        style={dealsMonthPriceStyle}
+                    >
+                        {dealsMonthPrice}
+                    </DealsMonthPrice>
+                    <Text
+                        className={totalPriceClassName}
+                        style={totalPriceStyle}
+                    >
+                        {totalPrice}
+                    </Text>
+                </PriceContainer>
+                {chidlren}
+                <PurchaseButton
+                    onClick={finishPurchase}
+                    className={purchaseButtonClassName}
+                    style={purchaseButtonStyle}
+                >
+                    {purchaseButtonTitle}
+                </PurchaseButton>
+            </SubContainer>
         </Container>
     )
 }

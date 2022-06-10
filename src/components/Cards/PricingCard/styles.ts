@@ -1,22 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  & .glassEffect {
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    background-color: rgba(17, 25, 40, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+`;
+export const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 320px;
-  margin: .8rem;
-  background-color: ${({ theme }) => theme.colors.black};
-  border-radius: 8px;
+  margin: 4px;
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 4px;
   padding: 16px;
   position: relative;
-  @media(max-width:1080px){
-    width: 640px;
-    margin: 1.2rem auto;
-  }
-  @media(max-width: 720px){
-    width: 92%;
+  @media (max-width: 1080px) {
+    width: 98%;
   }
 `;
 
@@ -39,9 +43,9 @@ export const PriceContainer = styled.div`
 export const Title = styled.h2`
   font-size: ${({ theme }) => theme.sizes.xlarge};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.title};
   width: 92%;
-  margin: .4rem auto;
+  margin: 0.4rem auto;
   text-align: center;
   @media (max-width: 1080px) {
     width: 50%;
@@ -53,9 +57,8 @@ export const Title = styled.h2`
 
 export const TextItem = styled.li`
   font-size: ${({ theme }) => theme.sizes.medium};
-  list-style: circle;
-  font-weight: 200;
-  color: ${({ theme }) => theme.colors.element_base};
+  font-weight: 300;
+  color: ${({ theme }) => theme.colors.text};
   text-align: center;
   @media (max-width: 1080px) {
   }
@@ -66,8 +69,8 @@ export const TextItem = styled.li`
 
 export const Text = styled.span`
   font-size: ${({ theme }) => theme.sizes.large};
-  font-weight: 200;
-  color: ${({ theme }) => theme.colors.element_base};
+  font-weight: 300;
+  color: ${({ theme }) => theme.colors.text};
   text-align: center;
   @media (max-width: 1080px) {
   }
@@ -80,11 +83,11 @@ export const PurchaseButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.secondary};
-  color: ${({ theme }) => theme.colors.black};
-  font-weight: 800;
+  background-color: ${({ theme }) => theme.colors.success};
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: 500;
   border-radius: 4px;
-  width: 160px;
+  width: 88%;
   height: 32px;
   margin: 1.2rem auto;
 `;
@@ -102,7 +105,7 @@ export const OldPrice = styled.h3`
   }
 `;
 
-export const DealsPrice = styled.h2`
+export const DealsMonthPrice = styled.h2`
   font-size: ${({ theme }) => theme.sizes.xlarge};
   font-weight: 800;
   color: ${({ theme }) => theme.colors.success};
@@ -112,19 +115,32 @@ export const DealsPrice = styled.h2`
   }
 `;
 
-export const RecomendationBadge = styled.div`
+export const RecommendationBadge = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
+  width: 56%;
   height: 32px;
   border-radius: 4px;
-  background-color: ${({ theme }) => theme.colors.secondary_dark};
+  background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.sizes.medium};
   font-weight: 600;
   z-index: 999;
   position: absolute;
   top: -16px;
-  rigth: 25%;
+  right: 22%;
+`;
+
+export const ResourceContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Divider = styled.div`
+  display: flex;
+  width: 98%;
+  height: 1px;
+  background-color: ${({ theme }) => theme.colors.silver};
+  margin: 16px auto;
 `;

@@ -37,7 +37,7 @@ export default function Avatar() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='CardNewsletter'
+                        content='NewsletterCard'
                     />
                     <Text
                         content='Used collect user contact data and send e-mails.'

@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../../../themes/theme'
 import { PricingCard } from '.'
+import { theme } from '../../../themes/theme'
 
 interface ChildrenProps {
     children: ReactNode
@@ -20,7 +20,7 @@ describe('PricingCard', () => {
     it('should render correctly', () => {
         render(
             <PricingCard
-                dealsPrice='pricing-card-deals-price'
+                dealsMonthPrice='pricing-card-deals-price'
                 finishPurchase={() => { }}
                 oldPrice='pricing-card-old-price'
                 firstResourceText='pricing-card-first-resource-text'
@@ -39,7 +39,7 @@ describe('PricingCard', () => {
     it('should render as recomended card correctly', () => {
         render(
             <PricingCard
-                dealsPrice='pricing-card-deals-price'
+                dealsMonthPrice='pricing-card-deals-price'
                 isRecomended
                 finishPurchase={() => { }}
                 oldPrice='pricing-card-old-price'
@@ -59,7 +59,7 @@ describe('PricingCard', () => {
     it('should render with all props correctly', () => {
         render(
             <PricingCard
-                dealsPrice='pricing-card-deals-price'
+                dealsMonthPrice='pricing-card-deals-price'
                 isRecomended
                 finishPurchase={() => { }}
                 oldPrice='pricing-card-old-price'
