@@ -43,24 +43,19 @@ export default function SignUpForm() {
         formTitle: 'Description: Text to display as form title. Type: String. Required.',
         submitButtonTitle: 'Description: SubmitButton title. Type: String. Required',
         submit: 'Description: Function to invoke at form submit, the form validation runs here. Type: Async function. Required.',
-        forgotPasswordButtonTitle: 'Description: ForgotPasswordButtonTitle title. Type: String.',
         formSubtitle: 'Description: Text to display as form subtitle. Type: String.',
         formAdditionalText: 'Description: Additional text to display on bottom form. Type: String.',
-        githubSignUpButtonTitle: 'Description: GitHubSignUpButton title. Type: String.',
-        googleSignUpButtonTitle: 'Description: GoogleSignUpButton title. Type: String.',
-        facebookSignUpButtonTitle: 'Description: FacebookSignUpButton title. Type: String.',
         emailPlaceholder: 'Description: Placeholder for email input. Type: String.',
         passwordPlaceholder: 'Description: Placeholder for password input. Type: String.',
-        passwordForget: 'Description: Function to invoke at click on forgotPasswordButton. Type: Async function.',
-        SignUpWithGitHub: 'Description: Function to invoke at trying to sign in with GitHub. Type: Async function.',
-        SignUpWithGoogle: 'Description: Function to invoke at trying to sign in with Google. Type: Async function.',
-        SignUpWithFacebook: 'Description: Function to invoke at trying to sign in with Facebook. Type: Async function.',
+        confirmPasswordPlaceholder: 'Description: Placeholder for confirm password input. Type: String.',
         buttonsDisabled: 'Disables all buttons if true. Type: Boolean.',
         buttonsLoading: 'Displays loading indicator into all buttons if true. Type: Boolean.',
         emailErrorMessage: 'Description: Displays the message error linked to email input. Type: FieldError.',
         passwordErrorMessage: 'Description: Displays the message error linked to password input. Type: FieldError.',
+        confirmPasswordErrorMessage: 'Description: Displays the message error linked to confirm password input. Type: FieldError.',
         emailRegister: 'Description: Receives the function for email input validation. Type: UseFormRegisterReturn.',
-        passwordRegister: 'Description: Receives the function for password input validation. Type: UseFormRegisterReturn.',
+        passwordRegister: 'Description:  Receives the function for password confirmation input validation. Type: UseFormRegisterReturn.',
+        confirmPasswordRegister: 'Description: Receives the function for password input validation. Type: UseFormRegisterReturn.',
         formTitleClassName: 'Description: FormTitle className. Type: String.',
         formTitleStyle: 'Description: FormTitle style. Type: CSS Properties.',
         formSubTitleClassName: 'Description: FormSubTitle className. Type: String.',
@@ -71,20 +66,10 @@ export default function SignUpForm() {
         formContainerStyle: 'Description: FormContainer style. Type: CSS Properties.',
         submitButtonClassName: 'Description: SubmitButton className. Type: String.',
         submitButtonStyle: 'Description: SubmitButton style. Type: CSS Properties.',
-        forgotPasswordButtonClassName: 'Description: forgotPasswordButton className. Type: String.',
-        forgotPasswordButtonStyle: 'Description: forgotPasswordButton style. Type: CSS Properties.',
-        iconStyle: 'Description: Icon style. Type: CSS Properties.',
-        iconClassName: 'Description: Icon className. Type: String.',
-        githubSignUpButtonClassName: 'Description: GitHubSignUpButton className. Type: String.',
-        githubSignUpButtonStyle: 'Description: GitHubSignUpButton style. Type: CSS Properties.',
-        googleSignUpButtonClassName: 'Description: GoogleSignUpButton className. Type: String.',
-        googleSignUpButtonStyle: 'Description: GoogleSignUpButton style. Type: CSS Properties.',
-        facebookSignUpButtonClassName: 'Description: FacebookSignUpButton className. Type: String.',
-        facebookSignUpButtonStyle: 'Description: FacebookSignUpButton style. Type: CSS Properties.',
         emailInputStyle: 'Description: EmailInput style. Type: CSS Properties.',
         emailInputClassName: 'Description: EmailInput className. Type: String.',
-        passwordInputStyle: 'Description: PasswordInput style. Type: CSS Properties.',
-        passwordInputClassName: 'Description: PasswordInput className. Type: String.',
+        passwordInputStyle: 'Description: PasswordInput and ConfirmPasswordInput style. Type: CSS Properties.',
+        passwordInputClassName: 'Description: PasswordInput and ConfirmPasswordInput className. Type: String.',
     }
 
 
@@ -106,7 +91,7 @@ export default function SignUpForm() {
                         content='SignUpForm'
                     />
                     <Text
-                        content='A complete sign in form with social authentication, own application authentication mechanism with form validation and recovery password option.'
+                        content='A complete sign up form with form validation.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>

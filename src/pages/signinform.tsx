@@ -71,8 +71,6 @@ export default function SignInForm() {
         submitButtonStyle: 'Description: SubmitButton style. Type: CSS Properties.',
         forgotPasswordButtonClassName: 'Description: forgotPasswordButton className. Type: String.',
         forgotPasswordButtonStyle: 'Description: forgotPasswordButton style. Type: CSS Properties.',
-        iconStyle: 'Description: Icon style. Type: CSS Properties.',
-        iconClassName: 'Description: Icon className. Type: String.',
         githubSignInButtonClassName: 'Description: GitHubSignInButton className. Type: String.',
         githubSignInButtonStyle: 'Description: GitHubSignInButton style. Type: CSS Properties.',
         googleSignInButtonClassName: 'Description: GoogleSignInButton className. Type: String.',
