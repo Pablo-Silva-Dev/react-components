@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { ActionCard } from '.'
 import { theme } from '../../../themes/theme'
-import { TitleCard } from '.'
 
 interface ChildrenProps {
     children: ReactNode
@@ -17,19 +17,19 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('TitleCard', () => {
+describe('ActionCard', () => {
     it('should render correctly', () => {
         render(
-            <TitleCard
-                title='titlecard-Title'
-                content='titlecard-content'
-                data-testid='titlecard-id'
+            <ActionCard
+                title='ActionCard-Title'
+                content='ActionCard-content'
+                data-testid='ActionCard-id'
             />, {
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByText('titlecard-content')
+        const component = screen.getByText('ActionCard-content')
 
         expect(component).toBeInTheDocument()
 

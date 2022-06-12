@@ -23,9 +23,14 @@ export const Container = styled.button<SecondaryButtonProps>`
   border-radius: 4px;
   color: ${({ theme }) => theme.colors.primary};
   border: 1px solid ${({ theme }) => theme.colors.primary};
+  font-size: ${({ theme }) => theme.sizes.medium};
 
   &:disabled {
     background-color: ${({ theme }) => theme.colors.white};
     border-color: ${({ theme }) => theme.colors.primary_light};
+  }
+
+  @media(max-width: 720px){
+    font-size: ${({ theme }) => theme.sizes.normal};
   }
 `;

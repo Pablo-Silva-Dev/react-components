@@ -39,6 +39,7 @@ export const elementsComponentsLinkList = [
 ];
 
 export const cardsLinkList = [
+  { content: "ActionCard", url: "/actioncard" },
   { content: "ContactCard", url: "/contactcard" },
   { content: "ImageCard", url: "/imagecard" },
   { content: "NewsletterCard", url: "/newslettercard" },
@@ -46,7 +47,6 @@ export const cardsLinkList = [
   { content: "ProductCard", url: "/productcard" },
   { content: "ProfileCard", url: "/profilecard" },
   { content: "TestimonialCard", url: "/testimonialcard" },
-  { content: "TitleCard", url: "/titlecard" },
 ]
 
 export const formComponentsLinkList = [

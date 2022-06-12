@@ -1,14 +1,10 @@
-import React, { CSSProperties, ReactNode } from 'react';
-import { useTheme } from 'styled-components'
-import { MdEmail, MdLocalPhone, MdLocationOn } from 'react-icons/md'
-import { FaWhatsappSquare } from 'react-icons/fa'
+import { CSSProperties, ReactNode } from 'react';
 import {
     CardContainer,
     Container,
     Text,
     TextContainer,
-    Title,
-    WhatsappButton
+    Title
 } from './styles';
 
 interface ContactCardProps {
@@ -19,10 +15,10 @@ interface ContactCardProps {
     contactMessage?: string;
     cardStyle?: CSSProperties;
     textStyle?: CSSProperties;
-    titleCardStyle?: CSSProperties;
+    ActionCardStyle?: CSSProperties;
     cardClassName?: string;
     textClassName?: string;
-    titleCardClassName?: string;
+    ActionCardClassName?: string;
     emailIcon?: ReactNode;
     phoneIcon?: ReactNode;
     addressIcon?: ReactNode;
@@ -42,8 +38,8 @@ export function ContactCard({
     contactMessage,
     cardStyle,
     cardClassName,
-    titleCardStyle,
-    titleCardClassName,
+    ActionCardStyle,
+    ActionCardClassName,
     textStyle,
     textClassName,
     glassEffect
@@ -56,8 +52,8 @@ export function ContactCard({
                 className={glassEffect ? 'glassEffect' : cardClassName}
             >
                 <Title
-                    style={titleCardStyle}
-                    className={titleCardClassName}
+                    style={ActionCardStyle}
+                    className={ActionCardClassName}
                 >
                     {cardTitle}
                 </Title>

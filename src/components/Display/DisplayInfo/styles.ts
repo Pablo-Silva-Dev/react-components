@@ -21,7 +21,7 @@ export const Container = styled.div`
   }
 `;
 
-export const TitleCard = styled.h3`
+export const ActionCard = styled.h3`
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 400;
   color: ${({ theme }) => theme.colors.black};

@@ -1,10 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
 
 import {
-    Container,
-    TitleCard,
-    TextCard,
-    IconsContainer
+    ActionCard, Container, IconsContainer, TextCard
 } from './styles';
 
 interface DisplayInfoProps {
@@ -26,7 +23,7 @@ export function DisplayInfo({
             style={style}
             data-testid='DisplayInfo-id'
         >
-            <TitleCard>{title}</TitleCard>
+            <ActionCard>{title}</ActionCard>
             <TextCard>{content}</TextCard>
             <IconsContainer>
                 {children}
