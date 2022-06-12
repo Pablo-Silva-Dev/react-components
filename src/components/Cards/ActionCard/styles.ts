@@ -19,9 +19,9 @@ export const SubContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadows.soft};
   border-radius: 4px;
-  margin: 4px;
+  margin: 4px auto;
   @media (max-width: 720px) {
-    width: 92%;
+    width: 98%;
   }
 `;
 
@@ -88,6 +88,11 @@ export const PrimaryActionButton = styled.button`
   &:disabled {
     background-color: ${({ theme }) => theme.colors.primary_light};
   }
+
+  @media(max-width: 720px){
+    font-size: ${({ theme }) => theme.sizes.normal}
+  }
+
 `;
 
 export const SecondaryActionButton = styled.button`
@@ -102,9 +107,15 @@ export const SecondaryActionButton = styled.button`
   margin-left: 12px;
   color: ${({ theme }) => theme.colors.primary};
   border: 1px solid ${({ theme }) => theme.colors.primary};
+  font-size: ${({ theme }) => theme.sizes.medium};
 
   &:disabled {
     background-color: ${({ theme }) => theme.colors.white};
     border-color: ${({ theme }) => theme.colors.primary_light};
   }
+
+  @media(max-width: 720px){
+    font-size: ${({ theme }) => theme.sizes.normal}
+  }
+
 `;
