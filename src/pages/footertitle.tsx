@@ -36,6 +36,7 @@ export default function FooterTitle() {
                 <PreviewContainer>
                     <FooterTitleComponent
                         content='Your content here'
+                        style={{color: theme.colors.title}}
                     />
                 </PreviewContainer>
 
@@ -64,8 +65,9 @@ export default function FooterTitle() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <FooterTitle
-                       content='Your content here'
+                    <FooterTitleComponent
+                        content='Your content here'
+                        style={{color: theme.colors.title}}
                     />"
                 />
             </ComponentContainer>

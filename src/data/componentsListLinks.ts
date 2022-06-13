@@ -16,7 +16,6 @@ export const elementsComponentsLinkList = [
   { content: "CollapsibleInfo", url: "/collapsibleinfo" },
   { content: "Divider", url: "/divider" },
   { content: "Drawer", url: "/drawer" },
-  { content: "DrawerButton", url: "/drawerbutton" },
   { content: "Footer", url: "/footer" },
   { content: "FooterFirstSection", url: "/footerfirstsection" },
   { content: "FooterLink", url: "/footerlink" },
