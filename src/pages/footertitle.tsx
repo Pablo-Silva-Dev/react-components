@@ -1,9 +1,9 @@
 import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { FooterText as FooterTextComponent } from '../components/Elements/Footer/FooterText'
+import { FooterTitle as FooterTitleComponent } from '../components/Elements/Footer/FooterTitle'
 import { SubTitle } from "../components/Typography/SubTitle";
-import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
+import { Text } from "../components/Typography/Text";
 import {
     ComponentContainer,
     Container,
@@ -12,12 +12,12 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function FooterText() {
+export default function FooterTitle() {
 
     const props = {
-        content: 'Description: Text text to display. Type: String. Required.',
-        style: 'Description: FooterText style. Type: CSS Properties.',
-        className: 'Description: FooterText className. Type: String.'
+        content: 'Description: Title Title to display. Type: String. Required.',
+        style: 'Description: FooterTitle style. Type: CSS Properties.',
+        className: 'Description: FooterTitle className. Type: String.'
     }
 
     const theme = useTheme()
@@ -27,14 +27,14 @@ export default function FooterText() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='FooterText'
+                        content='FooterTitle'
                     />
                     <Text
-                        content='Used to display texts on Footer.'
+                        content='Used to display titles for footer sections.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <FooterTextComponent
+                    <FooterTitleComponent
                        content='Your content here'
                     />
                 </PreviewContainer>
@@ -61,7 +61,7 @@ export default function FooterText() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <FooterTextComponent
+                    <FooterTitle
                        content='Your content here'
                     />"
                 />
