@@ -1,3 +1,4 @@
+import toast, { Toaster } from 'react-hot-toast';
 import { ActionCard as ActionCardComponent } from '../components/Cards/ActionCard';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { SubTitle } from "../components/Typography/SubTitle";
@@ -38,8 +39,17 @@ export default function Avatar() {
         content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book and the old ship. '
     }
 
+    function displayToast(message: string) {
+        toast.success(message)
+    }
+
     return (
         <Container>
+            <div>
+                <Toaster
+                    position='bottom-center'
+                />
+            </div>
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
@@ -51,10 +61,12 @@ export default function Avatar() {
                 </DescriptionContainer>
                 <PreviewContainer>
                     <ActionCardComponent
-                       title={cardData.title}
-                       content={cardData.content}
-                       primaryActionButtonTitle='Confirm'
-                       secondaryActionButtonTitle='Cancel'
+                        title={cardData.title}
+                        content={cardData.content}
+                        primaryActionButtonTitle='Confirm'
+                        secondaryActionButtonTitle='Cancel'
+                        primaryAction={() => displayToast('Action confirmed!')}
+                        secondaryAction={() => displayToast('Action cancelled!')}
                     />
                 </PreviewContainer>
 
@@ -91,12 +103,20 @@ export default function Avatar() {
                 />
                 <DisplayCode
                     //eslint-disable-next-line
+                    children=" function displayToast(message: string){
+                        toast.success(message)}"
+                        hideTitle
+                />
+                <DisplayCode
+                    //eslint-disable-next-line
                     children="
                     <ActionCard
                         title={cardData.title}
                         content={cardData.content}
                         primaryActionButtonTitle='Confirm'
                         secondaryActionButtonTitle='Cancel'
+                        primaryAction={() => displayToast('Action confirmed!')}
+                        secondaryAction={() => displayToast('Action cancelled!')}
                      />"
                     hideTitle
                 />

@@ -45,6 +45,9 @@ export default function CountUp() {
                         duration={2}
                         decimal=','
                         decimals={2}
+                        style={{
+                            fontSize: 40
+                        }}
                     />
                 </PreviewContainer>
 
@@ -79,6 +82,9 @@ export default function CountUp() {
                     duration={2}
                     decimal=','
                     decimals={2}
+                    style={{
+                        fontSize: 40
+                    }}
                 />"
                 />
             </ComponentContainer>
