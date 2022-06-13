@@ -18,6 +18,7 @@ export const elementsComponentsLinkList = [
   { content: "Drawer", url: "/drawer" },
   { content: "DrawerButton", url: "/drawerbutton" },
   { content: "Footer", url: "/footer" },
+  { content: "FooterAtach", url: "/footerattach" },
   { content: "GoogleMap", url: "/googlemap" },
   { content: "GroupInfo", url: "/groupinfo" },
   { content: "Header", url: "/header" },
