@@ -101,13 +101,29 @@ export default function Header() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <Header
-                        style={{
-                            backgroundColor: theme.colors.primary_light
-                        }}
-                    >
-                        <p>Your content comes here</p>
-                    </Header>"
+                    <HeaderComponent>
+                        <HeaderLogoContainer>
+                            <Logo
+                                imageUrl='/logo.png'
+                                size='medium'
+                            />
+                        </HeaderLogoContainer>
+                        <HeaderLinksContainer>
+                            <HeaderLink
+                                content='Your link'
+                                url='/'
+                            />
+                            <HeaderLink
+                                content='Your link'
+                                url='/'
+                            />
+                            <HeaderLink
+                                content='Your link'
+                                url='/'
+                            />
+                        </HeaderLinksContainer>
+                     </HeaderComponent>
+                   "
                 />
             </ComponentContainer>
         </Container>

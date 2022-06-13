@@ -1,6 +1,8 @@
 import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { Nav as NavComponent } from '../components/Elements/Nav'
+import { NavLink } from '../components/Elements/Nav/NavLink';
+import { NavTitle } from '../components/Elements/Nav/NavTitle';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -30,19 +32,42 @@ export default function Nav() {
                         content='Nav'
                     />
                     <Text
-                        content='A Nav wrapper used to mount your Nav component. It is auto responsible by default.'
+                        content='A Nav wrapper used to mount your Nav component.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
                     <NavComponent
                         style={{
                             display: 'flex',
-                            width: '50%',
                             height: 400,
-                            backgroundColor: theme.colors.primary_light
+                            backgroundColor: theme.colors.primary
                         }}
                     >
-                        <p>Your content comes here</p>
+                        <NavTitle
+                            content='NavTitle'
+                        />
+                        <NavLink
+                            content='NavLink'
+                            url='/'
+                        />
+                        <NavTitle
+                            content='NavTitle'
+                        />
+                        <NavLink
+                            content='NavLink'
+                            url='/'
+                        />
+                        <NavLink
+                            content='NavLink'
+                            url='/'
+                        />
+                        <NavTitle
+                            content='NavTitle'
+                        />
+                        <NavLink
+                            content='NavLink'
+                            url='/'
+                        />
                     </NavComponent>
                 </PreviewContainer>
 
@@ -71,16 +96,54 @@ export default function Nav() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
+                    import { NavLink } from '../components/Elements/Nav/NavLink';
+                     "
+                />
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
+                    import { NavTitle } from '../components/Elements/Nav/NavTitle';
+                "
+                    hideTitle
+                />
+                <DisplayCode
+                    //eslint-disable-next-line
+                    children="
                     <NavComponent
                         style={{
                             display: 'flex',
-                            width: '50%',
                             height: 400,
-                            backgroundColor: theme.colors.primary_light
+                            backgroundColor: theme.colors.primary
                         }}
-                    >
-                    <p>Your content comes here</p>
-                </NavComponent>"
+                         >
+                        <NavTitle
+                            content='NavTitle'
+                        />
+                        <NavLink
+                            content='NavLink'
+                            url='/'
+                        />
+                        <NavTitle
+                            content='NavTitle'
+                        />
+                        <NavLink
+                            content='NavLink'
+                            url='/'
+                        />
+                        <NavLink
+                            content='NavLink'
+                            url='/'
+                        />
+                        <NavTitle
+                            content='NavTitle'
+                        />
+                        <NavLink
+                            content='NavLink'
+                            url='/'
+                        />
+                     </NavComponent>
+                "
+                    hideTitle
                 />
             </ComponentContainer>
         </Container>

@@ -25,6 +25,7 @@ import {
     typographyComponentsLinkList
 } from '../data/componentsListLinks';
 import { Container, MainContainer } from "./styles";
+import { useTheme } from "styled-components";
 
 interface LayoutProps {
     children: ReactNode;
@@ -39,6 +40,8 @@ export default function Layout({ children }: LayoutProps) {
         setIsDrawerOpen(!isDrawerOpen)
     }
 
+    const theme = useTheme()
+
     return (
         <Container>
             <NextProgressComponent />
@@ -49,6 +52,9 @@ export default function Layout({ children }: LayoutProps) {
                         direction='left'
                     >
                         <NavTitle
+                            style={{
+                                color: theme.colors.title
+                            }}
                             content='Animations'
                         />
                         {animationComponentsLinkList.map(link => (
@@ -56,20 +62,32 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
                             />
                         ))}
                         <NavTitle
                             content='Card'
+                            style={{
+                                color: theme.colors.text
+                            }}
                         />
                         {cardsLinkList.map(link => (
                             <NavLink
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
                             />
                         ))}
 
                         <NavTitle
+                            style={{
+                                color: theme.colors.text
+                            }}
                             content='Elements'
                         />
                         {elementsComponentsLinkList.map(link => (
@@ -77,9 +95,15 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
                             />
                         ))}
                         <NavTitle
+                            style={{
+                                color: theme.colors.text
+                            }}
                             content='Forms'
                         />
                         {formComponentsLinkList.map(link => (
@@ -87,10 +111,16 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
                             />
                         ))}
 
                         <NavTitle
+                            style={{
+                                color: theme.colors.text
+                            }}
                             content='Modals'
                         />
                         {modalomponentsLinkList.map(link => (
@@ -98,10 +128,16 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
                             />
                         ))}
 
                         <NavTitle
+                            style={{
+                                color: theme.colors.text
+                            }}
                             content='Next'
                         />
                         {nextComponentsLinkList.map(link => (
@@ -109,19 +145,28 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
                             />
                         ))}
-
                         <NavTitle
-                            content='Next'
+                            style={{
+                                color: theme.colors.text
+                            }}
+                            content='Typography'
                         />
                         {typographyComponentsLinkList.map(link => (
                             <NavLink
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
                             />
                         ))}
+
                     </Drawer>
                 }
                 <DrawerButton
@@ -139,8 +184,15 @@ export default function Layout({ children }: LayoutProps) {
 
             </Header>
             <MainContainer>
-                <Nav>
+                <Nav
+                    style={{
+                        backgroundColor: theme.colors.element_base
+                    }}
+                >
                     <NavTitle
+                        style={{
+                            color: theme.colors.title
+                        }}
                         content='Animations'
                     />
                     {animationComponentsLinkList.map(link => (
@@ -148,20 +200,32 @@ export default function Layout({ children }: LayoutProps) {
                             key={link.content}
                             content={link.content}
                             url={link.url}
+                            style={{
+                                color: theme.colors.text
+                            }}
                         />
                     ))}
                     <NavTitle
                         content='Card'
+                        style={{
+                            color: theme.colors.text
+                        }}
                     />
                     {cardsLinkList.map(link => (
                         <NavLink
                             key={link.content}
                             content={link.content}
                             url={link.url}
+                            style={{
+                                color: theme.colors.text
+                            }}
                         />
                     ))}
 
                     <NavTitle
+                        style={{
+                            color: theme.colors.text
+                        }}
                         content='Elements'
                     />
                     {elementsComponentsLinkList.map(link => (
@@ -169,9 +233,15 @@ export default function Layout({ children }: LayoutProps) {
                             key={link.content}
                             content={link.content}
                             url={link.url}
+                            style={{
+                                color: theme.colors.text
+                            }}
                         />
                     ))}
                     <NavTitle
+                        style={{
+                            color: theme.colors.text
+                        }}
                         content='Forms'
                     />
                     {formComponentsLinkList.map(link => (
@@ -179,10 +249,16 @@ export default function Layout({ children }: LayoutProps) {
                             key={link.content}
                             content={link.content}
                             url={link.url}
+                            style={{
+                                color: theme.colors.text
+                            }}
                         />
                     ))}
 
                     <NavTitle
+                        style={{
+                            color: theme.colors.text
+                        }}
                         content='Modals'
                     />
                     {modalomponentsLinkList.map(link => (
@@ -190,10 +266,16 @@ export default function Layout({ children }: LayoutProps) {
                             key={link.content}
                             content={link.content}
                             url={link.url}
+                            style={{
+                                color: theme.colors.text
+                            }}
                         />
                     ))}
 
                     <NavTitle
+                        style={{
+                            color: theme.colors.text
+                        }}
                         content='Next'
                     />
                     {nextComponentsLinkList.map(link => (
@@ -201,10 +283,16 @@ export default function Layout({ children }: LayoutProps) {
                             key={link.content}
                             content={link.content}
                             url={link.url}
+                            style={{
+                                color: theme.colors.text
+                            }}
                         />
                     ))}
 
                     <NavTitle
+                        style={{
+                            color: theme.colors.text
+                        }}
                         content='Typography'
                     />
                     {typographyComponentsLinkList.map(link => (
@@ -212,6 +300,9 @@ export default function Layout({ children }: LayoutProps) {
                             key={link.content}
                             content={link.content}
                             url={link.url}
+                            style={{
+                                color: theme.colors.text
+                            }}
                         />
                     ))}
 
