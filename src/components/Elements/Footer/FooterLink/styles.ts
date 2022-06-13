@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.a`
-  font-weight: 200;
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.element_base};
   font-size: ${({ theme }) => theme.sizes.normal};
   width: 92%;

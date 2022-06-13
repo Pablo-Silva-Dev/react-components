@@ -6,13 +6,15 @@ interface FooterLinkProps {
   content: string;
   url: string;
   style?: CSSProperties;
+  className?: string;
 }
 
-export function FooterLink({ content, url, style }: FooterLinkProps) {
+export function FooterLink({ content, url, style, className }: FooterLinkProps) {
   return (
     <Link href={url} passHref>
       <Container
         style={style}
+        className={className}
       >
         {content}
       </Container>
