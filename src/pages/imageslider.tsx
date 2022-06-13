@@ -11,7 +11,7 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function Avatar() {
+export default function ImageSlider() {
 
     const props = {
         images: 'Description: An array of strings containing the images url to iterate. Type: String[]. Required.',
@@ -20,16 +20,12 @@ export default function Avatar() {
         imgDescription: 'Description: Image short description. Type: String.',
         autoPlay: 'Description: Actives autoplay if true. Type: Boolean.',
         infiniteLoop: 'Description: Actives infinite loop if true. Type: Boolean.',
+        showIndicators: 'Description: Display dots indicator if true. Type: Boolean.',
         showStatus: 'Description: Display the image array length and the current index if true. Type: Boolean.',
         interval: 'Description: The number in milliseconds to wait for leap for next image. Default: 2400.',
         
     }
 
- /*    
-    showStatus?: boolean;
-    autoPlay?: boolean;
-    interval?: number;
-    infiniteLoop?: boolean; */
 
     const images = [
         'https://images.unsplash.com/photo-1655071516416-4bd19f80c60f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80',
@@ -45,7 +41,7 @@ export default function Avatar() {
                         content='ImageSlider'
                     />
                     <Text
-                        content='A complete image card..'
+                        content='A carousel with controls and options to render a collection of images.'
                     />
                 </DescriptionContainer>
                 <PreviewContainer>

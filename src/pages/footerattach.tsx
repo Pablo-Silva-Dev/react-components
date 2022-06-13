@@ -2,7 +2,7 @@ import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { Divider } from '../components/Elements/Divider';
 import { Text } from "../components/Typography/Text";
-import { FooterAttach } from '../components/Elements/Footer/FooterAttach';
+import { FooterAttach as FooterAttachComponent } from '../components/Elements/Footer/FooterAttach';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Title } from "../components/Typography/Title";
 import {
@@ -13,7 +13,7 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function Footer() {
+export default function FooterAttach() {
 
     const props = {
         children: 'Description: React elements to display. Type: ReactNode. Required.',
@@ -35,7 +35,7 @@ export default function Footer() {
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <FooterAttach>
+                    <FooterAttachComponent>
                         <Divider />
                         <Text
                             content='PabloSilvaDev - 2022 - WebDeveloper'
@@ -43,7 +43,7 @@ export default function Footer() {
                                 fontSize: 10
                             }}
                         />
-                    </FooterAttach>
+                    </FooterAttachComponent>
                 </PreviewContainer>
 
                 <PropsContainer>

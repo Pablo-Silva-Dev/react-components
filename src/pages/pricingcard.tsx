@@ -12,7 +12,7 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function Avatar() {
+export default function PricingCard() {
 
     const resourcesList = [
         'Queue priority',

@@ -4,32 +4,30 @@ import { TestimonialCard } from '../../Cards/TestimonialCard';
 
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { ReactNode } from 'react';
 
-interface ImageSliderProps {
-    images: string[];
-    imgWidth: number;
-    imgHeight: number;
+interface CardSliderProps {
+    children: ReactNode;
     showStatus?: boolean;
     autoPlay?: boolean;
+    showIndicators?: boolean;
     interval?: number;
     infiniteLoop?: boolean;
-    showIndicators?: boolean;
 }
 
 
-export function ImageSlider({
-    images,
-    imgWidth,
-    imgHeight,
+export function CardSlider({
+    children,
     autoPlay,
     infiniteLoop,
     interval = 2400,
     showIndicators,
     showStatus
-}: ImageSliderProps) {
+}: CardSliderProps) {
 
     return (
         <Container>
+            {/*@ts-ignore*/ }
             <Carousel
                 showStatus={showStatus}
                 showArrows={false}
@@ -40,21 +38,7 @@ export function ImageSlider({
                 infiniteLoop={infiniteLoop}
                 showIndicators={showIndicators}
             >
-                {
-                    images.map((image, index) => (
-                        <>
-                            <Image
-                                src={image}
-                                alt="image"
-                                key={index}
-                                width={imgWidth}
-                                height={imgHeight}
-                                objectFit='cover'
-                            />
-                        </>
-                    ))
-                }
-
+                {children}
             </Carousel>
         </Container >
     )

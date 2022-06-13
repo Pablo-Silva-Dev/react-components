@@ -11,7 +11,7 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function Avatar() {
+export default function NewsletterCard() {
 
     const props = {
         title: 'Description: Newsletter title. Type: String. Required.',

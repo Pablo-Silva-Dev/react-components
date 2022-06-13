@@ -16,7 +16,7 @@ interface TestimonialCardProps {
     personName: string;
     personRole?: string;
     testimonial: string;
-    ratings?: "1" | "2" | "3" | "4" | "5";
+    ratings?: number;
     cardStyle?: CSSProperties;
     testimonialTextStyle?: CSSProperties;
     titleStyle?: CSSProperties;
@@ -75,7 +75,7 @@ export function TestimonialCard({
                 {ratings &&
                     <StarsContainer>
                         <StarRatings
-                            rating={parseInt(ratings)}
+                            rating={ratings}
                             starRatedColor="#ffc400"
                             numberOfStars={5}
                             starDimension="20px"

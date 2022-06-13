@@ -12,7 +12,7 @@ import {
 } from "../styles";
 import { MdEmail } from 'react-icons/md';
 
-export default function Avatar() {
+export default function ContactCard() {
 
     const props = {
         email: 'Description: The most common contact info. Email. Type: String. Required.',

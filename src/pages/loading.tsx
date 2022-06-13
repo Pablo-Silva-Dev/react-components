@@ -12,7 +12,6 @@ export default function Loading() {
         type: 'Description: Animation type. Type: "bars" | "bubbles" | "balls" | "blank" | "cylon" | "spin" | "spokes" |"cubes" | "spinningBubbles".',
         className: 'Description: ClassName. Type: String.'
 
-
     }
 
 

@@ -12,7 +12,7 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function Avatar() {
+export default function ActionCard() {
 
     const props = {
         title: 'Description: Card title. Type: String. Required.',

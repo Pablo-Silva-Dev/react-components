@@ -11,7 +11,7 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function Avatar() {
+export default function ImageCard() {
 
     const props = {
         imgUrl: 'Description: Path to find image. Type: String. Required.',
