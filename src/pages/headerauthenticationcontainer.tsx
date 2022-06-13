@@ -1,3 +1,4 @@
+import { useSession, signIn, signOut } from 'next-auth/react';
 import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { AuthenticationManager } from '../components/Elements/AuthenticationManager';
@@ -21,10 +22,12 @@ export default function HeaderAuthenticationUserContainer() {
         children: 'Description: React elements to display. Type: ReactNode. Required.',
         style: 'Description: HeaderAuthenticationUserContainer style. Type: CSS Properties.',
         className: 'Description: HeaderAuthenticationUserContainer className. Type: String.'
-        
+
     }
 
     const theme = useTheme()
+
+    const session = useSession()
 
     return (
         <Container>
@@ -44,11 +47,17 @@ export default function HeaderAuthenticationUserContainer() {
                             padding: 12
                         }}
                     >
-                     <AuthenticationManager 
-                        redirectPath='/'
-                        logInButtonTitle='Sign In'
-                        logOutButtonTitle='Sign Out'
-                     />
+                        <AuthenticationManager
+                            signInButtonTitle='Sign in'
+                            authenticationFeedbackText={
+                                session?.data ?
+                                    `Hello ${session?.data?.user.name}!`
+                                    : 'You are not authenticated.'}
+                            showsUserPhoto
+                            signIn={() => signIn('github')}
+                            signOut={signOut}
+                            signOutButtonTitle='Sign out'
+                        />
                     </HeaderAuthenticationUserContainerComponent >
                 </PreviewContainer>
 
@@ -78,17 +87,24 @@ export default function HeaderAuthenticationUserContainer() {
                     //eslint-disable-next-line
                     children="
                     <HeaderAuthenticationUserContainerComponent
-                    style={{
-                        backgroundColor: theme.colors.primary,
-                        padding: 12
-                    }}
+                        style={{
+                            backgroundColor: theme.colors.primary,
+                            padding: 12
+                        }}
                     >
-                        <AuthenticationManager 
-                            redirectPath='/'
-                            logInButtonTitle='Sign In'
-                            logOutButtonTitle='Sign Out'
+                        <AuthenticationManager
+                            signInButtonTitle='Sign in'
+                            authenticationFeedbackText={
+                                session?.data ?
+                                    `Hello ${session?.data?.user.name}!`
+                                    : 'You are not authenticated.'}
+                            showsUserPhoto
+                            signIn={() => signIn('github')}
+                            signOut={signOut}
+                            signOutButtonTitle='Sign out'
                         />
-                    </HeaderAuthenticationUserContainerComponent >"
+                    </HeaderAuthenticationUserContainerComponent >
+                    "
                 />
             </ComponentContainer>
         </Container>

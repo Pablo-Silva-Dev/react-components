@@ -40,6 +40,9 @@ export default function FooterFirstSection() {
                     <FooterFirstSectionComponent>
                         <FooterTitle
                             content='FooterTitle'
+                            style={{
+                                color: theme.colors.title
+                            }}
                         />
                         <FooterLink
                             content='FooterLink'

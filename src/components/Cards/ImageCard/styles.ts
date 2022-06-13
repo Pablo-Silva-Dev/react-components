@@ -22,7 +22,7 @@ export const ImageContainer = styled.div<ImageCardProps>`
   height: ${({ imgSize }) =>
     imgSize === "large" ? 640 : imgSize === "small" ? 480 : 320};
   padding: 16px;
-  margin: 8px;
+  margin: 4px auto;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadows.soft};

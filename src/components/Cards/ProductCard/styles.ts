@@ -44,6 +44,7 @@ export const PurchaseButton = styled.button`
   align-items: center;
   width: 240px;
   height: 40px;
+  margin: 4px auto;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 4px;
   color: ${({ theme }) => theme.colors.white};

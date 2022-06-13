@@ -1,127 +1,76 @@
-import Slider from 'react-slick'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { Container, SlickContainer } from './styles';
+import { Container, } from './styles';
 import Image from 'next/image'
+import { TestimonialCard } from '../../Cards/TestimonialCard';
+
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 interface ImageSliderProps {
-    imgAlt: string;
+    images: string[];
     imgWidth: number;
     imgHeight: number;
-    firstImgUrl: string;
-    secondImgUrl: string;
-    thirdImgUrl?: string;
-    fourthImgUrl?: string;
-    fivethImgUrl?: string;
-    sixthImgUrl?: string;
-    showDots?: boolean,
-    speed?: 250 | 500 | 750 | 1000,
-    slidesToShow?: 1 | 2 | 3 | 4 | 5 | 6,
-    slidesToScroll?: 1 | 2 | 3 | 4 | 5 | 6,
-    autoplay?: boolean,
+    showStatus?: boolean;
+    autoPlay?: boolean;
+    interval?: number;
+    infiniteLoop?: boolean;
 }
 
+
 export function ImageSlider({
-    imgAlt,
+    images,
     imgWidth,
     imgHeight,
-    firstImgUrl,
-    secondImgUrl,
-    thirdImgUrl,
-    fourthImgUrl,
-    fivethImgUrl,
-    sixthImgUrl,
-    showDots,
-    speed,
-    slidesToShow,
-    slidesToScroll,
-    autoplay
+    autoPlay,
+    infiniteLoop,
+    interval = 2400,
+    showStatus
 }: ImageSliderProps) {
 
-    const settings = {
-        dots: showDots,
-        infinite: true,
-        speed: speed,
-        slidesToShow: slidesToShow,
-        slidesToScroll: slidesToScroll,
-        autoplay,
-        acessibility: true
-    };
+
+
+  /*   const profiles = [
+        {
+            url: 'https://images.unsplash.com/photo-1654907300621-78c0edc0570a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+            name: 'Samantha Lee',
+            role: 'Designer',
+            testimonial: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        },
+        {
+            url: 'https://images.unsplash.com/photo-1655051605841-2d90737e7206?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80',
+            name: 'Alicia',
+            role: 'Designer',
+            testimonial: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        },
+
+    ] */
 
     return (
         <Container>
-            <Slider
-                {...settings}
-
+            <Carousel
+                showStatus={showStatus}
+                showArrows={false}
+                swipeable
+                emulateTouch
+                autoPlay={autoPlay}
+                interval={interval}
+                infiniteLoop={infiniteLoop}
             >
-                {firstImgUrl &&
-                    <SlickContainer>
-                        {/* eslint-disable */}
-                        <img
-                            alt={imgAlt}
-                            src={firstImgUrl}
-                            width={imgWidth}
-                            height={imgHeight}
-                        />
-                    </SlickContainer>
-                }
-                {secondImgUrl &&
-                    <SlickContainer>
-                        {/* eslint-disable */}
-                        <img
-                            alt={imgAlt}
-                            src={secondImgUrl}
-                            width={imgWidth}
-                            height={imgHeight}
-                        />
-                    </SlickContainer>
+                {
+                    images.map((image, index) => (
+                        <>
+                            <Image
+                                src={image}
+                                alt="image"
+                                key={index}
+                                width={imgWidth}
+                                height={imgHeight}
+                                objectFit='cover'
+                            />
+                        </>
+                    ))
                 }
 
-                {thirdImgUrl &&
-                    <SlickContainer>
-                        {/* eslint-disable */}
-                        <img
-                            alt={imgAlt}
-                            src={thirdImgUrl}
-                            width={imgWidth}
-                            height={imgHeight}
-                        />
-                    </SlickContainer>
-                }
-                {fourthImgUrl &&
-                    <SlickContainer>
-                        {/* eslint-disable */}
-                        <img
-                            alt={imgAlt}
-                            src={fourthImgUrl}
-                            width={imgWidth}
-                            height={imgHeight}
-                        />
-                    </SlickContainer>
-                }
-                {fivethImgUrl &&
-                    <SlickContainer>
-                        {/* eslint-disable */}
-                        <img
-                            alt={imgAlt}
-                            src={fivethImgUrl}
-                            width={imgWidth}
-                            height={imgHeight}
-                        />
-                    </SlickContainer>
-                }
-                {sixthImgUrl &&
-                    <SlickContainer>
-                        {/* eslint-disable */}
-                        <img
-                            alt={imgAlt}
-                            src={sixthImgUrl}
-                            width={imgWidth}
-                            height={imgHeight}
-                        />
-                    </SlickContainer>
-                }
-            </Slider>
-        </Container>
+            </Carousel>
+        </Container >
     )
 }

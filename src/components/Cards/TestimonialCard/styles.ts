@@ -16,7 +16,7 @@ export const SubContainer = styled.div`
   width: 320px;
   min-height: 320px;
   padding: 16px;
-  margin: 8px;
+  margin: 4px auto;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadows.soft};

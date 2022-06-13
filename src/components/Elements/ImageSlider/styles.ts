@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-display: flex
-justify-content: flex;
-align-items: center;
+width: 100%;
+@media (max-width: 720px) {
+      width: 98%;
+    }
 `;
 
 export const SlickContainer = styled.div`

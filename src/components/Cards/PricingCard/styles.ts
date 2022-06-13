@@ -14,7 +14,7 @@ export const SubContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 320px;
-  margin: 4px;
+  margin: 4px auto;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 4px;
   padding: 16px;

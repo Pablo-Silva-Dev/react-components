@@ -18,7 +18,7 @@ export const CardContainer = styled.div`
   border-radius: 4px;
   box-shadow: ${({ theme }) => theme.shadows.soft};
   padding: 16px;
-  margin: 8px;
+  margin: 4px auto;
   position: relative;
   & .card {
     backdrop-filter: blur(8px) saturate(120%);

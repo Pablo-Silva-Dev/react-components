@@ -19,7 +19,7 @@ export const SubContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 320px;
-  margin: 8px;
+  margin: 4px auto;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadows.soft};
