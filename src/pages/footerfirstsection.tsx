@@ -54,7 +54,10 @@ export default function FooterFirstSection() {
                 <PropsContainer>
                     <SubTitle
                         content='Props:'
-
+                        style={{
+                            fontSize: 20,
+                            fontWeight: 'bold'
+                        }}
                     />
                     {Object.entries(props).map(prop => (
                         <>

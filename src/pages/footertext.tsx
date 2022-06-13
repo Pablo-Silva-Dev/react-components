@@ -35,14 +35,17 @@ export default function FooterText() {
                 </DescriptionContainer>
                 <PreviewContainer>
                     <FooterTextComponent
-                       content='Your content here'
+                        content='Your content here'
                     />
                 </PreviewContainer>
 
                 <PropsContainer>
                     <SubTitle
                         content='Props:'
-                    
+                        style={{
+                            fontSize: 20,
+                            fontWeight: 'bold'
+                        }}
                     />
                     {Object.entries(props).map(prop => (
                         <>
