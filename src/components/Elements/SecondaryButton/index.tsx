@@ -1,7 +1,7 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import ReactLoading from 'react-loading';
 import { useTheme } from 'styled-components';
-import { Container } from './styles';
+import { Container, ContentContainer } from './styles';
 
 interface SecondaryButtonProps {
     title: string;
@@ -11,6 +11,7 @@ interface SecondaryButtonProps {
     size?: "tiny" | "small" | "medium" | "large";
     style?: CSSProperties;
     className?: string;
+    icon?: ReactNode;
 }
 
 export function SecondaryButton({
@@ -20,6 +21,7 @@ export function SecondaryButton({
     loading,
     style,
     size,
+    icon,
     className,
 }: SecondaryButtonProps) {
 
@@ -41,7 +43,9 @@ export function SecondaryButton({
                     width={40}
                 />
                 :
-                title
+                <ContentContainer>
+                    {icon && icon} {title}
+                </ContentContainer>
             }
         </Container>
     )

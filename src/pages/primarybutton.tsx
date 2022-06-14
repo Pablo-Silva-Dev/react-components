@@ -1,4 +1,5 @@
 import toast, { Toaster } from 'react-hot-toast'
+import { MdCheck } from 'react-icons/md';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { PrimaryButton as PrimaryButtonComponent } from '../components/Elements/PrimaryButton'
 import { SubTitle } from "../components/Typography/SubTitle";
@@ -19,6 +20,7 @@ export default function PrimaryButton() {
         onClick: 'Description: Function to invoke on button click. Type: Function. Required.',
         disabled: 'Description: Disables the button. Type: Boolean.',
         loading: 'Description: Shows loading animation if true. Type: Boolean.',
+        icon: 'Description: A space to render your own icon. Type: ReactNode.',
         size: 'Description: Button size. Type: "tiny" | "small" | "medium" | "large". Default: "Medium".',
         style: 'Description: Button style. Type: CSS Properties.',
         className: 'Description: ClassName. Type: String.'
@@ -44,7 +46,11 @@ export default function PrimaryButton() {
                     <PrimaryButtonComponent
                         onClick={() => toast.success('Primary Button')}
                         title='Confirm'
-                        size='large'
+                        icon={
+                            <MdCheck
+                                size={16}
+                            />
+                        }
                     />
                 </PreviewContainer>
 
@@ -76,7 +82,11 @@ export default function PrimaryButton() {
                     <PrimaryButton
                     onClick={() => toast.success('Primary Button')}
                     title='Confirm'
-                    size='large'
+                    icon={
+                        <MdCheck
+                            size={16}
+                        />
+                    }
                     />"
                 />
             </ComponentContainer>

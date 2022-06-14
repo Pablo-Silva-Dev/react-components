@@ -1,7 +1,7 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import ReactLoading from 'react-loading';
 import { useTheme } from 'styled-components';
-import { Container } from './styles';
+import { Container, ContentContainer } from './styles';
 
 interface PrimaryButtonProps {
     title: string;
@@ -11,6 +11,7 @@ interface PrimaryButtonProps {
     size?: "tiny" | "small" | "medium" | "large";
     style?: CSSProperties;
     className?: string;
+    icon?: ReactNode;
 }
 
 export function PrimaryButton({
@@ -18,6 +19,7 @@ export function PrimaryButton({
     onClick,
     disabled,
     loading,
+    icon,
     style,
     size,
     className,
@@ -33,6 +35,7 @@ export function PrimaryButton({
             className={className}
             size={size}
         >
+            
             {loading ?
                 <ReactLoading
                     type='bubbles'
@@ -41,8 +44,11 @@ export function PrimaryButton({
                     width={40}
                 />
                 :
-                title
+                <ContentContainer>
+                    {icon && icon} {title}
+                </ContentContainer>
             }
+
         </Container>
     )
 }

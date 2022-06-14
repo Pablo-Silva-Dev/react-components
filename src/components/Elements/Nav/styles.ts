@@ -5,15 +5,18 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 16px;
   width: 12vw;
-  height: 100vh;
+  max-height: 100vh;
   overflow: auto;
+  overflow-x: hidden;
   background-color: ${({ theme }) => theme.colors.primary};
   @media (max-width: 1440px) {
     width: 20vw;
   }
+  @media (max-width: 1080px) {
+    width: 28vw;
+  }
   @media (max-width: 720px) {
     display: none;
-    width: 56%;
     overflow-x: hidden;
   }
 `;

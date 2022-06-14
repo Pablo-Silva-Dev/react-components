@@ -26,7 +26,14 @@ export const Container = styled.button<PrimaryButtonProps>`
   &:disabled {
     background-color: ${({ theme }) => theme.colors.primary_light};
   }
-  @media(max-width: 720px){
+  @media (max-width: 720px) {
     font-size: ${({ theme }) => theme.sizes.normal};
   }
+`;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 72%;
 `;

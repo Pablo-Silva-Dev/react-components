@@ -5,9 +5,15 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   flex-grow: auto;
-  width: 80vw;
-  min-height: 80vh;
+  width: 88vw;
+  margin: 0 auto;
   padding: 40px;
+  @media (max-width: 1440px) {
+    width: 84vw;
+  }
+  @media (max-width: 1080px) {
+    width: 72vw;
+  }
   @media (max-width: 720px) {
     width: 98%;
   }
@@ -18,8 +24,24 @@ export const ComponentContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 800px;
-  @media (max-width: 1080px) {
+  @media (max-width: 1440px) {
     width: 640px;
+  }
+  @media (max-width: 1080px) {
+    width: 480px;
+  }
+  @media (max-width: 720px) {
+    width: 100%;
+  }
+`;
+
+export const HomeContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 920px;
+  @media (max-width: 1080px) {
+    width: 480px;
   }
   @media (max-width: 720px) {
     width: 100%;

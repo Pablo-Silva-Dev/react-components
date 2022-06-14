@@ -83,12 +83,12 @@ export default function Layout({ children }: LayoutProps) {
                             style={{
                                 color: theme.colors.primary_dark,
                             }}
-                            content='Download'
+                            content='Getting Started'
                         />
 
                         <NavLink
-                            content='Download'
-                            url='/#download'
+                            content='Getting Started'
+                            url='/#Getting Started'
                             style={{
                                 color: theme.colors.text
                             }}
@@ -229,7 +229,7 @@ export default function Layout({ children }: LayoutProps) {
                 <HeaderLogoContainer>
                     <Logo
                         imageUrl='/logo.png'
-                        size='medium'
+                        size='small'
                     />
                 </HeaderLogoContainer>
                 <HeaderLinksContainer>
@@ -238,8 +238,8 @@ export default function Layout({ children }: LayoutProps) {
                         url='/#introduction'
                     />
                     <HeaderLink
-                        content="Download"
-                        url='/#download'
+                        content="Getting Started"
+                        url='/#Getting Started'
                     />
                     <HeaderLink
                         content="Make a donation"
@@ -269,26 +269,26 @@ export default function Layout({ children }: LayoutProps) {
                         }}
                     />
                     <Divider
-                        style={{ background: theme.colors.primary }}
+                        style={{ background: theme.colors.silver }}
                     />
 
                     <NavTitle
                         style={{
                             color: theme.colors.primary_dark,
                         }}
-                        content='Download'
+                        content='Getting Started'
                     />
 
                     <NavLink
-                        content='Download'
-                        url='/#download'
+                        content='Getting Started'
+                        url='/#gettingstarted'
                         style={{
                             color: theme.colors.text
                         }}
                     />
 
                     <Divider
-                        style={{ background: theme.colors.primary }}
+                        style={{ background: theme.colors.silver }}
                     />
                     <NavTitle
                         style={{
@@ -425,11 +425,11 @@ export default function Layout({ children }: LayoutProps) {
             >
                 <FooterFirstSection>
                     <FooterTitle
-                        content='Download'
+                        content='Introduction'
                     />
                     <FooterLink
-                        content='Download the library here'
-                        url='/'
+                        content='Access the introduction'
+                        url='/#introduction'
                     />
                 </FooterFirstSection>
                 <FooterSecondSection>
