@@ -133,6 +133,7 @@ export default function CardSlider() {
                     ]"
                 />
                 <DisplayCode
+                    //eslint-disable-next-line
                     children="
                     <CardSliderComponent
                        infiniteLoop

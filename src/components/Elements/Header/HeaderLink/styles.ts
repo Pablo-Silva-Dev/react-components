@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.a`
   font-size: ${({ theme }) => theme.sizes.large};
-  font-weight: 400;
-  color: ${({ theme }) => theme.colors.element_base};
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.white};
   width: 92%;
   max-width: 240px;
   word-wrap: break-word;

@@ -24,8 +24,14 @@ import {
     nextComponentsLinkList,
     typographyComponentsLinkList
 } from '../data/componentsListLinks';
-import { Container, MainContainer } from "./styles";
+import { Container, CountryCreditContainer, MainContainer } from "./styles";
 import { useTheme } from "styled-components";
+import { SocialIcons } from "../components/Elements/SocialIcons";
+import { HeaderLinksContainer } from "../components/Elements/Header/HeaderLinksContainer";
+import { HeaderLink } from "../components/Elements/Header/HeaderLink";
+import { Divider } from "../components/Elements/Divider";
+import { FooterText } from "../components/Elements/Footer/FooterText";
+import { NextImage } from "../components/Next/NextImage";
 
 interface LayoutProps {
     children: ReactNode;
@@ -45,12 +51,58 @@ export default function Layout({ children }: LayoutProps) {
     return (
         <Container>
             <NextProgressComponent />
-            <Header>
+            <Header
+                style={{
+                    backgroundColor: theme.colors.black
+                }}
+            >
                 {isDrawerOpen &&
                     <Drawer
                         toggleDrawer={toggleDrawer}
                         direction='left'
                     >
+                        <NavTitle
+                            style={{
+                                color: theme.colors.primary_dark,
+                            }}
+                            content='Introduction'
+                        />
+
+                        <NavLink
+                            content='Introduction'
+                            url='/#introduction'
+                            style={{
+                                color: theme.colors.text
+                            }}
+                        />
+                        <Divider
+                            style={{ background: theme.colors.silver }}
+                        />
+
+                        <NavTitle
+                            style={{
+                                color: theme.colors.primary_dark,
+                            }}
+                            content='Download'
+                        />
+
+                        <NavLink
+                            content='Download'
+                            url='/#download'
+                            style={{
+                                color: theme.colors.text
+                            }}
+                        />
+
+                        <Divider
+                            style={{ background: theme.colors.silver }}
+                        />
+                        <NavTitle
+                            style={{
+                                color: theme.colors.primary_dark,
+                            }}
+                            content='Components'
+                        />
                         <NavTitle
                             style={{
                                 color: theme.colors.title
@@ -180,7 +232,20 @@ export default function Layout({ children }: LayoutProps) {
                         size='medium'
                     />
                 </HeaderLogoContainer>
-
+                <HeaderLinksContainer>
+                    <HeaderLink
+                        content="Introduction"
+                        url='/#introduction'
+                    />
+                    <HeaderLink
+                        content="Download"
+                        url='/#download'
+                    />
+                    <HeaderLink
+                        content="Make a donation"
+                        url='https://www.buymeacoffee.com/pablosilvadev'
+                    />
+                </HeaderLinksContainer>
 
             </Header>
             <MainContainer>
@@ -189,6 +254,49 @@ export default function Layout({ children }: LayoutProps) {
                         backgroundColor: theme.colors.element_base
                     }}
                 >
+                    <NavTitle
+                        style={{
+                            color: theme.colors.primary_dark,
+                        }}
+                        content='Introduction'
+                    />
+
+                    <NavLink
+                        content='Introduction'
+                        url='/#introduction'
+                        style={{
+                            color: theme.colors.text
+                        }}
+                    />
+                    <Divider
+                        style={{ background: theme.colors.primary }}
+                    />
+
+                    <NavTitle
+                        style={{
+                            color: theme.colors.primary_dark,
+                        }}
+                        content='Download'
+                    />
+
+                    <NavLink
+                        content='Download'
+                        url='/#download'
+                        style={{
+                            color: theme.colors.text
+                        }}
+                    />
+
+                    <Divider
+                        style={{ background: theme.colors.primary }}
+                    />
+                    <NavTitle
+                        style={{
+                            color: theme.colors.primary_dark,
+                        }}
+                        content='Components'
+                    />
+
                     <NavTitle
                         style={{
                             color: theme.colors.title
@@ -310,50 +418,59 @@ export default function Layout({ children }: LayoutProps) {
                 </Nav>
                 <main>{children}</main>
             </MainContainer>
-            <Footer>
+            <Footer
+                style={{
+                    backgroundColor: theme.colors.black
+                }}
+            >
                 <FooterFirstSection>
                     <FooterTitle
-                        content='Departamento'
+                        content='Download'
                     />
                     <FooterLink
-                        content='Placas de vídeo'
+                        content='Download the library here'
                         url='/'
                     />
                 </FooterFirstSection>
                 <FooterSecondSection>
                     <FooterTitle
-                        content='Departamento'
+                        content='License'
                     />
                     <FooterLink
-                        content='Placas de vídeo'
+                        content='Access our license here'
                         url='/'
                     />
                 </FooterSecondSection>
                 <FooterThirdSection>
                     <FooterTitle
-                        content='Departamento'
+                        content='Sponsor'
                     />
                     <FooterLink
-                        content='Placas de vídeo'
-                        url='/'
+                        content='If this project helps you, consider a donation'
+                        url='https://www.buymeacoffee.com/pablosilvadev'
                     />
                 </FooterThirdSection>
                 <FooterFourthSection>
                     <FooterTitle
-                        content='Departamento'
+                        content='Contact'
                     />
-                    <FooterLink
-                        content='Placas de vídeo'
-                        url='/'
+                    <SocialIcons
+                        linkedinUrl="https://www.linkedin.com/in/pablo-silva-76b521156/"
+                        githubUrl="https://github.com/pablolucio97"
+                        instagramUrl="https://www.instagram.com/pablosilva.dev/"
+                        iconsStyle={{ color: '#fff' }}
+                        iconsSize='small'
                     />
-                    <FooterLink
-                        content='Placas de vídeo'
-                        url='/'
-                    />
-                    <FooterLink
-                        content='Placas de vídeo'
-                        url='/'
-                    />
+                    <CountryCreditContainer>
+                        <FooterText
+                            content="Made in Brazil"
+                        />
+                        <NextImage
+                            height={16}
+                            width={24}
+                            imgUrl='/brazil_flag.jpg'
+                        />
+                    </CountryCreditContainer>
                 </FooterFourthSection>
             </Footer >
         </Container>
