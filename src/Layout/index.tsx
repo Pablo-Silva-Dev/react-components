@@ -427,7 +427,7 @@ export default function Layout({ children }: LayoutProps) {
             </MainContainer>
             <Footer
                 style={{
-                    backgroundColor: theme.colors.black
+                    backgroundColor: theme.colors.black,
                 }}
             >
                 <FooterFirstSection>

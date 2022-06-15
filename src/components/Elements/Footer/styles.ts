@@ -5,7 +5,7 @@ export const Container = styled.footer`
   min-height: 20vh;
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 0 auto;
   padding: 32px;
   @media (max-width: 1440px) {
@@ -25,7 +25,7 @@ export const Container = styled.footer`
 
 export const FirstContainer = styled.div`
   display: flex;
-  min-width: 240px;
+  min-width: 320px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -34,7 +34,7 @@ export const FirstContainer = styled.div`
 
 export const SecondContainer = styled.div`
   display: flex;
-  min-width: 240px;
+  min-width: 320px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -43,7 +43,7 @@ export const SecondContainer = styled.div`
 
 export const ThirdContainer = styled.div`
   display: flex;
-  min-width: 240px;
+  min-width: 320px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -52,7 +52,7 @@ export const ThirdContainer = styled.div`
 
 export const FourthContainer = styled.div`
   display: flex;
-  min-width: 240px;
+  min-width: 320px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;

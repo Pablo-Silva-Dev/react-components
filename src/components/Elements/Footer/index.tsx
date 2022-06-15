@@ -1,7 +1,7 @@
 import { CSSProperties, ReactNode } from "react";
 
 import {
-    Container,
+    Container
 } from './styles';
 
 interface FooterProps {
@@ -21,7 +21,7 @@ export function Footer({
             className={className}
         >
             {children}
-        </Container>
+        </Container >
     )
 }
 
