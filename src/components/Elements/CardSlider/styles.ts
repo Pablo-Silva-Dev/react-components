@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  
-  background-color: red;
+  width: 92%;
+
   @media (max-width: 720px) {
-    width: 98%;
+    width: 320px;
     margin: 0 auto;
   }
 

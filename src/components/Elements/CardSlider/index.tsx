@@ -1,69 +1,64 @@
-import React, { ReactElement } from 'react';
-
-import { Container, } from './styles';
+import { CSSProperties, ReactElement } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
+import { Container, } from './styles';
 
 interface CardSliderProps {
     children: ReactElement[];
-    showStatus?: boolean;
+    slidesToShow: number;
+    slidesToScroll: number;
+    showArrows?: boolean;
     autoPlay?: boolean;
     showIndicators?: boolean;
-    interval?: number;
+    transitionSpeed?: number;
     infiniteLoop?: boolean;
+    sliderContainerStyle?: CSSProperties;
+    sliderContainerClassName?: string;
 }
-
-/* personPhotoUrl: string;
-personName: string;
-personRole?: string;
-testimonial: string;
-ratings?: number;
-cardStyle?: CSSProperties;
-testimonialTextStyle?: CSSProperties;
-titleStyle?: CSSProperties;
-roletestimonialTextStyle?: CSSProperties;
-cardClassName?: string;
-titleClassName?: string;
-testimonialClassName?: string;
-roletestimonialClassName?: string;
-glassEffect?: boolean; */
-
 
 export function CardSlider({
     children,
-    autoPlay,
-    infiniteLoop,
-    interval = 2400,
+    autoPlay = true,
+    infiniteLoop = true,
+    transitionSpeed = 400,
     showIndicators,
-    showStatus
+    showArrows,
+    sliderContainerClassName,
+    sliderContainerStyle,
+    slidesToScroll,
+    slidesToShow,
 }: CardSliderProps) {
 
     var settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
+        dots: showIndicators,
+        arrows: showArrows,
+        infinite: infiniteLoop,
+        autoplay: autoPlay,
+        speed: transitionSpeed,
         slidesToShow: 1,
         slidesToScroll: 1,
+        initialSlide: 0,
         responsive: [
             {
-              breakpoint: 720,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 1
-              }
-            },
-          ]
+                breakpoint: 720,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
 
     return (
-        <Container>
+        <Container
+            className={sliderContainerClassName}
+            style={sliderContainerStyle}
+        >
             <Slider {...settings}>
-             {children}
+                {children}
             </Slider>
         </Container>
     )
