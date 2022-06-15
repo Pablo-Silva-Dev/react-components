@@ -46,7 +46,7 @@ export default function Home() {
             content='Getting Started'
           />
           <Text
-            content='I am working to publish this library on Npm, but it is a large library that contains over sixty components, and a lot of them use third libraries, it can take time. You can optionally download or clone a template repository from GitHub.'
+            content='I am working to publish this library on Npm, but it is a large library that contains over seventy components, and a lot of them use third libraries, it can take time. You can optionally download or clone a template repository from GitHub.'
           />
           <PrimaryButton
             icon={<AiOutlineGithub
