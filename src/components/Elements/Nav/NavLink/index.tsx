@@ -6,15 +6,17 @@ interface HeaderLinkProps {
   content: string;
   url: string;
   style?: CSSProperties;
+  onClick?: () => void;
   className?: string;
 }
 
-export function NavLink({ content, url, style, className }: HeaderLinkProps) {
+export function NavLink({ content, url, style, className, onClick }: HeaderLinkProps) {
   return (
     <Link href={url} passHref>
       <Container
         style={style}
         className={className}
+        onClick={onClick}
       >
         {content}
       </Container>

@@ -18,6 +18,7 @@ export default function NextLink() {
         url: 'Description: The Link address. Type: String. Required.',
         title: 'Description: The Link text to display. Type: String. Required.',
         openInSameWindow: 'Description: Define if the link should be open in the same window. Default: False.',
+        onClick: 'An optional function can be invoked at click on the link. Type: Function.',
         style: 'Description: Link style. Type: CSSProperties.',
         className: 'Description: Link className. Type: String.',
     }

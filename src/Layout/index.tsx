@@ -114,6 +114,7 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                onClick={toggleDrawer}
                                 style={{
                                     color: theme.colors.text
                                 }}
@@ -130,6 +131,7 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                onClick={toggleDrawer}
                                 style={{
                                     color: theme.colors.text
                                 }}
@@ -147,6 +149,7 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                onClick={toggleDrawer}
                                 style={{
                                     color: theme.colors.text
                                 }}
@@ -163,6 +166,7 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                onClick={toggleDrawer}
                                 style={{
                                     color: theme.colors.text
                                 }}
@@ -180,6 +184,7 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                onClick={toggleDrawer}
                                 style={{
                                     color: theme.colors.text
                                 }}
@@ -197,6 +202,7 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                onClick={toggleDrawer}
                                 style={{
                                     color: theme.colors.text
                                 }}
@@ -213,6 +219,7 @@ export default function Layout({ children }: LayoutProps) {
                                 key={link.content}
                                 content={link.content}
                                 url={link.url}
+                                onClick={toggleDrawer}
                                 style={{
                                     color: theme.colors.text
                                 }}

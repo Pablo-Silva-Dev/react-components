@@ -1,4 +1,6 @@
 
+import { MdAttachMoney} from 'react-icons/md';
+import { AiOutlineGithub} from 'react-icons/ai';
 import { PrimaryButton } from '../components/Elements/PrimaryButton';
 import { NextLink } from '../components/Next/NextLink';
 import { Text } from '../components/Typography/Text';
@@ -10,7 +12,6 @@ import {
   IntroductionSection,
   LicenseSection,
   ReferencesSection,
-  ComponentContainer,
   HomeContainer
 } from '../styles';
 
@@ -45,11 +46,17 @@ export default function Home() {
             content='Getting Started'
           />
           <Text
-            content='I am working to publish this library on Npm, but it is a large library that contains over sixty components, and a lot of them use third libraries, it can take time. You can optionally download this library from GitHub.'
+            content='I am working to publish this library on Npm, but it is a large library that contains over sixty components, and a lot of them use third libraries, it can take time. You can optionally download or clone a template repository from GitHub.'
           />
           <PrimaryButton
-            title='Download now'
-            onClick={() => handleOpenExternLink('/')}
+            icon={<AiOutlineGithub
+              size={16}
+              style={{
+                marginRight: 4
+              }}
+            />}
+            title='Access repository'
+            onClick={() => handleOpenExternLink('https://github.com/Pablo-Silva-Dev/react-useful-components-collection-template')}
           />
         </DownloadSection>
 
@@ -63,8 +70,14 @@ export default function Home() {
             content='I developed by myself over sixty components to help the React community developers. If you think this components are useful for you, consider to make a donation. Your support will help me a lot 😊.'
           />
           <PrimaryButton
+            icon={<MdAttachMoney 
+              size={16}
+              style={{
+                marginRight: 4
+              }}
+            />}
             title='Make a donation'
-            onClick={() => handleOpenExternLink('/')}
+            onClick={() => handleOpenExternLink('https://www.buymeacoffee.com/pablosilvadev')}
           />
         </DonationSection>
 

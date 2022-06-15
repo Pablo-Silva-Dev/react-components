@@ -5,7 +5,6 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 16px;
   width: 12vw;
-  max-height: 100vh;
   overflow: auto;
   overflow-x: hidden;
   background-color: ${({ theme }) => theme.colors.primary};
