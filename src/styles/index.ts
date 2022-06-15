@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-grow: auto;
   width: 88vw;
   margin: 0 auto;
-  padding: 40px;
+  padding: 16px;
   @media (max-width: 1440px) {
     width: 84vw;
   }

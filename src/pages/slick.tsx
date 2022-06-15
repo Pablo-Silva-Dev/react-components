@@ -1,9 +1,5 @@
 import React, { ReactElement } from 'react';
-
-import { Container, } from './styles';
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -32,7 +28,7 @@ roletestimonialClassName?: string;
 glassEffect?: boolean; */
 
 
-export function CardSlider({
+export default function Slick({
     children,
     autoPlay,
     infiniteLoop,
@@ -46,25 +42,32 @@ export function CardSlider({
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1,
-        responsive: [
-            {
-              breakpoint: 720,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 1
-              }
-            },
-          ]
-    };
+        slidesToScroll: 1
+      };
 
 
     return (
-        <Container>
-            <Slider {...settings}>
-             {children}
+          <div>
+              <Slider {...settings}>
+                <div>
+                    <h3>1</h3>
+                </div>
+                <div>
+                    <h3>2</h3>
+                </div>
+                <div>
+                    <h3>3</h3>
+                </div>
+                <div>
+                    <h3>4</h3>
+                </div>
+                <div>
+                    <h3>5</h3>
+                </div>
+                <div>
+                    <h3>6</h3>
+                </div>
             </Slider>
-        </Container>
+          </div>
     )
 }

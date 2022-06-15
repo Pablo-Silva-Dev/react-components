@@ -63,7 +63,7 @@ export default function ProductCard() {
                         addToCart={async () => { }}
                         imgUrl={product.url}
                         addToFavorites={async () => { }}
-                        ratings='3'
+                        ratings='4'
                         title={product.title}
                         price={product.price}
                         priceOnCredit='10 x $99.9'
@@ -93,16 +93,7 @@ export default function ProductCard() {
                         </>
                     ))}
                 </PropsContainer>
-                <DisplayCode
-                    //eslint-disable-next-line
-                    children="
-                    const product = {
-                        url: 'https://images.kabum.com.br/produtos/fotos/181089/processador-amd-ryzen-7-5700g-3-8ghz-4-6ghz-max-turbo-am4-video-integrado-8-nucleos-100-100000263box_1627588652_gg.jpg',
-                        title: 'AMD Ryzen 7 5700G, 3.8GHz (4.6GHz Max Turbo), AM4',
-                        price: '$499.99'
-                    }
-                "
-                />
+             
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
@@ -110,13 +101,13 @@ export default function ProductCard() {
                     addToCart={async () => { }}
                     imgUrl={product.url}
                     addToFavorites={async () => { }}
-                    ratings='3'
+                    ratings='4'
                     title={product.title}
                     price={product.price}
                     priceOnCredit='10 x $99.9'
                     addToCartButtonTitle='Add to cart'
                     />"
-                    hideTitle
+                  
                 />
             </ComponentContainer>
         </Container>

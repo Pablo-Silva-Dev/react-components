@@ -64,8 +64,7 @@ export default function Avatar() {
                     //eslint-disable-next-line
                     children="
                     <Avatar
-                        imageUrl='https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80'
-                        size='large'
+                        imageUrl={imgUrl}
                     />"
                 />
             </ComponentContainer>

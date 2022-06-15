@@ -84,17 +84,6 @@ export default function TestimonialCard() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    const profile = {
-                        url: 'https://images.unsplash.com/photo-1654907300621-78c0edc0570a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
-                        name: 'Samantha Lee',
-                        role: 'Designer',
-                        testimonial: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
-                    }
-                "
-                />
-                <DisplayCode
-                    //eslint-disable-next-line
-                    children="
                     <TestimonialCardComponent
                         personName={profile.name}
                         ratings={profile.ratings}
@@ -102,7 +91,6 @@ export default function TestimonialCard() {
                         testimonial={profile.testimonial}
                         personRole={profile.role}
                     />"
-                    hideTitle
                 />
             </ComponentContainer>
         </Container>

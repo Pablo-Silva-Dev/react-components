@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 100%;
   border-radius: 4px;
   padding: 16px;
   box-shadow: ${({ theme }) => theme.shadows.soft};

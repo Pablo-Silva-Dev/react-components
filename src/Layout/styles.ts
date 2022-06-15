@@ -12,6 +12,7 @@ export const MainContainer = styled.div`
   @media (max-width: 1080px) {
     justify-content: center;
   }
+ 
 `;
 
 export const CountryCreditContainer = styled.div`

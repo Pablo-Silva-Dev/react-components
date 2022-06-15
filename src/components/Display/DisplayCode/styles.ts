@@ -8,6 +8,7 @@ export const Container = styled.div`
 
   padding: 16px;
   background-color: ${({ theme }) => theme.colors.black};
+
 `;
 
 export const Title = styled.span`

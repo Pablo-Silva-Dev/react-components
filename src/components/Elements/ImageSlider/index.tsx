@@ -39,6 +39,7 @@ export function ImageSlider({
                 interval={interval}
                 infiniteLoop={infiniteLoop}
                 showIndicators={showIndicators}
+                className=""
             >
                 {
                     images.map((image, index) => (

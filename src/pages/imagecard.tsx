@@ -75,7 +75,7 @@ export default function ImageCard() {
                     //eslint-disable-next-line
                     children="
                     <ImageCardComponent
-                    imgUrl='https://images.unsplash.com/photo-1597784968750-d961bbcf3f0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80'
+                    imgUrl={imageUrl}
                     imgTitle='Forest'
                     imgDescription='Amazing travel to forest.'
                    />"
