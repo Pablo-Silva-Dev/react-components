@@ -6,7 +6,7 @@ export const Container = styled.div`
   justify-content: space-evenly;
   align-items: flex-start;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white100};
   box-shadow: ${({theme}) => theme.shadows.soft};
   border-left: 2px solid ${({ theme }) => theme.colors.primary};
   margin: 8px auto;

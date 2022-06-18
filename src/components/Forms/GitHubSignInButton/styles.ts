@@ -14,19 +14,19 @@ export const Container = styled.button<GithubSignInButtonProps>`
   border-radius: 4px;
   box-shadow: ${({ theme }) => theme.shadows.soft};
   background-color: ${({ themeColor, theme }) =>
-    themeColor === "dark" ? theme.colors.black : theme.colors.white};
+    themeColor === "dark" ? theme.colors.black : theme.colors.white100};
 
   &:disabled {
     opacity: 0.8;
     background-color: ${({ theme, themeColor }) =>
-      themeColor === "dark" ? theme.colors.black : theme.colors.white};
+      themeColor === "dark" ? theme.colors.black : theme.colors.white100};
     cursor: default;
   }
 `;
 
 export const Title = styled.h4<GithubSignInButtonProps>`
   color: ${({ themeColor, theme }) =>
-    themeColor === "dark" ? theme.colors.white : theme.colors.black};
+    themeColor === "dark" ? theme.colors.white100 : theme.colors.black};
   margin-left: 12px;
   font-size: ${({ theme }) => theme.sizes.medium};
   @media(max-width: 720px){

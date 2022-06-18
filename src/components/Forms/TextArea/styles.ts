@@ -32,7 +32,7 @@ export const TextAreaElement = styled.textarea`
 
 export const Counter = styled.p`
   color: ${({ theme }) => theme.colors.primary};
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.white100};
   font-size: ${({ theme }) => theme.sizes.xsmall};
   font-weight: 700;
   z-index: 999;

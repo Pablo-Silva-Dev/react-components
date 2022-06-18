@@ -17,7 +17,7 @@ export const IconContainer = styled.div`
   width: 37px;
   margin: 2px 4px 2px;
   margin-top: 1px;
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.white100};
   border-radius: 4px;
   margin-right: 2px;
 `;
@@ -34,7 +34,7 @@ export const Input = styled.input`
   height: 40px;
   margin: 0 4px 0 2px;
   padding: 16px;
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.white100};
   border: 2px solid ${({ theme }) => theme.colors.element_base};
   font-size: ${({ theme }) => theme.sizes.medium};
 
@@ -63,7 +63,7 @@ export const ChakraEmailInput = styled(ChakraInput)`
   height: 40px;
   margin: 2px auto;
   padding: 16px;
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.white100};
   border: 2px solid ${({ theme }) => theme.colors.element_base};
   font-size: ${({ theme }) => theme.sizes.medium};
 

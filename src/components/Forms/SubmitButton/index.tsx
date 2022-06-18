@@ -40,7 +40,7 @@ export function SubmitButton({
             {loading ?
                 <ReactLoading
                     type='bubbles'
-                    color={theme.colors.white}
+                    color={theme.colors.white100}
                     height={40}
                     width={40}
                     data-testid='submit-button-children-test-id'

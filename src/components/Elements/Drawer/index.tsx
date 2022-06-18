@@ -50,7 +50,7 @@ export function Drawer({
                     <MdClose
                         onClick={toggleDrawer}
                         size={32}
-                        color={theme.colors.white}
+                        color={theme.colors.white100}
                         role='dialog'
                     />
                 </CloseMenuButton>

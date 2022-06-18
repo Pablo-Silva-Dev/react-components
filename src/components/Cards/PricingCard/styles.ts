@@ -15,7 +15,7 @@ export const SubContainer = styled.div`
   align-items: center;
   width: 320px;
   margin: 4px auto;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white100};
   border-radius: 4px;
   padding: 16px;
   position: relative;
@@ -84,7 +84,7 @@ export const PurchaseButton = styled.button`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.success};
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white100};
   font-weight: 500;
   border-radius: 4px;
   width: 88%;
@@ -126,7 +126,7 @@ export const RecommendationBadge = styled.div`
   height: 32px;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white100};
   font-size: ${({ theme }) => theme.sizes.medium};
   font-weight: 600;
   z-index: 999;

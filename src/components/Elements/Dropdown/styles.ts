@@ -1,11 +1,11 @@
-import styled from "styled-components";
 import { darken } from "polished";
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white100};
   align-items: center;
   box-shadow: ${({ theme }) => theme.shadows.soft};
   border-radius: 4px;

@@ -16,7 +16,7 @@ export const SubContainer = styled.div`
   align-items: center;
   width: 320px;
   min-height: 240px;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white100};
   box-shadow: ${({ theme }) => theme.shadows.soft};
   border-radius: 4px;
   margin: 4px auto;
@@ -47,7 +47,7 @@ export const ContentContainer = styled.div`
 export const Title = styled.h2`
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white100};
   @media (max-width: 720px) {
     font-size: ${({ theme }) => theme.sizes.medium};
   }
@@ -82,7 +82,7 @@ export const PrimaryActionButton = styled.button`
   height: 40px;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 4px;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white100};
   font-size: ${({ theme }) => theme.sizes.medium};
 
   &:disabled {
@@ -110,7 +110,7 @@ export const SecondaryActionButton = styled.button`
   font-size: ${({ theme }) => theme.sizes.medium};
 
   &:disabled {
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.white100};
     border-color: ${({ theme }) => theme.colors.primary_light};
   }
 

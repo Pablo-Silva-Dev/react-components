@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.h3`
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white100};
   width: 92%;
   max-width: 240px;
   word-wrap: break-word;

@@ -40,7 +40,7 @@ export function PrimaryButton({
             {loading ?
                 <ReactLoading
                     type='bubbles'
-                    color={theme.colors.white}
+                    color={theme.colors.white100}
                     height={40}
                     width={40}
                 />

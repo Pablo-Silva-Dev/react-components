@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import Image from "next/image";
+import styled from "styled-components";
 
 interface ProfileCardProps {
   bgColor?: string;
@@ -21,7 +21,7 @@ export const SubContainer = styled.div`
   width: 320px;
   margin: 4px auto;
   border-radius: 4px;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white100};
   box-shadow: ${({ theme }) => theme.shadows.soft};
   @media (max-width: 720px) {
     width: 98%;

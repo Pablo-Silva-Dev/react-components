@@ -1,8 +1,8 @@
 import { CSSProperties } from 'react';
+import { FaFacebook } from 'react-icons/fa';
 import ReactLoading, { LoadingProps } from 'react-loading';
 import { useTheme } from 'styled-components';
 import { Container, Title } from './styles';
-import { FaFacebook } from 'react-icons/fa'
 
 interface FacebookSignInButtonProps {
     title: string;
@@ -40,7 +40,7 @@ export function FacebookSignInButton({
             {loading ?
                 <ReactLoading
                     type={animationType ? animationType : 'bubbles'}
-                    color={themeColor === 'dark' ? theme.colors.white : theme.colors.primary}
+                    color={themeColor === 'dark' ? theme.colors.white100 : theme.colors.primary}
                     height={36}
                     width={36}
                     data-testid='submit-button-children-test-id'

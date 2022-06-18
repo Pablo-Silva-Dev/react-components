@@ -26,7 +26,7 @@ export const Container = styled.button<SecondaryButtonProps>`
   font-size: ${({ theme }) => theme.sizes.medium};
 
   &:disabled {
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.white100};
     border-color: ${({ theme }) => theme.colors.primary_light};
   }
 
