@@ -53,7 +53,7 @@ export default function AuthenticationManager() {
                         signInButtonTitle='Sign in'
                         authenticationFeedbackText={
                             session?.data ?
-                                `Hello ${session?.data?.user.name}!`
+                                `Hello ${session!.data!.user!.name!}!`
                                 : 'You are not authenticated.'}
                         showsUserPhoto
                         signIn={() => signIn('github')}

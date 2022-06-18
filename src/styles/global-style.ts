@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     button{
         display: flex;
         justify-content: center;
-        aling-text-align: center;
+        text-align: center;
         border: none;
         cursor: pointer;
         padding: 4px;
