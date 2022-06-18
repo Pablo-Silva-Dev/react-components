@@ -15,7 +15,7 @@ interface JSONObject {
 interface JSONArray extends Array<JSONValue> { }
 
 interface LottieAnimationProps {
-    animation: JSONObject,
+    animation: JSONArray,
     height: number;
     width: number;
     loop?: boolean,

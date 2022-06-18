@@ -14,6 +14,8 @@ import { DisplayCode } from '../components/Display/DisplayCode';
 
 export default function Lottie() {
 
+    console.log(typeof animation)
+
     const props = {
         animation: 'Description: Animation size. Type: JSON object. Required.',
         width: 'Description: Animation width. Type: Number. Required.',
@@ -36,6 +38,7 @@ export default function Lottie() {
                 </DescriptionContainer>
                 <PreviewContainer>
                     <LottieAnimation
+                    //@ts-ignore
                         animation={animation}
                         width={300}
                         height={300}
