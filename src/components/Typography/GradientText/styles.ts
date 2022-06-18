@@ -6,7 +6,7 @@ interface GradientTextProps {
 }
 
 export const GradientText = styled(Gradient)<GradientTextProps>`
-  color: ${({ theme }) => theme.colors.black100100};
+  color: ${({ theme }) => theme.colors.black100};
   @media (max-width: 1080px) {
     font-size: ${({ theme, textType }) =>
       textType === "title"
