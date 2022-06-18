@@ -16,7 +16,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.white100100};
+  background-color: ${({ theme }) => theme.colors.white100};
   width: 320px;
   border-radius: 4px;
   box-shadow: ${({ theme }) => theme.shadows.soft};
@@ -88,7 +88,7 @@ export const WhatsappButton = styled.button`
   height: 56px;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.success};
-  color: ${({ theme }) => theme.colors.white100100};
+  color: ${({ theme }) => theme.colors.white100};
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 500;
   @media (max-width: 720px) {

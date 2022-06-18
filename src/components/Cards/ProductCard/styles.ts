@@ -13,7 +13,7 @@ export const SubContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.white100100};
+  background-color: ${({ theme }) => theme.colors.white100};
   width: 320px;
   min-height: 320px;
   border-radius: 4px;
@@ -47,7 +47,7 @@ export const PurchaseButton = styled.button`
   margin: 4px auto;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 4px;
-  color: ${({ theme }) => theme.colors.white100100};
+  color: ${({ theme }) => theme.colors.white100};
 
   &:disabled {
     background-color: ${({ theme }) => theme.colors.primary_light};
@@ -65,7 +65,7 @@ export const FavoriteButton = styled.button`
   height: 32px;
   background-color: transparent;
   border-radius: 4px;
-  color: ${({ theme }) => theme.colors.white100100};
+  color: ${({ theme }) => theme.colors.white100};
   position: absolute;
   left: 272px;
   top: 12px;
@@ -83,7 +83,7 @@ export const ShareButton = styled.button`
   height: 32px;
   background-color: transparent;
   border-radius: 4px;
-  color: ${({ theme }) => theme.colors.white100100};
+  color: ${({ theme }) => theme.colors.white100};
   position: absolute;
   left: 232px;
   top: 12px;

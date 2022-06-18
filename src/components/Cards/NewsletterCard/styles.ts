@@ -19,7 +19,7 @@ export const NewsletterContainer = styled.div`
   margin: 4px auto;
   padding: 16px;
   border-radius: 4px;
-  background-color: ${({ theme }) => theme.colors.white100100};
+  background-color: ${({ theme }) => theme.colors.white100};
 
   @media (max-width: 1080px) {
     width: 96%;
@@ -65,7 +65,7 @@ export const Input = styled.input`
   height: 40px;
   padding: 16px;
   margin-left: 4px;
-  background: ${({ theme }) => theme.colors.white100100};
+  background: ${({ theme }) => theme.colors.white100};
   border: 2px solid ${({ theme }) => theme.colors.element_base};
 
   &:focus {
@@ -97,7 +97,7 @@ export const SubmitButton = styled.button`
   margin-left: 4px;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 4px;
-  color: ${({ theme }) => theme.colors.white100100};
+  color: ${({ theme }) => theme.colors.white100};
 
   &:disabled {
     background-color: ${({ theme }) => theme.colors.primary_light};

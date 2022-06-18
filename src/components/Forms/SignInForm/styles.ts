@@ -9,7 +9,7 @@ export const Container = styled.div`
   border-radius: 4px;
   padding: 16px;
   box-shadow: ${({ theme }) => theme.shadows.soft};
-  background-color: ${({ theme }) => theme.colors.white100100};
+  background-color: ${({ theme }) => theme.colors.white100};
   & button {
     margin-top: 4px;
   }

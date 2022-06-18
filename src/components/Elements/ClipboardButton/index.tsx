@@ -39,7 +39,7 @@ export function ClipboardButton({
                 size={32}
                 className={iconClassName}
                 style={iconStyle || {
-                    backgroundColor: theme.colors.white100100,
+                    backgroundColor: theme.colors.white100,
                     padding: 8,
                     borderRadius: 4,
                     margin: 8

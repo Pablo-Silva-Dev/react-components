@@ -21,7 +21,7 @@ export const Container = styled(Modal)<ModalBoxProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.white100100};
+  background-color: ${({ theme }) => theme.colors.white100};
   border-radius: 4px;
   padding: 16px;
   border: 0;

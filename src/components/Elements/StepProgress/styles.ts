@@ -40,7 +40,7 @@ export const StepItem = styled.div`
   margin: 8px;
   border-radius: 50%;
   background: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.white100100};
+  color: ${({ theme }) => theme.colors.white100};
 `;
 
 export const StepTitle = styled.h4`

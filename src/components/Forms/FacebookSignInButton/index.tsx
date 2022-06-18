@@ -40,7 +40,7 @@ export function FacebookSignInButton({
             {loading ?
                 <ReactLoading
                     type={animationType ? animationType : 'bubbles'}
-                    color={themeColor === 'dark' ? theme.colors.white100100 : theme.colors.primary}
+                    color={themeColor === 'dark' ? theme.colors.white100 : theme.colors.primary}
                     height={36}
                     width={36}
                     data-testid='submit-button-children-test-id'
