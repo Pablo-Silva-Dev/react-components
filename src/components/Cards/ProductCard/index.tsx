@@ -124,7 +124,7 @@ export function ProductCard({
         />
         <RatingsContainer>
           <StarRatings
-            rating={parseInt(ratings)}
+            rating={parseInt(ratings!)}
             starRatedColor="#ffc400"
             numberOfStars={5}
             starDimension="20px"
