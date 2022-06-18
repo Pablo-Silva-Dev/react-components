@@ -1,27 +1,17 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import {
   MdFavoriteBorder,
-  MdOutlineFavorite,
-  MdOutlineStarPurple500,
-  MdShare,
+  MdOutlineFavorite, MdShare,
   MdShoppingCart
-} from 'react-icons/md'
+} from 'react-icons/md';
+import StarRatings from 'react-star-ratings';
 import { useTheme } from 'styled-components';
-import StarRatings from 'react-star-ratings'
 
-import {
-  Container,
-  RatingsContainer,
-  Title,
-  PurchaseButton,
-  FavoriteButton,
-  PriceText,
-  Text,
-  PriceOnCreditText,
-  ShareButton,
-  SubContainer,
-} from './styles';
 import { CSSProperties, ReactNode } from 'react';
+import {
+  Container, FavoriteButton, PriceOnCreditText, PriceText, PurchaseButton, RatingsContainer, ShareButton,
+  SubContainer, Title
+} from './styles';
 
 interface ProductCardProps {
   title: string;
@@ -106,7 +96,7 @@ export function ProductCard({
           onClick={share}
         >
           <MdShare
-            color={theme.colors.silver}
+            color={theme.colors.silver100}
             size={24}
           />
         </ShareButton>

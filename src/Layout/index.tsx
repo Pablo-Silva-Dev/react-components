@@ -76,7 +76,7 @@ export default function Layout({ children }: LayoutProps) {
                             }}
                         />
                         <Divider
-                            style={{ background: theme.colors.silver }}
+                            style={{ background: theme.colors.silver100 }}
                         />
 
                         <NavTitle
@@ -95,7 +95,7 @@ export default function Layout({ children }: LayoutProps) {
                         />
 
                         <Divider
-                            style={{ background: theme.colors.silver }}
+                            style={{ background: theme.colors.silver100 }}
                         />
                         <NavTitle
                             style={{
@@ -276,7 +276,7 @@ export default function Layout({ children }: LayoutProps) {
                         }}
                     />
                     <Divider
-                        style={{ background: theme.colors.silver }}
+                        style={{ background: theme.colors.silver100 }}
                     />
 
                     <NavTitle
@@ -295,7 +295,7 @@ export default function Layout({ children }: LayoutProps) {
                     />
 
                     <Divider
-                        style={{ background: theme.colors.silver }}
+                        style={{ background: theme.colors.silver100 }}
                     />
                     <NavTitle
                         style={{
