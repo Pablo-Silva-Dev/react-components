@@ -4,10 +4,10 @@ import { FieldError } from 'react-hook-form'
 import { ChakraTextInput } from './styles';
 
 interface TextInputInputValidatorProps extends InputProps{
-    error: FieldError;
+    error?: FieldError;
     TextInputPlaceholder?: string;
     textInputPlaceholder?: string;
-    style: CSSProperties;
+    style?: CSSProperties;
     className?: string;
 }
 

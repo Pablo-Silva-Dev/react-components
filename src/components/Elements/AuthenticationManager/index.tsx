@@ -58,7 +58,7 @@ export function AuthenticationManager({
             >
                 {showsUserPhoto &&
                     <Image
-                        src={session.user.image}
+                        src={session!.user!.image!}
                         width={
                             photoSize === 'small' ?
                                 40 :
@@ -91,7 +91,7 @@ export function AuthenticationManager({
                     </Text>
                 }
                 <SignOutButton
-                    onClick={() => signOut()}
+                    onClick={() => signOut!()}
                     style={signOutButtonStyle}
                     className={signOutButtonClassName}
                 >
@@ -117,7 +117,7 @@ export function AuthenticationManager({
                     </Text>
                 }
                 <SignInButton
-                    onClick={() => signIn()}
+                    onClick={() => signIn!()}
                     style={signInButtonStyle}
                     className={signInButtonClassName}
                 >

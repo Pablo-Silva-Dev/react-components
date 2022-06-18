@@ -4,9 +4,9 @@ import { FieldError } from 'react-hook-form'
 import { ChakraPasswordInput } from './styles';
 
 interface PasswordInputValidatorProps extends InputProps{
-    error: FieldError;
+    error?: FieldError;
     passwordPlaceholder?: string;
-    style: CSSProperties;
+    style?: CSSProperties;
     className?: string;
 }
 

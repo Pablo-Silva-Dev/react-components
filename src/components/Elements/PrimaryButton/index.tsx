@@ -1,6 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
 import ReactLoading from 'react-loading';
 import { useTheme } from 'styled-components';
+
 import { Container, ContentContainer } from './styles';
 
 interface PrimaryButtonProps {

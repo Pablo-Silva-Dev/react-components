@@ -1,5 +1,6 @@
 import { CSSProperties } from 'react';
 import Link from 'next/link'
+
 import { Container } from './styles';
 
 interface HeaderLinkProps {

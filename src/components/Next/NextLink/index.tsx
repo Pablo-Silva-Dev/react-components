@@ -30,8 +30,8 @@ export function NextLink({
                         '_blank'
                 }
             >
-                {title
-                }</TextLink>
+                {title}
+            </TextLink>
         </Link>
     )
 }

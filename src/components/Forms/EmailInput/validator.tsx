@@ -4,9 +4,9 @@ import { FieldError } from 'react-hook-form'
 import { ChakraEmailInput } from './styles';
 
 interface EmailInputValidatorProps extends InputProps {
-    error: FieldError;
+    error?: FieldError;
     emailPlaceholder?: string;
-    style: CSSProperties;
+    style?: CSSProperties;
     className?: string;
 }
 

@@ -141,7 +141,7 @@ export function SignUpForm({
                     <GoogleSignInButton
                         disabled={buttonsDisabled}
                         title={googleSignInButtonTitle}
-                        onClick={SignInWithGoogle}
+                        onClick={SignInWithGoogle!}
                         className={googleSignInButtonClassName}
                         style={googleSignInButtonStyle}
                     />
@@ -151,7 +151,7 @@ export function SignUpForm({
                     <GitHubSignInButton
                         disabled={buttonsDisabled}
                         title={githubSignInButtonTitle}
-                        onClick={SignInWithGitHub}
+                        onClick={SignInWithGitHub!}
                         className={githubSignInButtonClassName}
                         style={githubSignInButtonStyle}
                     />
@@ -161,7 +161,7 @@ export function SignUpForm({
                     <FacebookSignInButton
                         disabled={buttonsDisabled}
                         title={facebookSignInButtonTitle}
-                        onClick={SignInWithFacebook}
+                        onClick={SignInWithFacebook!}
                         className={facebookSignInButtonClassName}
                         style={facebookSignInButtonStyle}
                     />
@@ -210,7 +210,7 @@ export function SignUpForm({
             <SubmitButton
                 title={submitButtonTitle}
                 disabled={buttonsDisabled}
-                onClick={submit}
+                onClick={submit!}
                 loading={buttonsLoading}
                 className={submitButtonClassName}
                 style={submitButtonStyle}

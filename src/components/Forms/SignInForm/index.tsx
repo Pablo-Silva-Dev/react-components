@@ -128,7 +128,7 @@ export function SignInForm({
                     <GoogleSignInButton
                         disabled={buttonsDisabled}
                         title={googleSignInButtonTitle}
-                        onClick={signInWithGoogle}
+                        onClick={signInWithGoogle!}
                         className={googleSignInButtonClassName}
                         style={googleSignInButtonStyle}
                     />
@@ -138,7 +138,7 @@ export function SignInForm({
                     <GitHubSignInButton
                         disabled={buttonsDisabled}
                         title={githubSignInButtonTitle}
-                        onClick={signInWithGitHub}
+                        onClick={signInWithGitHub!}
                         className={githubSignInButtonClassName}
                         style={githubSignInButtonStyle}
                     />
@@ -148,7 +148,7 @@ export function SignInForm({
                     <FacebookSignInButton
                         disabled={buttonsDisabled}
                         title={facebookSignInButtonTitle}
-                        onClick={signInWithFacebook}
+                        onClick={signInWithFacebook!}
                         className={facebookSignInButtonClassName}
                         style={facebookSignInButtonStyle}
                     />
@@ -167,7 +167,7 @@ export function SignInForm({
                 </>
             }
             <EmailValidator
-                error={emailErrorMessage}
+                error={emailErrorMessage!}
                 emailPlaceholder={emailPlaceholder}
                 style={emailInputStyle}
                 className={emailInputClassName}
@@ -183,7 +183,7 @@ export function SignInForm({
             <SubmitButton
                 title={submitButtonTitle}
                 disabled={buttonsDisabled}
-                onClick={submit}
+                onClick={submit!}
                 loading={buttonsLoading}
                 className={submitButtonClassName}
                 style={submitButtonStyle}

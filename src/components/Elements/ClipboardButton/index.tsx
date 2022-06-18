@@ -33,7 +33,7 @@ export function ClipboardButton({
         <Container
             style={style}
             className={className}
-            onClick={() => { copy(content).then(() => onCopy())}}
+            onClick={() => { copy(content).then(() => onCopy!())}}
         >
             <MdContentCopy
                 size={32}
