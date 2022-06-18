@@ -24,9 +24,9 @@ export const Container = styled.div<DrawerProps>`
   top: 0;
   left: ${({ direction }) => (direction === "left" ? 0 : 300)};
   right: ${({ direction }) => (direction === "left" ? 300 : 0)};
-  border-left: ${({ direction, theme }) => (direction === "right" ? `1px solid ${theme.colors.silver}` : null)};
-  border-right: ${({ direction, theme }) => (direction === "left" ? `1px solid ${theme.colors.silver}` : null)};
-  border-bottom: ${({ direction, theme }) => (direction === "top" ? `1px solid ${theme.colors.silver}` : null)};
+  border-left: ${({ direction, theme }) => (direction === "right" ? `1px solid ${theme.colors.silver100}` : null)};
+  border-right: ${({ direction, theme }) => (direction === "left" ? `1px solid ${theme.colors.silver100}` : null)};
+  border-bottom: ${({ direction, theme }) => (direction === "top" ? `1px solid ${theme.colors.silver100}` : null)};
   right: ${({ direction }) => (direction === "left" ? 300 : 0)};
   z-index: 999;
   animation: ${({ direction }) =>
@@ -41,15 +41,17 @@ export const MenuContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 40px;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: center;
   position: relative;
   padding: 40px 24px;
 `;
 
 export const MenuItem = styled.a`
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.black100};
   text-transform: capitalize;
+  position: relative;
   font-weight: 700;
   font-size: ${({ theme }) => theme.sizes.large};
   line-height: 32px;
@@ -62,11 +64,13 @@ export const MenuItem = styled.a`
 
 export const CloseMenuButton = styled.button`
   display: flex;
+  position: absolute;
+  right: 24px ;
   justify-content: center;
   align-items: center;
   width: 20px;
   height: 20px;
-  margin-top: -16px;
+  margin-top: -96px;
   margin-bottom: 32px;
   background-color: ${({ theme }) => theme.colors.error};
 `;

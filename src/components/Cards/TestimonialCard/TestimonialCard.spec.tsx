@@ -21,7 +21,6 @@ describe('TestimonialCard', () => {
     it('should render correctly', () => {
         render(
             <TestimonialCard
-                alt='testimonialcard-alt'
                 personName='testimonialcard-person-name'
                 testimonial='tertimonialcard-testimonial'
                 ratings={4}

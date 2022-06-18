@@ -1,3 +1,4 @@
+import React from 'react';
 import { CSSProperties, ReactElement } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -37,8 +38,8 @@ export function CardSlider({
         infinite: infiniteLoop,
         autoplay: autoPlay,
         speed: transitionSpeed,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: slidesToShow,
+        slidesToScroll: slidesToScroll,
         initialSlide: 0,
         responsive: [
             {

@@ -19,8 +19,10 @@ export function GradientText({
     style
 }: GradientTextProps) {
     return (
-        <p
-            style={style}
+        <h1
+            style={{
+                fontWeight: 700
+            } || style}
             className={className}
         >
             <GradientTextComponent
@@ -30,6 +32,6 @@ export function GradientText({
             >
                 {content}
             </GradientTextComponent >
-        </p>
+        </h1>
     )
 }

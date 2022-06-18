@@ -111,10 +111,6 @@ export default function Home() {
             url='https://www.npmjs.com/package/react-collapsible'
           />
           <NextLink
-            title='react-countup'
-            url='https://www.npmjs.com/package/react-countup'
-          />
-          <NextLink
             title='react-dropdown'
             url='https://www.npmjs.com/package/react-dropdown'
           />

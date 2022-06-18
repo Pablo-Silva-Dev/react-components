@@ -1,5 +1,4 @@
 export const animationComponentsLinkList = [
-  { content: "CountUp", url: "/countup" },
   { content: "Loading", url: "/loading" },
   { content: "Lottie", url: "/lottie" },
   { content: "RevealFade", url: "/revealfade" },
