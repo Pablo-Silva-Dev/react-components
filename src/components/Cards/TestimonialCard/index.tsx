@@ -75,7 +75,7 @@ export function TestimonialCard({
                 {ratings &&
                     <StarsContainer>
                         <StarRatings
-                            rating={ratings}
+                            rating={ratings!}
                             starRatedColor="#ffc400"
                             numberOfStars={5}
                             starDimension="20px"

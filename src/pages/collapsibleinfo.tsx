@@ -22,7 +22,8 @@ export default function CollapsibleInfo() {
         contentContainerStyle: 'Description:  ContentContainer style. Type: CSS Properties.',
         contentContainerClassName: 'Description: ContentContainer className. Type: String.',
         titleStyle: 'Description: Title style. Type: CSS Properties.',
-        titleClassName: 'Description: Title className. Type: String.'
+        titleClassName: 'Description: Title className. Type: String.',
+        openedClassName: 'Description: ClassName to title when collapsible is open. Type: String.'
     }
 
     return (

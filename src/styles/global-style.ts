@@ -91,14 +91,4 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
-
-    .test{
-        width: 100px;
-        background: red;
-    }
-
-    
-    
-
-
 `;
