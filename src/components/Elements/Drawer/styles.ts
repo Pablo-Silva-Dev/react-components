@@ -49,7 +49,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuItem = styled.a`
-  color: ${({ theme }) => theme.colors.black100};
+  color: ${({ theme }) => theme.colors.black100100};
   text-transform: capitalize;
   position: relative;
   font-weight: 700;

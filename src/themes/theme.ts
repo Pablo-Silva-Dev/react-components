@@ -1,19 +1,19 @@
 const theme = {
   colors: {
     primary: "#0076E3",
-      primary_light: "#51cbff",
-      primary_dark: "#01377d",
-      secondary: "#FFDD00",
-      secondary_light: "#ffee70",
-      secondary_dark: "#7d6f01",
-      tertiary: "#00ff77",
-      tertiary_light: "#99e8a6",
-      tertiary_dark: "#017d47",
+    primary_light: "#51cbff",
+    primary_dark: "#01377d",
+    secondary: "#FFDD00",
+    secondary_light: "#ffee70",
+    secondary_dark: "#7d6f01",
+    tertiary: "#00ff77",
+    tertiary_light: "#99e8a6",
+    tertiary_dark: "#017d47",
     background_primary: "#ffffff",
     background_secondary: "#f2f0ee",
     title: "#111111",
     text: "#333333",
-    element_base: "#e6e6e6",
+    element_base: "#e6e6e6", 
     success: "#4fd934",
     alert: "#d97934",
     error: "#d9344f",
@@ -88,4 +88,3 @@ const theme = {
 };
 
 export { theme };
-

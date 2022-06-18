@@ -16,7 +16,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.white100};
+  background-color: ${({ theme }) => theme.colors.white100100};
   width: 320px;
   border-radius: 4px;
   box-shadow: ${({ theme }) => theme.shadows.soft};
@@ -51,7 +51,7 @@ export const TextContainer = styled.div`
 export const Title = styled.h3`
   font-size: ${({ theme }) => theme.sizes.xlarge};
   font-weight: 500;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.black100};
   width: 80%;
   text-align: center;
   @media (max-width: 1080px) {
@@ -88,7 +88,7 @@ export const WhatsappButton = styled.button`
   height: 56px;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.success};
-  color: ${({ theme }) => theme.colors.white100};
+  color: ${({ theme }) => theme.colors.white100100};
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 500;
   @media (max-width: 720px) {

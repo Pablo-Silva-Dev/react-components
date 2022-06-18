@@ -18,7 +18,7 @@ export const SubContainer = styled.div`
   padding: 16px;
   margin: 4px auto;
   border-radius: 4px;
-  background-color: ${({ theme }) => theme.colors.white100};
+  background-color: ${({ theme }) => theme.colors.white100100};
   box-shadow: ${({ theme }) => theme.shadows.soft};
   @media (max-width: 720px) {
     width: 88%;

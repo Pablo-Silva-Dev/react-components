@@ -6,7 +6,7 @@ export const Container = styled.div`
   justify-content: space-evenly;
   align-items: flex-start;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.white100};
+  background-color: ${({ theme }) => theme.colors.white100100};
   box-shadow: ${({theme}) => theme.shadows.soft};
   border-left: 2px solid ${({ theme }) => theme.colors.primary};
   margin: 8px auto;
@@ -24,7 +24,7 @@ export const Container = styled.div`
 export const ActionCard = styled.h3`
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 400;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.black100};
   @media (max-width: 1080px) {
     width: 50%;
   }

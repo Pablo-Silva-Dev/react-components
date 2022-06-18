@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background-color: ${({ theme }) => theme.colors.white100};
+  background-color: ${({ theme }) => theme.colors.white100100};
 `;
 
 export const MainContainer = styled.div`
@@ -24,7 +24,7 @@ export const CountryCreditContainer = styled.div`
 
   & p{
     cursor: normal;
-    color: ${({ theme }) => theme.colors.white100};
+    color: ${({ theme }) => theme.colors.white100100};
     font-size: ${({ theme }) => theme.sizes.small}
   }
 `;

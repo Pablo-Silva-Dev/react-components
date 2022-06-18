@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 100%;
 
   padding: 16px;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.black100};
 
 `;
 

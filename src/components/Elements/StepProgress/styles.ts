@@ -22,7 +22,7 @@ export const StepContainer = styled.div`
 export const StepLine = styled.div`
   width: 72px;
   height: 2px;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.black100};
   margin: 0 12px;
   @media(max-width: 1080px) {
     transform: rotate(90deg);
@@ -40,7 +40,7 @@ export const StepItem = styled.div`
   margin: 8px;
   border-radius: 50%;
   background: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.white100};
+  color: ${({ theme }) => theme.colors.white100100};
 `;
 
 export const StepTitle = styled.h4`

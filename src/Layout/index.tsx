@@ -1,19 +1,26 @@
 import { ReactNode, useState } from "react";
+import { useTheme } from "styled-components";
+import { Divider } from "../components/Elements/Divider";
 import { Drawer } from "../components/Elements/Drawer";
+import { DrawerButton } from "../components/Elements/DrawerButton";
 import { Footer } from "../components/Elements/Footer";
 import { FooterFirstSection } from "../components/Elements/Footer/FooterFirstSection";
 import { FooterFourthSection } from "../components/Elements/Footer/FooterFourthSection";
 import { FooterLink } from "../components/Elements/Footer/FooterLink";
 import { FooterSecondSection } from "../components/Elements/Footer/FooterSecondSection";
+import { FooterText } from "../components/Elements/Footer/FooterText";
 import { FooterThirdSection } from "../components/Elements/Footer/FooterThirdSection";
 import { FooterTitle } from "../components/Elements/Footer/FooterTitle";
 import { Header } from "../components/Elements/Header";
-import { DrawerButton } from "../components/Elements/DrawerButton";
+import { HeaderLink } from "../components/Elements/Header/HeaderLink";
+import { HeaderLinksContainer } from "../components/Elements/Header/HeaderLinksContainer";
 import { HeaderLogoContainer } from "../components/Elements/Header/HeaderLogoContainer";
 import { Logo } from "../components/Elements/Logo";
 import { Nav } from "../components/Elements/Nav";
 import { NavLink } from "../components/Elements/Nav/NavLink";
 import { NavTitle } from "../components/Elements/Nav/NavTitle";
+import { SocialIcons } from "../components/Elements/SocialIcons";
+import { NextImage } from "../components/Next/NextImage";
 import NextProgressComponent from "../components/Next/NextProgress";
 import {
     animationComponentsLinkList,
@@ -25,13 +32,6 @@ import {
     typographyComponentsLinkList
 } from '../data/componentsListLinks';
 import { Container, CountryCreditContainer, MainContainer } from "./styles";
-import { useTheme } from "styled-components";
-import { SocialIcons } from "../components/Elements/SocialIcons";
-import { HeaderLinksContainer } from "../components/Elements/Header/HeaderLinksContainer";
-import { HeaderLink } from "../components/Elements/Header/HeaderLink";
-import { Divider } from "../components/Elements/Divider";
-import { FooterText } from "../components/Elements/Footer/FooterText";
-import { NextImage } from "../components/Next/NextImage";
 
 interface LayoutProps {
     children: ReactNode;
@@ -53,7 +53,7 @@ export default function Layout({ children }: LayoutProps) {
             <NextProgressComponent />
             <Header
                 style={{
-                    backgroundColor: theme.colors.black
+                    backgroundColor: theme.colors.black100
                 }}
             >
                 {isDrawerOpen &&
@@ -427,7 +427,7 @@ export default function Layout({ children }: LayoutProps) {
             </MainContainer>
             <Footer
                 style={{
-                    backgroundColor: theme.colors.black,
+                    backgroundColor: theme.colors.black100,
                 }}
             >
                 <FooterFirstSection>

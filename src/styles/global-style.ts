@@ -1,4 +1,4 @@
-import { createGlobalStyle, keyframes } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
       *{
@@ -46,7 +46,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 25% auto;
         h3{
             font-size: 1.24rem;
-            color: ${(props) => props.theme.colors.black}
+            color: ${(props) => props.theme.colors.black100}
         }
         @media(max-width: 720px){
             width: 92%;
