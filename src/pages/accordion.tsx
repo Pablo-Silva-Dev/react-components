@@ -1,5 +1,5 @@
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { CollapsibleInfo as CollapsibleInfoComponent } from '../components/Elements/CollapsibleInfo'
+import { Accordion as AccordionComponent } from '../components/Elements/Accordion';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
@@ -11,10 +11,10 @@ import {
     PropsContainer
 } from "../styles";
 
-export default function CollapsibleInfo() {
+export default function Accordion() {
 
     const props = {
-        title: 'Description: Title for CollapsibleInfo. Type: String. Required.',
+        title: 'Description: Title for Accordion. Type: String. Required.',
         content: 'Description: Hidden content to be revealed. Type: String. Required.',
         transitionTime: 'Description: Time in ms to open the content. Type: Number. Default: 200.',
         contentStyle: 'Description:  Content style. Type: CSS Properties.',
@@ -31,17 +31,16 @@ export default function CollapsibleInfo() {
             <ComponentContainer>
                 <DescriptionContainer>
                     <Title
-                        content='CollapsibleInfo'
+                        content='Accordion'
                     />
                     <Text
                         content="Often used on FAQ's."
                     />
                 </DescriptionContainer>
                 <PreviewContainer>
-                    <CollapsibleInfoComponent
-                        content='Your content here'
-                        title='Title content here'
-                    />
+                  <AccordionComponent title='Title'>
+                    <p>Content</p>
+                  </AccordionComponent>
                 </PreviewContainer>
 
                 <PropsContainer>
@@ -69,10 +68,9 @@ export default function CollapsibleInfo() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    <CollapsibleInfo
-                        content='Your content here'
-                        title='Title content here'
-                    />"
+                    <AccordionComponent title='Title'>
+                    <p>Content</p>
+                  </AccordionComponent>"
                 />
             </ComponentContainer>
         </Container>

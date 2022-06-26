@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { Accordion } from '.'
 import { theme } from '../../../themes/theme'
-import { CollapsibleInfo } from './'
 
 interface ChildrenProps {
     children: ReactNode
@@ -16,18 +16,18 @@ const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
     )
 }
 
-describe('CollapsibleInfo', () => {
+describe('Accordion', () => {
     it('should render correctly', () => {
         render(
-            <CollapsibleInfo
-                title='collapsibleinfo-title'
-                content='collapsibleinfo-content'
+            <Accordion
+                title='Accordion-title'
+                content='Accordion-content'
             />, {
             wrapper: StyledProvider
         }
         )
 
-        const component = screen.getByText('collapsibleinfo-content')
+        const component = screen.getByText('Accordion-content')
         expect(component).toBeInTheDocument()
     })
 })

@@ -1,51 +1,45 @@
-import React, { CSSProperties, ReactNode } from 'react';
-import { CollapsibleTrigger, Container, Text } from './styles';
+import { CSSProperties, ReactElement, ReactNode } from 'react';
+import { CollapsibleTrigger, Container } from './styles';
 
-interface CollapsibleInfoProps {
+interface AccordionProps {
     title: string;
-    content: string;
+    children: ReactElement[] | ReactNode;
     transitionTime?: number;
     titleStyle?: CSSProperties;
-    contentStyle?: CSSProperties;
     contentContainerStyle?: CSSProperties
     titleClassName?: string;
-    contentClassName?: string;
     contentContainerClassName?: string;
     openedTitleClassName?: string;
 }
 
-export function CollapsibleInfo({
+export function Accordion({
     title,
-    content,
+    children,
     transitionTime = 200,
     titleStyle,
-    contentStyle,
     contentContainerStyle,
     titleClassName,
-    contentClassName,
     contentContainerClassName,
     openedTitleClassName
-}: CollapsibleInfoProps) {
+}: AccordionProps) {
     return (
         <CollapsibleTrigger
             trigger={title}
             openedClassName={openedTitleClassName}
             transitionTime={transitionTime}
             triggerStyle={titleStyle || {
-                cursor: 'pointer'
+                cursor: 'pointer',
+                display: 'flex',
+                flexDirection: 'column'
             }}
             triggerClassName={titleClassName}
+
         >
             <Container
                 style={contentContainerStyle}
                 className={contentContainerClassName}
             >
-                <Text
-                    style={contentStyle}
-                    className={contentClassName}
-                >
-                    {content}
-                </Text>
+                {children}
             </Container>
         </CollapsibleTrigger>
     )

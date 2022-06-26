@@ -1,5 +1,6 @@
 import { ReactNode, useState } from "react";
 import { useTheme } from "styled-components";
+import { Accordion } from "../components/Elements/Accordion";
 import { Divider } from "../components/Elements/Divider";
 import { Drawer } from "../components/Elements/Drawer";
 import { DrawerButton } from "../components/Elements/DrawerButton";
@@ -304,124 +305,107 @@ export default function Layout({ children }: LayoutProps) {
                         content='Components'
                     />
 
-                    <NavTitle
-                        style={{
-                            color: theme.colors.title
-                        }}
-                        content='Animations'
-                    />
-                    {animationComponentsLinkList.map(link => (
-                        <NavLink
-                            key={link.content}
-                            content={link.content}
-                            url={link.url}
-                            style={{
-                                color: theme.colors.text
-                            }}
-                        />
-                    ))}
-                    <NavTitle
-                        content='Card'
-                        style={{
-                            color: theme.colors.text
-                        }}
-                    />
-                    {cardsLinkList.map(link => (
-                        <NavLink
-                            key={link.content}
-                            content={link.content}
-                            url={link.url}
-                            style={{
-                                color: theme.colors.text
-                            }}
-                        />
-                    ))}
+                    <Accordion
+                        title="Animations"
+                    >
+                        {animationComponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
+                            />
+                        ))}
+                    </Accordion >
+                    <Accordion
+                        title="Cards"
+                    >
+                        {cardsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
+                            />
+                        ))}
+                    </Accordion >
 
-                    <NavTitle
-                        style={{
-                            color: theme.colors.text
-                        }}
-                        content='Elements'
-                    />
-                    {elementsComponentsLinkList.map(link => (
-                        <NavLink
-                            key={link.content}
-                            content={link.content}
-                            url={link.url}
-                            style={{
-                                color: theme.colors.text
-                            }}
-                        />
-                    ))}
-                    <NavTitle
-                        style={{
-                            color: theme.colors.text
-                        }}
-                        content='Forms'
-                    />
-                    {formComponentsLinkList.map(link => (
-                        <NavLink
-                            key={link.content}
-                            content={link.content}
-                            url={link.url}
-                            style={{
-                                color: theme.colors.text
-                            }}
-                        />
-                    ))}
+                    <Accordion
+                        title="Elements"
+                    >
+                        {elementsComponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
+                            />
+                        ))}
+                    </Accordion >
+                    <Accordion
+                        title="Forms"
+                    >
+                        {formComponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
+                            />
+                        ))}
+                    </Accordion >
 
-                    <NavTitle
-                        style={{
-                            color: theme.colors.text
-                        }}
-                        content='Modals'
-                    />
-                    {modalomponentsLinkList.map(link => (
-                        <NavLink
-                            key={link.content}
-                            content={link.content}
-                            url={link.url}
-                            style={{
-                                color: theme.colors.text
-                            }}
-                        />
-                    ))}
+                    <Accordion
+                        title="Modals"
+                    >
+                        {modalomponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
+                            />
+                        ))}
+                    </Accordion >
 
-                    <NavTitle
-                        style={{
-                            color: theme.colors.text
-                        }}
-                        content='Next'
-                    />
-                    {nextComponentsLinkList.map(link => (
-                        <NavLink
-                            key={link.content}
-                            content={link.content}
-                            url={link.url}
-                            style={{
-                                color: theme.colors.text
-                            }}
-                        />
-                    ))}
-
-                    <NavTitle
-                        style={{
-                            color: theme.colors.text
-                        }}
-                        content='Typography'
-                    />
-                    {typographyComponentsLinkList.map(link => (
-                        <NavLink
-                            key={link.content}
-                            content={link.content}
-                            url={link.url}
-                            style={{
-                                color: theme.colors.text
-                            }}
-                        />
-                    ))}
-
-
+                    <Accordion
+                        title="Next"
+                    >
+                        {nextComponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
+                            />
+                        ))}
+                    </Accordion >
+                    <Accordion
+                        title="Typography"
+                    >
+                        {typographyComponentsLinkList.map(link => (
+                            <NavLink
+                                key={link.content}
+                                content={link.content}
+                                url={link.url}
+                                style={{
+                                    color: theme.colors.text
+                                }}
+                            />
+                        ))}
+                    </Accordion >
                 </Nav>
                 <main>{children}</main>
             </MainContainer>
