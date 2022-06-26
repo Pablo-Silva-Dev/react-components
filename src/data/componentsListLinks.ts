@@ -37,6 +37,7 @@ export const elementsComponentsLinkList = [
   { content: "SearchInput", url: "/searchinput" },
   { content: "SecondaryButton", url: "/secondarybutton" },
   { content: "SocialIcons", url: "/socialicons" },
+  { content: "SoftSlider", url: "/softslider" },
   { content: "StepProgress", url: "/stepprogress" },
   { content: "Timeline", url: "/timeline" },
   { content: "TimelineElement", url: "/timelineelement" },
