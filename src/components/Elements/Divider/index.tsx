@@ -12,6 +12,7 @@ export function Divider({ style, className }: Divider) {
         <Container
             style={style}
             className={className}
+            data-testid='divider'
         />
     )
 }
