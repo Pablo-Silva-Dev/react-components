@@ -28,7 +28,7 @@ export function DrawerButton({
                 size={32}
                 style={iconStyle}
                 className={iconClassName}
-                data-testid='DrawerButton-id'
+                data-testid='HeaderDrawerButton-id'
                 color='#fff'
             />
         </Container>

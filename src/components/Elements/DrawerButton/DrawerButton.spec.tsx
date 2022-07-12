@@ -1,14 +1,14 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { HeaderDrawerButton } from '.'
+import { DrawerButton } from '.'
 import { theme } from '../../../themes/theme'
 
 interface ChildrenProps{
     children: ReactNode
 }
 
-const StyledProvider : React.FC = ({children} : ChildrenProps) => {
+const StyledProvider = ({children} : ChildrenProps) => {
     return(
         <ThemeProvider theme={theme}>
             {children}
@@ -18,11 +18,12 @@ const StyledProvider : React.FC = ({children} : ChildrenProps) => {
 
 describe('HeaderDrawerButton', () => {
 
-    const openDrawer = jest.fn();
+    const toggleDrawer = jest.fn();
+
     it('should render correctly', () => {
     render(
-        <HeaderDrawerButton
-        openDrawer={openDrawer}
+        <DrawerButton
+        toggleDrawer={toggleDrawer}
         data-testid='HeaderDrawerButton-id'
         />,{
             wrapper: StyledProvider
@@ -33,10 +34,10 @@ describe('HeaderDrawerButton', () => {
         expect(component).toBeInTheDocument()
     })
 
-    it('should call openDrawer function correctly', () => {
+    it('should call toggleDrawer function correctly', () => {
     render(
-        <HeaderDrawerButton
-        openDrawer={openDrawer}
+        <DrawerButton
+        toggleDrawer={toggleDrawer}
         data-testid='HeaderDrawerButton-id'
         />,{
             wrapper: StyledProvider
@@ -45,6 +46,6 @@ describe('HeaderDrawerButton', () => {
 
         const component = screen.getByTestId('HeaderDrawerButton-id')
         fireEvent.click(component)
-        expect(openDrawer).toBeCalled()
+        expect(toggleDrawer).toBeCalled()
     })
 })
