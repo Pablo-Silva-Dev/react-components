@@ -8,7 +8,7 @@ interface ChildrenProps {
     children: ReactNode
 }
 
-const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+const StyledProvider = ({ children }: ChildrenProps) => {
     return (
         <ThemeProvider theme={theme}>
             {children}
@@ -55,19 +55,23 @@ describe('PrimaryButton', () => {
     })
 
     it('should be disabled', () => {
+
+        const fn = jest.fn()
         render(
             <PrimaryButton
-                onClick={() => { }}
+                onClick={fn}
                 title='PrimaryButtonDisabled'
                 disabled={true}
-            />,{
-                wrapper: StyledProvider
-            }
+            />, {
+            wrapper: StyledProvider
+        }
         )
 
         const component = screen.getByText('PrimaryButtonDisabled')
 
-        expect(component).toBeDisabled()
+        fireEvent.click(component)
+
+        expect(component).toHasAttribute('disabled')
 
     })
 })

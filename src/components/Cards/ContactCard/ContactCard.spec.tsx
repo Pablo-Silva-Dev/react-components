@@ -8,7 +8,7 @@ interface ChildrenProps {
     children: ReactNode
 }
 
-const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+const StyledProvider = ({ children }: ChildrenProps) => {
     return (
         <ThemeProvider theme={theme}>
             {children}
@@ -21,7 +21,7 @@ describe('ContactCard', () => {
         render(
             <ContactCard
                 email='contactcard-email'
-                title='contactcard-title'
+                cardTitle='contactcard-title'
             />, {
             wrapper: StyledProvider
         }
@@ -35,7 +35,7 @@ describe('ContactCard', () => {
         render(
             <ContactCard
                 email='contactcard-email'
-                title='contactcard-title'
+                cardTitle='contactcard-title'
                 phone='12345678'
             />, {
             wrapper: StyledProvider
@@ -51,28 +51,13 @@ describe('ContactCard', () => {
             <ContactCard
                 email='contactcard-email'
                 address='contactcard-address'
-                title='contactcard-title'
+                cardTitle='contactcard-title'
             />, {
             wrapper: StyledProvider
         }
         )
 
         const component = screen.getByText('contactcard-address')
-        expect(component).toBeInTheDocument()
-
-    })
-    it('should render WhatsappButton correctly', () => {
-        render(
-            <ContactCard
-                email='contactcard-email'
-                title='contactcard-title'
-                whatsappConversationUrl='/'
-            />, {
-            wrapper: StyledProvider
-        }
-        )
-
-        const component = screen.getByText('Entrar em contato')
         expect(component).toBeInTheDocument()
 
     })

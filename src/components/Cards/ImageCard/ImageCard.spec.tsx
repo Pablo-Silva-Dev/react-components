@@ -8,7 +8,7 @@ interface ChildrenProps {
     children: ReactNode
 }
 
-const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+const StyledProvider = ({ children }: ChildrenProps) => {
 
     return (
         <ThemeProvider theme={theme}>
@@ -21,7 +21,6 @@ describe('ImageCard', () => {
     it('should render correctly', () => {
         render(
             <ImageCard
-                imgAlt='imagecard-alt'
                 imgUrl='/'
                 data-testid='imagecard-id'
             />, {

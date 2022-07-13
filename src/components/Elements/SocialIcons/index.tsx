@@ -24,6 +24,10 @@ interface SocialIconsProps {
     containerClassName?: string;
 }
 
+function openExternUrl(url: string) {
+    window.open(url, '_blank')
+}
+
 export function SocialIcons({
     facebookUrl,
     twitterUrl,
@@ -39,16 +43,11 @@ export function SocialIcons({
 }: SocialIconsProps) {
 
     const theme = useTheme()
-
-    function openExternUrl(url: string) {
-        window.open(url, '_blank')
-    }
-
-
     return (
         <Container
             style={containerStyle}
             className={containerClassName}
+            data-testid='test-social-icons'
         >
             {instagramUrl &&
                 <Button
