@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface IconProps {
+  iconsSize?: "tiny" | "small" | "medium" | "large";
+}
+
 export const Container = styled.div`
   display: flex;
   width: 240px;
