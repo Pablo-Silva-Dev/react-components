@@ -52,6 +52,7 @@ export function SocialIcons({
             {instagramUrl &&
                 <Button
                     onClick={() => openExternUrl(instagramUrl)}
+                    data-testid='instagram-icon-button'
                 >
                     <FaInstagramSquare
                         size={

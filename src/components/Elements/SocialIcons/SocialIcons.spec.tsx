@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../../themes/theme'
@@ -256,7 +256,7 @@ describe('SocialIcons', () => {
 
         expect(component).toBeInTheDocument()
     })
-    
+
     it('should render twitter icons with tiny size', () => {
         const { container } = render(
             <SocialIcons
@@ -339,7 +339,25 @@ describe('SocialIcons', () => {
 
         expect(component).toBeInTheDocument()
     })
-    
+
+/*     it('should call the openExternUrl function', () => {
+
+        const fn = jest.fn()
+
+        const { debug, container } = render(
+            <SocialIcons
+                data-testid='instagram-icon-button'
+                facebookUrl='/'
+                iconsSize='small'
+            />,
+            { wrapper: StyledProvider })
+
+        const button = container.querySelector('[class="styles__Button-sc-1sy1yaa-1 jPUKTE"]')
+        fireEvent.click(button!)
+  
+
+    }) */
+
 
 
 })
