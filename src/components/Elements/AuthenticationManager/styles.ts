@@ -27,7 +27,7 @@ export const SignInButton = styled.button`
   align-items: center;
   border-radius: 2px;
   padding: 4px;
-  color: ${({ theme }) => theme.colors.primary}};
+  color: ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.white100};
   font-size: ${({ theme }) => theme.sizes.medium};
   width: 100%;
