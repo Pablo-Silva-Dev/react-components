@@ -72,6 +72,7 @@ export const formComponentsLinkList = [
 ];
 
 export const modalomponentsLinkList = [
+  { content: "CookieModal", url: "/cookiemodal" },
   { content: "ModalBox", url: "/modalbox" },
   { content: "VideoModal", url: "/videomodal" },
 ];

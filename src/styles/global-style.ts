@@ -61,6 +61,26 @@ export const GlobalStyle = createGlobalStyle`
      }
   }
 
+  .cookie-modal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
+        min-height: 180px;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.8);
+        color: ${({theme}) => theme.colors.white100};
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        box-shadow: ${({ theme }) => theme.shadows.soft};
+        a{
+            color: ${(props) => props.theme.colors.white100}
+        }
+  }
+
   .react-modal-overlay{
         background: rgba(0, 0, 0, 0.5);
         position: fixed;
@@ -71,6 +91,15 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         justify-content: center;
         align-items: center;
+  }
+
+  .react-cookie-modal-overlay{
+        background: transparent;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
   }
 
   .react-modal-overlay-video{
