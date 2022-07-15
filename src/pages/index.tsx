@@ -1,6 +1,8 @@
 
-import { MdAttachMoney} from 'react-icons/md';
-import { AiOutlineGithub} from 'react-icons/ai';
+import { MdAttachMoney } from 'react-icons/md';
+import { AiOutlineGithub } from 'react-icons/ai';
+
+
 import { PrimaryButton } from '../components/Elements/PrimaryButton';
 import { NextLink } from '../components/Next/NextLink';
 import { Text } from '../components/Typography/Text';
@@ -14,6 +16,7 @@ import {
   ReferencesSection,
   HomeContainer
 } from '../styles';
+import { ReadProgressBar } from '../components/Elements/ReadProgressBar';
 
 export default function Home() {
 
@@ -24,6 +27,7 @@ export default function Home() {
 
   return (
     <Container>
+      <ReadProgressBar />
       <HomeContainer>
         <IntroductionSection
           id='#introduction'
@@ -70,7 +74,7 @@ export default function Home() {
             content='I developed by myself over sixty components to help the React community developers. If you think this components are useful for you, consider to make a donation. Your support will help me a lot 😊.'
           />
           <PrimaryButton
-            icon={<MdAttachMoney 
+            icon={<MdAttachMoney
               size={16}
               style={{
                 marginRight: 4
@@ -156,7 +160,6 @@ export default function Home() {
           />
         </ReferencesSection>
       </HomeContainer>
-
     </Container>
   )
 }
