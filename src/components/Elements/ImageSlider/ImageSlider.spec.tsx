@@ -1,16 +1,16 @@
 import { render, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
+import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../../themes/theme'
 import { ImageSlider } from './'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"
 
 interface ChildrenProps {
     children: ReactNode
 }
 
-const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+const StyledProvider = ({ children }: ChildrenProps) => {
     return (
         <ThemeProvider theme={theme}>
             {children}

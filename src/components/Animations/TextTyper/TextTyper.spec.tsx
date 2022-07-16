@@ -1,14 +1,14 @@
 import { render } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../../../themes/theme'
 import { TextTyper } from '.'
+import { theme } from '../../../themes/theme'
 
 interface ChildrenProps {
     children: ReactNode
 }
 
-const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+const StyledProvider = ({ children }: ChildrenProps) => {
     return (
         <ThemeProvider theme={theme}>
             {children}

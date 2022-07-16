@@ -8,7 +8,7 @@ interface ChildrenProps {
     children: ReactNode
 }
 
-const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+const StyledProvider = ({ children }: ChildrenProps) => {
 
     return (
         <ThemeProvider theme={theme}>

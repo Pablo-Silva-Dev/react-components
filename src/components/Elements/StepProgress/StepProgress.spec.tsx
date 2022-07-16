@@ -13,7 +13,7 @@ const tasks = [
     { process: 'process2', status: 'pendent' }
 ]
 
-const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+const StyledProvider = ({ children }: ChildrenProps) => {
     return (
         <ThemeProvider theme={theme}>
             {children}

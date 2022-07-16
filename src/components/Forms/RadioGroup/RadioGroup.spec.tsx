@@ -15,7 +15,7 @@ const options = [
     { value: 'apple', label: 'apple' },
 ]
 
-const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+const StyledProvider = ({ children }: ChildrenProps) => {
     return (
         <ThemeProvider theme={theme}>
             {children}

@@ -1,14 +1,14 @@
+import { render, screen } from '@testing-library/react';
 import { ReactNode } from 'react';
-import { screen, render } from '@testing-library/react'
-import { Loading } from './'
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../../themes/theme';
+import { Loading } from './';
 
 interface ChildrenProps {
     children: ReactNode;
 }
 
-const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+const StyledProvider = ({ children }: ChildrenProps) => {
     return (
         <ThemeProvider theme={theme}>
             {children}

@@ -14,7 +14,7 @@ const list = [
     { content: 'item3', url: '/' },
 ]
 
-const StyledProvider: React.FC = ({ children }: ChildrenProps) => {
+const StyledProvider = ({ children }: ChildrenProps) => {
     return (
         <ThemeProvider theme={theme}>
             {children}
