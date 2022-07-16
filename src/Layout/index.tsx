@@ -5,6 +5,7 @@ import { Divider } from "../components/Elements/Divider";
 import { Drawer } from "../components/Elements/Drawer";
 import { DrawerButton } from "../components/Elements/DrawerButton";
 import { Footer } from "../components/Elements/Footer";
+import { FooterAttach } from "../components/Elements/Footer/FooterAttach";
 import { FooterFirstSection } from "../components/Elements/Footer/FooterFirstSection";
 import { FooterFourthSection } from "../components/Elements/Footer/FooterFourthSection";
 import { FooterLink } from "../components/Elements/Footer/FooterLink";
@@ -23,6 +24,7 @@ import { NavTitle } from "../components/Elements/Nav/NavTitle";
 import { SocialIcons } from "../components/Elements/SocialIcons";
 import { NextImage } from "../components/Next/NextImage";
 import NextProgressComponent from "../components/Next/NextProgress";
+import { Text } from '../components/Typography/Text'
 import {
     animationComponentsLinkList,
     cardsLinkList,
@@ -464,6 +466,12 @@ export default function Layout({ children }: LayoutProps) {
                     </CountryCreditContainer>
                 </FooterFourthSection>
             </Footer >
+            <FooterAttach className="footerAttach">
+                <Divider/>
+                <Text
+                    content="PabloSilvaDev - © Copyright 2022"
+                />
+            </FooterAttach>
         </Container>
 
     )

@@ -12,7 +12,6 @@ import {
     DescriptionContainer,
     PropsContainer
 } from "../styles";
-import { NextLink } from '../components/Next/NextLink';
 
 export default function CookieModal() {
 

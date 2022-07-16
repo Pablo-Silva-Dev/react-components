@@ -5,6 +5,18 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100vw;
   background-color: ${({ theme }) => theme.colors.white100};
+
+  & .footerAttach{
+    background-color: ${({ theme }) => theme.colors.black100};
+    & p, span {
+      color: ${({ theme }) => theme.colors.white500};
+      font-size: ${({ theme }) => theme.sizes.small};
+      @media(max-width: 720px){
+        font-size: ${({ theme }) => theme.sizes.xsmall}
+      }
+    }
+  }
+
 `;
 
 export const MainContainer = styled.div`
