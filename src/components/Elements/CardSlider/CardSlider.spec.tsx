@@ -34,7 +34,7 @@ describe('Badge', () => {
                 wrapper: StyledProvider
             })
 
-            
+        
             const component = screen.findByText('el1')
             waitFor(() => {expect(component).toBeInTheDocument()})
 

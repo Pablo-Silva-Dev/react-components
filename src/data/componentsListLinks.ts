@@ -33,6 +33,7 @@ export const elementsComponentsLinkList = [
   { content: "Dropdown", url: "/dropdown" },
   { content: "Logo", url: "/logo" },
   { content: "Nav", url: "/nav" },
+  { content: "Pagination", url: "/pagination" },
   { content: "PrimaryButton", url: "/primarybutton" },
   { content: "SearchInput", url: "/searchinput" },
   { content: "SecondaryButton", url: "/secondarybutton" },
