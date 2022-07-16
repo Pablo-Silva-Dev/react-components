@@ -20,7 +20,7 @@ describe('VideoModal', () => {
     it('should render correctly', () => {
         render(
             <VideoModal
-                addressUrl='/'
+                videoUrl='/'
                 isOpen
                 onRequestClose={() => { }}
             />,

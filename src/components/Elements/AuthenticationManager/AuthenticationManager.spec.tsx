@@ -143,7 +143,7 @@ describe('AuthenticationManager', () => {
 
         const handleSignOut = jest.fn()
 
-        const { debug, container } = render(
+        const { container } = render(
             <AuthenticationManager
                 signInButtonTitle='SignIn'
                 signOutButtonTitle='SignOut'
@@ -155,8 +155,6 @@ describe('AuthenticationManager', () => {
                 wrapper: Provider
             }
         )
-
-        debug()
 
         const signOutButton = container.querySelector('[class="styles__SignOutButton-sc-c4zru4-1 lkvXSu"]')
         fireEvent.click(signOutButton!)
@@ -174,7 +172,7 @@ describe('AuthenticationManager', () => {
 
         const handleSignIn = jest.fn()
 
-        const { debug, container } = render(
+        const { container } = render(
             <AuthenticationManager
                 signInButtonTitle='SignIn'
                 signOutButtonTitle='SignOut'
@@ -186,9 +184,6 @@ describe('AuthenticationManager', () => {
                 wrapper: Provider
             }
         )
-
-        debug()
-
         const signInButton = container.querySelector('[class="styles__SignInButton-sc-c4zru4-2 cUCMGo"]')
         fireEvent.click(signInButton!)
         expect(handleSignIn).toHaveBeenCalled()

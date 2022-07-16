@@ -35,22 +35,19 @@ describe('List', () => {
 
         const component = screen.getByText('item1')
         expect(component).toBeInTheDocument()
-        
+
     })
     it('should render a stripped list', () => {
-        const { debug } = render(
+        render(
             <Dropdown
-            iconsSize={12}
-            items={list}
-            stripped
-            data-testid='Dropdown-testid'
+                iconsSize={12}
+                items={list}
+                stripped
+                data-testid='Dropdown-testid'
             />, {
-                wrapper: StyledProvider
+            wrapper: StyledProvider
         }
         )
-        
-        debug()
-        
         const component = screen.getByTestId('Dropdown-testid').firstChild
         expect(component).toHaveClass('stripped')
     })
