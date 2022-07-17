@@ -1,19 +1,9 @@
 import Modal from "react-modal";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 interface CookieModalProps {
   showAnimation?: boolean;
 }
-
-const modalAnimation = keyframes`
-    0%{
-      opacity: .8;
-      transform: translateY(200px);
-    };
-    100%{
-      opacity: 1;
-    };
-  `;
 
 export const Container = styled(Modal) <CookieModalProps>`
   display: flex;

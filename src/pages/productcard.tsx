@@ -1,4 +1,3 @@
-import { GoPrimitiveDot } from 'react-icons/go';
 import { ProductCard as ProductCardComponent } from '../components/Cards/ProductCard';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { SubTitle } from "../components/Typography/SubTitle";
@@ -93,7 +92,7 @@ export default function ProductCard() {
                         </>
                     ))}
                 </PropsContainer>
-             
+
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
@@ -107,7 +106,6 @@ export default function ProductCard() {
                     priceOnCredit='10 x $99.9'
                     addToCartButtonTitle='Add to cart'
                     />"
-                  
                 />
             </ComponentContainer>
         </Container>

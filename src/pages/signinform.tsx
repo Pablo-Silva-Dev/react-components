@@ -83,20 +83,12 @@ export default function SignInForm() {
         passwordInputClassName: 'Description: PasswordInput className. Type: String.',
     }
 
- 
+
     const { register, handleSubmit, formState } = useForm<SignInFormDataProps>({
         resolver: yupResolver(signInFormSchema)
     })
-  
-    const [loading, setLoading] = useState(false)
 
-    async function signIn() {
-        setLoading(true)
-        const timer = setTimeout(() => {
-            setLoading(false)
-            return () => clearTimeout(timer)
-        }, 1000)
-    }
+    const [loading, setLoading] = useState(false)
 
     return (
         <Container>

@@ -1,8 +1,6 @@
 
 import { MdAttachMoney } from 'react-icons/md';
 import { AiOutlineGithub } from 'react-icons/ai';
-import { setCookie, parseCookies } from 'nookies'
-
 
 import { PrimaryButton } from '../components/Elements/PrimaryButton';
 import { NextLink } from '../components/Next/NextLink';
@@ -18,18 +16,12 @@ import {
   HomeContainer
 } from '../styles';
 import { ReadProgressBar } from '../components/Elements/ReadProgressBar';
-import { CookieModal } from '../components/Modals/CookieModal';
-import { useEffect, useState } from 'react';
 
 export default function Home() {
-
-
 
   function handleOpenExternLink(url): void {
     window.open(url, '__blank')
   }
-
-
 
   return (
     <Container>

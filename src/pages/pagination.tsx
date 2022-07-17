@@ -24,8 +24,6 @@ export default function Pagination() {
     const [page, setPage] = useState(1)
 
     const fakeData = Array.from(Array(40).keys())
-    
-
     return (
         <Container>
             <ComponentContainer>

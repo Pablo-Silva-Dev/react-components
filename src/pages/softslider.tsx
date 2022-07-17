@@ -3,7 +3,6 @@ import { SoftSlider as SoftSliderComponent } from '../components/Elements/SoftSl
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
-import { TestimonialCard } from '../components/Cards/TestimonialCard'
 import {
     ComponentContainer,
     Container,
@@ -99,7 +98,7 @@ export default function SoftSlider() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    
+
                     "
                 />
             </ComponentContainer>

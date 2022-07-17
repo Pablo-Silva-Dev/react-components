@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import {  useState } from 'react';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { Switcher as SwitcherComponent } from '../components/Forms/Switcher'
 import { NextLink } from '../components/Next/NextLink';
@@ -15,17 +15,7 @@ import {
 
 export default function Switcher() {
 
-    const props = {
-        options: 'Description: An array of {value: string, label: string}. Type: OptionsProps[]. Required.',
-        SwitcherPlaceholder: 'Description: A placeholder for disabled default option. Type: String. Required.',
-        inputStyle: 'Description: Input style. Type: CSS Properties.',
-        inputClassName: 'Description: Input className. Type: String.',
-        optionsStyle: 'Description: Options style. Type: CSS Properties.',
-        optionsClassName: 'Description: Options className. Type: String.',
-    }
-
     const [value, setValue] = useState(false)
-
 
     return (
         <Container>
@@ -62,7 +52,7 @@ export default function Switcher() {
                         title='See official React Switch documentation.'
                         url='https://www.npmjs.com/package/react-switch'
                     />
-                   
+
                 </PropsContainer>
                 <DisplayCode
                     //eslint-disable-next-line

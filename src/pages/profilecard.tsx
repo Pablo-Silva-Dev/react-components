@@ -1,4 +1,3 @@
-import { GoPrimitiveDot } from 'react-icons/go';
 import { ProfileCard as ProfileCardComponent } from '../components/Cards/ProfileCard';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { SubTitle } from "../components/Typography/SubTitle";

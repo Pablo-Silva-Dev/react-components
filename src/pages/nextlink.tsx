@@ -1,5 +1,4 @@
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { DisplayInfo } from '../components/Display/DisplayInfo';
 import { NextLink as NextLinkComponent } from '../components/Next/NextLink'
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
@@ -22,12 +21,6 @@ export default function NextLink() {
         style: 'Description: Link style. Type: CSSProperties.',
         className: 'Description: Link className. Type: String.',
     }
-
-    /*  imgUrl: string;
-     width: number;
-     height: number;
-     style?: CSSProperties;
-     className?: string; */
 
     return (
         <Container>

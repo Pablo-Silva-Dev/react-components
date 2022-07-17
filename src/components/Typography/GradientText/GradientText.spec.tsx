@@ -18,13 +18,12 @@ const StyledProvider = ({ children }: ChildrenProps) => {
 
 describe('GradientText', () => {
     it('should render correctly', () => {
-       const {debug} = render(
+        render(
             <GradientText
                 content='gradienttext-content'
                 direction='right-to-left'
-                primaryColor='#55aadd'
-                secondaryColor='#4aff3a'
-                textType='text'
+                initialColor='#55aadd'
+                finalColor='#4aff3a'
             />, {
             wrapper: StyledProvider
         }

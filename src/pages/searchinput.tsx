@@ -1,4 +1,4 @@
-import { ChangeEvent, useCallback, useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { SearchInput as SearchInputComponent } from '../components/Elements/SearchInput'
 import { SubTitle } from "../components/Typography/SubTitle";
@@ -92,7 +92,7 @@ export default function SearchInput() {
                 <DisplayCode
                     //eslint-disable-next-line
                     children="
-                    const fruits = ['apple', 'banana', 'orange', 'pinaple', 'grape', 'cherry']                    
+                    const fruits = ['apple', 'banana', 'orange', 'pinaple', 'grape', 'cherry']
                     "
                 />
                 <DisplayCode
