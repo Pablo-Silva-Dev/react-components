@@ -1,24 +1,10 @@
-import { useState } from 'react';
-import { useTheme } from 'styled-components';
+
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { Drawer } from '../components/Elements/Drawer';
 import { Header as HeaderComponent } from '../components/Elements/Header'
 import { HeaderLogoContainer } from '../components/Elements/Header/HeaderLogoContainer';
-import { NavLink } from '../components/Elements/Nav/NavLink';
-import { NavTitle } from '../components/Elements/Nav/NavTitle';
-import { PrimaryButton } from '../components/Elements/PrimaryButton';
 import { SubTitle } from "../components/Typography/SubTitle";
 import { Text } from "../components/Typography/Text";
 import { Title } from "../components/Typography/Title";
-import {
-    animationComponentsLinkList,
-    cardsLinkList,
-    elementsComponentsLinkList,
-    formComponentsLinkList,
-    modalomponentsLinkList,
-    nextComponentsLinkList,
-    typographyComponentsLinkList
-} from '../data/componentsListLinks';
 import {
     ComponentContainer,
     Container,

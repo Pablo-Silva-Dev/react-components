@@ -25,7 +25,7 @@ const StyledProvider = ({ children }: ChildrenProps) => {
 
 describe('RadioGroup', () => {
     it('should render correctly', () => {
-        const {debug} = render(
+        render(
             <RadioGroup
                 options={options}
                 onChange={() => {}}

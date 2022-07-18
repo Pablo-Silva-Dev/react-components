@@ -14,7 +14,7 @@ interface AuthenticationManagerProps {
     signOutButtonTitle: string;
     signInButtonTitle: string;
     signInButtonClassName?: string;
-    signIn?: (provider?: string) => void;
+    signIn?: () => void;
     signOut?: () => void;
     showsUserPhoto?: boolean;
     authenticationFeedbackText?: string;

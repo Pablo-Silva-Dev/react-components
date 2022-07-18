@@ -1,5 +1,4 @@
 import { DisplayCode } from '../components/Display/DisplayCode';
-import { SubTitle } from '../components/Typography/SubTitle';
 import { GradientText as GradientTextComponent } from "../components/Typography/GradientText";
 import { Title } from '../components/Typography/Title';
 import { Text } from '../components/Typography/Text';

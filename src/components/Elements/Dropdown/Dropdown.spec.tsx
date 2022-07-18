@@ -24,7 +24,7 @@ const StyledProvider = ({ children }: ChildrenProps) => {
 
 describe('List', () => {
     it('should render correctly', () => {
-        const { debug } = render(
+         render(
             <Dropdown
                 iconsSize={12}
                 items={list}

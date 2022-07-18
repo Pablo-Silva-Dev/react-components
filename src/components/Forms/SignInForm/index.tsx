@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { FieldError, UseFormRegisterReturn,FieldValues } from 'react-hook-form'
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form'
 
 import { EmailValidator } from '../EmailInput/validator';
 import { FacebookSignInButton } from '../FacebookSignInButton';

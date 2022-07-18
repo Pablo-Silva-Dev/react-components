@@ -3,7 +3,7 @@ import { Button, ActiveButton } from './styles'
 interface PaginationItemProps {
     number: number;
     isCurrent?: boolean;
-    onPageChange: (page: number) => void;
+    onPageChange: () => void;
 }
 
 export function PaginationItem({
@@ -21,7 +21,7 @@ export function PaginationItem({
 
     return (
         <Button
-            onClick={() => onPageChange(number)}
+            onClick={onPageChange}
         >
             {number}
         </Button>

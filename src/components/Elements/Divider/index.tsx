@@ -1,13 +1,12 @@
 import React, { CSSProperties } from 'react';
 import { Container } from './styles';
 
-
-interface Divider {
+interface DividerProps {
     style?: CSSProperties;
     className?: string;
 }
 
-export function Divider({ style, className }: Divider) {
+export function Divider({ style, className }: DividerProps) {
     return (
         <Container
             style={style}

@@ -1,5 +1,5 @@
 import { CSSProperties, forwardRef, ForwardRefRenderFunction } from 'react';
-import { FormControl, FormErrorMessage, FormLabel, InputProps } from '@chakra-ui/react'
+import { FormControl, FormErrorMessage, InputProps } from '@chakra-ui/react'
 import { FieldError } from 'react-hook-form'
 import { ChakraEmailInput } from './styles';
 

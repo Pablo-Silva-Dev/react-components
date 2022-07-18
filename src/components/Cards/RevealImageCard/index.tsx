@@ -29,8 +29,6 @@ function handleVisitPage(url: string) {
 export function PortfolioCard({
     cardClassName,
     cardStyle,
-    contentClassName,
-    contentStyle,
     imageUrl,
     imgHeight,
     imgWidth,

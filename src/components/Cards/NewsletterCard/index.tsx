@@ -1,5 +1,4 @@
 import React, { CSSProperties } from 'react';
-import { MdEmail } from 'react-icons/md'
 import {
     Container,
     Form,

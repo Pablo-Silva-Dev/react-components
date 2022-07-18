@@ -2,13 +2,13 @@ import React, { CSSProperties, ReactNode } from 'react';
 import { Container } from './styles';
 
 
-interface FooterAttach {
+interface FooterAttachProps {
     children: ReactNode;
     style?: CSSProperties;
     className?: string;
 }
 
-export function FooterAttach({ children, style, className }: FooterAttach) {
+export function FooterAttach({ children, style, className }: FooterAttachProps) {
     return (
         <Container
             style={style}

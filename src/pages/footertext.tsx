@@ -1,4 +1,3 @@
-import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { FooterText as FooterTextComponent } from '../components/Elements/Footer/FooterText'
 import { SubTitle } from "../components/Typography/SubTitle";
@@ -19,8 +18,6 @@ export default function FooterText() {
         style: 'Description: FooterText style. Type: CSS Properties.',
         className: 'Description: FooterText className. Type: String.'
     }
-
-    const theme = useTheme()
 
     return (
         <Container>

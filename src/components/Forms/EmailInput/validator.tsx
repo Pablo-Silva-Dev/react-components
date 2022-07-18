@@ -4,25 +4,32 @@ import { FieldError } from 'react-hook-form'
 import { ChakraEmailInput } from './styles';
 
 interface EmailInputValidatorProps extends InputProps {
-    error?: FieldError;
-    emailPlaceholder?: string;
-    style?: CSSProperties;
-    className?: string;
+  error?: FieldError;
+  emailPlaceholder?: string;
+  style?: CSSProperties;
+  className?: string;
 }
 
-const EmailInputValidator: ForwardRefRenderFunction<HTMLInputElement, EmailInputValidatorProps> = ({ error, emailPlaceholder, style, className, ...rest }, ref) => {
-    return (
-        <FormControl isInvalid={!!error}>
-            <ChakraEmailInput
-                ref={ref}
-                type='email'
-                {...rest}
-                style={style}
-                className={className}
-            />
-            {!!error && (<FormErrorMessage>{error.message}</FormErrorMessage>)}
-        </FormControl>
-    )
+const EmailInputValidator: ForwardRefRenderFunction<HTMLInputElement, EmailInputValidatorProps> = ({
+  error,
+  style,
+  className,
+  ...rest
+ },
+ ref
+) => {
+  return (
+    <FormControl isInvalid={!!error}>
+      <ChakraEmailInput
+        ref={ref}
+        type='email'
+        {...rest}
+        style={style}
+        className={className}
+      />
+      {!!error && (<FormErrorMessage>{error.message}</FormErrorMessage>)}
+    </FormControl>
+  )
 }
 
 export const EmailValidator = forwardRef(EmailInputValidator)

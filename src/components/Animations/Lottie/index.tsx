@@ -5,7 +5,9 @@ type JSONValue =
     | string
     | number
     | boolean
+    //eslint-disable-next-line
     | JSONObject
+    //eslint-disable-next-line
     | JSONArray;
 
 interface JSONObject {

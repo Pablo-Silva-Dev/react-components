@@ -26,8 +26,6 @@ export default function Footer() {
         className: 'Description: Footer className. Type: String.'
     }
 
-    const theme = useTheme()
-
     return (
         <Container>
             <ComponentContainer>
@@ -207,7 +205,7 @@ export default function Footer() {
                                 url='/'
                             />
                         </FooterFourthSection>
-                    </Footer > 
+                    </Footer >
                     "
                     hideTitle
                 />

@@ -12,7 +12,6 @@ interface TextAreaProps extends TextareaHTMLAttributes<Props> {
 }
 
 export function TextArea({
-    showsCharactersCounting = true,
     currentLength,
     maxCharacters = 120,
     labelValidationClassName,

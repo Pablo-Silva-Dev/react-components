@@ -18,7 +18,7 @@ const StyledProvider = ({ children }: ChildrenProps) => {
 
 describe('HeaderAuthenticationContainer', () => {
     it('should render correctly', () => {
-        const { debug } = render(
+         render(
             <HeaderAuthenticationContainer
             >
                 <p>HeaderAuthenticationContainer</p>

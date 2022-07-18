@@ -1,4 +1,3 @@
-import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { Divider } from '../components/Elements/Divider';
 import { Text } from "../components/Typography/Text";
@@ -20,8 +19,6 @@ export default function FooterAttach() {
         style: 'Description: Footer style. Type: CSS Properties.',
         className: 'Description: Footer className. Type: String.'
     }
-
-    const theme = useTheme()
 
     return (
         <Container>
@@ -88,7 +85,7 @@ export default function FooterAttach() {
                             fontSize: 10
                         }}
                         />
-                        </FooterAttach>               
+                        </FooterAttach>
                         "
                         hideTitle
                 />
