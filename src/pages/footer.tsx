@@ -1,4 +1,3 @@
-import { useTheme } from 'styled-components';
 import { DisplayCode } from '../components/Display/DisplayCode';
 import { Footer as FooterComponent } from '../components/Elements/Footer'
 import { FooterFirstSection } from '../components/Elements/Footer/FooterFirstSection';

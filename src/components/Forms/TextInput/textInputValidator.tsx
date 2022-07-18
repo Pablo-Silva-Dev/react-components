@@ -11,7 +11,13 @@ interface TextInputInputValidatorProps extends InputProps{
     className?: string;
 }
 
-const InputValidator: ForwardRefRenderFunction<HTMLInputElement, TextInputInputValidatorProps> = ({ error, TextInputPlaceholder, textInputPlaceholder, style, className, ...rest }, ref) => {
+const InputValidator: ForwardRefRenderFunction<HTMLInputElement, TextInputInputValidatorProps> = ({
+  error,
+  textInputPlaceholder,
+  style,
+  className,
+  ...rest
+}, ref) => {
     return (
         <FormControl isInvalid={!!error}>
             <ChakraTextInput

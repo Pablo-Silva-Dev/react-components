@@ -18,7 +18,7 @@ const StyledProvider = ({ children }: ChildrenProps) => {
 
 describe('NavTitle', () => {
     it('should render correctly', () => {
-        const {debug} = render(
+       render(
             <NavTitle
                 content='navtitle-content'
             />, {
