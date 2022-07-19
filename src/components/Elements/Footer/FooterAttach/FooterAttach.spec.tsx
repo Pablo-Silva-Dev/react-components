@@ -20,15 +20,13 @@ const StyledProvider = ({ children }: ChildrenProps) => {
 
 describe('FooterAttach', () => {
   it('should render correctly', () => {
-    const {debug} = render(
+    render(
       <FooterAttach>
         <p>FooterTest</p>
       </FooterAttach>, {
       wrapper: StyledProvider
     }
     )
-
-    debug()
 
     const component = screen.getByText('FooterTest')
     expect(component).toBeInTheDocument()
