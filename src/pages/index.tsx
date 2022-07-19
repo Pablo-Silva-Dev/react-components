@@ -16,6 +16,7 @@ import {
   HomeContainer
 } from '../styles';
 import { ReadProgressBar } from '../components/Elements/ReadProgressBar';
+import { links } from '../data/nextLinks';
 
 export default function Home() {
 
@@ -95,67 +96,17 @@ export default function Home() {
             url='/'
           />
         </LicenseSection>
-
         <ReferencesSection>
           <Title
             content='References'
           />
-          <NextLink
-            title='NextJS'
-            url='/https://nextjs.org/docs/getting-started'
-          />
-          <NextLink
-            title='rc-checkbox'
-            url='https://www.npmjs.com/package/rc-checkbox'
-          />
-          <NextLink
-            title='react-collapsible'
-            url='https://www.npmjs.com/package/react-collapsible'
-          />
-          <NextLink
-            title='react-dropdown'
-            url='https://www.npmjs.com/package/react-dropdown'
-          />
-          <NextLink
-            title='react-loading'
-            url='https://www.npmjs.com/package/react-loading'
-          />
-          <NextLink
-            title='react-lottie'
-            url='https://www.npmjs.com/package/react-lottie'
-          />
-          <NextLink
-            title='react-modal'
-            url='https://www.npmjs.com/package/react-modal'
-          />
-          <NextLink
-            title='react-responsive-carousel'
-            url='https://www.npmjs.com/package/react-responsive-carousel'
-          />
-          <NextLink
-            title='react-reveal'
-            url='https://www.npmjs.com/package/react-reveal'
-          />
-          <NextLink
-            title='react-star-ratings'
-            url='https://www.npmjs.com/package/react-star-ratings'
-          />
-          <NextLink
-            title='react-switch'
-            url='https://www.npmjs.com/package/react-switch'
-          />
-          <NextLink
-            title='react-type-animation'
-            url='https://www.npmjs.com/package/react-type-animation'
-          />
-          <NextLink
-            title='react-vertical-timeline-component'
-            url='https://www.npmjs.com/package/react-vertical-timeline-component'
-          />
-          <NextLink
-            title='rgt'
-            url='https://www.npmjs.com/package/rgt'
-          />
+          {links.map(link => (
+            <NextLink
+              key={link.title}
+              title={link.title}
+              url={link.url}
+            />
+          ))}
         </ReferencesSection>
       </HomeContainer>
     </Container>
