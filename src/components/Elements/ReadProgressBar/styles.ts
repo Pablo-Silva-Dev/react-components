@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 interface ReadPorgressBarProps {
     barHeight?: 'low' | 'medium' | 'tall'
+    color?: string;
 }
 
 export const Container = styled.div<ReadPorgressBarProps>`
@@ -15,7 +16,7 @@ display: flex;
     height: ${({ barHeight }) => barHeight === 'low' ?
         '4px' : barHeight === 'tall' ?
             '16px' : '8px'};
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme, color }) => color ? color : theme.colors.primary};
     transform-origin: 0%;
 }
 

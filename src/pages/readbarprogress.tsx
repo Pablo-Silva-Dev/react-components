@@ -7,7 +7,6 @@ import {
   ComponentContainer,
   Container,
   DescriptionContainer,
-  PreviewContainer,
   PropsContainer
 } from "../styles";
 import { DisplayCode } from '../components/Display/DisplayCode';
@@ -35,6 +34,7 @@ export default function ReadBarProgress() {
         </DescriptionContainer>
         <ReadProgressBar
           barHeight='low'
+          color='#36EFAD'
         />
         <PropsContainer>
           <SubTitle
