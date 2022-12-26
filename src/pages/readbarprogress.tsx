@@ -63,6 +63,7 @@ export default function ReadBarProgress() {
           children="
             <ReadProgressBar
             barHeight='low'
+            color='#36EFAD'
           />"
         />
 

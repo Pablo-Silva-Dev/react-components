@@ -1,9 +1,10 @@
-import { CSSProperties, } from "react";
+/* eslint-disable no-unused-vars */
+import { ChangeEvent, CSSProperties, } from "react";
 import { Input } from "./styles";
 
 interface SearchInputProps {
   value: string;
-  onChange: () => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   disabled?: boolean;
   className?: string;
