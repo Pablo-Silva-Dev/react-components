@@ -35,6 +35,7 @@ export const elementsComponentsLinkList = [
   { content: "Nav", url: "/nav" },
   { content: "Pagination", url: "/pagination" },
   { content: "PrimaryButton", url: "/primarybutton" },
+  { content: "ReadProgressBar", url: "/readbarprogress" },
   { content: "SearchInput", url: "/searchinput" },
   { content: "SecondaryButton", url: "/secondarybutton" },
   { content: "SocialIcons", url: "/socialicons" },
