@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { CSSProperties } from "react";
 import {
   ItemContainer,
@@ -14,7 +15,7 @@ interface OptionProps {
 
 interface RadioGroupProps {
   options: OptionProps[];
-  onChange: () => void;
+  onChange: (e: any) => void;
   labelStyle?: CSSProperties;
   labelClassName?: string;
   style?: CSSProperties;
