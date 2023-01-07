@@ -83,6 +83,7 @@ export const nextComponentsLinkList = [
   { content: "NextHead", url: "/nexthead" },
   { content: "NextImage", url: "/nextimage" },
   { content: "NextLink", url: "/nextlink" },
+  { content: "NextQRCodeImage", url: "/nextqrcodeimage" },
 ];
 
 export const typographyComponentsLinkList = [
